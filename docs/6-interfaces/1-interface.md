@@ -12,17 +12,14 @@ TypeScript 接口定义代码中的约定，它也为类型检查提供显式名
 
 让我们从一个简单的例子开始：
 
-```TypeScript
-function getFullName(person: {
-  firstName: string;
-  lastName: string
-}) {
+```ts
+function getFullName(person: { firstName: string; lastName: string }) {
   return `${person.firstName} ${person.lastName}`;
 }
 
 let person = {
-  firstName: 'John',
-  lastName: 'Doe'
+  firstName: "John",
+  lastName: "Doe",
 };
 
 console.log(getFullName(person));
@@ -44,7 +41,7 @@ John Doe
 
 下面使用了一个 `Person` 的接口，它有两个字符串属性：
 
-```TypeScript
+```ts
 interface Person {
   firstName: string;
   lastName: string;
@@ -55,14 +52,14 @@ interface Person {
 
 定义好 `Person` 接口之后你可以把它作为类型使用，你也可以用接口名称来注释函数参数
 
-```TypeScript
+```ts
 function getFullName(person: Person) {
   return `${person.firstName} ${person.lastName}`;
 }
 
 let john = {
-  firstName: 'John',
-  lastName: 'Doe'
+  firstName: "John",
+  lastName: "Doe",
 };
 
 console.log(getFullName(john));
@@ -74,7 +71,7 @@ console.log(getFullName(john));
 
 下面的代码定义了一个有四个属性的对象：
 
-```TypeScript
+```ts
 let jane = {
   firstName: 'Jane',
   middleName: 'K.'
@@ -85,7 +82,7 @@ let jane = {
 
 因为 `jane` 对象有两个字符串属性 `firstName` 和 `lastName`，你可以把它传入到 `getFullName()` 函数中，如下所示：
 
-```TypeScript
+```ts
 let fullName = getFullName(jane);
 console.log(fullName); // Jane Doe
 ```
@@ -94,7 +91,7 @@ console.log(fullName); // Jane Doe
 
 接口可以有可选属性，要声明一个可选属性，你需要在属性名的末尾添加 (`?`)，就像这样：
 
-```TypeScript
+```ts
 interface Person {
   firstName: string;
   middleName?: string;
@@ -106,12 +103,12 @@ interface Person {
 
 下面的例子展示 `Person` 接口如何在 `getFullName()` 函数中使用：
 
-```TypeScript
+```ts
 function getFullName(person: Person) {
   if (person.middleName) {
     return `${person.firstName} ${person.middleName} ${person.lastName}`;
   }
-return `${person.firstName} ${person.lastName}`;
+  return `${person.firstName} ${person.lastName}`;
 }
 ```
 
@@ -119,7 +116,7 @@ return `${person.firstName} ${person.lastName}`;
 
 如果属性只有在对象第一次创建的时候可以修改，我们可以在属性名前面加上 `readonly` 关键字：
 
-```TypeScript
+```ts
 interface Person {
   readonly ssn: string;
   firstName: string;
@@ -128,16 +125,16 @@ interface Person {
 
 let person: Person;
 person = {
-  ssn: '171-28-0926',
-  firstName: 'John',
-  lastName: 'Doe'
-}
+  ssn: "171-28-0926",
+  firstName: "John",
+  lastName: "Doe",
+};
 ```
 
 在这个例子中，`ssn` 属性不能被修改：
 
-```TypeScript
-person.ssn = '171-28-0000';
+```ts
+person.ssn = "171-28-0000";
 ```
 
 错误提示：
@@ -157,9 +154,9 @@ error TS2540: Cannot assign to 'ssn' because it is a read-only property.
 
 如下所示：
 
-```TypeScript
+```ts
 interface StringFormat {
-  (str: string, isUpper: boolean): string
+  (str: string, isUpper: boolean): string;
 }
 ```
 
@@ -167,14 +164,14 @@ interface StringFormat {
 
 下面演示如何声明函数类型的变量，并为其赋值：
 
-```TypeScript
+```ts
 let format: StringFormat;
 
 format = function (str: string, isUpper: boolean) {
   return isUpper ? str.toLocaleUpperCase() : str.toLocaleLowerCase();
 };
 
-console.log(format('hi', true));
+console.log(format("hi", true));
 ```
 
 输出：
@@ -185,27 +182,27 @@ HI
 
 注意，参数名不需要匹配函数签名中的参数名字，下面的例子和上面的例子是等价的：
 
-```TypeScript
+```ts
 let format: StringFormat;
 
 format = function (src: string, upper: boolean) {
   return upper ? src.toLocaleUpperCase() : src.toLocaleLowerCase();
 };
 
-console.log(format('hi', true));
+console.log(format("hi", true));
 ```
 
 `StringFormat` 接口确保所有实现了它的函数调用方传入所需的参数：一个 [字符串类型](/2-basic-types/3-string/) 和一个 [布尔值类型](/2-basic-types/4-boolean/)
 
 下面的代码也可以正常的工作，即使 `lowerCase` 函数被分配成一个没有第二个参数的函数：
 
-```TypeScript
+```ts
 let lowerCase: StringFormat;
 lowerCase = function (str: string) {
   return str.toLowerCase();
-}
+};
 
-console.log(lowerCase('Hi', false));
+console.log(lowerCase("Hi", false));
 ```
 
 注意，第二个参数是在调用 `lowerCase()` 函数时传递的
@@ -216,9 +213,9 @@ console.log(lowerCase('Hi', false));
 
 比如，下面的 `Json` 接口可以由任何不相关的类实现：
 
-```TypeScript
+```ts
 interface Json {
-  toJSON(): string
+  toJSON(): string;
 }
 ```
 
@@ -226,9 +223,9 @@ interface Json {
 
 The following declares a class that implements the `Json` interface:
 
-```TypeScript
+```ts
 class Person implements Json {
-  constructor(private firstName: string, private lastName: string) { }
+  constructor(private firstName: string, private lastName: string) {}
   toJson(): string {
     return JSON.stringify(this);
   }
@@ -239,8 +236,8 @@ class Person implements Json {
 
 下面的例子展示了如何使用 `Person` 类
 
-```TypeScript
-let person = new Person('John', 'Doe');
+```ts
+let person = new Person("John", "Doe");
 console.log(person.toJson());
 ```
 

@@ -14,13 +14,13 @@ TypeScript 中你可以使用 `as` 关键字或者 `<>` 操作符进行类型转
 
 下面使用 [querySelector()](https://zh.javascript.info/searching-elements-dom#querySelector) 方法选择第一个输入元素：
 
-```TypeScript
+```ts
 let input = document.querySelector('input["type="text"]');
 ```
 
 因为 `document.querySelector()` 方法的返回类型是 `Element` 类型，下面的代码会导致编译错误：
 
-```TypeScript
+```ts
 console.log(input.value);
 ```
 
@@ -28,19 +28,19 @@ console.log(input.value);
 
 为了解决这个问题，你可以使用类型转换，即使用关键字 `as` 把 `Element` 类型转换为 `HTMLInputElement` 类型，如下所示：
 
-```TypeScript
+```ts
 let input = document.querySelector('input[type="text"]') as HTMLInputElement;
 ```
 
 现在，`input` 变量的类型是 `HTMLInputElement`，所以访问它的 `value` 属性不会导致任何错误，下面的代码可以正常工作：
 
-```TypeScript
+```ts
 console.log(input.value);
 ```
 
 另外一种把 `Element` 类型转换为 `HTMLInputElement` 类型来访问属性的方法如下所示：
 
-```TypeScript
+```ts
 let enteredText = (input as HTMLInputElement).value;
 ```
 
@@ -48,7 +48,7 @@ let enteredText = (input as HTMLInputElement).value;
 
 也可以如下进行向下转换：
 
-```TypeScript
+```ts
 let el: HTMLElement;
 el = new HTMLInputElement();
 ```
@@ -57,7 +57,7 @@ el = new HTMLInputElement();
 
 将类型从 `typeA` 转换为 `typeB` 的语法如下：
 
-```TypeScript
+```ts
 let a: typeA;
 let b = a as typeB;
 ```
@@ -66,7 +66,7 @@ let b = a as typeB;
 
 除了 `as` 关键词，你可以使用 `<>` 操作符进行类型转换，如下所示：
 
-```TypeScript
+```ts
 let input = <HTMLInputElement>document.querySelector('input[type="text"]');
 
 console.log(input.value);
@@ -74,7 +74,7 @@ console.log(input.value);
 
 使用 `<>` 操作符进行类型转换的语法是：
 
-```TypeScript
+```ts
 let a: typeA;
 let b = <typeB>a;
 ```

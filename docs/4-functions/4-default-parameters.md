@@ -10,7 +10,7 @@ title: 默认参数
 
 JavaScript 自 ES2015 (或者叫) ES6) 以来，开始支持 [默认参数](https://zh.javascript.info/function-basics#mo-ren-zhi)，它的语法如下：
 
-```TypeScript
+```ts
 function name(parameter1 = defaultValue1, ...) {
   // do something
 }
@@ -18,7 +18,7 @@ function name(parameter1 = defaultValue1, ...) {
 
 在这种语法中，如果在调用函数的时候不传递实参或者传递值为 `undefined` ，函数将为省略的形参赋值默认的初始化值，比如：
 
-```TypeScript
+```ts
 function applyDiscount(price, discount = 0.05) {
   return price * (1 - discount);
 }
@@ -32,7 +32,7 @@ console.log(applyDiscount(100)); // 95
 
 和 JavaScript 类似的，你可以在 TypeScript 中使用相同的语法来指定默认参数：
 
-```TypeScript
+```ts
 
 function name(parameter1 :type = defaultvalue1, parameter2 :type = defaultvalue2, ...) {
   //
@@ -41,7 +41,7 @@ function name(parameter1 :type = defaultvalue1, parameter2 :type = defaultvalue2
 
 下面的例子使用了 `applyDiscount()` 函数的默认参数：
 
-```TypeScript
+```ts
 function applyDiscount(price: number, discount: number = 0.05): number {
   return price * (1 - discount);
 }
@@ -51,7 +51,7 @@ console.log(applyDiscount(100)); // 95
 
 注意不能在函数类型定义中包含默认参数，下面的代码将会导致一个错误：
 
-```TypeScript
+```ts
 let promotion: (price: number, discount: number = 0.05) => number;
 ```
 
@@ -67,7 +67,7 @@ error TS2371: A parameter initializer is only allowed in a function or construct
 
 另外，默认参数和尾随的默认参数共享相同的类型，比如下面的函数：
 
-```TypeScript
+```ts
 function applyDiscount(price: number, discount: number = 0.05): number {
   // ...
 }
@@ -75,7 +75,7 @@ function applyDiscount(price: number, discount: number = 0.05): number {
 
 和
 
-```TypeScript
+```ts
 function applyDiscount(price: number, discount?: number): number {
   // ...
 }
@@ -83,8 +83,8 @@ function applyDiscount(price: number, discount?: number): number {
 
 它们共享相同的类型：
 
-```TypeScript
-(price: number, discount?: number) => number
+```ts
+(price: number, discount?: number) => number;
 ```
 
 可选参数必须在必选参数后面，但是默认参数不需要出现在必选参数的后面
@@ -93,8 +93,11 @@ function applyDiscount(price: number, discount?: number): number {
 
 下面的函数返回指定月份和年份中的天数：
 
-```TypeScript
-function getDay(year: number = new Date().getFullYear(), month: number): number {
+```ts
+function getDay(
+  year: number = new Date().getFullYear(),
+  month: number,
+): number {
   let day = 0;
   switch (month) {
     case 1:
@@ -114,16 +117,12 @@ function getDay(year: number = new Date().getFullYear(), month: number): number 
       break;
     case 2:
       // leap year
-      if (((year % 4 == 0) &&
-          !(year % 100 == 0))
-          || (year % 400 == 0))
-        day = 29;
-      else
-        day = 28;
+      if ((year % 4 == 0 && !(year % 100 == 0)) || year % 400 == 0) day = 29;
+      else day = 28;
       break;
     default:
-      throw Error('Invalid month');
-    }
+      throw Error("Invalid month");
+  }
   return day;
 }
 ```
@@ -132,14 +131,14 @@ function getDay(year: number = new Date().getFullYear(), month: number): number 
 
 下面的例子使用 `getDay()` 函数来获取 2019 年 2 月份的天数：
 
-```TypeScript
+```ts
 let day = getDay(2019, 2);
 console.log(day); // 28
 ```
 
 为了获取今年 2 月份的天数，你需要像下面这样把 `undefined` 值传递给 `year` 参数：
 
-```TypeScript
+```ts
 let day = getDay(undefined, 2);
 console.log(day);
 ```

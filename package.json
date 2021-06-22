@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "prettier:docs": "prettier ./docs --write",
+    "prettier:demos": "prettier ./demos --write"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +16,7 @@
     "@vuepress/plugin-back-to-top": "^1.8.2",
     "@vuepress/plugin-medium-zoom": "^1.8.2",
     "@vuepress/plugin-nprogress": "^1.8.2",
+    "prettier": "^2.3.1",
     "vuepress": "^1.8.2"
   }
 }

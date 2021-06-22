@@ -12,7 +12,7 @@ title: 交叉类型
 
 使用 `&` 操作符来组合类型，如下所示：
 
-```TypeScript
+```ts
 type typeAB = typeA & typeB;
 ```
 
@@ -20,13 +20,13 @@ type typeAB = typeA & typeB;
 
 注意，联合类型使用 `|` 操作符，定义一个可以保存 `typeA` 或者 `typeB` 类型的值
 
-```TypeScript
+```ts
 let varName = typeA | typeB; // union type
 ```
 
 假设你有三个接口：`BusinessPartner`, `Identity` 和 `Contact`
 
-```TypeScript
+```ts
 interface BusinessPartner {
   name: string;
   credit: number;
@@ -45,48 +45,48 @@ interface Contact {
 
 下面定义了两种交叉类型：
 
-```TypeScript
+```ts
 type Employee = Identity & Contact;
 type Customer = BusinessPartner & Contact;
 ```
 
 `Employee` 类包含 `Identity` 和 `Contact` 类型中的所有属性：
 
-```TypeScript
+```ts
 type Employee = Identity & Contact;
 
 let e: Employee = {
   id: 100,
-  name: 'John Doe',
-  email: 'john.doe@example.com',
-  phone: '(408)-897-5684'
+  name: "John Doe",
+  email: "john.doe@example.com",
+  phone: "(408)-897-5684",
 };
 ```
 
 `Customer` 类型包含 `BusinessPartner` 和 `Contact` 类型中的所有属性：
 
-```TypeScript
+```ts
 type Customer = BusinessPartner & Contact;
 
 let c: Customer = {
-  name: 'ABC Inc.',
+  name: "ABC Inc.",
   credit: 1000000,
-  email: 'sales@abcinc.com',
-  phone: '(408)-897-5735'
+  email: "sales@abcinc.com",
+  phone: "(408)-897-5735",
 };
 ```
 
 之后，如果你想实现销售员工，你可以创建一个新的交叉类型包含 `Identity`, `Contact` 和 `BusinessPartner` 三个类型中的所有属性：
 
-```TypeScript
+```ts
 type Employee = Identity & BusinessPartner & Contact;
 
 let e: Employee = {
   id: 100,
-  name: 'John Doe',
-  email: 'john.doe@example.com',
-  phone: '(408)-897-5684',
-  credit: 1000
+  name: "John Doe",
+  email: "john.doe@example.com",
+  phone: "(408)-897-5684",
+  credit: 1000,
 };
 ```
 
@@ -96,7 +96,7 @@ let e: Employee = {
 
 当你进行类型交叉的时候，类型的顺序并不重要，比如：
 
-```TypeScript
+```ts
 type typeAB = typeA & typeB;
 type typeBA = typeB & typeA;
 ```

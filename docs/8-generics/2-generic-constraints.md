@@ -10,47 +10,43 @@ title: 泛型约束
 
 思考下以下例子：
 
-```TypeScript
+```ts
 function merge<U, V>(obj1: U, obj2: V) {
   return {
     ...obj1,
-    ...obj2
+    ...obj2,
   };
 }
 ```
 
 `merge()` 是一个合并两个对象的泛型函数：
 
-```TypeScript
-let person = merge(
-  { name: 'John' },
-  { age: 25 }
-);
+```ts
+let person = merge({ name: "John" }, { age: 25 });
 
 console.log(result);
 ```
 
 输出：
 
-```TypeScript
+```ts
 { name: 'John', age: 25 }
 ```
 
 它工作地很好。`merge()` 函数接受两个对象，但它不阻止你传递一个非对象参数，就像这样：
 
-```TypeScript
-let person = merge(
-    { name: 'John' },
-    25
-);
+```ts
+let person = merge({ name: "John" }, 25);
 
 console.log(person);
 ```
 
 输出：
 
-```TypeScript
-{ name: 'John' }
+```ts
+{
+  name: "John";
+}
 ```
 
 TypeScript 没有发出任何错误提示
@@ -61,11 +57,11 @@ TypeScript 没有发出任何错误提示
 
 为了表示约束，你可以使用 `extends` 关键字：
 
-```TypeScript
+```ts
 function merge<U extends object, V extends object>(obj1: U, obj2: V) {
   return {
     ...obj1,
-    ...obj2
+    ...obj2,
   };
 }
 ```
@@ -74,11 +70,8 @@ function merge<U extends object, V extends object>(obj1: U, obj2: V) {
 
 下面将导致一个错误：
 
-```TypeScript
-let person = merge(
-  { name: 'John' },
-  25
-);
+```ts
+let person = merge({ name: "John" }, 25);
 ```
 
 错误提示：
@@ -93,7 +86,7 @@ TypeScript 允许声明受另外一个类型参数约束的类型参数
 
 下面的 `prop()` 函数接受一个对象和一个属性名，它会返回属性的值：
 
-```TypeScript
+```ts
 function prop<T, K>(obj: T, key: K) {
   return obj[key];
 }
@@ -107,7 +100,7 @@ Type 'K' cannot be used to index type 'T'.
 
 为了修正这个错误，你在 `K` 上添加一个约束来确保它是 `T` 的键，如下所示：
 
-```TypeScript
+```ts
 function prop<T, K extends keyof T>(obj: T, key: K) {
   return obj[key];
 }
@@ -115,8 +108,8 @@ function prop<T, K extends keyof T>(obj: T, key: K) {
 
 如果你传递给 `prop()` 函数一个 `obj` 对象上存在的属性明，编译器不会报错，如下所示：
 
-```TypeScript
-let str = prop({ name: 'John' }, 'name');
+```ts
+let str = prop({ name: "John" }, "name");
 console.log(str);
 ```
 
@@ -128,8 +121,8 @@ John
 
 然后如果你传递一个在第一个参数上不存在的键名，编译器会发出一个错误提示：
 
-```TypeScript
-let str = prop({ name: 'John' }, 'age');
+```ts
+let str = prop({ name: "John" }, "age");
 ```
 
 错误提示：

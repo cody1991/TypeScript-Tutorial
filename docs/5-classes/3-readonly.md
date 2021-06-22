@@ -13,7 +13,7 @@ TypeScript 提供了只读访问修饰符允许你将类属性标记为不可变
 
 要将属性标记为不可变，你需要使用 `readonly` 关键字，下面演示了如何在 `Person` 类中声明只读属性：
 
-```TypeScript
+```ts
 class Person {
   readonly birthDate: Date;
 
@@ -27,14 +27,14 @@ class Person {
 
 下面尝试重新给 `birthDate` 属性赋值，抛出错误提示：
 
-```TypeScript
+```ts
 let person = new Person(new Date(1990, 12, 25));
 person.birthDate = new Date(1991, 12, 25); // Compile error
 ```
 
 和其他 [访问修饰符](/5-classes/2-access-modifiers/) 一样，你可以在构造函数中合并只读属性的声明和初始化，如下所示：
 
-```TypeScript
+```ts
 class Person {
   constructor(readonly birthDate: Date) {
     this.birthDate = birthDate;

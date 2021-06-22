@@ -15,16 +15,16 @@ title: 元组类型
 
 比如，你可以用元组来表示一对 `string` 和 `number`：
 
-```TypeScript
+```ts
 let skill: [string, number];
-skill = ['Programming', 5];
+skill = ["Programming", 5];
 ```
 
 元组中的值的顺序是很重要的，如果你把 `skill` 元组中值的顺序修改成 `[5, "Programming"]`，你将会得到一个错误提示：
 
-```TypeScript
+```ts
 let skill: [string, number];
-skill = [5, 'Programming'];
+skill = [5, "Programming"];
 ```
 
 错误提示：
@@ -43,7 +43,7 @@ error TS2322: Type 'string' is not assignable to type 'number'.
 
 比如：
 
-```TypeScript
+```ts
 let color: [number, number, number] = [255, 0, 0];
 ```
 
@@ -55,7 +55,7 @@ let color: [number, number, number] = [255, 0, 0];
 
 比如，你可以用可选的 `alpha` 通道值定义一个 `RGBA` 元组
 
-```TypeScript
+```ts
 let bgColor, headerColor: [number, number, number, number?];
 bgColor = [0, 255, 255, 0.5];
 headerColor = [0, 255, 255];

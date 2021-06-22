@@ -10,13 +10,13 @@ title: 函数类型
 
 一个函数类型由两个部分组成：参数和返回类型，当声明一个函数类型时，你需要用下面的语法来指定这两个部分：
 
-```TypeScript
+```ts
 (parameter: type, parameter: type, ...) => type
 ```
 
 下面的例子演示了如何声明一个变量，它是一个接受两个数字类型的参数和返回一个数字的函数类型
 
-```TypeScript
+```ts
 let add: (x: number, y: number) => number;
 ```
 
@@ -35,7 +35,7 @@ TypeScript 编译器会检查参数的数量和类型以及返回类型是否匹
 
 下面的例子展示如何把一个函数赋值给 `add` 变量
 
-```TypeScript
+```ts
 add = function (x: number, y: number) {
   return x + y;
 };
@@ -43,7 +43,7 @@ add = function (x: number, y: number) {
 
 同样的，你也可以像这样声明一个变量并把函数赋值给它：
 
-```TypeScript
+```ts
 let add: (a: number, b: number) => number = function (x: number, y: number) {
   return x + y;
 };
@@ -51,7 +51,7 @@ let add: (a: number, b: number) => number = function (x: number, y: number) {
 
 如果你赋值了另外一个类型与 `add` 变量不匹配的函数，TypeScript 会抛出错误：
 
-```TypeScript
+```ts
 add = function (x: string, y: string): number {
   return x.concat(y).length;
 };

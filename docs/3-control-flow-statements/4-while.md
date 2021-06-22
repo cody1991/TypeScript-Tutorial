@@ -12,7 +12,7 @@ title: while
 
 下面展示了 TypeScript `while` 语句的语法：
 
-```TypeScript
+```ts
 while (condition) {
   // do something
 }
@@ -28,13 +28,12 @@ while (condition) {
 
 你可以使用 `if` 和 `break` 语句，基于另外一个条件立刻中断循环
 
-```TypeScript
+```ts
 while (condition) {
   // do something
   // ...
 
-  if (anotherCondition)
-    break;
+  if (anotherCondition) break;
 }
 ```
 
@@ -48,7 +47,7 @@ while (condition) {
 
 下面的例子使用 `while` 语句，当 `counter` 小于 `5` 的时候输出它的值到控制台上
 
-```TypeScript
+```ts
 let counter = 0;
 
 while (counter < 5) {
@@ -88,8 +87,8 @@ while (counter < 5) {
 
 下面的例子展示了如果使用 `while` 语句去移除 `<ul>` 元素上所有的 `<li>` 元素：
 
-```TypeScript
-let list = document.querySelector('#list');
+```ts
+let list = document.querySelector("#list");
 
 while (list.firstChild) {
   list.removeChild(list.firstChild);

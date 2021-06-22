@@ -17,9 +17,9 @@ title: 可选参数
 
 要使函数参数可选，你可以在函数名后面添加 `?`，比如：
 
-```TypeScript
+```ts
 function multiply(a: number, b: number, c?: number): number {
-  if (typeof c !== 'undefined') {
+  if (typeof c !== "undefined") {
     return a * b * c;
   }
   return a * b;
@@ -39,9 +39,9 @@ function multiply(a: number, b: number, c?: number): number {
 
 例如，如果你把 `b` 参数设置为可选的，`c` 参数是必须的，TypeScript 编译器会抛出一个错误提示：
 
-```TypeScript
+```ts
 function multiply(a: number, b?: number, c: number): number {
-  if (typeof c !== 'undefined') {
+  if (typeof c !== "undefined") {
     return a * b * c;
   }
   return a * b;

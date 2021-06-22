@@ -8,7 +8,7 @@ title: 布尔值类型
 
 TypeScript 中的 `boolean` 类型允许两个值：`true` 和 `false`。他们是 TypeScript 中原始类型的一种。例如：
 
-```TypeScript
+```ts
 let pending: boolean;
 pending = true;
 // after a while

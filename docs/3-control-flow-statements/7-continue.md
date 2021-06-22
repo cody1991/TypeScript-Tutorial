@@ -14,11 +14,10 @@ title: continue
 
 下面的例子演示了如何在 `for` 循环中使用 `continue` 语句
 
-```TypeScript
+```ts
 for (let index = 0; index < 9; index++) {
   // if index is odd, skip it
-  if (index % 2)
-    continue;
+  if (index % 2) continue;
 
   // the following code will be skipped for odd numbers
   console.log(index);
@@ -46,15 +45,13 @@ The following example shows how to use the continue statement in a while loop. I
 
 下面的例子展示了如何在 `while` 循环中使用 `continue` 语句，它返回的结果和上面的例子一样：
 
-```TypeScript
+```ts
 let index = -1;
 
 while (index < 9) {
-
   index = index + 1;
 
-  if (index % 2)
-    continue;
+  if (index % 2) continue;
 
   console.log(index);
 }
@@ -76,16 +73,14 @@ The following example demonstrates how to use the continue statement in a do...w
 
 下面的例子展示了如何在 `do while` 循环中使用 `continue` 语句，它返回 `9` 到 `99` 之间偶数的数量
 
-```TypeScript
+```ts
 let index = 9;
 let count = 0;
 
 do {
   index += 1;
-  if (index % 2)
-    continue;
+  if (index % 2) continue;
   count += 1;
-
 } while (index < 99);
 
 console.log(count); // 45

@@ -19,19 +19,19 @@ title: 为什么使用 TypeScript
 
 JavaScript 是动态类型的。与其他比如 `Java` 或者 `C#` 这些静态语言不同，值具有类型而不是变量，比如：
 
-```TypeScript
-"Hello"
+```ts
+"Hello";
 ```
 
 对于这个值，你可以说它的类型是 `string`，又比如下面的值是一个数字：
 
-```TypeScript
-2020
+```ts
+2020;
 ```
 
 看看下面的例子：
 
-```TypeScript
+```ts
 let box;
 box = "hello";
 box = 100;
@@ -41,15 +41,15 @@ box = 100;
 
 你可以在运行的时候使用 `typeof` 操作符来找出 `box` 变量的类型
 
-```TypeScript
+```ts
 let box;
-console.log(typeof(box)); // undefined
+console.log(typeof box); // undefined
 
 box = "Hello";
-console.log(typeof(box)); // string
+console.log(typeof box); // string
 
 box = 100;
-console.log(typeof(box)); // number
+console.log(typeof box); // number
 ```
 
 在这个例子中，第一条语句定义了一个变量但是没有进行赋值，所以它的类型是 `undefined`
@@ -68,19 +68,19 @@ console.log(typeof(box)); // number
 
 假设你有一个方法，它会根据 id 返回一个 `product` 对象
 
-```TypeScript
-function getProduct(id){
+```ts
+function getProduct(id) {
   return {
     id: id,
     name: `Awesome Gadget ${id}`,
-    price: 99.5
-  }
+    price: 99.5,
+  };
 }
 ```
 
 下面的例子调用 `getProduct()` 函数检索 id 等于 1 的产品，并显示它的数据：
 
-```TypeScript
+```ts
 const product = getProduct(1);
 console.log(`The product ${product.Name} costs $${product.price}`);
 ```
@@ -101,15 +101,15 @@ The product undefined costs $99.5
 
 下面的例子定义了一个新的函数，它会在控制台中输出产品的信息：
 
-```TypeScript
-const showProduct = (name, price)  => {
+```ts
+const showProduct = (name, price) => {
   console.log(`The product ${name} costs ${price}$.`);
 };
 ```
 
 下面的例子调用 `getProduct()` 和 `showProduct()` 函数：
 
-```TypeScript
+```ts
 const product = getProduct(1);
 showProduct(product.price, product.name);
 ```
@@ -130,29 +130,29 @@ The product 99.5 costs $Awesome Gadget 1
 
 首先，我们使用 [接口](/6-interfaces/1-interface/) 来定义 `product` 对象的 "形状"，注意你会在接下来的教程中 [学习关于接口的知识]()
 
-```TypeScript
-interface Product{
-    id: number,
-    name: string,
-    price: number
-};
+```ts
+interface Product {
+  id: number;
+  name: string;
+  price: number;
+}
 ```
 
 然后，显式地使用 `Product` 类型作为 `getProduct()` 函数的返回类型：
 
-```TypeScript
-function getProduct(id) : Product{
+```ts
+function getProduct(id): Product {
   return {
     id: id,
     name: `Awesome Gadget ${id}`,
-    price: 99.5
-  }
+    price: 99.5,
+  };
 }
 ```
 
 当你引用一个不存在的属性的时候，代码编辑器会马上通知你:
 
-```TypeScript
+```ts
 const product = getProduct(1);
 console.log(`The product ${product.Name} costs $${product.price}`);
 ```
@@ -167,15 +167,15 @@ console.log(`The product ${product.Name} costs $${product.price}`);
 
 为了解决以错误的顺序传递参数的问题，你可以显式地给函数的参数定义类型：
 
-```TypeScript
-const showProduct = (name: string, price:number)  => {
+```ts
+const showProduct = (name: string, price: number) => {
   console.log(`The product ${name} costs ${price}$.`);
 };
 ```
 
 那么当你传递了错误类型的参数给 `showProduct()` 函数的时候，你会收到一个错误：
 
-```TypeScript
+```ts
 const product = getProduct(1);
 showProduct(product.price, product.name);
 ```

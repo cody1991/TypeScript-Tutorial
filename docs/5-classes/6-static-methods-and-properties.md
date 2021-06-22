@@ -12,14 +12,15 @@ title: 静态属性和方法
 
 要声明静态属性，可以使用 `static` 关键字，要访问静态属性，可以使用 `className.propertyName` 语法，比如：
 
-```TypeScript
+```ts
 class Employee {
   static headcount: number = 0;
 
   constructor(
     private firstName: string,
     private lastName: string,
-    private jobTitle: string) {
+    private jobTitle: string,
+  ) {
     Employee.headcount++;
   }
 }
@@ -29,9 +30,9 @@ class Employee {
 
 下面的例子创建了两个 `Employee` 对象，然后打印 `headcount` 属性的值，它和预期一样返回 `2`
 
-```TypeScript
-let john = new Employee('John', 'Doe', 'Front-end Developer');
-let jane = new Employee('Jane', 'Doe', 'Back-end Developer');
+```ts
+let john = new Employee("John", "Doe", "Front-end Developer");
+let jane = new Employee("Jane", "Doe", "Back-end Developer");
 
 console.log(Employee.headcount); // 2
 ```
@@ -40,14 +41,15 @@ console.log(Employee.headcount); // 2
 
 与静态属性一样，静态方法也是类所有实例之间共享的，要声明一个静态属性，在方法名之前添加 `static` 关键字，如下所示：
 
-```TypeScript
+```ts
 class Employee {
   private static headcount: number = 0;
 
   constructor(
     private firstName: string,
     private lastName: string,
-    private jobTitle: string) {
+    private jobTitle: string,
+  ) {
     Employee.headcount++;
   }
 
@@ -64,9 +66,9 @@ class Employee {
 
 你可以使用 `className.staticMethod()` 的语法来调用静态方法，如下所示：
 
-```TypeScript
-let john = new Employee('John', 'Doe', 'Front-end Developer');
-let jane = new Employee('Jane', 'Doe', 'Back-end Developer');
+```ts
+let john = new Employee("John", "Doe", "Front-end Developer");
+let jane = new Employee("Jane", "Doe", "Back-end Developer");
 
 console.log(Employee.getHeadcount); // 2
 ```

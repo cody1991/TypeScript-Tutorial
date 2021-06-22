@@ -10,7 +10,7 @@ title: getter 方法和 getter 方法
 
 下面展示了一个简单的 `Person` 类，只有三个属性：`age`, `firstName` 和 `lastName`
 
-```TypeScript
+```ts
 class Person {
   public age: number;
   public firstName: string;
@@ -20,21 +20,21 @@ class Person {
 
 要访问 `Person` 类的属性，你可以这样做：
 
-```TypeScript
+```ts
 let person = new Person();
 person.age = 26;
 ```
 
 假设你将一个来自用户输入的值赋值给 `age` 属性：
 
-```TypeScript
+```ts
 person.age = inputAge;
 ```
 
 `inputAge` 可以是任意数字，为了确保年龄的有效性，你可以在赋值前进行检查：
 
-```TypeScript
-if(inputAge > 0 && inputAge < 200) {
+```ts
+if (inputAge > 0 && inputAge < 200) {
   person.age = inputAge;
 }
 ```
@@ -48,7 +48,7 @@ if(inputAge > 0 && inputAge < 200) {
 
 `getter` 方法以 `get` 关键字开头，而 `setter` 方法以 `set` 关键字开头：
 
-```TypeScript
+```ts
 class Person {
   private _age: number;
   private _firstName: string;
@@ -67,9 +67,9 @@ class Person {
 
   public set age(theAge: number) {
     if (theAge <= 0 || theAge >= 200) {
-      throw new Error('The age is invalid');
+      throw new Error("The age is invalid");
     }
-      this._age = theAge;
+    this._age = theAge;
   }
 
   public getFullName(): string {
@@ -86,14 +86,14 @@ class Person {
 
 现在，你可以通过下面的方式访问 `age` 的 `setter` 方法：
 
-```TypeScript
+```ts
 let person = new Person();
 person.age = 10;
 ```
 
 注意，对 `setter` 方法的调用不像常规方法那样，它没有加上括号，当你调用 `person.age` 的时候，`age` 的 `setter` 方法被调用，如果你设置了一个无效的 `age` 值，`setter` 方法会抛出错误提示：
 
-```TypeScript
+```ts
 person.age = 0;
 ```
 
@@ -105,13 +105,13 @@ Error: The age is invalid
 
 当你访问 `person.age` 的时候，`age` 的 `getter` 方法会被调用：
 
-```TypeScript
+```ts
 console.log(person.age);
 ```
 
 下面的代码给 `firstName` 和 `lastName` 属性增加了 `getter` 方法和 `setter` 方法
 
-```TypeScript
+```ts
 class Person {
   private _age: number;
   private _firstName: string;
@@ -130,7 +130,7 @@ class Person {
 
   public set age(theAge: number) {
     if (theAge <= 0 || theAge >= 200) {
-      throw new Error('The age is invalid');
+      throw new Error("The age is invalid");
     }
     this._age = theAge;
   }
@@ -141,7 +141,7 @@ class Person {
 
   public set firstName(theFirstName: string) {
     if (!theFirstName) {
-      throw new Error('Invalid first name.');
+      throw new Error("Invalid first name.");
     }
     this._firstName = theFirstName;
   }
@@ -152,7 +152,7 @@ class Person {
 
   public set lastName(theLastName: string) {
     if (!theLastName) {
-      throw new Error('Invalid last name.');
+      throw new Error("Invalid last name.");
     }
     this._lastName = theLastName;
   }
@@ -169,7 +169,7 @@ class Person {
 
 下面的例子展示了如何创建 `fullName` 的 `getter` 和 `setter` 方法：
 
-```TypeScript
+```ts
 class Person {
   // ... other code
   public get fullName() {
@@ -177,9 +177,9 @@ class Person {
   }
 
   public set fullName(name: string) {
-    let parts = name.split(' ');
+    let parts = name.split(" ");
     if (parts.length != 2) {
-      throw new Error('Invalid name format: first last');
+      throw new Error("Invalid name format: first last");
     }
     this.firstName = parts[0];
     this.lastName = parts[1];
@@ -194,11 +194,11 @@ class Person {
 
 现在，你可以像普通的类属性一样访问 `fullName` 的 `setter` 和 `getter` 属性：
 
-```TypeScript
- let person = new Person();
- person.fullname = 'John Doe';
+```ts
+let person = new Person();
+person.fullname = "John Doe";
 
- console.log(person.fullName);
+console.log(person.fullName);
 ```
 
 # 总结

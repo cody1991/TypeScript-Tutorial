@@ -12,7 +12,7 @@ title: 抽象方法
 
 要声明一个抽象类，可以使用 `abstract` 关键字：
 
-```TypeScript
+```ts
 abstract class Employee {
   //...
 }
@@ -24,10 +24,10 @@ abstract class Employee {
 
 下面展示一个拥有 `getSalary()` 抽象方法 的 `Employee` 抽象类：
 
-```TypeScript
+```ts
 abstract class Employee {
   constructor(private firstName: string, private lastName: string) {}
-  abstract getSalary(): number
+  abstract getSalary(): number;
   get fullName(): string {
     return `${this.firstName} ${this.lastName}`;
   }
@@ -45,8 +45,8 @@ abstract class Employee {
 
 因为 `Employee` 是抽象类，你不能用它来创建一个新的对象，下面的语句会抛出错误：
 
-```TypeScript
-let employee = new Employee('John','Doe');
+```ts
+let employee = new Employee("John", "Doe");
 ```
 
 错误提示：
@@ -57,7 +57,7 @@ error TS2511: Cannot create an instance of an abstract class.
 
 下面的 `FullTimeEmployee` 类继承自 `Employee` 类
 
-```TypeScript
+```ts
 class FullTimeEmployee extends Employee {
   constructor(firstName: string, lastName: string, private salary: number) {
     super(firstName, lastName);
@@ -72,9 +72,14 @@ class FullTimeEmployee extends Employee {
 
 下面的 `Contractor` 类继承自 `Employee` 类：
 
-```TypeScript
+```ts
 class Contractor extends Employee {
-  constructor(firstName: string, lastName: string, private rate: number, private hours: number) {
+  constructor(
+    firstName: string,
+    lastName: string,
+    private rate: number,
+    private hours: number,
+  ) {
     super(firstName, lastName);
   }
   getSalary(): number {
@@ -87,9 +92,9 @@ class Contractor extends Employee {
 
 下面的例子首先创建了一个 `FullTimeEmployee` 对象和 `Contractor` 对象，然后在控制台上展示了报酬信息
 
-```TypeScript
-let john = new FullTimeEmployee('John', 'Doe', 12000);
-let jane = new Contractor('Jane', 'Doe', 100, 160);
+```ts
+let john = new FullTimeEmployee("John", "Doe", 12000);
+let jane = new Contractor("Jane", "Doe", 100, 160);
 
 console.log(john.compensationStatement());
 console.log(jane.compensationStatement());

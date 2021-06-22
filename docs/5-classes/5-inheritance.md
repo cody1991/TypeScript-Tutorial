@@ -18,7 +18,7 @@ JavaScript 使用 [原型继承](/5-classes/1-class/)的方式实现类，而非
 
 假设你有下面的 `Person` 类：
 
-```TypeScript
+```ts
 class Person {
   constructor(private firstName: string, private lastName: string) {
     this.firstName = firstName;
@@ -35,7 +35,7 @@ class Person {
 
 使用 `extends` 关键字来继承一个类，比如下面 `Employee` 类继承了 `Person` 类：
 
-```TypeScript
+```ts
 class Employee extends Person {
   //..
 }
@@ -49,13 +49,9 @@ class Employee extends Person {
 
 要在子类的构造函数调用父类的构造函数，可以使用 `super()` 语法：
 
-```TypeScript
+```ts
 class Employee extends Person {
-  constructor(
-    firstName: string,
-    lastName: string,
-    private jobTitle: string
-  ) {
+  constructor(firstName: string, lastName: string, private jobTitle: string) {
     // call the constructor of the Person class:
     super(firstName, lastName);
     this.jobTitle = jobTitle;
@@ -65,14 +61,14 @@ class Employee extends Person {
 
 下面创建了一个 `Employee` 类的实例：
 
-```TypeScript
-let employee = new Employee('John','Doe','Front-end Developer');
+```ts
+let employee = new Employee("John", "Doe", "Front-end Developer");
 ```
 
 因为 `Employee` 类继承了 `Person` 类的方法和属性，你可以在 `employee` 对象上调用 `getFullName()` 和 `describe()` 方法，如下所示：
 
-```TypeScript
-let employee = new Employee('John', 'Doe', 'Web Developer');
+```ts
+let employee = new Employee("John", "Doe", "Web Developer");
 
 console.log(employee.getFullName());
 console.log(employee.describe());
@@ -91,12 +87,9 @@ This is John Doe.
 
 如果你想要 `Employee` 类有自己版本的 `describe()` 方法，你可以在 `Employee` 类中定义它，如下所示：
 
-```TypeScript
+```ts
 class Employee extends Person {
-  constructor(
-    firstName: string,
-    lastName: string,
-    private jobTitle: string) {
+  constructor(firstName: string, lastName: string, private jobTitle: string) {
     super(firstName, lastName);
     this.jobTitle = jobTitle;
   }
@@ -111,8 +104,8 @@ class Employee extends Person {
 
 如果你在 `employee` 对象上调用 `describe()` 方法，`Employee` 类的 `describe()` 方法会被调用
 
-```TypeScript
-let employee = new Employee('John', 'Doe', 'Web Developer');
+```ts
+let employee = new Employee("John", "Doe", "Web Developer");
 console.log(employee.describe());
 ```
 

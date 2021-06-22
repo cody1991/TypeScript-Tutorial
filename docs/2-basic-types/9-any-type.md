@@ -12,7 +12,7 @@ title: any 类型
 
 在这种情况下，你希望不使用类型检查，允许它在编译时通过检查，你可以使用 `any` 类型， `any` 类型允许你给变量赋任何类型的值
 
-```TypeScript
+```ts
 // json may come from a third-party API
 const json = `{"latitude": 10.11, "longitude":12.12}`;
 
@@ -31,14 +31,14 @@ console.log(currentLocation);
 
 然后，当你访问呢 `currentLocation` 变量的属性的时候，TypeScript 不会做任何的类型检查
 
-```TypeScript
+```ts
 console.log(currentLocation.x);
 ```
 
 输出：
 
-```TypeScript
-undefined
+```ts
+undefined;
 ```
 
 上面的例子中，TypeScript 编译器不会有编译时报错，也不会发出任何的错误提示
@@ -49,7 +49,7 @@ TypeScript 的 `any` 类型为你提供了一个可以与当前 JavaScript 代�
 
 如果你声明一个变量的时候没有指定类型，TypeScript 假定你使用的是 `any` 类型，这个特性叫做 [类型推断](/2-basic-types/15-type-inference/)。基本上 TypeScript 都会进行变量类型的推断，比如：
 
-```TypeScript
+```ts
 let result;
 ```
 
@@ -65,7 +65,7 @@ let result;
 
 然后，即使某个方法确实存在，你不能在它上面调用这个方法，比如：
 
-```TypeScript
+```ts
 let result: any;
 result = 10.123;
 console.log(result.toFixed());
@@ -76,7 +76,7 @@ result.willExist(); //
 
 然后，你如果把 `result` 变量的类型改为 `object` 的话，TypeScript 编译器会发出一个错误提示：
 
-```TypeScript
+```ts
 let result: object;
 result = 10.123;
 result.toFixed();

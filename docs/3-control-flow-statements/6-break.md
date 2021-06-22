@@ -14,16 +14,15 @@ break 语句允许你终止一个循环，把程序控制流传递给循环后�
 
 下面的例子展示了在 `for` 循环里面如何使用 `break` 语句
 
-```TypeScript
+```ts
 let products = [
-  { name: 'phone', price: 700 },
-  { name: 'tablet', price: 900 },
-  { name: 'laptop', price: 1200 }
+  { name: "phone", price: 700 },
+  { name: "tablet", price: 900 },
+  { name: "laptop", price: 1200 },
 ];
 
 for (var i = 0; i < products.length; i++) {
-  if (products[i].price == 900)
-    break;
+  if (products[i].price == 900) break;
 }
 
 // show the products
@@ -46,24 +45,24 @@ console.log(products[i]);
 
 下面的例子返回指定产品的折扣，它使用 `break` 语句中断 [switch](/3-control-flow-statements/2-switch-case/) 语句
 
-```TypeScript
+```ts
 let products = [
-  { name: 'phone', price: 700 },
-  { name: 'tablet', price: 900 },
-  { name: 'laptop', price: 1200 }
+  { name: "phone", price: 700 },
+  { name: "tablet", price: 900 },
+  { name: "laptop", price: 1200 },
 ];
 
 let discount = 0;
 let product = products[1];
 
 switch (product.name) {
-  case 'phone':
+  case "phone":
     discount = 5;
     break;
-  case 'tablet':
+  case "tablet":
     discount = 10;
     break;
-  case 'laptop':
+  case "laptop":
     discount = 15;
     break;
 }

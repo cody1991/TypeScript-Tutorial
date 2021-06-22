@@ -10,7 +10,7 @@ title: switch case
 
 下面展示了 `switch case` 语句的语法：
 
-```TypeScript
+```ts
 switch (expression) {
   case value1:
     // statement 1
@@ -50,18 +50,18 @@ switch (expression) {
 
 下面的例子展示了一个简单的 `switch case` 例子，它会基于 `targetId` 来展示信息
 
-```TypeScript
-let targetId = 'btnDelete';
+```ts
+let targetId = "btnDelete";
 
 switch (targetId) {
-  case 'btnUpdate':
-    console.log('Update');
+  case "btnUpdate":
+    console.log("Update");
     break;
-  case 'btnDelete':
-    console.log('Delete');
+  case "btnDelete":
+    console.log("Delete");
     break;
-  case 'btnNew':
-    console.log('New');
+  case "btnNew":
+    console.log("New");
     break;
 }
 ```
@@ -80,10 +80,10 @@ Delete
 
 如果你希望一段代码被多个 `case` 共享，你可以对它们进行分组，比如：
 
-```TypeScript
+```ts
 // change the month and year
 let month = 2,
-    year = 2020;
+  year = 2020;
 
 let day = 0;
 switch (month) {
@@ -104,15 +104,11 @@ switch (month) {
     break;
   case 2:
     // leap year
-    if (((year % 4 == 0) &&
-        !(year % 100 == 0))
-        || (year % 400 == 0))
-        day = 29;
-    else
-        day = 28;
+    if ((year % 4 == 0 && !(year % 100 == 0)) || year % 400 == 0) day = 29;
+    else day = 28;
     break;
   default:
-    throw Error('Invalid month');
+    throw Error("Invalid month");
 }
 
 console.log(`The month ${month} in ${year} has ${day} days`);

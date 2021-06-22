@@ -12,9 +12,9 @@ title: void 类型
 
 实际上你可以使用 `void` 类型 作为不返回任何值的函数的返回类型，比如：
 
-```TypeScript
+```ts
 function log(message): void {
-    console.log(messsage);
+  console.log(messsage);
 }
 ```
 
@@ -25,7 +25,7 @@ function log(message): void {
 
 注意你如果使用一个类型为 `void` 的变量，你只能给它赋值为 `undefined`，这种情况下 `void` 类型是没有任何用处的，例如：
 
-```TypeScript
+```ts
 let useless: void = undefined;
 useless = 1; // error
 ```
@@ -34,7 +34,7 @@ useless = 1; // error
 
 If the `--strictNullChecks` flag is not specified, you can assign the `useless` to `null`.
 
-```TypeScript
+```ts
 useless = null; // OK if --strictNullChecks is not specified
 ```
 

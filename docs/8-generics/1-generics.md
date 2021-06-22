@@ -16,7 +16,7 @@ TypeScript 中的泛型允许你编写可重用的泛型函数，泛型 [类](/8
 
 下面的 `getRandomNumberElement()` 函数接受一个数字数组作为参数，并从数组中返回一个随机元素：
 
-```TypeScript
+```ts
 function getRandomNumberElement(items: number[]): number {
   let randomIndex = Math.floor(Math.random() * items.length);
   return items[randomIndex];
@@ -32,14 +32,14 @@ function getRandomNumberElement(items: number[]): number {
 
 下面展示了如何使用 `getRandomNumberElement()` 函数
 
-```TypeScript
+```ts
 let numbers = [1, 5, 7, 4, 2, 9];
 console.log(getRandomNumberElement(numbers));
 ```
 
 假设你需要从一个 [字符串](/2-basic-types/3-string/) 数组中获得随机元素，你可能想到开发一个新的函数：
 
-```TypeScript
+```ts
 function getRandomStringElement(items: string[]): string {
   let randomIndex = Math.floor(Math.random() * items.length);
   return items[randomIndex];
@@ -50,8 +50,8 @@ function getRandomStringElement(items: string[]): string {
 
 下面展示了如何使用 `getRandomStringElement()` 函数
 
-```TypeScript
-let colors = ['red', 'green', 'blue'];
+```ts
+let colors = ["red", "green", "blue"];
 console.log(getRandomStringElement(colors));
 ```
 
@@ -61,7 +61,7 @@ console.log(getRandomStringElement(colors));
 
 这个问题的一个解决方案是把数组参数的类型设置为 `any[]`，通过这么处理，你只需要编写一个用于任何类型的数组的函数
 
-```TypeScript
+```ts
 function getRandomAnyElement(items: any[]): any {
   let randomIndex = Math.floor(Math.random() * items.length);
   return items[randomIndex];
@@ -70,9 +70,9 @@ function getRandomAnyElement(items: any[]): any {
 
 `getRandomAnyElement()` 函数适用于 `any` 类型的数组，包括数字，字符串，对象等等
 
-```TypeScript
+```ts
 let numbers = [1, 5, 7, 4, 2, 9];
-let colors = ['red', 'green', 'blue'];
+let colors = ["red", "green", "blue"];
 
 console.log(getRandomAnyElement(numbers));
 console.log(getRandomAnyElement(colors));
@@ -86,7 +86,7 @@ console.log(getRandomAnyElement(colors));
 
 下面是一个泛型函数，它从类型为 `T` 的数组中返回随机元素：
 
-```TypeScript
+```ts
 function getRandomElement<T>(items: T[]): T {
   let randomIndex = Math.floor(Math.random() * items.length);
   return items[randomIndex];
@@ -103,7 +103,7 @@ function getRandomElement<T>(items: T[]): T {
 
 下面演示如何使用数字数组调用 `getRandomElement()` 函数：
 
-```TypeScript
+```ts
 let numbers = [1, 5, 7, 4, 2, 9];
 let randomEle = getRandomElement<number>(numbers);
 console.log(randomEle);
@@ -113,7 +113,7 @@ console.log(randomEle);
 
 实践中，你可以使用 [类型推断](/2-basic-types/15-type-inference/) 来推断类型。这意味着你可以让 TypeScript 编译器根据你传递的参数自动设置 `T` 的值，就像这样：
 
-```TypeScript
+```ts
 let numbers = [1, 5, 7, 4, 2, 9];
 let randomEle = getRandomElement(numbers);
 console.log(randomEle);
@@ -123,21 +123,21 @@ console.log(randomEle);
 
 现在 `getRandomElement()` 函数也是类型安全的了，比如，如果你把返回值赋值给一个字符串变量，将会得到一个错误提示：
 
-```TypeScript
+```ts
 let numbers = [1, 5, 7, 4, 2, 9];
 let returnElem: string;
-returnElem = getRandomElement(numbers);  // compiler error
+returnElem = getRandomElement(numbers); // compiler error
 ```
 
 # 具有多个类型变量的泛型函数
 
 下面演示如何使用两个类型变量 `U` 和 `V` 开发泛型函数：
 
-```TypeScript
+```ts
 function merge<U, V>(obj1: U, obj2: V) {
   return {
     ...obj1,
-    ...obj2
+    ...obj2,
   };
 }
 ```
@@ -148,18 +148,15 @@ function merge<U, V>(obj1: U, obj2: V) {
 
 下面演示了如何使用 `merge()` 函数来合并两个对象：
 
-```TypeScript
-let result = merge(
-  { name: 'John' },
-  { jobTitle: 'Frontend Developer' }
-);
+```ts
+let result = merge({ name: "John" }, { jobTitle: "Frontend Developer" });
 
 console.log(result);
 ```
 
 输出：
 
-```TypeScript
+```ts
 { name: 'John', jobTitle: 'Frontend Developer' }
 ```
 

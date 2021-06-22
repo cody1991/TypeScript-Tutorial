@@ -21,9 +21,9 @@ TypeScript 模块可以同时包含声明和代码，模块在它自己的作用
 
 下面创建了一个名为 `Validator.ts` 的新模块，声明了一个名为 `Validator` 的接口：
 
-```TypeScript
+```ts
 export interface Validator {
-  isValid(s: string): boolean
+  isValid(s: string): boolean;
 }
 ```
 
@@ -35,9 +35,9 @@ export interface Validator {
 
 从模块中到处声明的另外一种方法是使用 `export` 语句，比如：
 
-```TypeScript
+```ts
 interface Validator {
-  isValid(s: string): boolean
+  isValid(s: string): boolean;
 }
 
 export { Validator };
@@ -45,9 +45,9 @@ export { Validator };
 
 TypeScript 也允许模块使用者重命名声明，就像这样：
 
-```TypeScript
+```ts
 interface Validator {
-  isValid(s: string): boolean
+  isValid(s: string): boolean;
 }
 
 export { Validator as StringValidator };
@@ -59,8 +59,8 @@ export { Validator as StringValidator };
 
 要使用一个模块，使用 `import` 语句，下面创建了一个使用 `Validator.ts` 模块的新模块 `EmailValidator.ts`
 
-```TypeScript
-import { Validator } from './Validator';
+```ts
+import { Validator } from "./Validator";
 
 class EmailValidator implements Validator {
   isValid(s: string): boolean {
@@ -74,14 +74,14 @@ export { EmailValidator };
 
 当你倒入一个模块的时候，你可以像这样重命名它：
 
-```TypeScript
-import { Validator as StringValidator } from './Validator';
+```ts
+import { Validator as StringValidator } from "./Validator";
 ```
 
 在 `EmailValidator` 模块中，你是用 `Validator` 接口作为 `StringValidator` 接口
 
-```TypeScript
-import { Validator as StringValidator } from './Validator';
+```ts
+import { Validator as StringValidator } from "./Validator";
 
 class EmailValidator implements StringValidator {
   isValid(s: string): boolean {
@@ -95,10 +95,10 @@ export { EmailValidator };
 
 下面演示如何在 `App.ts` 文件中使用 `EmailValidator` 模块：
 
-```TypeScript
-import { EmailValidator } from './EmailValidator';
+```ts
+import { EmailValidator } from "./EmailValidator";
 
-let email = 'john.doe@typescripttutorial.net';
+let email = "john.doe@typescripttutorial.net";
 let validator = new EmailValidator();
 let result = validator.isValid(email);
 
@@ -115,27 +115,27 @@ true
 
 下面在 `Types.ts` 模块中声明了一个类型：
 
-```TypeScript
+```ts
 export type alphanumeric = string | number;
 ```
 
 要从 `Types.ts` 模块中导入 `alphanumeric` 类型，你可以使用 `import type` 语句：
 
-```TypeScript
-import type { alphanumeric } from './Types';
+```ts
+import type { alphanumeric } from "./Types";
 ```
 
 注意，TypeScript 从 3.8 版本开始支持 `import type` 语句，在 TypeScript 3.8 版本之前你需要使用 `import` 语句来代替：
 
-```TypeScript
-import { alphanumeric } from './Types';
+```ts
+import { alphanumeric } from "./Types";
 ```
 
 ## 从模块中导入所有内容
 
 要从模块中导入所有内容，可以使用下面的语法：
 
-```TypeScript
+```ts
 import * from 'module_name';
 ```
 
@@ -143,8 +143,8 @@ import * from 'module_name';
 
 下面创建了一个使用 `Validator.ts` 模块，名为 `ZipCodeValidator.ts` 的新模块：
 
-```TypeScript
-import { Validator } from './Validator';
+```ts
+import { Validator } from "./Validator";
 
 class ZipCodeValidator implements Validator {
   isValid(s: string): boolean {
@@ -158,13 +158,13 @@ export { ZipCodeValidator };
 
 你可以将 `EmailValidator` 和 `ZipCodeValidator` 模块打包到一个新的模块中，方法是使用以下语法组合导出它们所有的内容：
 
-```TypeScript
-export * from 'module_name';
+```ts
+export * from "module_name";
 ```
 
 下面的示例演示了如何在 `FormValidator.ts` 模块中包装 `EmailValidator.ts` 和 `ZipCodeValidator.ts` 模块
 
-```TypeScript
+```ts
 export * from "./EmailValidator";
 export * from "./ZipCodeValidator";
 ```
@@ -175,8 +175,8 @@ TypeScript 允许每个模块都有一个默认导出，要将导出标记为 `d
 
 下面展示了如何将 `ZipCodeValidator` 作为默认导出：
 
-```TypeScript
-import { Validator } from './Validator';
+```ts
+import { Validator } from "./Validator";
 
 export default class ZipCodeValidator implements Validator {
   isValid(s: string): boolean {
@@ -188,17 +188,17 @@ export default class ZipCodeValidator implements Validator {
 
 要导入一个默认导出，你可以使用一个不同的 `import` 语法，如下所示：
 
-```TypeScript
-import default_export from 'module_name';
+```ts
+import default_export from "module_name";
 ```
 
 下面展示了如何在 `App.ts` 文件中使用 `ZipCodeValidator` 的默认导出：
 
-```TypeScript
-import ZipCodeValidator from './ZipCodeValidator';
+```ts
+import ZipCodeValidator from "./ZipCodeValidator";
 
 let validator = new ZipCodeValidator();
-let result = validator.isValid('95134');
+let result = validator.isValid("95134");
 
 console.log(result);
 ```

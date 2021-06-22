@@ -10,14 +10,18 @@ title: 类型断言
 
 类型断言让 TypeScript 编译器将某个值视为指定的类型，它使用 `as` 关键字来做到这点：
 
-```TypeScript
-expression as targetType
+```ts
+expression as targetType;
 ```
 
 类型断言也被称为类型收缩，它允许你从 [联合类型](/2-basic-types/12-union-type/) 收缩类型范围。让我们看下下面简单的函数：
 
-```TypeScript
-function getNetPrice(price: number, discount: number, format: boolean): number | string {
+```ts
+function getNetPrice(
+  price: number,
+  discount: number,
+  format: boolean,
+): number | string {
   let netPrice = price * (1 - discount);
   return format ? `$${netPrice}` : netPrice;
 }
@@ -29,7 +33,7 @@ function getNetPrice(price: number, discount: number, format: boolean): number |
 
 下面使用 `as` 关键字告诉编译器，赋值给 `netPrice` 的值是一个字符串：
 
-```TypeScript
+```ts
 let netPrice = getNetPrice(100, 0.05, true) as string;
 console.log(netPrice);
 ```
@@ -42,7 +46,7 @@ $95
 
 同样的，下面的例子使用 `as` 关键字告诉编译器，赋值给 `netPrice` 的值是一个数字：
 
-```TypeScript
+```ts
 let netPrice = getNetPrice(100, 0.05, false) as number;
 console.log(netPrice);
 ```
@@ -59,13 +63,13 @@ console.log(netPrice);
 
 你也可以使用尖括号语法 `<>` 来断言一个类型，比如：
 
-```TypeScript
-<targetType> value
+```ts
+<targetType>value;
 ```
 
 例如：
 
-```TypeScript
+```ts
 let netPrice = <number>getNetPrice(100, 0.05, false);
 ```
 

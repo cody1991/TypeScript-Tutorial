@@ -12,7 +12,7 @@ TypeScript 中的函数是可读的，可维护的和可复用的代码块
 
 和 JavaScript 一样，你可以使用关键字 `function` 来声明 TypeScript 中的函数
 
-```TypeScript
+```ts
 function name(parameter: type, parameter: type, ...): returnType {
   // do something
 }
@@ -22,7 +22,7 @@ function name(parameter: type, parameter: type, ...): returnType {
 
 让我们看下 `add()` 函数：
 
-```TypeScript
+```ts
 function add(a: number, b: number): number {
   return a + b;
 }
@@ -36,8 +36,8 @@ function add(a: number, b: number): number {
 
 下面的例子会导致错误，因为它向 `add()` 函数传递了两个字符串而不是两个数字参数
 
-```TypeScript
-let sum = add('10', '20');
+```ts
+let sum = add("10", "20");
 ```
 
 错误提示：
@@ -54,7 +54,7 @@ error TS2345: Argument of type '"10"' is not assignable to parameter of type 'nu
 
 如果函数不返回值，你可以使用 `void` 类型作为返回类型，`void` 关键字表示该函数不返回任何值，例如：
 
-```TypeScript
+```ts
 function echo(message: string): void {
   console.log(message.toUpperCase());
 }
@@ -64,9 +64,9 @@ function echo(message: string): void {
 
 当你没有注释返回类型时，TypeScript 会尝试推断适当的类型，比如：
 
-```TypeScript
+```ts
 function add(a: number, b: number) {
-    return a + b;
+  return a + b;
 }
 ```
 

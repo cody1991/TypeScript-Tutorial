@@ -10,10 +10,10 @@ title: 扩展接口
 
 假设你有一个名为 `Mailable` 的 [接口](/6-interfaces/1-interface/)，它包含两个方法：`send()` 和 `queue()`
 
-```TypeScript
+```ts
 interface Mailable {
-  send(email: string): boolean
-  queue(email: string): boolean
+  send(email: string): boolean;
+  queue(email: string): boolean;
 }
 ```
 
@@ -21,7 +21,7 @@ interface Mailable {
 
 现在，你想要在 `Mailable` 接口上添加一个新的方法， 表示它会延时发送邮件，如下所示：
 
-```TypeScript
+```ts
 later(email: string, after: number): void
 ```
 
@@ -29,21 +29,21 @@ later(email: string, after: number): void
 
 为了避免这个问题，你可以创建一个新的接口来扩展 `Mailable` 接口：
 
-```TypeScript
+```ts
 interface FutureMailable extends Mailable {
-  later(email: string, after: number): boolean
+  later(email: string, after: number): boolean;
 }
 ```
 
 你可以使用 `extends` 关键字按照下面的语法来扩展一个接口：
 
-```TypeScript
+```ts
 interface A {
-  a(): void
+  a(): void;
 }
 
 interface B extends A {
-  b(): void
+  b(): void;
 }
 ```
 
@@ -53,7 +53,7 @@ interface B extends A {
 
 下面的例子展示了如何实现 `FutureMailable` 接口：
 
-```TypeScript
+```ts
 class Mail implements FutureMailable {
   later(email: string, after: number): boolean {
     console.log(`Send email to ${email} in ${after} ms.`);
@@ -74,13 +74,13 @@ class Mail implements FutureMailable {
 
 一个接口可以扩展多个接口，创建所有接口的组合，比如：
 
-```TypeScript
+```ts
 interface C {
-  c(): void
+  c(): void;
 }
 
 interface D extends B, C {
-  d(): void
+  d(): void;
 }
 ```
 
@@ -94,26 +94,26 @@ TypeScript 允许接口扩展类，在这种情况下，接口会继承类的属
 
 通过这么做，可以把接口的使用范围限制为接口所继承的类或该类的子类，如果试图从一个不是接口继承的类或该类的子类来实现接口，则会得到一个错误：
 
-```TypeScript
+```ts
 class Control {
   private state: boolean;
 }
 
 interface StatefulControl extends Control {
-  enable(): void
+  enable(): void;
 }
 
 class Button extends Control implements StatefulControl {
-  enable() { }
+  enable() {}
 }
 class TextBox extends Control implements StatefulControl {
-  enable() { }
+  enable() {}
 }
-class Label extends Control { }
+class Label extends Control {}
 
 // Error: cannot implement
 class Chart implements StatefulControl {
-  enable() { }
+  enable() {}
 }
 ```
 

@@ -16,7 +16,7 @@ title: 函数重载
 
 让我们看几个简单的例子：
 
-```TypeScript
+```ts
 function addNumbers(a: number, b: number): number {
   return a + b;
 }
@@ -33,13 +33,13 @@ function addStrings(a: string, b: string): string {
 
 可以使用 [联合类型](/2-basic-types/12-union-type/) 来定义一个函数参数和返回值的类型范围：
 
-```TypeScript
+```ts
 function add(a: number | string, b: number | string): number | string {
-  if (typeof a === 'number' && typeof b === 'number') {
+  if (typeof a === "number" && typeof b === "number") {
     return a + b;
   }
 
-  if (typeof a === 'string' && typeof b === 'string') {
+  if (typeof a === "string" && typeof b === "string") {
     return a + b;
   }
 }
@@ -51,7 +51,7 @@ function add(a: number | string, b: number | string): number | string {
 
 为了更好地描述函数使用的类型之间的关系，TypeScript 支持函数重载，比如：
 
-```TypeScript
+```ts
 function add(a: number, b: number): number;
 function add(a: string, b: string): string;
 function add(a: any, b: any): any {
@@ -71,7 +71,7 @@ function add(a: any, b: any): any {
 
 当你使用函数重载的时候，函数所需的参数数量必须相同，如果又一个函数重载比另外一个重载的参数多的话，你必须把其他参数设置成可选的，比如：
 
-```TypeScript
+```ts
 function sum(a: number, b: number): number;
 function sum(a: number, b: number, c: number): number;
 function sum(a: number, b: number, c?: number): number {
@@ -86,7 +86,7 @@ function sum(a: number, b: number, c?: number): number {
 
 当一个函数是一个类的属性的时候，它被称为方法，TypeScript 也支持方法重载，比如：
 
-```TypeScript
+```ts
 class Counter {
   private current: number = 0;
   count(): number;
@@ -107,7 +107,7 @@ class Counter {
 
 `count()` 函数可以返回一个数字或者一个数组，取决于你传递给它的参数的数量
 
-```TypeScript
+```ts
 let counter = new Counter();
 
 console.log(counter.count()); // return a number

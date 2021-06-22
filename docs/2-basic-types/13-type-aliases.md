@@ -10,7 +10,7 @@ title: 类型别名
 
 类型别名允许你为现有的类型创建新的名称，类型别名的语法如下：
 
-```TypeScript
+```ts
 type alias = existingType;
 ```
 
@@ -18,18 +18,18 @@ type alias = existingType;
 
 下面的例子使用类型别名，给 `string` 类型创建了新的名称 `chars`
 
-```TypeScript
+```ts
 type chars = string;
 let messsage: chars; // same as string type
 ```
 
 给 [联合类型](/2-basic-types/13-type-aliases/) 创建类型别名是非常有用的，比如：
 
-```TypeScript
+```ts
 type alphanumeric = string | number;
 let input: alphanumeric;
 input = 100; // valid
-input = 'Hi'; // valid
+input = "Hi"; // valid
 input = false; // Compiler error
 ```
 

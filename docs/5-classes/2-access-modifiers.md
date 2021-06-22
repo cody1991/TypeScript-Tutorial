@@ -20,7 +20,7 @@ title: 访问修饰符
 
 下面的例子展示如何给 `Person` 类中的 `snn`, `firstName` 和 `lastName` 属性增加 `private` 修饰符：
 
-```TypeScript
+```ts
 class Person {
   private ssn: string;
   private firstName: string;
@@ -31,7 +31,7 @@ class Person {
 
 一旦 `private` 添加完毕，你可以在构造函数或者 `Person` 类的方法中访问 `ssn` 属性，比如：
 
-```TypeScript
+```ts
 class Person {
   private ssn: string;
   private firstName: string;
@@ -51,8 +51,8 @@ class Person {
 
 下面尝试在 `Person` 类外部访问 `ssn` 属性：
 
-```TypeScript
-let person = new Person('153-07-3130', 'John', 'Doe');
+```ts
+let person = new Person("153-07-3130", "John", "Doe");
 console.log(person.ssn); // compile error
 ```
 
@@ -64,7 +64,7 @@ The public modifier allows class properties and methods to be accessible from al
 
 比如，`Person` 类中的 `getFullName()` 方法有 `public` 修饰符，下面显示地为 `getFullName()` 方法添加 `public` 修饰符：
 
-```TypeScript
+```ts
 class Person {
   // ...
   public getFullName(): string {
@@ -86,7 +86,7 @@ class Person {
 
 通过使用 `protected` 关键字给方法和属性添加 `protected` 修饰符，如下所示：
 
-```TypeScript
+```ts
 class Person {
   protected ssn: string;
   // other code
@@ -99,9 +99,13 @@ class Person {
 
 为了让代码更加简单，TypeScript 允许你在构造函数中同时声明属性和初始化属性，如下所示：
 
-```TypeScript
+```ts
 class Person {
-  constructor(protected ssn: string, private firstName: string, private lastName: string) {
+  constructor(
+    protected ssn: string,
+    private firstName: string,
+    private lastName: string,
+  ) {
     this.ssn = ssn;
     this.firstName = firstName;
     this.lastName = lastName;

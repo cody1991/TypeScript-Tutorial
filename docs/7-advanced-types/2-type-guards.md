@@ -12,19 +12,21 @@ title: 类型保护
 
 让我们看看下面的例子：
 
-```TypeScript
+```ts
 type alphanumeric = string | number;
 
 function add(a: alphanumeric, b: alphanumeric) {
-  if (typeof a === 'number' && typeof b === 'number') {
+  if (typeof a === "number" && typeof b === "number") {
     return a + b;
   }
 
-  if (typeof a === 'string' && typeof b === 'string') {
+  if (typeof a === "string" && typeof b === "string") {
     return a.concat(b);
   }
 
-  throw new Error('Invalid arguments. Both arguments must be either numbers or strings.');
+  throw new Error(
+    "Invalid arguments. Both arguments must be either numbers or strings.",
+  );
 }
 ```
 
@@ -38,16 +40,16 @@ function add(a: alphanumeric, b: alphanumeric) {
 
 在这个例子中，TypeScript 直到如何在条件代码块中使用 `typeof` 操作符，在下面的 [if](/3-control-flow-statements/1-if-else/) 块中，TypeScript 认为 `a` 和 `b` 都是数字类型
 
-```TypeScript
-if (typeof a === 'number' && typeof b === 'number') {
+```ts
+if (typeof a === "number" && typeof b === "number") {
   return a + b;
 }
 ```
 
 类似地，在下面的 `if` 代码块中，TypeScript 将 `a` 和 `b` 作为字符串处理，因此，你可以把它们拼接成一个字符串：
 
-```TypeScript
-if (typeof a === 'string' && typeof b === 'string') {
+```ts
+if (typeof a === "string" && typeof b === "string") {
   return a.concat(b);
 }
 ```
@@ -56,7 +58,7 @@ if (typeof a === 'string' && typeof b === 'string') {
 
 与 `typeof` 操作符类型，TypeScript 也知道 `instanceof` 操作符的使用，例如：
 
-```TypeScript
+```ts
 class Customer {
   isCreditAllowed(): boolean {
     // ...
@@ -76,11 +78,15 @@ type BusinessPartner = Customer | Supplier;
 function signContract(partner: BusinessPartner): string {
   let message: string;
   if (partner instanceof Customer) {
-    message = partner.isCreditAllowed() ? 'Sign a new contract with the customer' : 'Credit issue';
+    message = partner.isCreditAllowed()
+      ? "Sign a new contract with the customer"
+      : "Credit issue";
   }
 
   if (partner instanceof Supplier) {
-    message = partner.isInShortList() ? 'Sign a new contract the supplier' : 'Need to evaluate further';
+    message = partner.isInShortList()
+      ? "Sign a new contract the supplier"
+      : "Need to evaluate further";
   }
 
   return message;
@@ -96,30 +102,38 @@ function signContract(partner: BusinessPartner): string {
 
 在下面的 `if` 代码块中，TypeScript 通过 `instanceof` 操作符知道 `partner` 是 `Customer` 类型的一个实例：
 
-```TypeScript
+```ts
 if (partner instanceof Customer) {
-  message = partner.isCreditAllowed() ? 'Sign a new contract with the customer' : 'Credit issue';
+  message = partner.isCreditAllowed()
+    ? "Sign a new contract with the customer"
+    : "Credit issue";
 }
 ```
 
 同样的方式，在下面的 `if` 代码块中，TypeScript 知道 `partner` 是 `Supplier` 类型的一个实例：
 
-```TypeScript
+```ts
 if (partner instanceof Supplier) {
-  message = partner.isInShortList() ? 'Sign a new contract with the supplier' : 'Need to evaluate further';
+  message = partner.isInShortList()
+    ? "Sign a new contract with the supplier"
+    : "Need to evaluate further";
 }
 ```
 
 当 `if` 代码块限定了一种类型，TypeScript 知道在 `else` 里面会是另外一种类型，例如：
 
-```TypeScript
+```ts
 function signContract(partner: BusinessPartner): string {
   let message: string;
   if (partner instanceof Customer) {
-    message = partner.isCreditAllowed() ? 'Sign a new contract with the customer' : 'Credit issue';
+    message = partner.isCreditAllowed()
+      ? "Sign a new contract with the customer"
+      : "Credit issue";
   } else {
     // must be Supplier
-    message = partner.isInShortList() ? 'Sign a new contract with the supplier' : 'Need to evaluate further';
+    message = partner.isInShortList()
+      ? "Sign a new contract with the supplier"
+      : "Need to evaluate further";
   }
   return message;
 }
@@ -129,14 +143,18 @@ function signContract(partner: BusinessPartner): string {
 
 `in` 操作符判断对象上是否存在某个属性来进行安全检查，你也可以将它用作类型保护，例如：
 
-```TypeScript
-function signContract(partner: BusinessPartner) : string {
+```ts
+function signContract(partner: BusinessPartner): string {
   let message: string;
-  if ('isCreditAllowed' in partner) {
-    message = partner.isCreditAllowed() ? 'Sign a new contract with the customer' : 'Credit issue';
+  if ("isCreditAllowed" in partner) {
+    message = partner.isCreditAllowed()
+      ? "Sign a new contract with the customer"
+      : "Credit issue";
   } else {
     // must be Supplier
-    message = partner.isInShortList() ? 'Sign a new contract the supplier ' : 'Need to evaluate further';
+    message = partner.isInShortList()
+      ? "Sign a new contract the supplier "
+      : "Need to evaluate further";
   }
   return message;
 }
@@ -148,7 +166,7 @@ function signContract(partner: BusinessPartner) : string {
 
 用户定义的类型保护函数是一个简单返回 `arg is aType` 判断的函数，比如：
 
-```TypeScript
+```ts
 function isCustomer(partner: any): partner is Customer {
   return partner instanceof Customer;
 }
@@ -156,13 +174,17 @@ function isCustomer(partner: any): partner is Customer {
 
 在这个例子中，`isCustomer()` 是一个用户定义的类型保护函数，现在你可以按照下面的例子来使用它：
 
-```TypeScript
+```ts
 function signContract(partner: BusinessPartner): string {
   let message: string;
   if (isCustomer(partner)) {
-    message = partner.isCreditAllowed() ? 'Sign a new contract with the customer' : 'Credit issue';
+    message = partner.isCreditAllowed()
+      ? "Sign a new contract with the customer"
+      : "Credit issue";
   } else {
-    message = partner.isInShortList() ? 'Sign a new contract with the supplier' : 'Need to evaluate further';
+    message = partner.isInShortList()
+      ? "Sign a new contract with the supplier"
+      : "Need to evaluate further";
   }
 
   return message;

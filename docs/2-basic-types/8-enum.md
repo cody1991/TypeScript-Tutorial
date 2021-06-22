@@ -17,7 +17,7 @@ title: 枚举类型
 
 下面展示定义枚举的语法：
 
-```TypeScript
+```ts
 enum name {constant1, constant2, ...};
 ```
 
@@ -27,47 +27,47 @@ enum name {constant1, constant2, ...};
 
 下面的例子创建了一个表示一年中月份的枚举
 
-```TypeScript
+```ts
 enum Month {
-    Jan,
-    Feb,
-    Mar,
-    Apr,
-    May,
-    Jun,
-    Jul,
-    Aug,
-    Sep,
-    Oct,
-    Nov,
-    Dec
-};
+  Jan,
+  Feb,
+  Mar,
+  Apr,
+  May,
+  Jun,
+  Jul,
+  Aug,
+  Sep,
+  Oct,
+  Nov,
+  Dec,
+}
 ```
 
 在这个例子中，枚举的名字为 `Month` ，它的常量值有 `Jan`, `Feb`, `Mar` 等等
 
 下面声明了一个函数，它使用 `Month` 枚举作为参数 `month` 的类型
 
-```TypeScript
+```ts
 function isItSummer(month: Month) {
-    let isSummer: boolean;
-    switch (month) {
-        case Month.Jun:
-        case Month.Jul:
-        case Month.Aug:
-            isSummer = true;
-            break;
-        default:
-            isSummer = false;
-            break;
-    }
-    return isSummer;
+  let isSummer: boolean;
+  switch (month) {
+    case Month.Jun:
+    case Month.Jul:
+    case Month.Aug:
+      isSummer = true;
+      break;
+    default:
+      isSummer = false;
+      break;
+  }
+  return isSummer;
 }
 ```
 
 你可以这样来调用它：
 
-```TypeScript
+```ts
 console.log(isItSummer(Month.Jun)); // true
 ```
 
@@ -79,7 +79,7 @@ console.log(isItSummer(Month.Jun)); // true
 
 但是，下面的例子将一个数字而不是枚举值传递给 `isItSummer()` 函数，它也能正常工作：
 
-```TypeScript
+```ts
 console.log(isItSummer(6)); // true
 ```
 
@@ -87,27 +87,27 @@ console.log(isItSummer(6)); // true
 
 让我们检查下 `Month` 枚举生成的 Javascript 代码：
 
-```TypeScript
+```ts
 var Month;
 (function (Month) {
-    Month[Month["Jan"] = 0] = "Jan";
-    Month[Month["Feb"] = 1] = "Feb";
-    Month[Month["Mar"] = 2] = "Mar";
-    Month[Month["Apr"] = 3] = "Apr";
-    Month[Month["May"] = 4] = "May";
-    Month[Month["Jun"] = 5] = "Jun";
-    Month[Month["Jul"] = 6] = "Jul";
-    Month[Month["Aug"] = 7] = "Aug";
-    Month[Month["Sep"] = 8] = "Sep";
-    Month[Month["Oct"] = 9] = "Oct";
-    Month[Month["Nov"] = 10] = "Nov";
-    Month[Month["Dec"] = 11] = "Dec";
+  Month[(Month["Jan"] = 0)] = "Jan";
+  Month[(Month["Feb"] = 1)] = "Feb";
+  Month[(Month["Mar"] = 2)] = "Mar";
+  Month[(Month["Apr"] = 3)] = "Apr";
+  Month[(Month["May"] = 4)] = "May";
+  Month[(Month["Jun"] = 5)] = "Jun";
+  Month[(Month["Jul"] = 6)] = "Jul";
+  Month[(Month["Aug"] = 7)] = "Aug";
+  Month[(Month["Sep"] = 8)] = "Sep";
+  Month[(Month["Oct"] = 9)] = "Oct";
+  Month[(Month["Nov"] = 10)] = "Nov";
+  Month[(Month["Dec"] = 11)] = "Dec";
 })(Month || (Month = {}));
 ```
 
 你可以在控制台输出 `Month` 变量：
 
-```TypeScript
+```ts
 {
   '0': 'Jan',
   '1': 'Feb',
@@ -148,21 +148,21 @@ TypeScript 根据枚举定义中成员的出现顺序定义枚举成员的数值
 
 可以像这样显式地为枚举成员指定数字：
 
-```TypeScript
+```ts
 enum Month {
-    Jan = 1,
-    Feb,
-    Mar,
-    Apr,
-    May,
-    Jun,
-    Jul,
-    Aug,
-    Sep,
-    Oct,
-    Nov,
-    Dec
-};
+  Jan = 1,
+  Feb,
+  Mar,
+  Apr,
+  May,
+  Jun,
+  Jul,
+  Aug,
+  Sep,
+  Oct,
+  Nov,
+  Dec,
+}
 ```
 
 在这个例子中，`Jan` 常量值取值为 `1` 而不是 `0`，`Feb` 取值为 `2`，`Mar` 取值为 `3` 等等
@@ -176,27 +176,27 @@ enum Month {
 
 例如，你可以使用枚举来表示审批状态：
 
-```TypeScript
+```ts
 enum ApprovalStatus {
-    draft,
-    submitted,
-    approved,
-    rejected
-};
+  draft,
+  submitted,
+  approved,
+  rejected,
+}
 ```
 
 然后，你可以像下面这样来使用 `ApprovalStatus` 枚举：
 
-```TypeScript
-const request =  {
-    id: 1,
-    status: ApprovalStatus.approved,
-    description: 'Please approve this request'
+```ts
+const request = {
+  id: 1,
+  status: ApprovalStatus.approved,
+  description: "Please approve this request",
 };
 
-if(request.status === ApprovalStatus.approved) {
-    // 发送邮件
-    console.log('Send email to the Applicant...');
+if (request.status === ApprovalStatus.approved) {
+  // 发送邮件
+  console.log("Send email to the Applicant...");
 }
 ```
 

@@ -10,15 +10,15 @@ title: 联合类型
 
 有时候你会遇到一个函数，它希望接受一个数字或者字符串作为参数，比如：
 
-```TypeScript
+```ts
 function add(a: any, b: any) {
-  if (typeof a === 'number' && typeof b === 'number') {
+  if (typeof a === "number" && typeof b === "number") {
     return a + b;
   }
-  if (typeof a === 'string' && typeof b === 'string') {
+  if (typeof a === "string" && typeof b === "string") {
     return a.concat(b);
   }
-  throw new Error('Parameters must be numbers or strings');
+  throw new Error("Parameters must be numbers or strings");
 }
 ```
 
@@ -32,7 +32,7 @@ function add(a: any, b: any) {
 
 代码可以编译成功但是在运行的时候会抛出错误：
 
-```TypeScript
+```ts
 add(true, false);
 ```
 
@@ -40,10 +40,10 @@ add(true, false);
 
 比如，下面的变量类型是 `number` 或者 `string`：
 
-```TypeScript
+```ts
 let result: number | string;
 result = 10; // OK
-result = 'Hi'; // also OK
+result = "Hi"; // also OK
 result = false; // a boolean value, not OK
 ```
 
@@ -51,15 +51,15 @@ result = false; // a boolean value, not OK
 
 回到 `add()` 函数的例子，你可以把它的参数类型从 `any` 类型改为联合类型
 
-```TypeScript
+```ts
 function add(a: number | string, b: number | string) {
-  if (typeof a === 'number' && typeof b === 'number') {
+  if (typeof a === "number" && typeof b === "number") {
     return a + b;
   }
-  if (typeof a === 'string' && typeof b === 'string') {
+  if (typeof a === "string" && typeof b === "string") {
     return a.concat(b);
   }
-  throw new Error('Parameters must be numbers or strings');
+  throw new Error("Parameters must be numbers or strings");
 }
 ```
 

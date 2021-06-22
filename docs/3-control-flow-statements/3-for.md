@@ -10,7 +10,7 @@ title: for
 
 下面展示了 TypeScript 中 `for` 循环语句的语法：
 
-```TypeScript
+```ts
 for (initialization; condition; expression) {
   // statement
 }
@@ -24,7 +24,7 @@ for (initialization; condition; expression) {
 
 `for` 循环语句中的三个表达式都是可选的，这意味着你可以像下面这样使用它：
 
-```TypeScript
+```ts
 for (;;) {
   // do something
 }
@@ -34,7 +34,7 @@ for (;;) {
 
 TypeScript 允许你完全忽略循环体，如下所示：
 
-```TypeScript
+```ts
 for (initialization; condition; expression);
 ```
 
@@ -50,7 +50,7 @@ The following example uses the `for` loop statement to output 10 numbers from 0 
 
 下面的例子使用 `for` 循环语句输出从 `0` 到 `9` 的 `10` 个数字到控制台
 
-```TypeScript
+```ts
 for (let i = 0; i < 10; i++) {
   console.log(i);
 }
@@ -81,7 +81,7 @@ Output:
 
 下面的例子和上面的例子由相同的输出，但是，`for` 循环语句没有 `initialization` 块：
 
-```TypeScript
+```ts
 let i = 0;
 for (; i < 10; i++) {
   console.log(i);
@@ -92,7 +92,7 @@ for (; i < 10; i++) {
 
 但是，你必须使用 `if` 和 `break` 语句来满足一些条件来终止循环，否则的话你将创建一个无限循环语句导致程序重复执行直至崩溃
 
-```TypeScript
+```ts
 for (let i = 0; ; i++) {
   console.log(i);
   if (i > 9) break;
@@ -101,9 +101,9 @@ for (let i = 0; ; i++) {
 
 下面的例子演示了一个省略三个块的 `for` 循环
 
-```TypeScript
+```ts
 let i = 0;
-for (; ;) {
+for (;;) {
   console.log(i);
   i++;
   if (i > 9) break;

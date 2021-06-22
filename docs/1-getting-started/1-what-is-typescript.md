@@ -39,7 +39,7 @@ TypeScript 的主要目标有下面两个：
 
 下面的函数将两个数字 x 和 y 相加：
 
-```TypeScript
+```ts
 function add(x, y) {
   return x + y;
 }
@@ -47,7 +47,7 @@ function add(x, y) {
 
 如果你是通过 HTML 的 Input 元素获取到的值，并且把它们传入到这个函数，你可能会得到意料之外的结果：
 
-```TypeScript
+```ts
 const result = add(input1.value, input2.value);
 console.log(result); // 结果是字符串连接
 ```
@@ -58,7 +58,7 @@ console.log(result); // 结果是字符串连接
 
 当你使用 TypeScript 显式指定参数的类型的时候，如下：
 
-```TypeScript
+```ts
 function add(x: number, y: number) {
   return x + y;
 }
@@ -68,7 +68,7 @@ function add(x: number, y: number) {
 
 当你如下调用函数的时候：
 
-```TypeScript
+```ts
 const result = add(input1.value, input2.value);
 ```
 

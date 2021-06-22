@@ -14,7 +14,7 @@ Rest 参数允许函数接受零个或者多个指定类型的参数，在 TypeS
 
 要声明一个 Rest 参数，你可以在参数名前加上三个点，并使用数组类型作为类型注释：
 
-```TypeScript
+```ts
 function fn(...rest: type[]) {
   //...
 }
@@ -22,10 +22,10 @@ function fn(...rest: type[]) {
 
 下面的例子展示了如何使用 Rest 参数：
 
-```TypeScript
+```ts
 function getTotal(...numbers: number[]): number {
   let total = 0;
-  numbers.forEach((num) => total += num);
+  numbers.forEach((num) => (total += num));
   return total;
 }
 ```
@@ -34,7 +34,7 @@ function getTotal(...numbers: number[]): number {
 
 由于 `numbers` 参数是一个 Rest 参数，你可以传递一个或者多个数字来计算它们的总数：
 
-```TypeScript
+```ts
 console.log(getTotal()); // 0
 console.log(getTotal(10, 20)); // 30
 console.log(getTotal(10, 20, 30)); // 60

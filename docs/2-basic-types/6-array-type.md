@@ -10,47 +10,47 @@ title: 数组类型
 
 TypeScript `array` 是一个有序的数据列表。要声明一个保存特定类型的数组你可以使用以下语法：
 
-```TypeScript
+```ts
 let arrayName: type[];
 ```
 
 例如下面的语句声明了一个 [字符串类型](/2-basic-types/3-string/) 的数组：
 
-```TypeScript
+```ts
 let skills: string[];
 ```
 
 你可以往这个数组中添加一个或多个字符串：
 
-```TypeScript
+```ts
 skills[0] = "Problem Solving";
 skills[1] = "Programming";
 ```
 
 或者使用 `push()` 方法
 
-```TypeScript
-skills.push('Software Design');
+```ts
+skills.push("Software Design");
 ```
 
 下面的语句声明了一个变量，并将一个字符串数组赋值给它：
 
-```TypeScript
-let skills = ['Problem Sovling','Software Design','Programming'];
+```ts
+let skills = ["Problem Sovling", "Software Design", "Programming"];
 ```
 
 在这个例子中，TypeScript [推断](/2-basic-types/15-type-inference/) `skills` 数组为一个字符串数组，它相当于：
 
-```TypeScript
+```ts
 let skills: string[];
-skills = ['Problem Sovling','Software Design','Programming'];
+skills = ["Problem Sovling", "Software Design", "Programming"];
 ```
 
 当你给一个数组定义了特定类型，TypeScript 将阻止你向数组中添加不兼容的值
 
 下面的语句会引发一个错误：
 
-```TypeScript
+```ts
 skills.push(100);
 ```
 
@@ -64,9 +64,9 @@ Argument of type 'number' is not assignable to parameter of type 'string'.
 
 当你从一个数组中提取元素的时候，TypeScript 可以进行 [类型推断](/2-basic-types/15-type-inference/)，比如：
 
-```TypeScript
+```ts
 let skill = skills[0];
-console.log(typeof(skill));
+console.log(typeof skill);
 ```
 
 输出：
@@ -83,16 +83,16 @@ string
 
 TypeScript 数组可以和 JavaScript 一样访问属性和方法。比如下面使用 `length` 属性来获取数组中元素的个数：
 
-```TypeScript
+```ts
 let series = [1, 2, 3];
 console.log(series.length); // 3
 ```
 
 而且你也可以用使用所有有用的数组方法，比如 `forEach()`, `map()`, `reduce()`, 和 `filter()`。如下所示：
 
-```TypeScript
+```ts
 let series = [1, 2, 3];
-let doubleIt = series.map(e => e* 2);
+let doubleIt = series.map((e) => e * 2);
 console.log(doubleIt);
 ```
 
@@ -106,17 +106,17 @@ console.log(doubleIt);
 
 下面演示了如何声明一个同时好汉字符串和数字的数组：
 
-```TypeScript
-let scores = ['Programming', 5, 'Software Design', 4];
+```ts
+let scores = ["Programming", 5, "Software Design", 4];
 ```
 
 在这个例子中，TypeScript 将 `scores` 数组推断为 `string | number` 数组
 
 它和下面的例子是等价的：
 
-```TypeScript
-let scores : (string | number)[];
-scores = ['Programming', 5, 'Software Design', 4];
+```ts
+let scores: (string | number)[];
+scores = ["Programming", 5, "Software Design", 4];
 ```
 
 # 总结

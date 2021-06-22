@@ -8,8 +8,8 @@ title: 字符串类型
 
 和 JavaScript 一样，TypeScript 使用双引号 (`"`) 或者单引号 (`'`) 包裹字符串
 
-```TypeScript
-let firstName: string = 'John';
+```ts
+let firstName: string = "John";
 let title: string = "Web Developer";
 ```
 
@@ -19,7 +19,7 @@ TypeScript 也支持使用反引号 (`) 来包裹字符的模板字符串
 
 下面的例子展示了如何使用反引号 (`) 创建多行字符串：
 
-```TypeScript
+```ts
 let description = `This TypeScript string can
 span multiple
 lines
@@ -28,7 +28,7 @@ lines
 
 字符串插值允许你将变量嵌入到字符串中，就像这样：
 
-```TypeScript
+```ts
 let firstName: string = `John`;
 let title: string = `Web Developer`;
 let profile: string = `I'm ${firstName}.

@@ -12,7 +12,7 @@ JavaScript 不想其他编程语言，比如 `Java` 和 `C#` 有类的概念，�
 
 比如要创建一个有 `ssn`，`firstName` 和 `lastName` 三个属性的 `Person` 类，你可以使用下面的构造函数：
 
-```TypeScript
+```ts
 function Person(ssn, firstName, lastName) {
   this.ssn = ssn;
   this.firstName = firstName;
@@ -22,16 +22,16 @@ function Person(ssn, firstName, lastName) {
 
 接下来，你可以定义一个原型方法，通过下面连接 `firstName` 和 `lastName` 的方式来获得人名全称
 
-```TypeScript
+```ts
 Person.prototype.getFullName = function () {
   return `${this.firstName} ${this.lastName}`;
-}
+};
 ```
 
 然后你可以通过 `Person` “类” 来创建一个新对象：
 
-```TypeScript
-let person = new Person('171-28-0926','John','Doe');
+```ts
+let person = new Person("171-28-0926", "John", "Doe");
 console.log(person.getFullName());
 ```
 
@@ -43,7 +43,7 @@ John Doe
 
 [ES6 允许你定义一个类](https://zh.javascript.info/class)，这是创建对应的构造函数和原型继承的语法糖
 
-```TypeScript
+```ts
 class Person {
   ssn;
   firstName;
@@ -59,7 +59,7 @@ class Person {
 
 在上面使用类的语法中，构造函数已经被明确定义并放置在类中，下面增加 `getFullName()` 方法：
 
-```TypeScript
+```ts
 class Person {
   ssn;
   firstName;
@@ -79,14 +79,14 @@ class Person {
 
 使用 `Person` 类和使用 `Person` 构造函数创建对象是一样的：
 
-```TypeScript
-let person = new Person('171-28-0926','John','Doe');
+```ts
+let person = new Person("171-28-0926", "John", "Doe");
 console.log(person.getFullName());
 ```
 
 TypeScript 中的类给它的属性和方法增加了 [类型注释](/2-basic-types/1-type-annotations/)。下面展示 TypeScript 中的 `Person` 类：
 
-```TypeScript
+```ts
 class Person {
   ssn: string;
   firstName: string;
@@ -108,8 +108,8 @@ class Person {
 
 例如，你你不能把 `ssn` 初始化为一个 `number` ，下面的代码会抛出一个错误：
 
-```TypeScript
-let person = new Person(171280926, 'John', 'Doe');
+```ts
+let person = new Person(171280926, "John", "Doe");
 ```
 
 # 总结

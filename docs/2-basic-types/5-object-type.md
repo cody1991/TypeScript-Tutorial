@@ -22,14 +22,14 @@ TypeScript 中原始类型有下面这些：
 
 下面的例子展示了如何声明一个保存对象的变量：
 
-```TypeScript
+```ts
 let employee: object;
 
 employee = {
-    firstName: 'John',
-    lastName: 'Doe',
-    age: 25,
-    jobTitle: 'Web Developer'
+  firstName: "John",
+  lastName: "Doe",
+  age: 25,
+  jobTitle: "Web Developer",
 };
 
 console.log(employee);
@@ -48,7 +48,7 @@ console.log(employee);
 
 如果你重新给 `employee` 对象赋值一个原始值，你将得到一个错误提示：
 
-```TypeScript
+```ts
 employee = "Jane";
 ```
 
@@ -60,7 +60,7 @@ error TS2322: Type '"Jane"' is not assignable to type 'object'.
 
 `employee` 对象是一个具有固定属性列表的 `object` 类型。如果你尝试去访问 `employee` 对象中不存在的属性，你将得到一个错误提示：
 
-```TypeScript
+```ts
 console.log(employee.hireDate);
 ```
 
@@ -76,39 +76,39 @@ error TS2339: Property 'hireDate' does not exist on type 'object'.
 
 要显式地指定 `employee` 对象的属性，首先使用下面的语法来定义 `employee` 对象
 
-```TypeScript
+```ts
 let employee: {
-    firstName: string;
-    lastName: string;
-    age: number;
-    jobTitle: string;
+  firstName: string;
+  lastName: string;
+  age: number;
+  jobTitle: string;
 };
 ```
 
 然后你给 `employee` 对象赋值具有上述描述属性的对象字面量
 
-```TypeScript
+```ts
 employee = {
-    firstName: 'John',
-    lastName: 'Doe',
-    age: 25,
-    jobTitle: 'Web Developer'
+  firstName: "John",
+  lastName: "Doe",
+  age: 25,
+  jobTitle: "Web Developer",
 };
 ```
 
 或者你可以把两种语法组合在同一个语句中，就像这样：
 
-```TypeScript
+```ts
 let employee: {
-    firstName: string;
-    lastName: string;
-    age: number;
-    jobTitle: string;
+  firstName: string;
+  lastName: string;
+  age: number;
+  jobTitle: string;
 } = {
-    firstName: 'John',
-    lastName: 'Doe',
-    age: 25,
-    jobTitle: 'Web Developer'
+  firstName: "John",
+  lastName: "Doe",
+  age: 25,
+  jobTitle: "Web Developer",
 };
 ```
 
@@ -126,9 +126,9 @@ TypeScript 有另外一种类似叫做空类型，使用 `{}` 表示，它和 `o
 
 空类型 `{}` 描述一个本身没有属性的对象，如果你尝试去访问这种类型对象的某个属性，TypeScript 会发出一个编译时错误提示：
 
-```TypeScript
+```ts
 let vacant: {};
-vacant.firstName = 'John';
+vacant.firstName = "John";
 ```
 
 错误提示：
@@ -139,7 +139,7 @@ error TS2339: Property 'firstName' does not exist on type '{}'.
 
 但是你可以通过 [原型链](https://zh.javascript.info/prototype-inheritance) 访问所有在 `Object` 类型上定义的属性和方法
 
-```TypeScript
+```ts
 let vacant: {} = {};
 
 console.log(vacant.toString());

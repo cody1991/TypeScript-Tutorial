@@ -12,27 +12,27 @@ title: 类型推断
 
 当你声明一个变量的时候，你可以使用 [类型注释](/2-basic-types/1-type-annotations/) 给它明确指定某种类型，比如：
 
-```TypeScript
+```ts
 let counter: number;
 ```
 
 然而，当你把 `counter` 变量初始化一个数字的时候，TypeScript 会推断 `counter` 的类型为 [数字类型](/2-basic-types/2-number/)，比如：
 
-```TypeScript
+```ts
 let counter = 0;
 ```
 
 它和下面的语句是等价的：
 
-```TypeScript
+```ts
 let counter: number = 0;
 ```
 
 同样，当你给函数参数赋值的时候，TypeScript 将参数的类型推断为默认值的类型，比如：
 
-```TypeScript
+```ts
 function setCounter(max = 100) {
-    // ...
+  // ...
 }
 ```
 
@@ -40,17 +40,17 @@ function setCounter(max = 100) {
 
 类似地，TypeScript 推断下面 `increment()` 函数的返回值类型为 `number`
 
-```TypeScript
+```ts
 function increment(counter: number) {
-    return counter++;
+  return counter++;
 }
 ```
 
 它和下面是等价的：
 
-```TypeScript
-function increment(counter: number) : number {
-    return counter++;
+```ts
+function increment(counter: number): number {
+  return counter++;
 }
 ```
 
@@ -58,7 +58,7 @@ function increment(counter: number) : number {
 
 思考下下面的语句：
 
-```TypeScript
+```ts
 let items = [1, 2, 3, null];
 ```
 
@@ -70,14 +70,14 @@ let items = [1, 2, 3, null];
 
 如果你往 `items` 数组中添加一个字符串，TypeScript 会把 `items` 的类型推断为数组与字符串数组：`(number | string)[]`
 
-```TypeScript
-let items = [0, 1, null, 'Hi'];
+```ts
+let items = [0, 1, null, "Hi"];
 ```
 
 当 TypeScript 找不到最佳通用类型的时候，它会返回联合数组类型，比如：
 
-```TypeScript
-let arr = [new Date(), new RegExp('\d+')];
+```ts
+let arr = [new Date(), new RegExp("d+")];
 ```
 
 在这个例子中，TypeScript 推断 `arr` 的类型为 `(RegExp | Date)[]`
@@ -86,9 +86,9 @@ let arr = [new Date(), new RegExp('\d+')];
 
 TypeScript 会使用变量的位置上下文来推断它的类型，这种机制被称为上下文类型，比如：
 
-```TypeScript
-document.addEventListener('click', function (event) {
-    console.log(event.button); //
+```ts
+document.addEventListener("click", function (event) {
+  console.log(event.button); //
 });
 ```
 
@@ -96,9 +96,9 @@ document.addEventListener('click', function (event) {
 
 然后，当你把 `click` 事件修改成 `scroll` 事件的时候，TypeScript 会抛出一个错误：
 
-```TypeScript
-document.addEventListener('scroll', function (event) {
-    console.log(event.button); // compiler error
+```ts
+document.addEventListener("scroll", function (event) {
+  console.log(event.button); // compiler error
 });
 ```
 

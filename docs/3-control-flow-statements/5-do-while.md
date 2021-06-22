@@ -10,10 +10,10 @@ title: do while
 
 下面展示了 `do while` 语句的语法：
 
-```TypeScript
+```ts
 do {
   // do something
-} while(condition);
+} while (condition);
 ```
 
 `do while` 语句将执行其主体中被花括号 (`{}`) 包裹的代码，直到 `condition` 计算结果为 `false`
@@ -26,12 +26,12 @@ do {
 
 下面的例子使用 `do while` 语句来把 `0` 到 `9` 的数字输出到控制台：
 
-```TypeScript
+```ts
 let i = 0;
 
 do {
   console.log(i);
-  i++
+  i++;
 } while (i < 10);
 ```
 

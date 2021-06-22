@@ -10,7 +10,7 @@ title: if else
 
 `if` 语句基于条件执行语句，如果条件为真，那么 `if` 语句会执行语句体中的语句
 
-```TypeScript
+```ts
 if (condition) {
   // if-statement
 }
@@ -18,7 +18,7 @@ if (condition) {
 
 比如下面的语句演示了如果 `counter` 变量值小于 `max` 常量值，如何使用 `if` 语句来增加 `counter` 变量的值
 
-```TypeScript
+```ts
 const max = 100;
 let counter = 0;
 
@@ -39,7 +39,7 @@ console.log(counter); // 1
 
 让我们把 `counter` 变量初始化为 `100`
 
-```TypeScript
+```ts
 const max = 100;
 let counter = 100;
 
@@ -62,9 +62,9 @@ console.log(counter); // 100
 
 如果希望当条件语句计算结果为 `false` 的时候执行一些语句，你可以使用 `if else` 语句
 
-```TypeScript
+```ts
 if (condition) {
-   // if-statements
+  // if-statements
 } else {
   // else statements;
 }
@@ -72,7 +72,7 @@ if (condition) {
 
 下面演示了一个使用 `if else` 语句的例子
 
-```TypeScript
+```ts
 const max = 100;
 let counter = 100;
 
@@ -97,11 +97,11 @@ console.log(counter);
 
 在实践中，如果只是一个简单的条件判断，你可以使用三元运算符 `?:` 代替 `if else` 语句，这会让代码看起来更加短，比如：
 
-```TypeScript
+```ts
 const max = 100;
 let counter = 100;
 
-counter < max ? counter++ : counter = 1;
+counter < max ? counter++ : (counter = 1);
 
 console.log(counter);
 ```
@@ -114,19 +114,19 @@ console.log(counter);
 
 例如：
 
-```TypeScript
+```ts
 let discount: number;
 let itemCount = 11;
 
 if (itemCount > 0 && itemCount <= 5) {
-  discount = 5;  // 5% discount
+  discount = 5; // 5% discount
 } else if (itemCount > 5 && itemCount <= 10) {
   discount = 10; // 10% discount
 } else {
   discount = 15; // 15%
 }
 
-console.log(`You got ${discount}% discount. `)
+console.log(`You got ${discount}% discount. `);
 ```
 
 输出：
@@ -147,21 +147,21 @@ console.log(`You got ${discount}% discount. `)
 
 为了使代码更加健壮，你可以另外使用一个 `else if` 分支代替 `else` 分支，就像这样：
 
-```TypeScript
+```ts
 let discount: number;
 let itemCount = 11;
 
 if (itemCount > 0 && itemCount <= 5) {
-  discount = 5;  // 5% discount
+  discount = 5; // 5% discount
 } else if (itemCount > 5 && itemCount <= 10) {
   discount = 10; // 10% discount
 } else if (discount > 10) {
   discount = 15; // 15%
 } else {
-  throw new Error('The number of items cannot be negative!');
+  throw new Error("The number of items cannot be negative!");
 }
 
-console.log(`You got ${discount}% discount. `)
+console.log(`You got ${discount}% discount. `);
 ```
 
 在本例中，只有但 `items` 的数量大于 `10` 的时候折扣是 `10%`，第二个 `else if` 分支的语句将会被执行
