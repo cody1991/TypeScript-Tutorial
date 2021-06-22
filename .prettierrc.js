@@ -1,5 +1,5 @@
 module.exports = {
-  // 一行最多 120 字符
+  // 一行最多 80 字符
   printWidth: 80,
   // 使用 2 个空格缩进
   tabWidth: 2,
@@ -8,7 +8,7 @@ module.exports = {
   // 行尾需要有分号
   semi: true,
   // 使用单引号
-  singleQuote: false,
+  singleQuote: true,
   // 对象的 key 仅在必要时用引号
   quoteProps: 'as-needed',
   // jsx 不使用单引号，而使用双引号

@@ -60,13 +60,13 @@ class Stack<T> {
   }
   push(element: T): void {
     if (this.elements.length === this.size) {
-      throw new Error("The stack is overflow!");
+      throw new Error('The stack is overflow!');
     }
     this.elements.push(element);
   }
   pop(): T {
     if (this.elements.length == 0) {
-      throw new Error("The stack is empty!");
+      throw new Error('The stack is empty!');
     }
     return this.elements.pop();
   }
@@ -131,7 +131,7 @@ Pop 3 from the stack.
 Similarly, you can create a stack of strings. For example:
 
 ```ts
-let words = "The quick brown fox jumps over the lazy dog".split(" ");
+let words = 'The quick brown fox jumps over the lazy dog'.split(' ');
 
 let wordStack = new Stack<string>(words.length);
 

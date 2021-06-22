@@ -11,7 +11,7 @@ class Person {
   }
 }
 
-const person = new Person("cody", "tang");
+const person = new Person('cody', 'tang');
 console.log(person);
 
 class Employee extends Person {
@@ -24,6 +24,6 @@ class Employee extends Person {
   }
 }
 
-const employee = new Employee("cody", "tang", "developer");
+const employee = new Employee('cody', 'tang', 'developer');
 console.log(employee.getFullName());
 console.log(employee.describe());

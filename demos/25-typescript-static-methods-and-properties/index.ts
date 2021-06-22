@@ -12,7 +12,7 @@ class Employee {
     return Employee.headcount;
   }
 }
-const john = new Employee("John", "Doe", "Front-end Developer");
-const jane = new Employee("Jane", "Doe", "Back-end Developer");
+const john = new Employee('John', 'Doe', 'Front-end Developer');
+const jane = new Employee('Jane', 'Doe', 'Back-end Developer');
 
 console.log(Employee.getHeadcount());

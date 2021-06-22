@@ -19,7 +19,7 @@ title: 可选参数
 
 ```ts
 function multiply(a: number, b: number, c?: number): number {
-  if (typeof c !== "undefined") {
+  if (typeof c !== 'undefined') {
     return a * b * c;
   }
   return a * b;
@@ -41,7 +41,7 @@ function multiply(a: number, b: number, c?: number): number {
 
 ```ts
 function multiply(a: number, b?: number, c: number): number {
-  if (typeof c !== "undefined") {
+  if (typeof c !== 'undefined') {
     return a * b * c;
   }
   return a * b;

@@ -1,8 +1,8 @@
-let click: "click";
+let click: 'click';
 
-click = "click";
+click = 'click';
 
-type CustomMouseEvent = "click" | "dblclick" | "mouseup" | "mousedown";
+type CustomMouseEvent = 'click' | 'dblclick' | 'mouseup' | 'mousedown';
 let mouseEvent: CustomMouseEvent;
 
-mouseEvent = "click";
+mouseEvent = 'click';

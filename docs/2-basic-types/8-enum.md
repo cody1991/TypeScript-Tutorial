@@ -90,18 +90,18 @@ console.log(isItSummer(6)); // true
 ```ts
 var Month;
 (function (Month) {
-  Month[(Month["Jan"] = 0)] = "Jan";
-  Month[(Month["Feb"] = 1)] = "Feb";
-  Month[(Month["Mar"] = 2)] = "Mar";
-  Month[(Month["Apr"] = 3)] = "Apr";
-  Month[(Month["May"] = 4)] = "May";
-  Month[(Month["Jun"] = 5)] = "Jun";
-  Month[(Month["Jul"] = 6)] = "Jul";
-  Month[(Month["Aug"] = 7)] = "Aug";
-  Month[(Month["Sep"] = 8)] = "Sep";
-  Month[(Month["Oct"] = 9)] = "Oct";
-  Month[(Month["Nov"] = 10)] = "Nov";
-  Month[(Month["Dec"] = 11)] = "Dec";
+  Month[(Month['Jan'] = 0)] = 'Jan';
+  Month[(Month['Feb'] = 1)] = 'Feb';
+  Month[(Month['Mar'] = 2)] = 'Mar';
+  Month[(Month['Apr'] = 3)] = 'Apr';
+  Month[(Month['May'] = 4)] = 'May';
+  Month[(Month['Jun'] = 5)] = 'Jun';
+  Month[(Month['Jul'] = 6)] = 'Jul';
+  Month[(Month['Aug'] = 7)] = 'Aug';
+  Month[(Month['Sep'] = 8)] = 'Sep';
+  Month[(Month['Oct'] = 9)] = 'Oct';
+  Month[(Month['Nov'] = 10)] = 'Nov';
+  Month[(Month['Dec'] = 11)] = 'Dec';
 })(Month || (Month = {}));
 ```
 
@@ -191,12 +191,12 @@ enum ApprovalStatus {
 const request = {
   id: 1,
   status: ApprovalStatus.approved,
-  description: "Please approve this request",
+  description: 'Please approve this request',
 };
 
 if (request.status === ApprovalStatus.approved) {
   // 发送邮件
-  console.log("Send email to the Applicant...");
+  console.log('Send email to the Applicant...');
 }
 ```
 

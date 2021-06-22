@@ -71,13 +71,13 @@ let items = [1, 2, 3, null];
 如果你往 `items` 数组中添加一个字符串，TypeScript 会把 `items` 的类型推断为数组与字符串数组：`(number | string)[]`
 
 ```ts
-let items = [0, 1, null, "Hi"];
+let items = [0, 1, null, 'Hi'];
 ```
 
 当 TypeScript 找不到最佳通用类型的时候，它会返回联合数组类型，比如：
 
 ```ts
-let arr = [new Date(), new RegExp("d+")];
+let arr = [new Date(), new RegExp('d+')];
 ```
 
 在这个例子中，TypeScript 推断 `arr` 的类型为 `(RegExp | Date)[]`
@@ -87,7 +87,7 @@ let arr = [new Date(), new RegExp("d+")];
 TypeScript 会使用变量的位置上下文来推断它的类型，这种机制被称为上下文类型，比如：
 
 ```ts
-document.addEventListener("click", function (event) {
+document.addEventListener('click', function (event) {
   console.log(event.button); //
 });
 ```
@@ -97,7 +97,7 @@ document.addEventListener("click", function (event) {
 然后，当你把 `click` 事件修改成 `scroll` 事件的时候，TypeScript 会抛出一个错误：
 
 ```ts
-document.addEventListener("scroll", function (event) {
+document.addEventListener('scroll', function (event) {
   console.log(event.button); // compiler error
 });
 ```

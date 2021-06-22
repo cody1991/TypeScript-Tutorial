@@ -37,7 +37,7 @@ function add(a: number, b: number): number {
 下面的例子会导致错误，因为它向 `add()` 函数传递了两个字符串而不是两个数字参数
 
 ```ts
-let sum = add("10", "20");
+let sum = add('10', '20');
 ```
 
 错误提示：

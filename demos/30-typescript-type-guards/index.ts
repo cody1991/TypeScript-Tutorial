@@ -19,12 +19,12 @@ function signContract(partner: BusinessPartner): string {
 
   if (partner instanceof Customer) {
     message = partner.isCreditAllowed()
-      ? "Sign a new contract with the customer"
-      : "Credit issue";
+      ? 'Sign a new contract with the customer'
+      : 'Credit issue';
   } else {
     message = partner.isInShortList()
-      ? "Sign a new contract the supplier"
-      : "Need to evaluate further";
+      ? 'Sign a new contract the supplier'
+      : 'Need to evaluate further';
   }
 
   return message;
@@ -43,12 +43,12 @@ function signContract2(partner: BusinessPartner): string {
 
   if (isCustomer(partner)) {
     message = partner.isCreditAllowed()
-      ? "Sign a new contract with the customer"
-      : "Credit issue";
+      ? 'Sign a new contract with the customer'
+      : 'Credit issue';
   } else {
     message = partner.isInShortList()
-      ? "Sign a new contract the supplier"
-      : "Need to evaluate further";
+      ? 'Sign a new contract the supplier'
+      : 'Need to evaluate further';
   }
 
   return message;

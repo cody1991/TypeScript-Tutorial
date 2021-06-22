@@ -18,8 +18,8 @@ function getFullName(person: { firstName: string; lastName: string }) {
 }
 
 let person = {
-  firstName: "John",
-  lastName: "Doe",
+  firstName: 'John',
+  lastName: 'Doe',
 };
 
 console.log(getFullName(person));
@@ -58,8 +58,8 @@ function getFullName(person: Person) {
 }
 
 let john = {
-  firstName: "John",
-  lastName: "Doe",
+  firstName: 'John',
+  lastName: 'Doe',
 };
 
 console.log(getFullName(john));
@@ -125,16 +125,16 @@ interface Person {
 
 let person: Person;
 person = {
-  ssn: "171-28-0926",
-  firstName: "John",
-  lastName: "Doe",
+  ssn: '171-28-0926',
+  firstName: 'John',
+  lastName: 'Doe',
 };
 ```
 
 在这个例子中，`ssn` 属性不能被修改：
 
 ```ts
-person.ssn = "171-28-0000";
+person.ssn = '171-28-0000';
 ```
 
 错误提示：
@@ -171,7 +171,7 @@ format = function (str: string, isUpper: boolean) {
   return isUpper ? str.toLocaleUpperCase() : str.toLocaleLowerCase();
 };
 
-console.log(format("hi", true));
+console.log(format('hi', true));
 ```
 
 输出：
@@ -189,7 +189,7 @@ format = function (src: string, upper: boolean) {
   return upper ? src.toLocaleUpperCase() : src.toLocaleLowerCase();
 };
 
-console.log(format("hi", true));
+console.log(format('hi', true));
 ```
 
 `StringFormat` 接口确保所有实现了它的函数调用方传入所需的参数：一个 [字符串类型](/2-basic-types/3-string/) 和一个 [布尔值类型](/2-basic-types/4-boolean/)
@@ -202,7 +202,7 @@ lowerCase = function (str: string) {
   return str.toLowerCase();
 };
 
-console.log(lowerCase("Hi", false));
+console.log(lowerCase('Hi', false));
 ```
 
 注意，第二个参数是在调用 `lowerCase()` 函数时传递的
@@ -237,7 +237,7 @@ class Person implements Json {
 下面的例子展示了如何使用 `Person` 类
 
 ```ts
-let person = new Person("John", "Doe");
+let person = new Person('John', 'Doe');
 console.log(person.toJson());
 ```
 

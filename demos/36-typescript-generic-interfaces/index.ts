@@ -4,7 +4,7 @@ interface Pair<K, V> {
 }
 
 let month: Pair<string, number> = {
-  key: "Jan",
+  key: 'Jan',
   value: 1,
 };
 

@@ -20,4 +20,4 @@ function merge<U, V>(obj1: U, obj2: V): U & V {
   };
 }
 
-let result = merge({ name: "John" }, { jobTitle: "Frontend Developer" });
+let result = merge({ name: 'John' }, { jobTitle: 'Frontend Developer' });

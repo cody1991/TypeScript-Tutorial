@@ -51,17 +51,17 @@ switch (expression) {
 下面的例子展示了一个简单的 `switch case` 例子，它会基于 `targetId` 来展示信息
 
 ```ts
-let targetId = "btnDelete";
+let targetId = 'btnDelete';
 
 switch (targetId) {
-  case "btnUpdate":
-    console.log("Update");
+  case 'btnUpdate':
+    console.log('Update');
     break;
-  case "btnDelete":
-    console.log("Delete");
+  case 'btnDelete':
+    console.log('Delete');
     break;
-  case "btnNew":
-    console.log("New");
+  case 'btnNew':
+    console.log('New');
     break;
 }
 ```
@@ -108,7 +108,7 @@ switch (month) {
     else day = 28;
     break;
   default:
-    throw Error("Invalid month");
+    throw Error('Invalid month');
 }
 
 console.log(`The month ${month} in ${year} has ${day} days`);

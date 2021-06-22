@@ -52,7 +52,7 @@ class Person {
 下面尝试在 `Person` 类外部访问 `ssn` 属性：
 
 ```ts
-let person = new Person("153-07-3130", "John", "Doe");
+let person = new Person('153-07-3130', 'John', 'Doe');
 console.log(person.ssn); // compile error
 ```
 

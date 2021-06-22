@@ -1,2 +1,2 @@
-export * from "./ZipCodeValidator";
-export * from "./EmailValidator";
+export * from './ZipCodeValidator';
+export * from './EmailValidator';

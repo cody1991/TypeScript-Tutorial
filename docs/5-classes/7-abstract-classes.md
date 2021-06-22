@@ -46,7 +46,7 @@ abstract class Employee {
 因为 `Employee` 是抽象类，你不能用它来创建一个新的对象，下面的语句会抛出错误：
 
 ```ts
-let employee = new Employee("John", "Doe");
+let employee = new Employee('John', 'Doe');
 ```
 
 错误提示：
@@ -93,8 +93,8 @@ class Contractor extends Employee {
 下面的例子首先创建了一个 `FullTimeEmployee` 对象和 `Contractor` 对象，然后在控制台上展示了报酬信息
 
 ```ts
-let john = new FullTimeEmployee("John", "Doe", 12000);
-let jane = new Contractor("Jane", "Doe", 100, 160);
+let john = new FullTimeEmployee('John', 'Doe', 12000);
+let jane = new Contractor('Jane', 'Doe', 100, 160);
 
 console.log(john.compensationStatement());
 console.log(jane.compensationStatement());

@@ -1,1 +1,1 @@
-const heading = document.querySelector("h1");
+const heading = document.querySelector('h1');

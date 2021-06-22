@@ -14,7 +14,7 @@ class Person {
   }
 }
 
-const person = new Person("153-07-3130", "John", "Doe");
+const person = new Person('153-07-3130', 'John', 'Doe');
 console.log(person.getFullName());
 
 class ShortPerson {

@@ -17,7 +17,7 @@ title: TypeScript 版的 Hello World
 第四，我们在 `app.ts` 文件中输入下面的源代码
 
 ```ts
-const message: string = "Hello, World!";
+const message: string = 'Hello, World!';
 console.log(message);
 ```
 
@@ -72,9 +72,9 @@ ts-node app.ts
 第二，把 `app.js` 文件改成如下所示代码
 
 ```ts
-const message: string = "Hello, World!";
+const message: string = 'Hello, World!';
 // 创建一个新的 H1 头部元素
-const heading = document.createElement("h1");
+const heading = document.createElement('h1');
 heading.textContent = message;
 // 把头部元素添加到文档中
 document.body.appendChild(heading);
@@ -97,9 +97,9 @@ Live Server 会打开 `index.html` ，并显示下面的信息
 需要改变显示信息的话，你需要编辑 `app.ts` 文件，比如：
 
 ```ts
-const message: string = "Hello, TypeScript!";
+const message: string = 'Hello, TypeScript!';
 
-const heading = document.createElement("h1");
+const heading = document.createElement('h1');
 heading.textContent = message;
 
 document.body.appendChild(heading);

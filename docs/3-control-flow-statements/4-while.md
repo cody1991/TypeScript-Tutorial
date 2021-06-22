@@ -88,7 +88,7 @@ while (counter < 5) {
 下面的例子展示了如果使用 `while` 语句去移除 `<ul>` 元素上所有的 `<li>` 元素：
 
 ```ts
-let list = document.querySelector("#list");
+let list = document.querySelector('#list');
 
 while (list.firstChild) {
   list.removeChild(list.firstChild);

@@ -7,10 +7,10 @@ let employee: {
 };
 
 employee = {
-  firstName: "John",
-  lastName: "Doe",
+  firstName: 'John',
+  lastName: 'Doe',
   age: 25,
-  jobTitle: "Web Developer",
+  jobTitle: 'Web Developer',
 };
 
 // or
@@ -21,10 +21,10 @@ let employee2: {
   age: number;
   jobTitle: string;
 } = {
-  firstName: "John",
-  lastName: "Doe",
+  firstName: 'John',
+  lastName: 'Doe',
   age: 25,
-  jobTitle: "Web Developer",
+  jobTitle: 'Web Developer',
 };
 
 let vacant: {}; // 上面没有任何的属性

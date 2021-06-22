@@ -62,13 +62,13 @@ class Employee extends Person {
 下面创建了一个 `Employee` 类的实例：
 
 ```ts
-let employee = new Employee("John", "Doe", "Front-end Developer");
+let employee = new Employee('John', 'Doe', 'Front-end Developer');
 ```
 
 因为 `Employee` 类继承了 `Person` 类的方法和属性，你可以在 `employee` 对象上调用 `getFullName()` 和 `describe()` 方法，如下所示：
 
 ```ts
-let employee = new Employee("John", "Doe", "Web Developer");
+let employee = new Employee('John', 'Doe', 'Web Developer');
 
 console.log(employee.getFullName());
 console.log(employee.describe());
@@ -105,7 +105,7 @@ class Employee extends Person {
 如果你在 `employee` 对象上调用 `describe()` 方法，`Employee` 类的 `describe()` 方法会被调用
 
 ```ts
-let employee = new Employee("John", "Doe", "Web Developer");
+let employee = new Employee('John', 'Doe', 'Web Developer');
 console.log(employee.describe());
 ```
 

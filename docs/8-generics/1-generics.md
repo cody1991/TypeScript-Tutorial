@@ -51,7 +51,7 @@ function getRandomStringElement(items: string[]): string {
 下面展示了如何使用 `getRandomStringElement()` 函数
 
 ```ts
-let colors = ["red", "green", "blue"];
+let colors = ['red', 'green', 'blue'];
 console.log(getRandomStringElement(colors));
 ```
 
@@ -72,7 +72,7 @@ function getRandomAnyElement(items: any[]): any {
 
 ```ts
 let numbers = [1, 5, 7, 4, 2, 9];
-let colors = ["red", "green", "blue"];
+let colors = ['red', 'green', 'blue'];
 
 console.log(getRandomAnyElement(numbers));
 console.log(getRandomAnyElement(colors));
@@ -149,7 +149,7 @@ function merge<U, V>(obj1: U, obj2: V) {
 下面演示了如何使用 `merge()` 函数来合并两个对象：
 
 ```ts
-let result = merge({ name: "John" }, { jobTitle: "Frontend Developer" });
+let result = merge({ name: 'John' }, { jobTitle: 'Frontend Developer' });
 
 console.log(result);
 ```

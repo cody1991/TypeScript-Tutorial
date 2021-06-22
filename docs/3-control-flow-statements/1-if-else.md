@@ -158,7 +158,7 @@ if (itemCount > 0 && itemCount <= 5) {
 } else if (discount > 10) {
   discount = 15; // 15%
 } else {
-  throw new Error("The number of items cannot be negative!");
+  throw new Error('The number of items cannot be negative!');
 }
 
 console.log(`You got ${discount}% discount. `);

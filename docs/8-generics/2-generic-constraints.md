@@ -22,7 +22,7 @@ function merge<U, V>(obj1: U, obj2: V) {
 `merge()` 是一个合并两个对象的泛型函数：
 
 ```ts
-let person = merge({ name: "John" }, { age: 25 });
+let person = merge({ name: 'John' }, { age: 25 });
 
 console.log(result);
 ```
@@ -36,7 +36,7 @@ console.log(result);
 它工作地很好。`merge()` 函数接受两个对象，但它不阻止你传递一个非对象参数，就像这样：
 
 ```ts
-let person = merge({ name: "John" }, 25);
+let person = merge({ name: 'John' }, 25);
 
 console.log(person);
 ```
@@ -45,7 +45,7 @@ console.log(person);
 
 ```ts
 {
-  name: "John";
+  name: 'John';
 }
 ```
 
@@ -71,7 +71,7 @@ function merge<U extends object, V extends object>(obj1: U, obj2: V) {
 下面将导致一个错误：
 
 ```ts
-let person = merge({ name: "John" }, 25);
+let person = merge({ name: 'John' }, 25);
 ```
 
 错误提示：
@@ -109,7 +109,7 @@ function prop<T, K extends keyof T>(obj: T, key: K) {
 如果你传递给 `prop()` 函数一个 `obj` 对象上存在的属性明，编译器不会报错，如下所示：
 
 ```ts
-let str = prop({ name: "John" }, "name");
+let str = prop({ name: 'John' }, 'name');
 console.log(str);
 ```
 
@@ -122,7 +122,7 @@ John
 然后如果你传递一个在第一个参数上不存在的键名，编译器会发出一个错误提示：
 
 ```ts
-let str = prop({ name: "John" }, "age");
+let str = prop({ name: 'John' }, 'age');
 ```
 
 错误提示：

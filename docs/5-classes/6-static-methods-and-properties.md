@@ -31,8 +31,8 @@ class Employee {
 下面的例子创建了两个 `Employee` 对象，然后打印 `headcount` 属性的值，它和预期一样返回 `2`
 
 ```ts
-let john = new Employee("John", "Doe", "Front-end Developer");
-let jane = new Employee("Jane", "Doe", "Back-end Developer");
+let john = new Employee('John', 'Doe', 'Front-end Developer');
+let jane = new Employee('Jane', 'Doe', 'Back-end Developer');
 
 console.log(Employee.headcount); // 2
 ```
@@ -67,8 +67,8 @@ class Employee {
 你可以使用 `className.staticMethod()` 的语法来调用静态方法，如下所示：
 
 ```ts
-let john = new Employee("John", "Doe", "Front-end Developer");
-let jane = new Employee("Jane", "Doe", "Back-end Developer");
+let john = new Employee('John', 'Doe', 'Front-end Developer');
+let jane = new Employee('Jane', 'Doe', 'Back-end Developer');
 
 console.log(Employee.getHeadcount); // 2
 ```

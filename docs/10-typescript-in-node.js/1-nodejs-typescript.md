@@ -60,7 +60,7 @@ tsc --init
 为了验证新的配置是否正确，你可以在 `./src` 目录下创建一个名为 `app.ts` 的新文件，并敲入以下代码：
 
 ```ts
-console.log("Node.js TypeScript");
+console.log('Node.js TypeScript');
 ```
 
 ![nodejs-typescript-app.ts_](./images/nodejs-typescript-app.ts_.png)

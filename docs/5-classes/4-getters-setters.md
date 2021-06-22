@@ -67,7 +67,7 @@ class Person {
 
   public set age(theAge: number) {
     if (theAge <= 0 || theAge >= 200) {
-      throw new Error("The age is invalid");
+      throw new Error('The age is invalid');
     }
     this._age = theAge;
   }
@@ -130,7 +130,7 @@ class Person {
 
   public set age(theAge: number) {
     if (theAge <= 0 || theAge >= 200) {
-      throw new Error("The age is invalid");
+      throw new Error('The age is invalid');
     }
     this._age = theAge;
   }
@@ -141,7 +141,7 @@ class Person {
 
   public set firstName(theFirstName: string) {
     if (!theFirstName) {
-      throw new Error("Invalid first name.");
+      throw new Error('Invalid first name.');
     }
     this._firstName = theFirstName;
   }
@@ -152,7 +152,7 @@ class Person {
 
   public set lastName(theLastName: string) {
     if (!theLastName) {
-      throw new Error("Invalid last name.");
+      throw new Error('Invalid last name.');
     }
     this._lastName = theLastName;
   }
@@ -177,9 +177,9 @@ class Person {
   }
 
   public set fullName(name: string) {
-    let parts = name.split(" ");
+    let parts = name.split(' ');
     if (parts.length != 2) {
-      throw new Error("Invalid name format: first last");
+      throw new Error('Invalid name format: first last');
     }
     this.firstName = parts[0];
     this.lastName = parts[1];
@@ -196,7 +196,7 @@ class Person {
 
 ```ts
 let person = new Person();
-person.fullname = "John Doe";
+person.fullname = 'John Doe';
 
 console.log(person.fullName);
 ```

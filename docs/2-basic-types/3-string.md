@@ -9,8 +9,8 @@ title: 字符串类型
 和 JavaScript 一样，TypeScript 使用双引号 (`"`) 或者单引号 (`'`) 包裹字符串
 
 ```ts
-let firstName: string = "John";
-let title: string = "Web Developer";
+let firstName: string = 'John';
+let title: string = 'Web Developer';
 ```
 
 TypeScript 也支持使用反引号 (`) 来包裹字符的模板字符串

@@ -1,4 +1,4 @@
-import { StringValidator } from "./Validator";
+import { StringValidator } from './Validator';
 export default class ZipCodeValidator implements StringValidator {
   isValid(s: string): boolean {
     const numberRegex = /^[0-9]+$/;

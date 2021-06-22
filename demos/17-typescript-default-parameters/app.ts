@@ -28,7 +28,7 @@ function getDay(
       else day = 28;
       break;
     default:
-      throw Error("Invalid month");
+      throw Error('Invalid month');
   }
   return day;
 }

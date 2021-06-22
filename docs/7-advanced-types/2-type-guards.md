@@ -16,16 +16,16 @@ title: 类型保护
 type alphanumeric = string | number;
 
 function add(a: alphanumeric, b: alphanumeric) {
-  if (typeof a === "number" && typeof b === "number") {
+  if (typeof a === 'number' && typeof b === 'number') {
     return a + b;
   }
 
-  if (typeof a === "string" && typeof b === "string") {
+  if (typeof a === 'string' && typeof b === 'string') {
     return a.concat(b);
   }
 
   throw new Error(
-    "Invalid arguments. Both arguments must be either numbers or strings.",
+    'Invalid arguments. Both arguments must be either numbers or strings.',
   );
 }
 ```
@@ -41,7 +41,7 @@ function add(a: alphanumeric, b: alphanumeric) {
 在这个例子中，TypeScript 直到如何在条件代码块中使用 `typeof` 操作符，在下面的 [if](/3-control-flow-statements/1-if-else/) 块中，TypeScript 认为 `a` 和 `b` 都是数字类型
 
 ```ts
-if (typeof a === "number" && typeof b === "number") {
+if (typeof a === 'number' && typeof b === 'number') {
   return a + b;
 }
 ```
@@ -49,7 +49,7 @@ if (typeof a === "number" && typeof b === "number") {
 类似地，在下面的 `if` 代码块中，TypeScript 将 `a` 和 `b` 作为字符串处理，因此，你可以把它们拼接成一个字符串：
 
 ```ts
-if (typeof a === "string" && typeof b === "string") {
+if (typeof a === 'string' && typeof b === 'string') {
   return a.concat(b);
 }
 ```
@@ -79,14 +79,14 @@ function signContract(partner: BusinessPartner): string {
   let message: string;
   if (partner instanceof Customer) {
     message = partner.isCreditAllowed()
-      ? "Sign a new contract with the customer"
-      : "Credit issue";
+      ? 'Sign a new contract with the customer'
+      : 'Credit issue';
   }
 
   if (partner instanceof Supplier) {
     message = partner.isInShortList()
-      ? "Sign a new contract the supplier"
-      : "Need to evaluate further";
+      ? 'Sign a new contract the supplier'
+      : 'Need to evaluate further';
   }
 
   return message;
@@ -105,8 +105,8 @@ function signContract(partner: BusinessPartner): string {
 ```ts
 if (partner instanceof Customer) {
   message = partner.isCreditAllowed()
-    ? "Sign a new contract with the customer"
-    : "Credit issue";
+    ? 'Sign a new contract with the customer'
+    : 'Credit issue';
 }
 ```
 
@@ -115,8 +115,8 @@ if (partner instanceof Customer) {
 ```ts
 if (partner instanceof Supplier) {
   message = partner.isInShortList()
-    ? "Sign a new contract with the supplier"
-    : "Need to evaluate further";
+    ? 'Sign a new contract with the supplier'
+    : 'Need to evaluate further';
 }
 ```
 
@@ -127,13 +127,13 @@ function signContract(partner: BusinessPartner): string {
   let message: string;
   if (partner instanceof Customer) {
     message = partner.isCreditAllowed()
-      ? "Sign a new contract with the customer"
-      : "Credit issue";
+      ? 'Sign a new contract with the customer'
+      : 'Credit issue';
   } else {
     // must be Supplier
     message = partner.isInShortList()
-      ? "Sign a new contract with the supplier"
-      : "Need to evaluate further";
+      ? 'Sign a new contract with the supplier'
+      : 'Need to evaluate further';
   }
   return message;
 }
@@ -146,15 +146,15 @@ function signContract(partner: BusinessPartner): string {
 ```ts
 function signContract(partner: BusinessPartner): string {
   let message: string;
-  if ("isCreditAllowed" in partner) {
+  if ('isCreditAllowed' in partner) {
     message = partner.isCreditAllowed()
-      ? "Sign a new contract with the customer"
-      : "Credit issue";
+      ? 'Sign a new contract with the customer'
+      : 'Credit issue';
   } else {
     // must be Supplier
     message = partner.isInShortList()
-      ? "Sign a new contract the supplier "
-      : "Need to evaluate further";
+      ? 'Sign a new contract the supplier '
+      : 'Need to evaluate further';
   }
   return message;
 }
@@ -179,12 +179,12 @@ function signContract(partner: BusinessPartner): string {
   let message: string;
   if (isCustomer(partner)) {
     message = partner.isCreditAllowed()
-      ? "Sign a new contract with the customer"
-      : "Credit issue";
+      ? 'Sign a new contract with the customer'
+      : 'Credit issue';
   } else {
     message = partner.isInShortList()
-      ? "Sign a new contract with the supplier"
-      : "Need to evaluate further";
+      ? 'Sign a new contract with the supplier'
+      : 'Need to evaluate further';
   }
 
   return message;

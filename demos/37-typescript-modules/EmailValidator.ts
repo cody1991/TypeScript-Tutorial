@@ -1,4 +1,4 @@
-import { StringValidator } from "./Validator";
+import { StringValidator } from './Validator';
 
 class EmailValidator implements StringValidator {
   isValid(s: string): boolean {

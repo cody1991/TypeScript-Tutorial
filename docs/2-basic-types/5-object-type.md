@@ -26,10 +26,10 @@ TypeScript 中原始类型有下面这些：
 let employee: object;
 
 employee = {
-  firstName: "John",
-  lastName: "Doe",
+  firstName: 'John',
+  lastName: 'Doe',
   age: 25,
-  jobTitle: "Web Developer",
+  jobTitle: 'Web Developer',
 };
 
 console.log(employee);
@@ -49,7 +49,7 @@ console.log(employee);
 如果你重新给 `employee` 对象赋值一个原始值，你将得到一个错误提示：
 
 ```ts
-employee = "Jane";
+employee = 'Jane';
 ```
 
 错误提示：
@@ -89,10 +89,10 @@ let employee: {
 
 ```ts
 employee = {
-  firstName: "John",
-  lastName: "Doe",
+  firstName: 'John',
+  lastName: 'Doe',
   age: 25,
-  jobTitle: "Web Developer",
+  jobTitle: 'Web Developer',
 };
 ```
 
@@ -105,10 +105,10 @@ let employee: {
   age: number;
   jobTitle: string;
 } = {
-  firstName: "John",
-  lastName: "Doe",
+  firstName: 'John',
+  lastName: 'Doe',
   age: 25,
-  jobTitle: "Web Developer",
+  jobTitle: 'Web Developer',
 };
 ```
 
@@ -128,7 +128,7 @@ TypeScript 有另外一种类似叫做空类型，使用 `{}` 表示，它和 `o
 
 ```ts
 let vacant: {};
-vacant.firstName = "John";
+vacant.firstName = 'John';
 ```
 
 错误提示：

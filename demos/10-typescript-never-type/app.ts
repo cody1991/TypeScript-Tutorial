@@ -4,20 +4,20 @@ function raiseError(message: string): never {
 
 let loop = function forever() {
   while (true) {
-    console.log("hello");
+    console.log('hello');
   }
 };
 
 function reject() {
-  return raiseError("Rejected");
+  return raiseError('Rejected');
 }
 
 function fn(a: string | number): boolean {
-  if (typeof a === "string") return true;
-  else if (typeof a === "number") return false;
+  if (typeof a === 'string') return true;
+  else if (typeof a === 'number') return false;
   return neverOccur();
 }
 
 let neverOccur = () => {
-  throw new Error("Never!");
+  throw new Error('Never!');
 };

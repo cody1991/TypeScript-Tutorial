@@ -45,7 +45,7 @@ Now, you can use the Pair interface for defining any key/value pair with any typ
 
 ```ts
 let month: Pair<string, number> = {
-  key: "Jan",
+  key: 'Jan',
   value: 1,
 };
 

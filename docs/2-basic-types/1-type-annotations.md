@@ -42,7 +42,7 @@ counter = 1;
 
 ```ts
 let counter: number;
-counter = "Hello"; // compile error
+counter = 'Hello'; // compile error
 ```
 
 错误提示：
@@ -62,7 +62,7 @@ let counter: number = 1;
 下面是其他基本类型注释的例子：
 
 ```ts
-let name: string = "John";
+let name: string = 'John';
 let age: number = 25;
 let active: boolean = true;
 ```
@@ -82,7 +82,7 @@ let arrayName: type[];
 比如下面的例子声明了一个字符串数组：
 
 ```ts
-let names: string[] = ["John", "Jane", "Peter", "David", "Mary"];
+let names: string[] = ['John', 'Jane', 'Peter', 'David', 'Mary'];
 ```
 
 ## 对象
@@ -96,7 +96,7 @@ let person: {
 };
 
 person = {
-  name: "John",
+  name: 'John',
   age: 25,
 }; // 合法的
 ```
@@ -123,7 +123,7 @@ greeting = function (name: string) {
 
 ```ts
 greeting = function () {
-  console.log("Hello");
+  console.log('Hello');
 };
 ```
 

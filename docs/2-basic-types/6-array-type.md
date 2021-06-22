@@ -23,27 +23,27 @@ let skills: string[];
 你可以往这个数组中添加一个或多个字符串：
 
 ```ts
-skills[0] = "Problem Solving";
-skills[1] = "Programming";
+skills[0] = 'Problem Solving';
+skills[1] = 'Programming';
 ```
 
 或者使用 `push()` 方法
 
 ```ts
-skills.push("Software Design");
+skills.push('Software Design');
 ```
 
 下面的语句声明了一个变量，并将一个字符串数组赋值给它：
 
 ```ts
-let skills = ["Problem Sovling", "Software Design", "Programming"];
+let skills = ['Problem Sovling', 'Software Design', 'Programming'];
 ```
 
 在这个例子中，TypeScript [推断](/2-basic-types/15-type-inference/) `skills` 数组为一个字符串数组，它相当于：
 
 ```ts
 let skills: string[];
-skills = ["Problem Sovling", "Software Design", "Programming"];
+skills = ['Problem Sovling', 'Software Design', 'Programming'];
 ```
 
 当你给一个数组定义了特定类型，TypeScript 将阻止你向数组中添加不兼容的值
@@ -107,7 +107,7 @@ console.log(doubleIt);
 下面演示了如何声明一个同时好汉字符串和数字的数组：
 
 ```ts
-let scores = ["Programming", 5, "Software Design", 4];
+let scores = ['Programming', 5, 'Software Design', 4];
 ```
 
 在这个例子中，TypeScript 将 `scores` 数组推断为 `string | number` 数组
@@ -116,7 +116,7 @@ let scores = ["Programming", 5, "Software Design", 4];
 
 ```ts
 let scores: (string | number)[];
-scores = ["Programming", 5, "Software Design", 4];
+scores = ['Programming', 5, 'Software Design', 4];
 ```
 
 # 总结

@@ -1,4 +1,4 @@
-const arrayName: string[] = ["John", "Jane", "Peter", "David"];
+const arrayName: string[] = ['John', 'Jane', 'Peter', 'David'];
 
 let person: {
   name: string;
@@ -6,7 +6,7 @@ let person: {
 };
 
 person = {
-  name: "John",
+  name: 'John',
   age: 24,
 };
 

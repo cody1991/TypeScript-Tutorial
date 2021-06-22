@@ -43,9 +43,9 @@ enum ApprovalStatus {
 const request = {
   id: 1,
   status: ApprovalStatus.approved,
-  description: "Please approve this request",
+  description: 'Please approve this request',
 };
 
 if (request.status === ApprovalStatus.approved) {
-  console.log("Send email to the Applicant...");
+  console.log('Send email to the Applicant...');
 }

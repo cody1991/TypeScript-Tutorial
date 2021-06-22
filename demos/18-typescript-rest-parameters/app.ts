@@ -1,5 +1,5 @@
 function getTotal(base?: number, ...numbers: number[]): number {
-  let total = typeof base === "number" ? base : 0;
+  let total = typeof base === 'number' ? base : 0;
   numbers.forEach((num) => (total += num));
   return total;
 }

@@ -20,7 +20,7 @@ title: 为什么使用 TypeScript
 JavaScript 是动态类型的。与其他比如 `Java` 或者 `C#` 这些静态语言不同，值具有类型而不是变量，比如：
 
 ```ts
-"Hello";
+'Hello';
 ```
 
 对于这个值，你可以说它的类型是 `string`，又比如下面的值是一个数字：
@@ -33,7 +33,7 @@ JavaScript 是动态类型的。与其他比如 `Java` 或者 `C#` 这些静态�
 
 ```ts
 let box;
-box = "hello";
+box = 'hello';
 box = 100;
 ```
 
@@ -45,7 +45,7 @@ box = 100;
 let box;
 console.log(typeof box); // undefined
 
-box = "Hello";
+box = 'Hello';
 console.log(typeof box); // string
 
 box = 100;

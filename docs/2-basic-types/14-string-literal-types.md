@@ -11,19 +11,19 @@ title: 字符串字面量类型
 下面的例子定义了一个字符串字面量类型，它只接受 `'click'` 字符串
 
 ```ts
-let click: "click";
+let click: 'click';
 ```
 
 `click` 是一个只接受 `'click'` 字符串的字符串字面量类型，如果你把字符串 `click` 赋值给 `click` 变量，它是合法的：
 
 ```ts
-click = "click"; // valid
+click = 'click'; // valid
 ```
 
 但是你如果把另外一个字符串赋值给 `click` 变量，TypeScript 编译器会抛出错误，例如：
 
 ```ts
-click = "dblclick"; // compiler error
+click = 'dblclick'; // compiler error
 ```
 
 错误提示：
@@ -37,12 +37,12 @@ Type '"dblclick"' is not assignable to type '"click"'.
 字符串字面量类型可以与 [联合类型](/2-basic-types/12-union-type/) 很好地结合起来，为变量定义一组有限的字符串值
 
 ```ts
-let mouseEvent: "click" | "dblclick" | "mouseup" | "mousedown";
-mouseEvent = "click"; // valid
-mouseEvent = "dblclick"; // valid
-mouseEvent = "mouseup"; // valid
-mouseEvent = "mousedown"; // valid
-mouseEvent = "mouseover"; // compiler error
+let mouseEvent: 'click' | 'dblclick' | 'mouseup' | 'mousedown';
+mouseEvent = 'click'; // valid
+mouseEvent = 'dblclick'; // valid
+mouseEvent = 'mouseup'; // valid
+mouseEvent = 'mousedown'; // valid
+mouseEvent = 'mouseover'; // compiler error
 ```
 
 如果你在多个位置使用字符串字面量类型，这样会非常的冗长

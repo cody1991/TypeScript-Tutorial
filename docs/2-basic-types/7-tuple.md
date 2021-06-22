@@ -17,14 +17,14 @@ title: 元组类型
 
 ```ts
 let skill: [string, number];
-skill = ["Programming", 5];
+skill = ['Programming', 5];
 ```
 
 元组中的值的顺序是很重要的，如果你把 `skill` 元组中值的顺序修改成 `[5, "Programming"]`，你将会得到一个错误提示：
 
 ```ts
 let skill: [string, number];
-skill = [5, "Programming"];
+skill = [5, 'Programming'];
 ```
 
 错误提示：

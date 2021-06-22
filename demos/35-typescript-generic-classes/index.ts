@@ -9,13 +9,13 @@ class Stack<T> {
   }
   push(element: T): void {
     if (this.isFull()) {
-      throw new Error("The stack is overflow!");
+      throw new Error('The stack is overflow!');
     }
     this.elements.push(element);
   }
   pop(): T {
     if (this.isEmpty()) {
-      throw new Error("The stack is empty!");
+      throw new Error('The stack is empty!');
     }
     return <T>this.elements.pop();
   }
@@ -38,7 +38,7 @@ while (!numbers.isEmpty()) {
   console.log(`Pop ${n} from the stack.`);
 }
 
-const words = "The quick brown fox jumps over the lazy dog".split(" ");
+const words = 'The quick brown fox jumps over the lazy dog'.split(' ');
 const wordStack = new Stack<string>(words.length);
 
 words.forEach((word) => wordStack.push(word));

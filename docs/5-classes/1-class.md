@@ -31,7 +31,7 @@ Person.prototype.getFullName = function () {
 然后你可以通过 `Person` “类” 来创建一个新对象：
 
 ```ts
-let person = new Person("171-28-0926", "John", "Doe");
+let person = new Person('171-28-0926', 'John', 'Doe');
 console.log(person.getFullName());
 ```
 
@@ -80,7 +80,7 @@ class Person {
 使用 `Person` 类和使用 `Person` 构造函数创建对象是一样的：
 
 ```ts
-let person = new Person("171-28-0926", "John", "Doe");
+let person = new Person('171-28-0926', 'John', 'Doe');
 console.log(person.getFullName());
 ```
 
@@ -109,7 +109,7 @@ class Person {
 例如，你你不能把 `ssn` 初始化为一个 `number` ，下面的代码会抛出一个错误：
 
 ```ts
-let person = new Person(171280926, "John", "Doe");
+let person = new Person(171280926, 'John', 'Doe');
 ```
 
 # 总结

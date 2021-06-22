@@ -16,9 +16,9 @@ break 语句允许你终止一个循环，把程序控制流传递给循环后�
 
 ```ts
 let products = [
-  { name: "phone", price: 700 },
-  { name: "tablet", price: 900 },
-  { name: "laptop", price: 1200 },
+  { name: 'phone', price: 700 },
+  { name: 'tablet', price: 900 },
+  { name: 'laptop', price: 1200 },
 ];
 
 for (var i = 0; i < products.length; i++) {
@@ -47,22 +47,22 @@ console.log(products[i]);
 
 ```ts
 let products = [
-  { name: "phone", price: 700 },
-  { name: "tablet", price: 900 },
-  { name: "laptop", price: 1200 },
+  { name: 'phone', price: 700 },
+  { name: 'tablet', price: 900 },
+  { name: 'laptop', price: 1200 },
 ];
 
 let discount = 0;
 let product = products[1];
 
 switch (product.name) {
-  case "phone":
+  case 'phone':
     discount = 5;
     break;
-  case "tablet":
+  case 'tablet':
     discount = 10;
     break;
-  case "laptop":
+  case 'laptop':
     discount = 15;
     break;
 }
