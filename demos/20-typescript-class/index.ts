@@ -14,5 +14,5 @@ class Person {
   }
 }
 
-const person = new Person('171-28-0926', 'John', 'Doe');
+const person = new Person("171-28-0926", "John", "Doe");
 console.log(person);

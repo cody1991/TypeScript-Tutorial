@@ -23,7 +23,7 @@ class Contractor extends Employee {
     firstName: string,
     lastName: string,
     private rate: number,
-    private hours: number
+    private hours: number,
   ) {
     super(firstName, lastName);
   }
@@ -32,8 +32,8 @@ class Contractor extends Employee {
   }
 }
 
-const john = new FullTimeEmployee('John', 'Doe', 12000);
-const jane = new Contractor('Jane', 'Doe', 100, 160);
+const john = new FullTimeEmployee("John", "Doe", 12000);
+const jane = new Contractor("Jane", "Doe", 100, 160);
 
 console.log(john.compensationStatement());
 console.log(jane.compensationStatement());

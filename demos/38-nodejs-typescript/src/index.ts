@@ -1,1 +1,1 @@
-console.log('Node.js TypeScript!!');
+console.log("Node.js TypeScript!!");

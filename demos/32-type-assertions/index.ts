@@ -1,7 +1,7 @@
 function getNetPrice(
   price: number,
   discount: number,
-  format: boolean
+  format: boolean,
 ): number | string {
   let netPrice = price * (1 - discount);
   return format ? `$${netPrice}` : netPrice;

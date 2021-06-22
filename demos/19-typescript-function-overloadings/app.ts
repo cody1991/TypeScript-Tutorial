@@ -17,12 +17,12 @@ function add(a: any, b: any): any {
   return a + b;
 }
 add(1, 2);
-add('1', '4');
+add("1", "4");
 
 function sum(a: number, b: number): number;
 function sum(a: number, b: number, c: number): number;
 function sum(a: number, b: number, c?: number): number {
-  if (typeof c !== 'undefined') return a + b + c;
+  if (typeof c !== "undefined") return a + b + c;
   return a + b;
 }
 
@@ -31,7 +31,7 @@ class Counter {
   count(): number;
   count(target: number): number[];
   count(target?: number): number | number[] {
-    if (typeof target !== 'undefined') {
+    if (typeof target !== "undefined") {
       let values = [];
       for (let start = this.current; start <= target; start++) {
         values.push(start);

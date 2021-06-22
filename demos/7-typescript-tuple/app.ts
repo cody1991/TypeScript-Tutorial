@@ -1,5 +1,5 @@
 let skill: [string, number];
-skill = ['Programming', 5];
+skill = ["Programming", 5];
 
 let color: [number, number, number] = [255, 0, 0];
 

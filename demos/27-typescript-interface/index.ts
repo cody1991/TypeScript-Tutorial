@@ -6,23 +6,23 @@ interface Person {
 }
 
 function getFullName(person: Person) {
-  if (typeof person.middleName !== 'undefined') {
+  if (typeof person.middleName !== "undefined") {
     return `${person.firstName} ${person.middleName} ${person.lastName}`;
   }
   return `${person.firstName} ${person.lastName}`;
 }
 
 let john = {
-  firstName: 'John',
-  lastName: 'Doe',
+  firstName: "John",
+  lastName: "Doe",
 };
 
 console.log(getFullName(john));
 
 let jane = {
-  firstName: 'Jane',
-  middleName: 'K.',
-  lastName: 'Doe',
+  firstName: "Jane",
+  middleName: "K.",
+  lastName: "Doe",
   age: 22,
 };
 
@@ -44,7 +44,7 @@ lowerCase = function (str: string) {
   return str.toLowerCase();
 };
 
-console.log(format('hi', true));
+console.log(format("hi", true));
 
 // class types
 interface Json {
@@ -58,5 +58,5 @@ class Person2 implements Json {
   }
 }
 
-const person = new Person2('John', 'Doe');
+const person = new Person2("John", "Doe");
 console.log(person.toJson());

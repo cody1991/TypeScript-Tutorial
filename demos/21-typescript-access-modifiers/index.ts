@@ -14,14 +14,14 @@ class Person {
   }
 }
 
-const person = new Person('153-07-3130', 'John', 'Doe');
+const person = new Person("153-07-3130", "John", "Doe");
 console.log(person.getFullName());
 
 class ShortPerson {
   constructor(
     protected ssn: string,
     private firstName: string,
-    private lastName: string
+    private lastName: string,
   ) {
     this.ssn = ssn;
     this.firstName = firstName;

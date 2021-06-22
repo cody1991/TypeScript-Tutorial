@@ -4,7 +4,7 @@ function applyDiscount(price: number, discount: number = 0.05): number {
 
 function getDay(
   month: number,
-  year: number = new Date().getFullYear()
+  year: number = new Date().getFullYear(),
 ): number {
   let day: number = 0;
   switch (month) {
@@ -28,7 +28,7 @@ function getDay(
       else day = 28;
       break;
     default:
-      throw Error('Invalid month');
+      throw Error("Invalid month");
   }
   return day;
 }

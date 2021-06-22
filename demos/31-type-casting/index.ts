@@ -1,5 +1,5 @@
 const input = document.querySelector(
-  'input["type="text""]'
+  'input["type="text""]',
 ) as HTMLInputElement;
 
 console.log(input.value);
