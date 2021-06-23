@@ -3,12 +3,12 @@ title: 泛型接口
 ---
 
 :::tip 前言
-in this tutorial, you will learn how to develop TypeScript generic interfaces.
+在本教程中，你将学习 TypeScript 中的泛型接口
 :::
 
-# Introduction to TypeScript generic interfaces
+# TypeScript 中的泛型接口介绍
 
-Like classes, interfaces also can be generic. A generic interface has generic type parameter list in an angle brackets `<>` following the name of the interface:
+和类一样，接口也支持泛型的，泛型接口的语法如下，泛型类型参数列表在尖括号 `<>` 中，跟着接口名称后面：
 
 ```ts
 interface interfaceName<T> {
@@ -16,9 +16,9 @@ interface interfaceName<T> {
 }
 ```
 
-This make the type parameter `T` visible to all members of the interface.
+这使得类型参数 `T` 对接口的所有成员都可见
 
-The type parameter list can have one or multiple types. For example:
+类型参数列表可以是一个或者多个类型，如下所示：
 
 ```ts
 interface interfaceName<U, V> {
@@ -26,13 +26,13 @@ interface interfaceName<U, V> {
 }
 ```
 
-# TypeScript generic interface examples
+# TypeScript 泛型接口例子：
 
-Let’s take some examples of declaring generic interfaces.
+看我们看几个声明泛型接口的列子：
 
-## 1) Generic interfaces that describe object properties
+## 1) 描述对象属性的泛型接口
 
-The following show how to declare a generic interface that consists of two members key and value with the corresponding types `K` and `V`:
+下面展示了一个泛型接口，他包含两个键值对成员，类型分别是 `K` 和 `V`
 
 ```ts
 interface Pair<K, V> {
@@ -41,7 +41,7 @@ interface Pair<K, V> {
 }
 ```
 
-Now, you can use the Pair interface for defining any key/value pair with any type. For example:
+现在，你可以使用 `Pair` 接口定义任意类型的键值对，比如：
 
 ```ts
 let month: Pair<string, number> = {
@@ -52,11 +52,11 @@ let month: Pair<string, number> = {
 console.log(month);
 ```
 
-In this example, we declare a month key-value pair whose key is a string and value is a number.
+在这个例子中，我们定义了一个 `key` 为字符串类型而 `value` 为数字类型的键值对
 
-## 2) Generic interfaces that describe methods
+## 2) 描述方法的泛型接口
 
-The following declares a generic interface with two methods add() and remove():
+下面声明了一个泛型接口，它有两个方法：`add()` 方法和 `remove()` 方法：
 
 ```ts
 interface Collection<T> {
@@ -65,7 +65,7 @@ interface Collection<T> {
 }
 ```
 
-And this `List<T>` generic class implements the `Collection<T>` generic interface:
+`List<T>` 泛型类实现了 `Collection<T>` 泛型接口：
 
 ```ts
 class List<T> implements Collection<T> {
@@ -83,9 +83,9 @@ class List<T> implements Collection<T> {
 }
 ```
 
-From the `List<T>` class, you can create a list of values of the various type e.g., numbers, or strings.
+对于 `List<T>` 类，你可以创建任意类型的值列表，如数字或者字符串
 
-For example, the following shows how to use the List<T> generic class to create a list of numbers:
+比如，下面展示了如何使用 `List<T>` 泛型类来创建一个数字列表：
 
 ```ts
 let list = new List<number>();
@@ -95,9 +95,9 @@ for (let i = 0; i < 10; i++) {
 }
 ```
 
-## 3) Generic interfaces that describe index types
+## 3) 描述索引类型的泛型接口
 
-The following declare an interface that describes an index type:
+下面声明了一个描述索引类型的接口：
 
 ```ts
 interface Options<T> {
@@ -109,5 +109,3 @@ let inputOptions: Options<boolean> = {
   visible: true,
 };
 ```
-
-In this tutorial, you have learned about the TypeScript generic interfaces.
