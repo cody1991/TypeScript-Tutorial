@@ -1,5 +1,5 @@
 ---
-title: 为什么使用 TypeScript
+title: 使用原因
 ---
 
 :::tip 前言

@@ -1,5 +1,5 @@
 ---
-title: 搭建 TypeScript 开发环境
+title: 环境搭建
 ---
 
 :::tip 前言

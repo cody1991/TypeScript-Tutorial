@@ -1,5 +1,5 @@
 ---
-title: TypeScript 是什么
+title: 简介
 ---
 
 :::tip 前言

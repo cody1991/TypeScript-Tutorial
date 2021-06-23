@@ -1,5 +1,5 @@
 ---
-title: TypeScript 版的 Hello World
+title: Hello World
 ---
 
 :::tip 前言
