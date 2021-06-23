@@ -1,5 +1,5 @@
 ---
-title: getter 方法和 getter 方法
+title: Getter / Setter
 ---
 
 :::tip 前言
