@@ -1,5 +1,5 @@
 ---
-title: Node.js 中的 TypeScript
+title: Node.js
 ---
 
 :::tip 前言
