@@ -3,12 +3,12 @@ title: 泛型类
 ---
 
 :::tip 前言
-in this tutorial, you will learn how to develop TypeScript generic classes.
+在本教程中，你将学习 如何开发 TypeScript 中的泛型类
 :::
 
-# Introduction to TypeScript generic classes
+# TypeScript 中的泛型类介绍
 
-A [generic](/8-generics/1-generics/) class has a generic type parameter list in an angle brackets `<>` that follows the name of the class:
+[泛型](/8-generics/1-generics/) 类的语法如下，泛型类型参数列表在尖括号 `<>` 中，跟着名称后面：
 
 ```ts
 class className<T> {
@@ -16,7 +16,7 @@ class className<T> {
 }
 ```
 
-TypeScript allows you to have multiple generic types in the type parameter list. For example:
+TypeScript 允许你在类型参数列表中有多个泛型类型类型，如下所示：
 
 ```ts
 class className<K, T> {
