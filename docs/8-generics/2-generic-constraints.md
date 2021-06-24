@@ -133,5 +133,5 @@ Argument of type '"age"' is not assignable to parameter of type '"name"'.
 
 # 总结
 
-- Use `extends` keyword to constrain the type parameter to a specific type.
-- Use `extends keyof` to constrain a type that is the property of another object.
+- 使用 `extends` 关键字将类型参数约束为特定类型
+- 使用 `extends keyof` 来约束类型为另外一个对象属性集合的类型
