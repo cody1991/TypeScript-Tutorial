@@ -24,7 +24,7 @@ class className<K, T> {
 }
 ```
 
-The [generic constraints](/8-generics/2-generic-constraints/) are also applied to the generic types in the class:
+[泛型约束](/8-generics/2-generic-constraints/) 也可以应用于类中的泛型类型：
 
 ```ts
 class className<T extends TypeA> {
@@ -32,20 +32,20 @@ class className<T extends TypeA> {
 }
 ```
 
-Placing the type parameter on the class allows you to develop methods and properties that work with the same type.
+在类上放置类型参数允许你开发相同类型的方法和属性
 
-# TypeScript generic classes example
+# TypeScript 泛型类例子
 
-In this example, we will develop a generic Stack class.
+在这个例子中，我们将开发一个 `Stack` 泛型类
 
-A stack is a data structure that works on the last-in-first-out (or LIFO) principle. It means that the first element you place into the stack is the last element you can get from the stack.
+栈是一个基于后进先出(LIFO)原则的数据结构，这就意味着你第一个放入到栈中的元素会是你从栈中最后一个获取到的元素
 
-Typically, a stack has a size. By default, it is empty. The stack has two main operations:
+通常栈有大小限制，默认为空，栈有两个主要的操作：
 
-- Push: push an element into the stack.
-- Pop: pop an element from the stack.
+- Push: 将一个元素推入到栈中
+- Pop: 从栈中弹出一个元素
 
-The following shows a complete generic Stack class called `Stack<T>`:
+下面展示一个完整的栈泛型类，名为 `Stack<T>`：
 
 ```ts
 class Stack<T> {
@@ -73,13 +73,13 @@ class Stack<T> {
 }
 ```
 
-The following creates a new stack of numbers:
+下面创建了一个新的数字栈：
 
 ```ts
 let numbers = new Stack<number>(5);
 ```
 
-This function returns a random number between two numbers, `low` and `high`:
+下面的函数返回两个数字 `low` 和 `high` 之间的随机数：
 
 ```ts
 function randBetween(low: number, high: number): number {
@@ -87,7 +87,7 @@ function randBetween(low: number, high: number): number {
 }
 ```
 
-Now, you can use the `randBetween()` function to generate random numbers for pushing into the `numbers` stack:
+现在你可以使用 `randBetween()` 函数生成随机数，然后推入到 `numbers` 栈中：
 
 ```ts
 let numbers = new Stack<number>(5);
@@ -99,7 +99,7 @@ while (!numbers.isFull()) {
 }
 ```
 
-Output:
+输出：
 
 ```sh
 Push 3 into the stack.
@@ -109,7 +109,7 @@ Push 8 into the stack.
 Push 9 into the stack.
 ```
 
-The following shows how to pop elements from the stack until it is empty:
+下面演示如何从栈中弹出元素，直到栈为空：
 
 ```ts
 while (!numbers.isEmpty()) {
@@ -118,7 +118,7 @@ while (!numbers.isEmpty()) {
 }
 ```
 
-Output:
+输出：
 
 ```sh
 Pop 9 from the stack.
@@ -128,7 +128,7 @@ Pop 2 from the stack.
 Pop 3 from the stack.
 ```
 
-Similarly, you can create a stack of strings. For example:
+类似的，你可以创建一个字符串栈，例如：
 
 ```ts
 let words = 'The quick brown fox jumps over the lazy dog'.split(' ');
@@ -144,11 +144,9 @@ while (!wordStack.isEmpty()) {
 }
 ```
 
-How it works:
+它是如何工作的：
 
-- First, split the sentences into words.
-- Second, create a stack whose size is equal to the number of words in the words array.
-- Third, push elements of the words array into the stack.
-- Finally, pop words from the stack until it is empty.
-
-In this tutorial, you have learned how to develop generic classes in TypeScript.
+- 首先，把橘子拆成单词
+- 然后，创建一个栈，大小等于单词数组的单词数
+- 第三，将单词数组中的单词推入栈中
+- 最后，将栈中的单词弹出，直到栈为空
