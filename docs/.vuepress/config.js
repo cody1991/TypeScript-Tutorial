@@ -11,6 +11,12 @@ module.exports = {
       },
     ],
     '@vuepress/nprogress',
+    [
+      '@vuepress/google-analytics',
+      {
+        ga: 'G-4DNMGQS60C',
+      },
+    ],
   ],
   title: 'TypeScript Tutorial',
   // description: 'Just playing arround',
