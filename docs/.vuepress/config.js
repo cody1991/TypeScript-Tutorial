@@ -1,4 +1,23 @@
 module.exports = {
+  head: [
+    [
+      'script',
+      {},
+      `
+        (function() {
+        var hm1 = document.createElement("script");
+        hm1.src = "https://www.googletagmanager.com/gtag/js?id=G-4DNMGQS60C";
+        var s1 = document.getElementsByTagName("script")[0]; 
+        s1.parentNode.insertBefore(hm1, s1);
+        })();
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-4DNMGQS60C');
+    `,
+    ],
+  ],
   plugins: [
     '@vuepress/back-to-top',
     [
