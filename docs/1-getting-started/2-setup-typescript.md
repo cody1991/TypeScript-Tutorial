@@ -16,7 +16,7 @@ title: 环境搭建
 
 - Live Server – 允许启动本地开发服务器进行开发，它带有热更新等特性。
 
-# 安装 Node.js
+## 安装 Node.js
 
 按照下面的步骤来安装 Node.js
 
@@ -25,7 +25,7 @@ title: 环境搭建
 - 运行下载回来的 Node.js 包或者可执行文件，后续的安装过程非常简单；
 - 在 macOS 或 Linux 中打开终端，或者在 Windows 上打开命令行工具，输入命令 `node -v` 验证安装是否成功，如果看到的版本号和你刚下载的一致，那么 Node.js 成功安装在你的电脑上了。
 
-# 安装 TypeScript 编译器
+## 安装 TypeScript 编译器
 
 安装 TypeScript 编译器，你需要在 macOS 或 Linux 上打开终端，或者在 Windows 上打开命令行工具，输入以下命令：
 
@@ -62,7 +62,7 @@ operable program or batch file.
 npm install -g ts-node
 ```
 
-# 安装 VS Code
+## 安装 VS Code
 
 你可以按照下面的步骤来安装 VS Code
 

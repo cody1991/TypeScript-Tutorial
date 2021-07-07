@@ -6,7 +6,7 @@ title: Hello World
 在本教程中，你会学习到在 TypeScript 如何开发一个 Hello World 程序
 :::
 
-# Node.js 下的 TypeScript Hello World 程序
+## Node.js 下的 TypeScript Hello World 程序
 
 第一，创建一个文件夹来存放我们的代码，比如 `helloword`
 
@@ -49,7 +49,7 @@ node app.js
 ts-node app.ts
 ```
 
-# Web 浏览器下的 TypeScript Hello World 程序
+## Web 浏览器下的 TypeScript Hello World 程序
 
 按照下面的步骤来创建一个网页，它会在 Web 浏览器中显示 `Hello, World!` 信息
 
