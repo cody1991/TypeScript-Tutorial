@@ -6,6 +6,8 @@ title: 环境搭建
 在本教程中，你会学习 TypeScript 本地开发环境的搭建。
 :::
 
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/setup-typescript/)
+
 安装下面的工具来开始你的 TypeScript 语言编程之旅：
 
 - Node.js – Node.js 是运行 TypeScript 编译器的环境，注意不一定要了解 Node.js；

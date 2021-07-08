@@ -6,6 +6,8 @@ title: 使用原因
 在本教程中，你将会了解到为什么要用 TypeScript 替代 JavaScript，来避免动态类型引发的一些问题
 :::
 
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/why-typescript/)
+
 ## 为什么使用 TypeScript
 
 这里有两个原因去使用 TypeScript：

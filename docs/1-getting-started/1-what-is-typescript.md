@@ -6,6 +6,8 @@ title: 简介
 在本教程中，你将知道 TypeScript 是什么，以及 TypeScript 对比原生 JavaScript 具备哪些优势。
 :::
 
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/what-is-typescript/)
+
 ## TypeScript 介绍
 
 TypeScript 是 JavaScript 的超集，它是建立在 JavaScript 之上的一门编程语言。
