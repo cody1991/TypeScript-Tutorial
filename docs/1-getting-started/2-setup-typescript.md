@@ -64,9 +64,9 @@ operable program or batch file.
 npm install -g ts-node
 ```
 
-## 安装 VS Code
+## 安装 Visual Studio Code
 
-你可以按照下面的步骤来安装 VS Code
+你可以按照下面的步骤来安装 Visual Studio Code
 
 - 打开 [Visual Studio Code 下载页面](https://code.visualstudio.com/download)；
 - 选择最新的且和你操作系统（Windows, macOS, 或者 Linux）兼容的 Visual Studio Code 版本进行下载；

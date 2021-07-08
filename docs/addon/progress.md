@@ -18,7 +18,7 @@ title: 项目进度
 | **<big>Section 1. 入门</big>**       | 4 / 4    | -                         |
 | - Section 1.1 简介                   | 完成     | 1                         |
 | - Section 1.2 环境搭建               | 完成     | 1                         |
-| - Section 1.3 Hello World            | 完成     | 0                         |
+| - Section 1.3 Hello World            | 完成     | 1                         |
 | - Section 1.4 使用原因               | 完成     | 0                         |
 | **<big>Section 2. 基本类型</big>**   | 15 / 15  | -                         |
 | - Section 2.1 类型注释               | 完成     | 0                         |
