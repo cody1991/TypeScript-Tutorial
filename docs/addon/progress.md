@@ -23,7 +23,7 @@ title: 项目进度
 | **<big>Section 2. 基本类型</big>**   | 16 / 16  | -                         |
 | - Section 2.1 类型                   | 完成     | 1                         |
 | - Section 2.2 类型注释               | 完成     | 1                         |
-| - Section 2.3 类型推断               | 完成     | 0                         |
+| - Section 2.3 类型推断               | 完成     | 1                         |
 | - Section 2.4 数字类型               | 完成     | 0                         |
 | - Section 2.5 字符串类型             | 完成     | 0                         |
 | - Section 2.6 布尔值类型             | 完成     | 0                         |
