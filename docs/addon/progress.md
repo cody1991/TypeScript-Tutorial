@@ -9,7 +9,7 @@ title: 项目进度
 ::: tip 翻译进度
 🎉🎉 翻译完毕 🎉🎉
 
-总体翻译进度：51 / 51
+总体翻译进度：52 / 52
 :::
 
 | 章节                                 | 翻译进度 | 校准次数 （计划两到五次） |
@@ -20,22 +20,23 @@ title: 项目进度
 | - Section 1.2 环境搭建               | 完成     | 1                         |
 | - Section 1.3 Hello World            | 完成     | 1                         |
 | - Section 1.4 使用原因               | 完成     | 1                         |
-| **<big>Section 2. 基本类型</big>**   | 15 / 15  | -                         |
-| - Section 2.1 类型注释               | 完成     | 0                         |
-| - Section 2.2 类型推断               | 完成     | 0                         |
-| - Section 2.3 数字类型               | 完成     | 0                         |
-| - Section 2.4 字符串类型             | 完成     | 0                         |
-| - Section 2.5 布尔值类型             | 完成     | 0                         |
-| - Section 2.6 对象类型               | 完成     | 0                         |
-| - Section 2.7 数组类型               | 完成     | 0                         |
-| - Section 2.8 元组类型               | 完成     | 0                         |
-| - Section 2.9 枚举类型               | 完成     | 0                         |
-| - Section 2.10 any 类型              | 完成     | 0                         |
-| - Section 2.11 void 类型             | 完成     | 0                         |
-| - Section 2.12 never 类型            | 完成     | 0                         |
-| - Section 2.13 联合类型              | 完成     | 0                         |
-| - Section 2.14 类型别名              | 完成     | 0                         |
-| - Section 2.15 字符串字面量类型      | 完成     | 0                         |
+| **<big>Section 2. 基本类型</big>**   | 16 / 16  | -                         |
+| - Section 2.1 类型                   | 完成     | 0                         |
+| - Section 2.2 类型注释               | 完成     | 0                         |
+| - Section 2.3 类型推断               | 完成     | 0                         |
+| - Section 2.4 数字类型               | 完成     | 0                         |
+| - Section 2.5 字符串类型             | 完成     | 0                         |
+| - Section 2.6 布尔值类型             | 完成     | 0                         |
+| - Section 2.7 对象类型               | 完成     | 0                         |
+| - Section 2.8 数组类型               | 完成     | 0                         |
+| - Section 2.9 元组类型               | 完成     | 0                         |
+| - Section 2.10 枚举类型              | 完成     | 0                         |
+| - Section 2.11 any 类型              | 完成     | 0                         |
+| - Section 2.12 void 类型             | 完成     | 0                         |
+| - Section 2.13 never 类型            | 完成     | 0                         |
+| - Section 2.14 联合类型              | 完成     | 0                         |
+| - Section 2.15 类型别名              | 完成     | 0                         |
+| - Section 2.16 字符串字面量类型      | 完成     | 0                         |
 | **<big>Section 3. 控制流语句</big>** | 7 / 7    | -                         |
 | - Section 3.1 if else                | 完成     | 0                         |
 | - Section 3.2 switch case            | 完成     | 0                         |
