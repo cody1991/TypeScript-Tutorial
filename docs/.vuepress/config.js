@@ -69,7 +69,7 @@ module.exports = {
       },
       {
         title: 'Section 2. 基本类型',
-        path: '/2-basic-types/1-type-annotations',
+        path: '/2-basic-types/16-types',
         children: [
           '/2-basic-types/16-types',
           '/2-basic-types/1-type-annotations',
