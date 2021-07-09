@@ -3,10 +3,12 @@ title: 布尔值类型
 ---
 
 :::tip 前言
-在本教程中，你将学习 TypeScript 布尔值数据类型
+在本教程中，你将学习 TypeScript 中的布尔值数据类型。
 :::
 
-TypeScript 中的 `boolean` 类型允许两个值：`true` 和 `false`。他们是 TypeScript 中原始类型的一种。例如：
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-boolean/)
+
+TypeScript 中的 `boolean` 类型有两个值：`true` 和 `false`，它是 TypeScript 的原始类型之一，如下所示：
 
 ```ts
 let pending: boolean;
@@ -16,6 +18,4 @@ pending = true;
 pending = false;
 ```
 
-JavaScript 有表示非原始封装对象的 `Boolean` 类型，`Boolean` 类型首字母为大写字符 `B`，这和 `boolean` 类型不一样
-
-避免使用 `Boolean` 类型是一个好的实践
+JavaScript 有表示非原始，封装的对象类型 `Boolean` 类型，`Boolean` 类型首字母为大写字符 `B`，和 `boolean` 类型是不一样的，我们尽可能不使用 `Boolean` 类型。

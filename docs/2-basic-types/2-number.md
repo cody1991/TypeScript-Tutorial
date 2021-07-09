@@ -63,7 +63,7 @@ let octal: number = 0o10;
 let hexadecimal: number = 0xa;
 ```
 
-JavaScript 有一个 `Number` 类型（注意是大写字母 `N`），该类型表示的是非原始封装的对象类型，在 TypeScript 中尽可能不使用 `Number` 类型。
+JavaScript 有一个 `Number` 类型（注意是大写字母 `N`），该类型表示的是非原始，封装的对象类型，在 TypeScript 中尽可能不使用 `Number` 类型。
 
 ## 大整数
 
