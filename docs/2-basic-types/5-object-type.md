@@ -3,14 +3,14 @@ title: 对象类型
 ---
 
 :::tip 前言
-在本教程中，你将学习 TypeScript 对象数据类型，以及如何编写更加准确的对象类型声明
+在本教程中，你将学习 TypeScript 中的对象数据类型，以及如何更加准地编写对象类型声明。
 :::
 
-# TypeScript 对象类型介绍
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-object-type/)
 
-TypeScript `object` 类型代表所有不属于原始类型的值
+## TypeScript 中的对象类型介绍
 
-TypeScript 中原始类型有下面这些：
+TypeScript 中的 `object` 类型代表所有不是原始类型的值，TypeScript 中原始类型有以下这些：
 
 - `number`
 - `bigint`
@@ -46,7 +46,7 @@ console.log(employee);
 }
 ```
 
-如果你重新给 `employee` 对象赋值一个原始值，你将得到一个错误提示：
+如果你给 `employee` 对象赋值一个原始类型的值，将得到一个错误提示：
 
 ```ts
 employee = 'Jane';
@@ -58,7 +58,7 @@ employee = 'Jane';
 error TS2322: Type '"Jane"' is not assignable to type 'object'.
 ```
 
-`employee` 对象是一个具有固定属性列表的 `object` 类型。如果你尝试去访问 `employee` 对象中不存在的属性，你将得到一个错误提示：
+`employee` 对象是一个具有固定属性列表的 `object` 类型，如果你尝试去访问 `employee` 对象中不存在的属性，将得到一个错误提示：
 
 ```ts
 console.log(employee.hireDate);
@@ -71,10 +71,10 @@ error TS2339: Property 'hireDate' does not exist on type 'object'.
 ```
 
 ::: tip
-注意上面的语句在 JavaScript 中能正常地工作，它会返回 `undefined`
+注意上面的语句在 JavaScript 中能正常地允许，它会返回 `undefined` 。
 :::
 
-要显式地指定 `employee` 对象的属性，首先使用下面的语法来定义 `employee` 对象
+要显式地指定 `employee` 对象的属性，首先使用下面的语法定义 `employee` 对象：
 
 ```ts
 let employee: {
@@ -85,7 +85,7 @@ let employee: {
 };
 ```
 
-然后你给 `employee` 对象赋值具有上述描述属性的对象字面量
+然后你给 `employee` 对象赋值一个具有上面所有属性的对象：
 
 ```ts
 employee = {
@@ -96,7 +96,7 @@ employee = {
 };
 ```
 
-或者你可以把两种语法组合在同一个语句中，就像这样：
+也可以把两种语法组合在一个语句中，如下所示：
 
 ```ts
 let employee: {
@@ -112,19 +112,13 @@ let employee: {
 };
 ```
 
-# object vs. Object
+## object vs. Object
 
-TypeScript 有另外一种类型叫做 `Object`，字符 `O` 是大写的。理解它们之间的区别是非常重要的
+TypeScript 有另外一种类型，叫做 `Object` 类型，它的字符 `O` 是大写的，理解它们之间的区别是非常有必要的。`object` 类型代表所有的非原始类型的值，而 `Object` 类型描述的是所有对象具有的功能。例如，`Object` 类型具有可以被任何对象访问的 `toString()` 和 `valueOf()` 方法。
 
-`object` 类型代表所有的非原始值，而 `Object` 类型描述所有对象的功能
+## 空类型 {}
 
-比如，`Object` 类型具有可以被任何对象访问的 `toString()` 和 `valueOf()` 方法，
-
-# 空类型 {}
-
-TypeScript 有另外一种类似叫做空类型，使用 `{}` 表示，它和 `object` 类型非常类似
-
-空类型 `{}` 描述一个本身没有属性的对象，如果你尝试去访问这种类型对象的某个属性，TypeScript 会发出一个编译时错误提示：
+TypeScript 有另外一个类型叫空类型，使用 `{}` 表示，它和 `object` 类型非常相似。空类型 `{}` 描述一个本身没有任何属性的对象，如果你尝试去访问这种类型的对象的某个属性，TypeScript 会发出一个编译时错误的提示：
 
 ```ts
 let vacant: {};
@@ -137,7 +131,7 @@ vacant.firstName = 'John';
 error TS2339: Property 'firstName' does not exist on type '{}'.
 ```
 
-但是你可以通过 [原型链](https://zh.javascript.info/prototype-inheritance) 访问所有在 `Object` 类型上定义的属性和方法
+但可以通过 [原型链](https://zh.javascript.info/prototype-inheritance) 访问所有在 `Object` 类型上定义的属性和方法：
 
 ```ts
 let vacant: {} = {};
@@ -151,8 +145,8 @@ console.log(vacant.toString());
 [object Object]
 ```
 
-# 总结
+## 总结
 
-- TypeScript `object` 类型代表所有的非原始类型的值
-- 而 `Object` 类型描述所有对象上可用的功能
-- 空类型 `{}` 描述一个自身没有属性的对象
+- TypeScript 中的 `object` 类型代表所有的非原始类型的值；
+- `Object` 类型描述所有对象具有的功能；
+- 空类型 `{}` 描述一个自身没有任何属性的对象。
