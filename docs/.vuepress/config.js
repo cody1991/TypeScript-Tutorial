@@ -29,7 +29,7 @@ module.exports = {
           repo: 'TypeScript-Tutorial',
           owner: 'cody1991',
           admin: ['cody1991'],
-          distractionFreeMode: false,
+          distractionFreeMode: true,
           id: '<%- frontmatter.title %>',
           title: '「Comment」<%- frontmatter.title %>',
           body: '<%- frontmatter.title %>：<%-window.location.origin %><%- frontmatter.to.path || window.location.pathname %>',
