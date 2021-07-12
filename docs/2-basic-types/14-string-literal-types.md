@@ -61,7 +61,7 @@ mouseEvent = 'mouseover'; // compiler error
 let anotherEvent: MouseEvent;
 ```
 
-# 总结
+# 小结
 
 - TypeScript 字符串字面量类型指定了可接受的字符串
 - 将字符串字面量类型与联合类型和类型别名一起使用，来定义指定接受有限的字符串集合的类型

@@ -201,7 +201,7 @@ person.fullname = 'John Doe';
 console.log(person.fullName);
 ```
 
-# 总结
+# 小结
 
 - 使用 TypeScript 的 `getter` 方法 / `setter` 方法来控制类属性的访问
 - `getter` 方法 / `setter` 方法 也被叫做 `accessor` 方法 / `mutator` 方法.

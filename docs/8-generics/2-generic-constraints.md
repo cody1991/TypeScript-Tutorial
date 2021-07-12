@@ -131,7 +131,7 @@ let str = prop({ name: 'John' }, 'age');
 Argument of type '"age"' is not assignable to parameter of type '"name"'.
 ```
 
-# 总结
+# 小结
 
 - 使用 `extends` 关键字将类型参数约束为特定类型
 - 使用 `extends keyof` 来约束类型为另外一个对象属性集合的类型

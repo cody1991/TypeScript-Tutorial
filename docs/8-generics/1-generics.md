@@ -168,6 +168,6 @@ console.log(result);
 - 消除 [类型转换](/7-advanced-types/3-casting/).
 - 允许你实现泛型算法
 
-# 总结
+# 小结
 
 - 使用 TypeScript 泛型来开发可复用的，通用的和类型安全的函数，接口和类

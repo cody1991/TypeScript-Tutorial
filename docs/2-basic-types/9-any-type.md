@@ -80,7 +80,7 @@ result.toFixed();
 error TS2339: Property 'toFixed' does not exist on type 'object'.
 ```
 
-## 总结
+## 小结
 
 - TypeScript `any` 类型允许你存储任意类型的值，它告诉编译器不进行类型检查；
 - 使用 `any` 类型来存储在编译时或者 JavaScript 项目迁移成 TypeScript 项目时不知道类型的值。

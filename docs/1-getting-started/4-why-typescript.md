@@ -176,7 +176,7 @@ showProduct(product.price, product.name);
 
 ![why-typescript-error-in-function-arguments](./images/why-typescript-error-in-function-arguments.png)
 
-## 总结
+## 小结
 
 - JavaScript 是一门动态类型语言，它具有灵活性，但是引发了不少问题；
 - TypeScript 在 JavaScript 之上增加了可选类型系统解决这些问题。

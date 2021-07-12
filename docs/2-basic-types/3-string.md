@@ -44,7 +44,7 @@ I'm John.
 I'm a Web Developer.
 ```
 
-## 总结
+## 小结
 
 - 在 TypeScript 中，所有的字符串都是 `string` 类型；
 - 和 JavaScript 一样，TypeScript 中使用双引号 (`"`)，单引号 (`'`) 或者反引号 (`) 包裹字符串。

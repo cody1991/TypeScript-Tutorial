@@ -86,6 +86,6 @@ do {
 console.log(count); // 45
 ```
 
-# 总结
+# 小结
 
 - 使用 TypeScript `continue` 语句跳到循环的末尾，并继续下一个循环迭代

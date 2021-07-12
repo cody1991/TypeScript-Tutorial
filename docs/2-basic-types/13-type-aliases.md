@@ -33,6 +33,6 @@ input = 'Hi'; // valid
 input = false; // Compiler error
 ```
 
-# 总结
+# 小结
 
 - 使用类型别名给现有的类型创建新的名称

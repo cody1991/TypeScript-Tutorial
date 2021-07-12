@@ -247,7 +247,7 @@ console.log(person.toJson());
 {"firstName":"John", "lastName":"Doe"}
 ```
 
-# 总结
+# 小结
 
 - TypeScript 接口在代码中定义约定，并为类型检查提供显式名称
 - 接口可以有很多的可选属性或者只读属性

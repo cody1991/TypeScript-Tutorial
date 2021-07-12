@@ -194,7 +194,7 @@ if (request.status === ApprovalStatus.approved) {
 }
 ```
 
-## 总结
+## 小结
 
 - TypeScript 中的枚举是一组常量值的集合；
 - 本质上，枚举是一个在枚举定义中声明了命名属性的 JavaScript 对象；

@@ -115,7 +115,7 @@ let scores: (string | number)[];
 scores = ['Programming', 5, 'Software Design', 4];
 ```
 
-## 总结
+## 小结
 
 - 在 TypeScript 中，数组是一个有序的数据列表，数组可以存储混合类型的值；
 - 声明指定类型的数组，你可以使用 `let arr: type[]` 这个语法。

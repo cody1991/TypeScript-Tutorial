@@ -119,7 +119,7 @@ class Person {
 
 当你考虑属性和方法的可见性，最好给它们添加最低可见性的访问修饰符，即 `private` 修饰符
 
-# 总结
+# 小结
 
 - TypeScript 给属性和方法提供了三种访问修饰符：`private`, `protected` 和 `public`
 - `private` 修饰符只有在当前类中可以访问

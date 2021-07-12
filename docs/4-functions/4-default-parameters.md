@@ -143,7 +143,7 @@ let day = getDay(undefined, 2);
 console.log(day);
 ```
 
-# 总结
+# 小结
 
 - 如果你想要设置参数的默认初始值，使用默认参数的语法`parameter:=defaultValue`
 - 默认参数是可选的

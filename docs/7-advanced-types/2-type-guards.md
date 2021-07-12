@@ -191,7 +191,7 @@ function signContract(partner: BusinessPartner): string {
 }
 ```
 
-# 总结
+# 小结
 
 - 类型保护限定了条件代码块中变量的类型
 - 使用 `typeof` 和 `instanceof` 操作符在条件代码块中的实现类型保护

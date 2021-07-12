@@ -125,6 +125,6 @@ console.log(counter.count(20)); // return an array
 ]
 ```
 
-# 总结
+# 小结
 
 - TypeScript 中的函数重载允许你描述函数的参数类型和返回类型之间的关系

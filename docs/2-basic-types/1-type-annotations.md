@@ -131,6 +131,6 @@ greeting = function () {
 Type '() => void' is not assignable to type '(name: string) => string'. Type 'void' is not assignable to type 'string'.
 ```
 
-## 总结
+## 小结
 
 - 使用语法为 `: [type]` 的类型注释方式，显式地给一个变量，函数或者函数返回值指定类型。

@@ -145,7 +145,7 @@ console.log(vacant.toString());
 [object Object]
 ```
 
-## 总结
+## 小结
 
 - TypeScript 中的 `object` 类型代表所有的非原始类型的值；
 - `Object` 类型描述所有对象具有的功能；

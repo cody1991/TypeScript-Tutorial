@@ -100,6 +100,6 @@ while (list.firstChild) {
 - 首先，通过元素的 `id` 和 `querySelector()` 方法查找出 `<ul>` 元素
 - 接下来，检查 `list` 变量的 `firstChild` 是否可用，如果是的话删除它。当第一个子节点被删除的时候，下一个子节点自动提升为第一个子节点。因此，`while` 语句可以删除 `list` 元素伤的所有子节点
 
-# 总结
+# 小结
 
 - 使用 TypeScript `while` 语句创建一个只要条件为 `true` 就会一直执行的循环

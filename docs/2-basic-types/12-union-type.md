@@ -63,6 +63,6 @@ function add(a: number | string, b: number | string) {
 }
 ```
 
-# 总结
+# 小结
 
 - TypeScript 联合类型允许你在变量中存储一个或者多个类型的值

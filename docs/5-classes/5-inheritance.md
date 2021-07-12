@@ -115,7 +115,7 @@ console.log(employee.describe());
 This is John Doe.I'm a Web Developer.
 ```
 
-# 总结
+# 小结
 
 - 使用 `extends` 关键字允许一个类继承另外一个类
 - 在子类的构造函数中使用 `super` 方法调用父类的构造函数，同时，可以使用 `super.methodInParentClass()` 语法在子类中调用 `methodInParentClass()` ，即父类中的方法

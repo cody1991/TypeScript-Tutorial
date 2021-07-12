@@ -168,7 +168,7 @@ console.log(`You got ${discount}% discount. `);
 
 如果 `items` 的数量小于 `0`，`else` 分支会被执行
 
-# 总结
+# 小结
 
 - 使用 `if` 语句来根据条件执行代码
 - 如果你想在条件为 `false` 的时候执行代码，那么使用 `else` 分支。使用三元运算符 `?:` 是一个好的实践，而不是简单的使用 `if else` 语句

@@ -38,6 +38,6 @@ If the `--strictNullChecks` flag is not specified, you can assign the `useless` 
 useless = null; // OK if --strictNullChecks is not specified
 ```
 
-# 总结
+# 小结
 
 - 使用 `void` 类型 作为不返回任何值的函数的返回类型

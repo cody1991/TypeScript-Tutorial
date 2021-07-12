@@ -54,7 +54,7 @@ function multiply(a: number, b?: number, c: number): number {
 error TS1016: A required parameter cannot follow an optional parameter.
 ```
 
-# 总结
+# 小结
 
 - 使用 `parameter?: type` 语法使参数是可选的
 - 使用 `typeof(parameter) !== 'undefined'` 表达式来检查可选参数是否被初始化了

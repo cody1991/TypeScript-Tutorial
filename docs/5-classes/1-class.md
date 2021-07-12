@@ -112,7 +112,7 @@ class Person {
 let person = new Person(171280926, 'John', 'Doe');
 ```
 
-# 总结
+# 小结
 
 - 在 TypeScript 中使用 `class` 关键字定义类
 - TypeScript 利用 ES6 类语法，并添加类型注释，让类更具健壮性

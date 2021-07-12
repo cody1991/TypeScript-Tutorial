@@ -90,7 +90,7 @@ TypeScript 编译器知道 `heading` 的类型是 `HTMLHeadingElement`：
 
 ![TypeScript-types-error](./images/TypeScript-types-error.png)
 
-## 总结
+## 小结
 
 - TypeScript 中每个值都有一种类型；
 - 类型是描述值所具有的属性和方法的标签；
