@@ -7,7 +7,8 @@
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     "prettier:docs": "prettier ./docs --write",
-    "prettier:demos": "prettier ./demos --write"
+    "prettier:demos": "prettier ./demos --write",
+    "docs:deploy": "sh ./deploy.sh"
   },
   "keywords": [],
   "author": "",
