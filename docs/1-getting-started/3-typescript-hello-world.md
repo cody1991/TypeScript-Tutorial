@@ -4,11 +4,9 @@ title: Hello World
 
 ## Hello World
 
-:::tip 前言
-在本教程中，你会学习如何使用 TypeScript 开发一个 Hello World 程序。
-:::
-
 [原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-hello-world/)
+
+在本教程中，你会学习如何使用 TypeScript 开发一个 Hello World 程序。
 
 ### Node.js 环境下的 TypeScript Hello World 程序
 

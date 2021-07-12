@@ -4,11 +4,9 @@ title: 环境搭建
 
 ## 环境搭建
 
-:::tip 前言
-在本教程中，你会学习 TypeScript 本地开发环境的搭建。
-:::
-
 [原文地址](https://www.typescripttutorial.net/typescript-tutorial/setup-typescript/)
+
+在本教程中，你会学习 TypeScript 本地开发环境的搭建。
 
 安装下面的工具来开始你的 TypeScript 语言编程之旅：
 

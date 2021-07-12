@@ -4,11 +4,9 @@ title: 简介
 
 ## 简介
 
-:::tip 前言
-在本教程中，你将知道 TypeScript 是什么，以及 TypeScript 对比原生 JavaScript 具备哪些优势。
-:::
-
 [原文地址](https://www.typescripttutorial.net/typescript-tutorial/what-is-typescript/)
+
+在本教程中，你将知道 TypeScript 是什么，以及 TypeScript 对比原生 JavaScript 具备哪些优势。
 
 ### TypeScript 介绍
 
@@ -84,7 +82,4 @@ TypeScript 给如今的 JavaScript 引擎提供了 ES Next 即将推出的新特
 
 TypeScript 通常能支持还在第 3 阶段的特性。
 
-:::tip 译者留言
-关于功能提案可以参考下面这篇文章
-[ECMAScript - Introducing All Stages of the TC39 Process](https://nitayneeman.com/posts/introducing-all-stages-of-the-tc39-process-in-ecmascript/)。
-:::
+> 关于功能提案可以参考下面这篇文章 [ECMAScript - Introducing All Stages of the TC39 Process](https://nitayneeman.com/posts/introducing-all-stages-of-the-tc39-process-in-ecmascript/)。

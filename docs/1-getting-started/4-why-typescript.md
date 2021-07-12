@@ -4,11 +4,9 @@ title: 使用原因
 
 ## 使用原因
 
-:::tip 前言
-在本教程中，你将学习如何使用 TypeScript 来避免一些由 JavaScript 中的动态类型引发的问题。
-:::
-
 [原文地址](https://www.typescripttutorial.net/typescript-tutorial/why-typescript/)
+
+在本教程中，你将学习如何使用 TypeScript 来避免一些由 JavaScript 中的动态类型引发的问题。
 
 ### 为什么使用 TypeScript
 
