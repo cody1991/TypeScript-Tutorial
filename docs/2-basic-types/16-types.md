@@ -80,15 +80,15 @@ const heading = document.querySelector('h1');
 
 TypeScript 编译器知道 `heading` 的类型是 `HTMLHeadingElement`：
 
-![TypeScript-types-example-1.png](./images/TypeScript-types-example-1.png)
+![TypeScript-types-example-1](https://cdn.jsdelivr.net/gh/cody1991/images@master/typescript-tutorial/TypeScript-types-example-1.4h001hujndw0.png)
 
 下面列出了类型为 `HTMLHeadingElement` 的 `heading` 变量可以访问的属性和方法列表：
 
-![TypeScript-types-properties-and-methods](./images/TypeScript-types-properties-and-methods.png)
+![TypeScript-types-properties-and-methods](https://cdn.jsdelivr.net/gh/cody1991/images@master/typescript-tutorial/TypeScript-types-properties-and-methods.2izwvt0qmfa0.png)
 
 如果你试图访问值上不存在的属性和方法时，TypeScript 编译器会显示错误提示，如下所示：
 
-![TypeScript-types-error](./images/TypeScript-types-error.png)
+![TypeScript-types-error](https://cdn.jsdelivr.net/gh/cody1991/images@master/typescript-tutorial/TypeScript-types-error.4c00bls39gw0.png)
 
 ## 小结
 

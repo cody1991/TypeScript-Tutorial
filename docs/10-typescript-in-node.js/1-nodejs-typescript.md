@@ -16,7 +16,7 @@ title: Node.js
 
 接下来，在 `nodets` 目录下面创建两个子目录，分别是 `build` 和 `src`，如下所示：
 
-![nodejs-typescript-directory-structure](./images/nodejs-typescript-directory-structure.png)
+![nodejs-typescript-directory-structure](https://cdn.jsdelivr.net/gh/cody1991/images@master/typescript-tutorial/nodejs-typescript-directory-structure.4buzjj0j3lc0.png)
 
 你的 TypeScript 代码存储在 `src` 目录下
 
@@ -32,7 +32,7 @@ tsc --init
 
 你会看到 `nodets` 目录下 `tsconfig.json` 被创建了
 
-![nodejs-typescript-tsconfig.json_.png](./images/nodejs-typescript-tsconfig.json_.png)
+![nodejs-typescript-tsconfig.json](https://cdn.jsdelivr.net/gh/cody1991/images@master/typescript-tutorial/nodejs-typescript-tsconfig.json_.jn33hl2u37k.png)
 
 `tsconfig.json` 文件指定目录 (`nodets`) 是 TypeScript 项目的根目录
 
@@ -63,7 +63,7 @@ tsc --init
 console.log('Node.js TypeScript');
 ```
 
-![nodejs-typescript-app.ts_](./images/nodejs-typescript-app.ts_.png)
+![nodejs-typescript-app](https://cdn.jsdelivr.net/gh/cody1991/images@master/typescript-tutorial/nodejs-typescript-app.ts_.6j9le5sytxs0.png)
 
 接下来运行下面的命令来执行 TypeScript 编译器，它会编译所有存储在 `src` 目录下的文件：
 
@@ -73,7 +73,7 @@ tsc
 
 如果配置是正确的，你将会看到 `./build` 目录下生成了 `app.js` 文件
 
-![nodejs-typescript-app.js](./images/nodejs-typescript-app.js.png)
+![nodejs-typescript-app](https://cdn.jsdelivr.net/gh/cody1991/images@master/typescript-tutorial/nodejs-typescript-app.js.4okqve6avca0.png)
 
 导航到 `build` 目录并执行下面的命令来运行 `app.js` 文件：
 

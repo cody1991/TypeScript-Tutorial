@@ -16,13 +16,13 @@ TypeScript 是 JavaScript 的超集，它是建立在 JavaScript 之上的一门
 
 JavaScript 文件使用的扩展名是 `.js` ，而 TypeScript 文件使用的扩展名是 `.ts`。
 
-![what-is-typescript-compiler](./images/what-is-typescript-compiler.png)
+![what-is-typescript-compiler](https://cdn.jsdelivr.net/gh/cody1991/images@master/typescript-tutorial/what-is-typescript-compiler.51en2uo6cgo0.png)
 
 TypeScript 在 JavaScript 语法的基础上，增加了用来支持类型系统的新语法。如果你有一段没有任何语法错误的 JavaScript 程序，那它也是一段 TypeScript 程序，这意味着所有的 JavaScript 程序都是 TypeScript 程序。基于上述原因，把现有的基于 JavaScript 的代码库重构成基于 TypeScript 的代码库会是一件非常容易的事。
 
 下图展示了 TypeScript 和 JavaScript 之间的关系：
 
-![what-is-typescript-typescript-and-js](./images/what-is-typescript-typescript-and-js.png)
+![what-is-typescript-typescript-and-js](https://cdn.jsdelivr.net/gh/cody1991/images@master/typescript-tutorial/what-is-typescript-typescript-and-js.zaozekhm5bk.png)
 
 ## 为什么选择 TypeScript
 

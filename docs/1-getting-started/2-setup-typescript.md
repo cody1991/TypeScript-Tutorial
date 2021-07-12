@@ -75,11 +75,11 @@ npm install -g ts-node
 
 你会看到如下所示的 Visual Studio Code 代码编辑器：
 
-![vs-code](./images/vs-code.png)
+![vs-code](https://cdn.jsdelivr.net/gh/cody1991/images@master/typescript-tutorial/vs-code.1glyyl4c1pxc.png)
 
 按照下面的步骤来安装 Live Server 扩展插件：
 
-![Live-Server](./images/Live-Server.png)
+![Live-Server](https://cdn.jsdelivr.net/gh/cody1991/images@master/typescript-tutorial/Live-Server.4m2ngu7cnii0.png)
 
 - 点击扩展插件选项卡，将展示 Visual Studio Code 的扩展插件列表；
 - 输入 Live Server 查找 Live Server 扩展插件；

@@ -33,5 +33,5 @@ TypeScript 是建立在 JavaScript 语言之上的开源编程语言。TypeScrip
 
 非常感谢您的阅读，您可以通过微信赞赏码，表示支持：
 
-![](https://cdn.jsdelivr.net/gh/cody1991/images@master/20210604/zsm.6t3ys61st900.jpeg)
+![微信赞赏码](https://cdn.jsdelivr.net/gh/cody1991/images@master/20210604/zsm.6t3ys61st900.jpeg)
 :::

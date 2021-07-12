@@ -63,7 +63,7 @@ add = function (x: string, y: string): number {
 
 当在等式的一边有类型的时候，TypeScript 编译器可以推断出函数的类型，这种形式的 [类型推断](/2-basic-types/15-type-inference/) 被称为上下文类型，比如：
 
-![TypeScript-Function-Type-Example](./images/TypeScript-Function-Type-Example.png)
+![TypeScript-Function-Type-Example](https://cdn.jsdelivr.net/gh/cody1991/images@master/typescript-tutorial/TypeScript-Function-Type-Example.6rkmnr74nik0.png)
 
 在这个例子中，`add` 函数会得到 `(x: number, y:number) => number` 这种类型
 

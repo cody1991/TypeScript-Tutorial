@@ -25,7 +25,7 @@ console.log(message);
 
 第五，使用快捷键 `Ctrl+` 或者菜单 `Terminal > New Terminal`，在 Visual Studio Code 中启动命令行工具：
 
-![TypeScript-Hello-World-Launch-Terminal](./images/TypeScript-Hello-World-Launch-Terminal.png)
+![TypeScript-Hello-World-Launch-Terminal](https://cdn.jsdelivr.net/gh/cody1991/images@master/typescript-tutorial/TypeScript-Hello-World-Launch-Terminal.1lqe6wc1s140.png)
 
 第六，在命令行工具中输入下面的命令来编译 `app.ts` 文件：
 
@@ -33,11 +33,11 @@ console.log(message);
 tsc app.ts
 ```
 
-![TypeScript-Hello-World-compile-TS-file](./images/TypeScript-Hello-World-compile-TS-file.png)
+![TypeScript-Hello-World-compile-TS-file](https://cdn.jsdelivr.net/gh/cody1991/images@master/typescript-tutorial/TypeScript-Hello-World-compile-TS-file.k21w3y1dri8.png)
 
 如果一切正常，你会看到 TypeScript 编译器生成了一个名为 `app.js` 的新文件：
 
-![TypeScript-Hello-World-Output-file](./images/TypeScript-Hello-World-Output-file.png)
+![TypeScript-Hello-World-Output-file](https://cdn.jsdelivr.net/gh/cody1991/images@master/typescript-tutorial/TypeScript-Hello-World-Output-file.noimhwwiqa8.png)
 
 你可以在命令行工具中输入下面的命令来运行 `app.js` 文件：
 
@@ -90,11 +90,11 @@ tsc app.ts
 
 第四，打开 Visual Studio Code 编辑器，鼠标右键 `index.html` 文件，选择 `Open with Live Server` 选项来打开 Live Server 服务：
 
-![TypeScript-Hello-World-Live-Server](./images/TypeScript-Hello-World-Live-Server.png)
+![TypeScript-Hello-World-Live-Server](https://cdn.jsdelivr.net/gh/cody1991/images@master/typescript-tutorial/TypeScript-Hello-World-Live-Server.4obe4i76xdo0.png)
 
 Live Server 会打开 `index.html` 文件，显示下面的信息：
 
-![TypeScript-Hello-World-Web-Browser](./images/TypeScript-Hello-World-Web-Browser.png)
+![TypeScript-Hello-World-Web-Browser](https://cdn.jsdelivr.net/gh/cody1991/images@master/typescript-tutorial/TypeScript-Hello-World-Web-Browser.ptpo86xpvnk.png)
 
 你可以编辑 `app.ts` 文件来做出一些改变，如下所示：
 
