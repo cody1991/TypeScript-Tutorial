@@ -34,7 +34,6 @@ module.exports = {
           title: '「Comment」<%- frontmatter.title %>',
           body: '<%- frontmatter.title %>：<%-window.location.origin %><%- frontmatter.to.path || window.location.pathname %>',
         },
-        container: 'div.theme-default-content',
       },
     ],
     '@vuepress/back-to-top',
