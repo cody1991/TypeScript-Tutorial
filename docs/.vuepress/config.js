@@ -24,12 +24,15 @@ module.exports = {
       {
         choosen: 'gitalk',
         options: {
-          clientID: '0a304386a7f7fa30c5ed',
-          clientSecret: '4e7262eae4acad0a8beda3e83df7af5aa9ae46c4',
+          clientID: 'eb060af2f7a3df3dd3f0',
+          clientSecret: 'a6febfc0f380bf4ef59e924fe2276018851c638c',
           repo: 'TypeScript-Tutorial',
           owner: 'cody1991',
           admin: ['cody1991'],
           distractionFreeMode: false,
+          id: '<%- frontmatter.title %>',
+          title: '「Comment」<%- frontmatter.title %>',
+          body: '<%- frontmatter.title %>：<%-window.location.origin %><%- frontmatter.to.path || window.location.pathname %>',
         },
       },
     ],
