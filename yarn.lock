@@ -5466,6 +5466,13 @@ opencollective-postinstall@^2.0.2:
   resolved "http://r.tnpm.oa.com/opencollective-postinstall/-/opencollective-postinstall-2.0.3.tgz#7a0fff978f6dbfa4d006238fbac98ed4198c3259"
   integrity sha512-8AV/sCtuzUeTo8gQK5qDZzARrulB3egtLzFgteqB2tcT4Mw7B8Kt7JcDHmltjz6FOAHsvTevk70gZEbhM4ZS9Q==
 
+openteam-postinstall@^1.0.2:
+  version "1.0.2"
+  resolved "http://r.tnpm.oa.com/openteam-postinstall/-/openteam-postinstall-1.0.2.tgz#c31e98eda2c787caa8ce2b3572d665eb08cc9916"
+  integrity sha512-fwmwxXTJC9Cf+1+awPY6auO781smO7ka7YPHihTt9pxlLOqdoykvL2jg6CNnV7uyXujZSN6J+UhdRnHV1PywnA==
+  dependencies:
+    lodash "^4.17.15"
+
 opn@^5.5.0:
   version "5.5.0"
   resolved "http://r.tnpm.oa.com/opn/-/opn-5.5.0.tgz#fc7164fab56d235904c51c3b27da6758ca3b9bfc"
@@ -7713,6 +7720,15 @@ vuepress-plugin-container@^2.0.2:
   dependencies:
     "@vuepress/shared-utils" "^1.2.0"
     markdown-it-container "^2.0.0"
+
+vuepress-plugin-helper-live2d@^1.0.2:
+  version "1.0.2"
+  resolved "http://r.tnpm.oa.com/vuepress-plugin-helper-live2d/-/vuepress-plugin-helper-live2d-1.0.2.tgz#6ba1c2f0a440c9263078ae5083de26fbbfac0759"
+  integrity sha512-OQFynzDJeuEpxv25oNE15otpfCV8Yf0Nxsqq2Y/RHRIdzMpgcp7B0HZRDKUjUqRUa+Sd0NxXbCdzPSxP/9TwWw==
+  dependencies:
+    chalk "^2.4.2"
+    lodash "^4.17.15"
+    openteam-postinstall "^1.0.2"
 
 vuepress-plugin-smooth-scroll@^0.0.3:
   version "0.0.3"
