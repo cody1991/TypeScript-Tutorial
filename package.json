@@ -19,6 +19,7 @@
     "@vuepress/plugin-nprogress": "^1.8.2",
     "prettier": "^2.3.1",
     "vuepress": "^1.8.2",
+    "vuepress-plugin-comment": "^0.7.3",
     "vuepress-plugin-helper-live2d": "^1.0.2"
   }
 }

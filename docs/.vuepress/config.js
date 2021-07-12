@@ -19,6 +19,20 @@ module.exports = {
     ],
   ],
   plugins: [
+    [
+      'vuepress-plugin-comment',
+      {
+        choosen: 'gitalk',
+        options: {
+          clientID: '0a304386a7f7fa30c5ed',
+          clientSecret: '4e7262eae4acad0a8beda3e83df7af5aa9ae46c4',
+          repo: 'TypeScript-Tutorial',
+          owner: 'cody1991',
+          admin: ['cody1991'],
+          distractionFreeMode: false,
+        },
+      },
+    ],
     '@vuepress/back-to-top',
     [
       '@vuepress/medium-zoom',
