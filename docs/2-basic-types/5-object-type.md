@@ -112,7 +112,7 @@ let employee: {
 };
 ```
 
-## object vs. Object
+## object vs Object
 
 TypeScript 有另外一种类型，叫做 `Object` 类型，它的字符 `O` 是大写的，理解它们之间的区别是非常有必要的。`object` 类型代表所有的非原始类型的值，而 `Object` 类型描述的是所有对象具有的功能。例如，`Object` 类型具有可以被任何对象访问的 `toString()` 和 `valueOf()` 方法。
 

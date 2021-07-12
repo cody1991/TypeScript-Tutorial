@@ -42,7 +42,7 @@ class Person {
 }
 ```
 
-# Readonly vs. const
+# Readonly vs const
 
 下面展示了`readonly` 和 `const` 之间不同的地点：
 
