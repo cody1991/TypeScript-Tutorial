@@ -2,13 +2,15 @@
 title: 使用原因
 ---
 
+## 使用原因
+
 :::tip 前言
 在本教程中，你将学习如何使用 TypeScript 来避免一些由 JavaScript 中的动态类型引发的问题。
 :::
 
 [原文地址](https://www.typescripttutorial.net/typescript-tutorial/why-typescript/)
 
-## 为什么使用 TypeScript
+### 为什么使用 TypeScript
 
 下面罗列了使用 TypeScript 的主要原因：
 
@@ -17,7 +19,7 @@ title: 使用原因
 
 本教程将聚焦在第一个原因上。
 
-## 理解 JavaScript 中的动态类型
+### 理解 JavaScript 中的动态类型
 
 JavaScript 是一门动态类型语言，与其他的比如 `Java` 或者 `C#` 这些静态语言不同，值具有类型而不是变量，比如：
 
@@ -64,7 +66,7 @@ console.log(typeof box); // number
 
 动态类型具有灵活性，但它也引发了一些问题。
 
-### 动态类型引发的问题
+#### 动态类型引发的问题
 
 假设你有一个函数，它会根据 `id` 来返回一个 `product` 对象：
 
@@ -118,7 +120,7 @@ The product 99.5 costs $Awesome Gadget 1
 
 使用 TypeScript 来解决这些问题，是我们引入 TypeScript 的重要原因。
 
-## Typescript 如何解决这些动态类型引发的问题
+### Typescript 如何解决这些动态类型引发的问题
 
 解决引用对象上不存在的属性的问题，你可以按照下面的步骤来进行：
 
@@ -176,7 +178,7 @@ showProduct(product.price, product.name);
 
 ![why-typescript-error-in-function-arguments](https://cdn.jsdelivr.net/gh/cody1991/images@master/typescript-tutorial/why-typescript-error-in-function-arguments.6rj9183357s0.png)
 
-## 小结
+### 小结
 
 - JavaScript 是一门动态类型语言，它具有灵活性，但是引发了不少问题；
 - TypeScript 在 JavaScript 之上增加了可选类型系统解决这些问题。

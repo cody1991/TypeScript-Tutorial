@@ -1,3 +1,7 @@
+---
+title: TypeScript 教程
+---
+
 ## TypeScript 教程
 
 TypeScript 是带有类型系统的 JavaScript 语言，TypeScript 通过给 JavaScript 添加类型，可以在 JavaScript 代码运行前就捕获到不少的错误提示，从而提升开发效率。
@@ -10,7 +14,7 @@ TypeScript 是建立在 JavaScript 语言之上的开源编程语言。TypeScrip
 - 知道 TypeScript 的真正含义，以及它背后的运行原理；
 - 使用 TypeScript 丰富的语言特性，例如类型，类，接口，模块等等。
 
-## 条件
+### 条件
 
 为了更好的学习本教程，你需要具备以下条件：
 
