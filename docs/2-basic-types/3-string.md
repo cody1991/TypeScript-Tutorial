@@ -2,11 +2,11 @@
 title: 字符串类型
 ---
 
-:::tip 前言
-在本教程中，你将学习 TypeScript 字符串数据类型。
-:::
+## 字符串类型
 
 [原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-string/)
+
+在本教程中，你将学习 TypeScript 字符串数据类型。
 
 和 JavaScript 一样，在 TypeScript 中使用双引号 (`"`) 或者单引号 (`'`) 包裹字符串：
 
@@ -44,7 +44,7 @@ I'm John.
 I'm a Web Developer.
 ```
 
-## 小结
+### 小结
 
 - 在 TypeScript 中，所有的字符串都是 `string` 类型；
 - 和 JavaScript 一样，TypeScript 中使用双引号 (`"`)，单引号 (`'`) 或者反引号 (`) 包裹字符串。

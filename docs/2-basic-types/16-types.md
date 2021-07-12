@@ -2,13 +2,13 @@
 title: 类型
 ---
 
-:::tip 前言
-在本教程中，你将了解 TypeScript 中的类型和它的用途。
-:::
+## 类型
 
 [原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-types/)
 
-## TypeScript 中的类型是什么
+在本教程中，你将了解 TypeScript 中的类型和它的用途。
+
+### TypeScript 中的类型是什么
 
 在 TypeScript 中，类型可以方便地描述一个值拥有的属性和方法，值是任何可以赋值给变量的东西，比如数字，字符串，数组，对象或者函数。
 
@@ -39,14 +39,14 @@ console.log('Hello'.toLocaleUpperCase()); // HELLO
 - 类型是描述值所具有的属性和方法的标签；
 - 每个值都有一种类型。
 
-## TypeScript 中的类型
+### TypeScript 中的类型
 
 TypeScript 继承了 JavaScript 的内置类型，TypeScript 中的类型可分为：
 
 - 原始类型
 - 对象类型
 
-### 原始类型
+#### 原始类型
 
 下面列出了 TypeScript 中的原始类型：
 
@@ -59,18 +59,18 @@ TypeScript 继承了 JavaScript 的内置类型，TypeScript 中的类型可分�
 | undefined                           | 有一个值：undefined，它是未初始化变量的默认值 |
 | symbol                              | 表示唯一常量值                                |
 
-### 对象类型
+#### 对象类型
 
 对象类型包括函数，数组和类等，稍后你将学习如何创建自定义对象类型。
 
-## TypeScript 中类型的作用
+### TypeScript 中类型的作用
 
 TypeScript 中类型的主要作用如下：
 
 - 首先，TypeScript 编译器使用类型来分析代码中错误；
 - 其次，类型帮助你了解变量所关联的值是什么。
 
-## TypeScript 中类型示例
+### TypeScript 中类型示例
 
 下面的例子使用 [querySelector()](https://zh.javascript.info/searching-elements-dom#querySelector) 方法来选出 `<h1>` 元素：
 
@@ -90,7 +90,7 @@ TypeScript 编译器知道 `heading` 的类型是 `HTMLHeadingElement`：
 
 ![TypeScript-types-error](https://cdn.jsdelivr.net/gh/cody1991/images@master/typescript-tutorial/TypeScript-types-error.4c00bls39gw0.png)
 
-## 小结
+### 小结
 
 - TypeScript 中每个值都有一种类型；
 - 类型是描述值所具有的属性和方法的标签；

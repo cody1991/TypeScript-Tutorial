@@ -2,13 +2,13 @@
 title: 数组类型
 ---
 
-:::tip 前言
-在本教程中，你将学习 TypeScript 中的数组类型，以及它的一些基本操作。
-:::
+## 数组类型
 
 [原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-array-type/)
 
-## TypeScript 中的数组类型介绍
+在本教程中，你将学习 TypeScript 中的数组类型，以及它的一些基本操作。
+
+### TypeScript 中的数组类型介绍
 
 TypeScript 中的 `array` 是一个有序的数据列表，可以使用下面的语法来声明一个存储指定类型的值的数组：
 
@@ -77,7 +77,7 @@ string
 
 这个例子中，提取了 `skills` 数组中的第一个元素，把它赋值给了 `skill` 变量，由于字符串数组中的元素都是字符串，TypeScript 把 `skill` 变量的类型推断为字符串类型。
 
-## TypeScript 中的数组的属性和方法
+### TypeScript 中的数组的属性和方法
 
 TypeScript 中的数组和 JavaScript 一样，可以访问 JavaScript 数组中的所有属性和方法，比如下面使用 `length` 属性来获取数组中元素的数量：
 
@@ -100,7 +100,7 @@ console.log(doubleIt);
 [ 2, 4, 6 ]
 ```
 
-## 存储混合类型的值
+### 存储混合类型的值
 
 下面演示了如何声明一个同时存储字符串和数字的数组：
 
@@ -115,7 +115,7 @@ let scores: (string | number)[];
 scores = ['Programming', 5, 'Software Design', 4];
 ```
 
-## 小结
+### 小结
 
 - 在 TypeScript 中，数组是一个有序的数据列表，数组可以存储混合类型的值；
 - 声明指定类型的数组，你可以使用 `let arr: type[]` 这个语法。

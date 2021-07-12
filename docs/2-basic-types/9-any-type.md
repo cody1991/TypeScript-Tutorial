@@ -2,13 +2,13 @@
 title: any 类型
 ---
 
-:::tip 前言
-在本教程中，你将学习 TypeScript 中的 any 类型，以及如何在代码中正确地使用它。
-:::
+## any 类型
 
 [原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-any-type/)
 
-## TypeScript 中地 any 类型介绍
+在本教程中，你将学习 TypeScript 中的 any 类型，以及如何在代码中正确地使用它。
+
+### TypeScript 中地 any 类型介绍
 
 有时候你需要在变量中存储一个值，但在你编写代码的时候你并不知道它的类型，这种未知的值可能来自第三方的 `API` 或者用户的输入。在这种情况下，如果你希望不进行类型检查，允许它在编译时通过检查，你可以使用 `any` 类型， `any` 类型允许你给变量赋任何类型的值：
 
@@ -43,7 +43,7 @@ undefined;
 
 TypeScript 的 `any` 类型提供了一个可以与当前基于 JavaScript 的代码库一起正常工作的方案，它允许你在编译期间是否使用类型检测。因此，你可以借助 `any` 类型把基于 JavaScript 的项目平滑地过渡成为基于 TypeScript 的项目。
 
-## TypeScript 隐式具有 any 类型
+### TypeScript 隐式具有 any 类型
 
 如果你在声明一个变量的时候没有指定类型，TypeScript 会假定变量使用的是 `any` 类型。这个特性被叫做 [类型推断](/2-basic-types/15-type-inference/)。TypeScript 基本上都会进行变量类型的推断，比如：
 
@@ -53,11 +53,9 @@ let result;
 
 在这个例子中，TypeScript 会进行变量的类型推断，这种特性被称为隐式类型。
 
-::: tip
-注意要禁用 `any` 类型的隐式类型特性，你需要把 `tsconfig.json` 文件中的 `noImplicitAny` 选项的值调整为 `true`，你在后面的教程中会学习更多关于 `tsconfig.json` 配置文件的知识。
-:::
+> 注意：要禁用 `any` 类型的隐式类型特性，你需要把 `tsconfig.json` 文件中的 `noImplicitAny` 选项的值调整为 `true`，你在后面的教程中会学习更多关于 `tsconfig.json` 配置文件的知识。
 
-## TypeScript 中的 any 类型 vs 对象类型
+### TypeScript 中的 any 类型 vs 对象类型
 
 ```ts
 let result: any;
@@ -80,7 +78,7 @@ result.toFixed();
 error TS2339: Property 'toFixed' does not exist on type 'object'.
 ```
 
-## 小结
+### 小结
 
 - TypeScript `any` 类型允许你存储任意类型的值，它告诉编译器不进行类型检查；
 - 使用 `any` 类型来存储在编译时或者 JavaScript 项目迁移成 TypeScript 项目时不知道类型的值。

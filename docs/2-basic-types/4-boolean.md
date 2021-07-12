@@ -2,11 +2,11 @@
 title: 布尔值类型
 ---
 
-:::tip 前言
-在本教程中，你将学习 TypeScript 中的布尔值数据类型。
-:::
+## 布尔值类型
 
 [原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-boolean/)
+
+在本教程中，你将学习 TypeScript 中的布尔值数据类型。
 
 TypeScript 中的 `boolean` 类型有两个值：`true` 和 `false`，它是 TypeScript 的原始类型之一，如下所示：
 

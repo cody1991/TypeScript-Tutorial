@@ -2,15 +2,15 @@
 title: 类型推断
 ---
 
-:::tip 前言
-在本教程中，你将学习 TypeScript 中的类型推断
-:::
+## 类型推断
 
 [原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-type-inference/)
 
+在本教程中，你将学习 TypeScript 中的类型推断
+
 类型推断描述的是当你没有为变量添加 [类型注释](/2-basic-types/1-type-annotations/) 的时候，TypeScript 是如何推断变量的类型的。
 
-## 类型推断基础
+### 类型推断基础
 
 当你声明一个变量的时候，你可以使用 [类型注释](/2-basic-types/1-type-annotations/) 为变量指定某种类型，如下所示：
 
@@ -54,7 +54,7 @@ function increment(counter: number): number {
 }
 ```
 
-## 最佳通用类型算法
+### 最佳通用类型算法
 
 思考下面的语句：
 
@@ -78,7 +78,7 @@ let arr = [new Date(), new RegExp('d+')];
 
 在这个例子中，TypeScript 推断 `arr` 变量的类型为 `(RegExp | Date)[]`。
 
-## 上下文类型
+### 上下文类型
 
 TypeScript 可以使用位置上下文推断变量的类型，这种机制被称为上下文类型，如下所示：
 
@@ -108,7 +108,7 @@ TypeScript 知道在这种情况下 `event` 不再是 `MouseEvent` 的实例，�
 
 很多情况中可以找到上下文类型的踪影，比如函数调用的参数，类型断言，对象和数组的成员，返回语句和右侧赋值。
 
-## 类型推断 vs 类型注释
+### 类型推断 vs 类型注释
 
 下面展示了类型推断和类型注释的区别：
 
@@ -122,7 +122,7 @@ TypeScript 知道在这种情况下 `event` 不再是 `MouseEvent` 的实例，�
 - 当你希望一个变量的类型不能被推断的时候；
 - 当一个函数的返回类型是 [any](/2-basic-types/9-any-type/) 类型，而你需要明确知道它的类型的时候。
 
-## 小结
+### 小结
 
 - 类型推断发生在初始化变量的值，设置参数默认值和需要确定函数返回值类型的时候；
 - TypeScript 使用最佳通用类型算法来选择与所有变量类型兼容的最佳候选类型；

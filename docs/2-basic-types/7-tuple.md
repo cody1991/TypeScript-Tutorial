@@ -2,13 +2,13 @@
 title: 元组类型
 ---
 
-:::tip 前言
-在本教程中，你将学习 TypeScript 中的元组类型，以及它的使用方法。
-:::
+## 元组类型
 
 [原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-tuple/)
 
-## TypeScript 中的元组类型介绍
+在本教程中，你将学习 TypeScript 中的元组类型，以及它的使用方法。
+
+### TypeScript 中的元组类型介绍
 
 元组的工作机制和 [数组类型](/2-basic-types/6-array-type/) 类似，但有一些额外的条件限制：
 
@@ -49,7 +49,7 @@ let color: [number, number, number] = [255, 0, 0];
 
 `color[0]`, `color[1]` 和 `color[2]` 分别映射到 `Red`, `Green` 和 `Blue` 颜色值上。
 
-## 可选元组元素
+### 可选元组元素
 
 从 TypeScript 3.0 开始，元组可以通过使用问号 `(?)` 后缀来指定可选元素。例如，可以使用可选的 `alpha` 通道值来定义一个 `RGBA` 元组：
 
@@ -59,10 +59,8 @@ bgColor = [0, 255, 255, 0.5];
 headerColor = [0, 255, 255];
 ```
 
-:::tip
-注意，`RGBA` 使用 `red`, `green`, `blue` 和 `alpha` 模型定义颜色，`alpha` 指定颜色的透明度。
-:::
+> 注意：`RGBA` 使用 `red`, `green`, `blue` 和 `alpha` 模型定义颜色，`alpha` 指定颜色的透明度。
 
-## 小结
+### 小结
 
 - 元组是一个具有固定数量和已知元素类型的数组。

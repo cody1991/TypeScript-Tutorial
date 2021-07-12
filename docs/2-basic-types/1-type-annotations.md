@@ -2,17 +2,17 @@
 title: 类型注释
 ---
 
-:::tip 前言
-在本教程中，你将学习 TypeScript 中的类型注释。
-:::
+## 类型注释
 
 [原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-type-annotations/)
 
-## TypeScript 中的类型注释是什么
+在本教程中，你将学习 TypeScript 中的类型注释。
+
+### TypeScript 中的类型注释是什么
 
 TypeScript 使用类型注释显式地为变量，函数和对象等标识符指定类型。TypeScript 中的类型注释语法是在标识符后面添加 `: type` 标识，其中 `type` 可以是任何有效的类型。一旦标识符被声明为某种类型，那它在使用的时候只能是那种类型，如果以其他类型来使用，TypeScript 编译器会抛出一个错误提示。
 
-## 变量和常量中的类型注释
+### 变量和常量中的类型注释
 
 下面是给变量和常量指定类型注释的语法：
 
@@ -67,9 +67,9 @@ let active: boolean = true;
 
 在这个例子中， 为 `name` 变量添加了 [字符串](/2-basic-types/3-string/) 类型注释，为 `age` 变量添加了 [数字](/2-basic-types/2-number/) 类型注释，为 `active` 变量添加了 [布尔值](/2-basic-types/4-boolean/) 类型注释
 
-## 类型注释例子
+### 类型注释例子
 
-### 数组
+#### 数组
 
 为 [数组类型](/2-basic-types/6-array-type/) 的变量添加类型注释，需要使用一个特定的类型：它的后面跟着一个方括号 `: type[] ` 标识：
 
@@ -83,7 +83,7 @@ let arrayName: type[];
 let names: string[] = ['John', 'Jane', 'Peter', 'David', 'Mary'];
 ```
 
-### 对象
+#### 对象
 
 为一个对象指定类型，使用对象类型注释，如下所示：
 
@@ -101,7 +101,7 @@ person = {
 
 在这个例子中，`person` 对象只接受具有两个指定属性的对象：一个是类型为 `string` 名为 `name` 的属性，另外一个是类型为 `number` 名为 `age` 的属性。
 
-## 函数参数和返回类型
+### 函数参数和返回类型
 
 下面展示了一个带有参数类型注释和返回类型注释的函数注释语法：
 
@@ -131,6 +131,6 @@ greeting = function () {
 Type '() => void' is not assignable to type '(name: string) => string'. Type 'void' is not assignable to type 'string'.
 ```
 
-## 小结
+### 小结
 
 - 使用语法为 `: [type]` 的类型注释方式，显式地给一个变量，函数或者函数返回值指定类型。
