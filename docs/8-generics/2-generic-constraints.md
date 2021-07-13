@@ -2,11 +2,13 @@
 title: 泛型约束
 ---
 
-:::tip 前言
-在本教程中，你将学习 TypeScript 中的通用约束
-:::
+## 泛型约束
 
-# TypeScript 中的通用约束介绍
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-generic-constraints/)
+
+在本教程中，你将学习 TypeScript 中的通用约束
+
+### TypeScript 中的通用约束介绍
 
 思考下以下例子：
 
@@ -80,7 +82,7 @@ let person = merge({ name: 'John' }, 25);
 Argument of type '25' is not assignable to parameter of type 'object'.
 ```
 
-# 在泛型约束中使用类型参数
+### 在泛型约束中使用类型参数
 
 TypeScript 允许声明受另外一个类型参数约束的类型参数
 
@@ -131,7 +133,7 @@ let str = prop({ name: 'John' }, 'age');
 Argument of type '"age"' is not assignable to parameter of type '"name"'.
 ```
 
-# 小结
+### 小结
 
 - 使用 `extends` 关键字将类型参数约束为特定类型
 - 使用 `extends keyof` 来约束类型为另外一个对象属性集合的类型

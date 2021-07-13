@@ -2,11 +2,13 @@
 title: 泛型类
 ---
 
-:::tip 前言
-在本教程中，你将学习 如何开发 TypeScript 中的泛型类
-:::
+## 泛型类
 
-# TypeScript 中的泛型类介绍
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-generic-classes/)
+
+在本教程中，你将学习 如何开发 TypeScript 中的泛型类
+
+### TypeScript 中的泛型类介绍
 
 [泛型](/8-generics/1-generics/) 类的语法如下，泛型类型参数列表在尖括号 `<>` 中，跟着名称后面：
 
@@ -34,7 +36,7 @@ class className<T extends TypeA> {
 
 在类上放置类型参数允许你开发相同类型的方法和属性
 
-# TypeScript 泛型类例子
+### TypeScript 泛型类例子
 
 在这个例子中，我们将开发一个 `Stack` 泛型类
 

@@ -2,11 +2,13 @@
 title: 泛型
 ---
 
-:::tip 前言
-在本教程中，你将学习 TypeScript 中的泛型，它允许你使用类型作为形式参数
-:::
+## 泛型
 
-# TypeScript 中的泛型介绍
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-generics/)
+
+在本教程中，你将学习 TypeScript 中的泛型，它允许你使用类型作为形式参数
+
+### TypeScript 中的泛型介绍
 
 TypeScript 中的泛型允许你编写可重用的泛型函数，泛型 [类](/8-generics/3-generic-classes/) 和 泛型 [接口](/8-generics/4-generic-interfaces/)，在这个教程中，你将专注于通用函数的开发
 
@@ -57,7 +59,7 @@ console.log(getRandomStringElement(colors));
 
 稍后你可能需要获取对象数组中的随机元素，每次你想从新的类型数组中获得一个随机元素时，创建一个新的函数的方法不具有可扩展性
 
-## 使用 any 类型
+#### 使用 any 类型
 
 这个问题的一个解决方案是把数组参数的类型设置为 `any[]`，通过这么处理，你只需要编写一个用于任何类型的数组的函数
 
@@ -82,7 +84,7 @@ console.log(getRandomAnyElement(colors));
 
 在保留类型的同时避免代码重复的更好的解决方法是使用泛型
 
-## TypeScript 泛型可以帮上忙
+#### TypeScript 泛型可以帮上忙
 
 下面是一个泛型函数，它从类型为 `T` 的数组中返回随机元素：
 
@@ -99,7 +101,7 @@ function getRandomElement<T>(items: T[]): T {
 
 按照惯例，我们使用 `T` 作为类型变量，然而你可以自由的使用其他字母，比如 `A`，`B` 和 `C` 等等
 
-# 调用泛型函数
+### 调用泛型函数
 
 下面演示如何使用数字数组调用 `getRandomElement()` 函数：
 
@@ -129,7 +131,7 @@ let returnElem: string;
 returnElem = getRandomElement(numbers); // compiler error
 ```
 
-# 具有多个类型变量的泛型函数
+### 具有多个类型变量的泛型函数
 
 下面演示如何使用两个类型变量 `U` 和 `V` 开发泛型函数：
 
@@ -160,7 +162,7 @@ console.log(result);
 { name: 'John', jobTitle: 'Frontend Developer' }
 ```
 
-# TypeScript 中泛型的好处
+### TypeScript 中泛型的好处
 
 下面是 TypeScript 中泛型的好处：
 
@@ -168,6 +170,6 @@ console.log(result);
 - 消除 [类型转换](/7-advanced-types/3-casting/).
 - 允许你实现泛型算法
 
-# 小结
+### 小结
 
 - 使用 TypeScript 泛型来开发可复用的，通用的和类型安全的函数，接口和类
