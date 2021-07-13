@@ -11,11 +11,13 @@ theme: jzman
 - [TypeScript Tutorial 中文版 - Section 1. 入门](https://juejin.cn/post/6984290303880478757)
 - [TypeScript Tutorial 中文版 - Section 2. 基本类型](https://juejin.cn/post/6984309148553445406)
 
-:::tip 前言
-在本教程中，你将学习 TypeScript 中的接口，以及如何使用它们来执行类型检查
-:::
+## 接口
 
-# TypeScript 接口介绍
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-interface/)
+
+在本教程中，你将学习 TypeScript 中的接口，以及如何使用它们来执行类型检查
+
+### TypeScript 接口介绍
 
 TypeScript 接口定义代码中的约定，它也为类型检查提供显式名称
 
@@ -96,7 +98,7 @@ let fullName = getFullName(jane);
 console.log(fullName); // Jane Doe
 ```
 
-# 可选属性
+### 可选属性
 
 接口可以有可选属性，要声明一个可选属性，你需要在属性名的末尾添加 (`?`)，就像这样：
 
@@ -121,7 +123,7 @@ function getFullName(person: Person) {
 }
 ```
 
-# 只读属性
+### 只读属性
 
 如果属性只有在对象第一次创建的时候可以修改，我们可以在属性名前面加上 `readonly` 关键字：
 
@@ -152,7 +154,7 @@ person.ssn = '171-28-0000';
 error TS2540: Cannot assign to 'ssn' because it is a read-only property.
 ```
 
-# 函数类型
+### 函数类型
 
 除了描述对象的属性外，接口也可以描述 [函数类型](https://juejin.cn/post/6984313766053675022)
 
@@ -216,7 +218,7 @@ console.log(lowerCase('Hi', false));
 
 注意，第二个参数是在调用 `lowerCase()` 函数时传递的
 
-# 类类型
+### 类类型
 
 如果你使用过 `Java` 或者 `C#`，你会发现接口的主要用途是定义不相关类之间的联系
 
@@ -256,7 +258,7 @@ console.log(person.toJson());
 {"firstName":"John", "lastName":"Doe"}
 ```
 
-# 小结
+### 小结
 
 - TypeScript 接口在代码中定义约定，并为类型检查提供显式名称
 - 接口可以有很多的可选属性或者只读属性
@@ -264,11 +266,13 @@ console.log(person.toJson());
 - 接口经常被用作类类型来建立不相关类之间的约定
 
 
-:::tip 前言
-在本教程中，你讲学习如何扩展接口，让你能够把一个接口的属性和方法复制到另外一个接口
-:::
+## 扩展接口
 
-# 扩展一个接口的接口
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-extend-interface/)
+
+在本教程中，你讲学习如何扩展接口，让你能够把一个接口的属性和方法复制到另外一个接口
+
+### 扩展一个接口的接口
 
 假设你有一个名为 `Mailable` 的 [接口](https://juejin.cn/post/6984313984061505567)，它包含两个方法：`send()` 和 `queue()`
 
@@ -332,7 +336,7 @@ class Mail implements FutureMailable {
 }
 ```
 
-# 扩展多个接口的接口
+### 扩展多个接口的接口
 
 一个接口可以扩展多个接口，创建所有接口的组合，比如：
 
@@ -348,7 +352,7 @@ interface D extends B, C {
 
 在这个例子中，接口 `D` 扩展了 `B` 和 `C` 接口，所以 `D` 接口有所有 `B` 和 `C` 接口的方法，它们是 `a()`, `b()` 和 `c()` 接口
 
-# 扩展类的接口
+### 扩展类的接口
 
 TypeScript 允许接口扩展类，在这种情况下，接口会继承类的属性和方法，此外，接口可以继承累的私有成员和受保护成员，而不仅仅是公共成员
 
@@ -379,7 +383,7 @@ class Chart implements StatefulControl {
 }
 ```
 
-# 小结
+### 小结
 
 - 接口可以扩展一个或多个现有接口
 - 接口也可以扩展类，如果类包含私有成员或受保护成员，则接口只能有该类或该类的子类实现

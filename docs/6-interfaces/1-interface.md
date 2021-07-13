@@ -2,11 +2,13 @@
 title: 接口
 ---
 
-:::tip 前言
-在本教程中，你将学习 TypeScript 中的接口，以及如何使用它们来执行类型检查
-:::
+## 接口
 
-# TypeScript 接口介绍
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-interface/)
+
+在本教程中，你将学习 TypeScript 中的接口，以及如何使用它们来执行类型检查
+
+### TypeScript 接口介绍
 
 TypeScript 接口定义代码中的约定，它也为类型检查提供显式名称
 
@@ -87,7 +89,7 @@ let fullName = getFullName(jane);
 console.log(fullName); // Jane Doe
 ```
 
-# 可选属性
+### 可选属性
 
 接口可以有可选属性，要声明一个可选属性，你需要在属性名的末尾添加 (`?`)，就像这样：
 
@@ -112,7 +114,7 @@ function getFullName(person: Person) {
 }
 ```
 
-# 只读属性
+### 只读属性
 
 如果属性只有在对象第一次创建的时候可以修改，我们可以在属性名前面加上 `readonly` 关键字：
 
@@ -143,7 +145,7 @@ person.ssn = '171-28-0000';
 error TS2540: Cannot assign to 'ssn' because it is a read-only property.
 ```
 
-# 函数类型
+### 函数类型
 
 除了描述对象的属性外，接口也可以描述 [函数类型](/4-functions/2-function-types/)
 
@@ -207,7 +209,7 @@ console.log(lowerCase('Hi', false));
 
 注意，第二个参数是在调用 `lowerCase()` 函数时传递的
 
-# 类类型
+### 类类型
 
 如果你使用过 `Java` 或者 `C#`，你会发现接口的主要用途是定义不相关类之间的联系
 
@@ -247,7 +249,7 @@ console.log(person.toJson());
 {"firstName":"John", "lastName":"Doe"}
 ```
 
-# 小结
+### 小结
 
 - TypeScript 接口在代码中定义约定，并为类型检查提供显式名称
 - 接口可以有很多的可选属性或者只读属性
