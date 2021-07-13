@@ -18,7 +18,9 @@ for (let index = 0; index < sidebar.length; index++) {
 theme: geek-black
 ---
 
-# ${title}`,
+# ${title}
+
+[项目地址](https://github.com/cody1991/TypeScript-Tutorial)`,
   );
 
   function writeFile(srcFileName, fileName) {

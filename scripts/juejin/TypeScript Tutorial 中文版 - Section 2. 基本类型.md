@@ -4,6 +4,8 @@ theme: geek-black
 
 # Section 2. 基本类型
 
+[项目地址](https://github.com/cody1991/TypeScript-Tutorial)
+
 ## 类型
 
 [原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-types/)

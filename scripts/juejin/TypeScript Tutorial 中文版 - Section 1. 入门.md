@@ -4,6 +4,8 @@ theme: geek-black
 
 # Section 1. 入门
 
+[项目地址](https://github.com/cody1991/TypeScript-Tutorial)
+
 ## 简介
 
 [原文地址](https://www.typescripttutorial.net/typescript-tutorial/what-is-typescript/)

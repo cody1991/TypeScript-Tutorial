@@ -4,6 +4,8 @@ theme: geek-black
 
 # Section 10. Node.js
 
+[项目地址](https://github.com/cody1991/TypeScript-Tutorial)
+
 :::tip 前言
 在本教程中，你将学习如何搭建 Node.js 项目中的 TypeScript 自动化开发工作流
 :::

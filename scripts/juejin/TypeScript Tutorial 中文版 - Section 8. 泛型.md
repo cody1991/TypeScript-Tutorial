@@ -4,6 +4,8 @@ theme: geek-black
 
 # Section 8. 泛型
 
+[项目地址](https://github.com/cody1991/TypeScript-Tutorial)
+
 :::tip 前言
 在本教程中，你将学习 TypeScript 中的泛型，它允许你使用类型作为形式参数
 :::

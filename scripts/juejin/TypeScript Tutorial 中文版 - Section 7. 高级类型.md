@@ -4,6 +4,8 @@ theme: geek-black
 
 # Section 7. 高级类型
 
+[项目地址](https://github.com/cody1991/TypeScript-Tutorial)
+
 :::tip 前言
 在本教程中，你将学习 TypeScript 中的交叉类型
 :::

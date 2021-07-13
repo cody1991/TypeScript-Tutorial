@@ -4,6 +4,8 @@ theme: geek-black
 
 # Section 5. 类
 
+[项目地址](https://github.com/cody1991/TypeScript-Tutorial)
+
 :::tip 前言
 在本教程中，你将学习 TypeScript 中的类
 :::

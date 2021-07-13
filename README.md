@@ -37,7 +37,8 @@ TypeScript 语言越来越受欢迎，而 TypeScript 语言的学习渠道也越
 下面有几点需要注意的：
 
 1. Gitalk is a modern comment component based on GitHub Issue and Preact，Gitalk 是基于 Github Issue 的，Github Issue 的唯一标识 ID 不能超过 50 个字符，默认是使用页面的 URL 地址，很多时候超过字数限制导致报错，可以修改配置。我这个项目使用的是文档的标题作为唯一标识。
-2.  插件嵌入到页面以后，样式并不是那么兼容，可以自己新建一个 `docs/.vuepress/styles/index.styl` 的文件，编写自定义的样式([参考文档](https://vuepress.vuejs.org/config/#styling))，如下所示：
+
+2. 插件嵌入到页面以后，样式并不是那么兼容，可以自己新建一个 `docs/.vuepress/styles/index.styl` 的文件，编写自定义的样式([参考文档](https://vuepress.vuejs.org/config/#styling))，如下所示：
 
 ```css
 #vuepress-plugin-comment {

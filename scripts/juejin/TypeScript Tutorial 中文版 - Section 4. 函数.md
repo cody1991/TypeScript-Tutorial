@@ -4,6 +4,8 @@ theme: geek-black
 
 # Section 4. 函数
 
+[项目地址](https://github.com/cody1991/TypeScript-Tutorial)
+
 :::tip 前言
 在本教程中，你将学习 TypeScript 中的函数，以及如何使用类型注释来强制对函数进行类型检查
 :::
