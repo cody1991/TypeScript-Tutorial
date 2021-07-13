@@ -8,7 +8,8 @@
     "docs:build": "vuepress build docs",
     "prettier:docs": "prettier ./docs --write",
     "prettier:demos": "prettier ./demos --write",
-    "docs:deploy": "sh ./deploy.sh"
+    "docs:deploy": "sh ./deploy.sh",
+    "docs:juejin": "cd ./scripts/juejin && node index.js"
   },
   "keywords": [],
   "author": "",
