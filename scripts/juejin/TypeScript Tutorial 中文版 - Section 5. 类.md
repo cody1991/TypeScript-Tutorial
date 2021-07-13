@@ -1,3 +1,7 @@
+---
+theme: geek-black
+---
+
 # Section 5. 类
 
 :::tip 前言

@@ -1,3 +1,7 @@
+---
+theme: geek-black
+---
+
 # Section 8. 泛型
 
 :::tip 前言

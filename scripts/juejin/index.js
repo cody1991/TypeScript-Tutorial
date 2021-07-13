@@ -12,7 +12,14 @@ for (let index = 0; index < sidebar.length; index++) {
   if (print === false) continue;
 
   const fileName = `TypeScript Tutorial 中文版 - ${title}.md`;
-  fs.writeFileSync(fileName, `# ${title}`);
+  fs.writeFileSync(
+    fileName,
+    `---
+theme: geek-black
+---
+
+# ${title}`,
+  );
 
   function writeFile(srcFileName, fileName) {
     const filePath = path.join('../../docs', `${srcFileName}.md`);

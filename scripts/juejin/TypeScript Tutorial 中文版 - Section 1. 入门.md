@@ -1,3 +1,7 @@
+---
+theme: geek-black
+---
+
 # Section 1. 入门
 
 ## 简介

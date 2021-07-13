@@ -1,3 +1,7 @@
+---
+theme: geek-black
+---
+
 # Section 4. 函数
 
 :::tip 前言

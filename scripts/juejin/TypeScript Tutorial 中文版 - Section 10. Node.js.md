@@ -1,3 +1,7 @@
+---
+theme: geek-black
+---
+
 # Section 10. Node.js
 
 :::tip 前言

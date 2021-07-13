@@ -1,3 +1,7 @@
+---
+theme: geek-black
+---
+
 # Section 7. 高级类型
 
 :::tip 前言

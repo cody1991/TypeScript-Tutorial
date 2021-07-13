@@ -1,3 +1,7 @@
+---
+theme: geek-black
+---
+
 # Section 2. 基本类型
 
 ## 类型

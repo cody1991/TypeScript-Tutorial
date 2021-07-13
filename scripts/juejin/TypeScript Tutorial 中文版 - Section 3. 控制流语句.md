@@ -1,3 +1,7 @@
+---
+theme: geek-black
+---
+
 # Section 3. 控制流语句
 
 :::tip 前言

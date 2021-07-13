@@ -1,3 +1,7 @@
+---
+theme: geek-black
+---
+
 # Section 6. 接口
 
 :::tip 前言
