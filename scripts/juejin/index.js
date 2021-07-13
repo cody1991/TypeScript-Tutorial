@@ -19,7 +19,7 @@ for (let index = 0; index < sidebar.length; index++) {
   fs.writeFileSync(
     fileName,
     `---
-theme: geek-black
+theme: jzman
 ---
 
 # ${title}
