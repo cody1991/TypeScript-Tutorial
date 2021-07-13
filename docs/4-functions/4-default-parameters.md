@@ -2,11 +2,13 @@
 title: 默认参数
 ---
 
-:::tip 前言
-在本教程中，你将学习 TypeScript 中的默认参数
-:::
+## 默认参数
 
-# TypeScript 默认参数介绍
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-default-parameters/)
+
+在本教程中，你将学习 TypeScript 中的默认参数
+
+### TypeScript 默认参数介绍
 
 JavaScript 自 ES2015 (或者叫) ES6) 以来，开始支持 [默认参数](https://zh.javascript.info/function-basics#mo-ren-zhi)，它的语法如下：
 
@@ -61,7 +63,7 @@ Error:
 error TS2371: A parameter initializer is only allowed in a function or constructor implementation.
 ```
 
-# 默认参数和可选参数
+### 默认参数和可选参数
 
 和 [可选参数](/4-functions/3-optional-parameters/) 相同,默认参数也是可选的。这意味着在调用函数的时候可以省略默认参数
 
@@ -143,7 +145,7 @@ let day = getDay(undefined, 2);
 console.log(day);
 ```
 
-# 小结
+### 小结
 
 - 如果你想要设置参数的默认初始值，使用默认参数的语法`parameter:=defaultValue`
 - 默认参数是可选的

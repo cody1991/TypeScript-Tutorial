@@ -11,11 +11,13 @@ theme: jzman
 - [TypeScript Tutorial 中文版 - Section 1. 入门](https://juejin.cn/post/6984290303880478757)
 - [TypeScript Tutorial 中文版 - Section 2. 基本类型](https://juejin.cn/post/6984309148553445406)
 
-:::tip 前言
-在本教程中，你将学习 TypeScript 中的函数，以及如何使用类型注释来强制对函数进行类型检查
-:::
+## 函数
 
-# TypeScript 中的函数介绍
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-functions/)
+
+在本教程中，你将学习 TypeScript 中的函数，以及如何使用类型注释来强制对函数进行类型检查
+
+### TypeScript 中的函数介绍
 
 TypeScript 中的函数是可读的，可维护的和可复用的代码块
 
@@ -85,16 +87,18 @@ function add(a: number, b: number) {
 
 因此，将类型注释尽可能地添加到函数中是非常重要的
 
-# 小结
+### 小结
 
 - 为函数参数和返回类型使用类型注释保持调用代码的内联，确保在函数体中进行类型检查
 
 
-:::tip 前言
-在本教程中，你将学习 TypeScript 中的函数类型，它允许你为函数定义类型
-:::
+## 函数类型
 
-# TypeScript 中的函数类型介绍
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-function-types/)
+
+在本教程中，你将学习 TypeScript 中的函数类型，它允许你为函数定义类型
+
+### TypeScript 中的函数类型介绍
 
 一个函数类型由两个部分组成：参数和返回类型，当声明一个函数类型时，你需要用下面的语法来指定这两个部分：
 
@@ -113,9 +117,7 @@ let add: (x: number, y: number) => number;
 - 函数类型接受两个参数：`x` 和 `y`，他们都是 `number` 类型
 - 返回值的类型是 [数字类型](https://juejin.cn/post/6984309148553445406) ，它跟在参数和返回类型之间的胖箭头 (`=>`) 后面
 
-::: tip
-注意，参数的命名 (`x` 和 `y`) 指示为了方便阅读，只要参数的类型匹配，它就是函数中有效的类型
-:::
+> 注意，参数的命名 (`x` 和 `y`) 指示为了方便阅读，只要参数的类型匹配，它就是函数中有效的类型
 
 当给一个变量注释函数类型后，你可以把有相同类型的函数赋值给这个变量
 
@@ -147,7 +149,7 @@ add = function (x: string, y: string): number {
 
 在这个例子中，我们将一个类型不匹配的函数重新赋值给 `add` 函数
 
-# 推断函数类型
+### 推断函数类型
 
 当在等式的一边有类型的时候，TypeScript 编译器可以推断出函数的类型，这种形式的 [类型推断](https://juejin.cn/post/6984309148553445406) 被称为上下文类型，比如：
 
@@ -158,9 +160,11 @@ add = function (x: string, y: string): number {
 通过使用类型推断，你可以显著的通过减少注释来减少代码数量
 
 
-:::tip 前言
+## 可选参数
+
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-optional-parameters/)
+
 在本教程中，你将学习如何使用 TypeScript 函数的可选参数
-:::
 
 在 JavaScript 中，即使函数指定了参数，你也可以在调用它的时候不传入任何参数，因此 JavaScript 默认支持可选参数
 
@@ -187,9 +191,7 @@ function multiply(a: number, b: number, c?: number): number {
 - 首先，在 `c` 参数后面添加 `?`
 - 然后，通过表达式 `typeof c !== 'undefined'` 检查 `c` 参数是否传递给了函数
 
-::: tip
-注意如果你是用表达式 `if(c)` 来检查参数是否被初始化，你会发现空字符串和 `0` 也被视为 `undefined`
-:::
+> 注意如果你是用表达式 `if(c)` 来检查参数是否被初始化，你会发现空字符串和 `0` 也被视为 `undefined`
 
 可选参数必须出现在参数列表中必选参数的后面
 
@@ -210,17 +212,19 @@ function multiply(a: number, b?: number, c: number): number {
 error TS1016: A required parameter cannot follow an optional parameter.
 ```
 
-# 小结
+### 小结
 
 - 使用 `parameter?: type` 语法使参数是可选的
 - 使用 `typeof(parameter) !== 'undefined'` 表达式来检查可选参数是否被初始化了
 
 
-:::tip 前言
-在本教程中，你将学习 TypeScript 中的默认参数
-:::
+## 默认参数
 
-# TypeScript 默认参数介绍
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-default-parameters/)
+
+在本教程中，你将学习 TypeScript 中的默认参数
+
+### TypeScript 默认参数介绍
 
 JavaScript 自 ES2015 (或者叫) ES6) 以来，开始支持 [默认参数](https://zh.javascript.info/function-basics#mo-ren-zhi)，它的语法如下：
 
@@ -275,7 +279,7 @@ Error:
 error TS2371: A parameter initializer is only allowed in a function or constructor implementation.
 ```
 
-# 默认参数和可选参数
+### 默认参数和可选参数
 
 和 [可选参数](https://juejin.cn/post/6984313766053675022) 相同,默认参数也是可选的。这意味着在调用函数的时候可以省略默认参数
 
@@ -357,16 +361,18 @@ let day = getDay(undefined, 2);
 console.log(day);
 ```
 
-# 小结
+### 小结
 
 - 如果你想要设置参数的默认初始值，使用默认参数的语法`parameter:=defaultValue`
 - 默认参数是可选的
 - 要使用形参的默认初始值，在调用函数的时候忽略实参或者把 `undefined` 值传递给函数
 
 
-:::tip 前言
+## Rest 参数
+
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-rest-parameters/)
+
 在本教程中，你将学习 TypeScript 中的剩余参数，它允许你把无限数量的参数表示为一个数组
-:::
 
 Rest 参数允许函数接受零个或者多个指定类型的参数，在 TypeScript 中， Rest 参数遵守下面的规则：
 
@@ -403,17 +409,17 @@ console.log(getTotal(10, 20, 30)); // 60
 ```
 
 
-:::tip 前言
-在本教程中，你将学习 TypeScript 中的函数重载
-:::
+## 函数重载
 
-# TypeScript 中的函数重载介绍
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-function-overloadings/)
+
+在本教程中，你将学习 TypeScript 中的函数重载
+
+### TypeScript 中的函数重载介绍
 
 在 TypeScript 中，函数重载允许你建立函数的参数类型和返回类型之间的关系
 
-::: tip
-注意 TypeScript 的函数重载不同于其他静态类型语言，比如 `C#` 和 `Java` 支持的函数重载
-:::
+> 注意 TypeScript 的函数重载不同于其他静态类型语言，比如 `C#` 和 `Java` 支持的函数重载
 
 让我们看几个简单的例子：
 
@@ -468,7 +474,7 @@ function add(a: any, b: any): any {
 
 ![typescript-function-overloadings](https://cdn.jsdelivr.net/gh/cody1991/images@master/typescript-tutorial/typescript-function-overloadings.36nbxumle820.png)
 
-# 数函数重载中使用可选参
+### 数函数重载中使用可选参
 
 当你使用函数重载的时候，函数所需的参数数量必须相同，如果又一个函数重载比另外一个重载的参数多的话，你必须把其他参数设置成可选的，比如：
 
@@ -483,7 +489,7 @@ function sum(a: number, b: number, c?: number): number {
 
 `sum()` 函数接受两个或者三个数字，第三个参数是可选的，如果你没有把它设置为可选，你将会得到一个错误提示
 
-# 方法重载
+### 方法重载
 
 当一个函数是一个类的属性的时候，它被称为方法，TypeScript 也支持方法重载，比如：
 
@@ -526,6 +532,6 @@ console.log(counter.count(20)); // return an array
 ]
 ```
 
-# 小结
+### 小结
 
 - TypeScript 中的函数重载允许你描述函数的参数类型和返回类型之间的关系

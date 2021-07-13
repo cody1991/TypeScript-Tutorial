@@ -2,11 +2,13 @@
 title: 函数
 ---
 
-:::tip 前言
-在本教程中，你将学习 TypeScript 中的函数，以及如何使用类型注释来强制对函数进行类型检查
-:::
+## 函数
 
-# TypeScript 中的函数介绍
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-functions/)
+
+在本教程中，你将学习 TypeScript 中的函数，以及如何使用类型注释来强制对函数进行类型检查
+
+### TypeScript 中的函数介绍
 
 TypeScript 中的函数是可读的，可维护的和可复用的代码块
 
@@ -76,6 +78,6 @@ function add(a: number, b: number) {
 
 因此，将类型注释尽可能地添加到函数中是非常重要的
 
-# 小结
+### 小结
 
 - 为函数参数和返回类型使用类型注释保持调用代码的内联，确保在函数体中进行类型检查

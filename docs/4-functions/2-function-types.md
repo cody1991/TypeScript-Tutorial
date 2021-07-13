@@ -2,11 +2,13 @@
 title: 函数类型
 ---
 
-:::tip 前言
-在本教程中，你将学习 TypeScript 中的函数类型，它允许你为函数定义类型
-:::
+## 函数类型
 
-# TypeScript 中的函数类型介绍
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-function-types/)
+
+在本教程中，你将学习 TypeScript 中的函数类型，它允许你为函数定义类型
+
+### TypeScript 中的函数类型介绍
 
 一个函数类型由两个部分组成：参数和返回类型，当声明一个函数类型时，你需要用下面的语法来指定这两个部分：
 
@@ -25,9 +27,7 @@ let add: (x: number, y: number) => number;
 - 函数类型接受两个参数：`x` 和 `y`，他们都是 `number` 类型
 - 返回值的类型是 [数字类型](/2-basic-types/2-number/) ，它跟在参数和返回类型之间的胖箭头 (`=>`) 后面
 
-::: tip
-注意，参数的命名 (`x` 和 `y`) 指示为了方便阅读，只要参数的类型匹配，它就是函数中有效的类型
-:::
+> 注意，参数的命名 (`x` 和 `y`) 指示为了方便阅读，只要参数的类型匹配，它就是函数中有效的类型
 
 当给一个变量注释函数类型后，你可以把有相同类型的函数赋值给这个变量
 
@@ -59,7 +59,7 @@ add = function (x: string, y: string): number {
 
 在这个例子中，我们将一个类型不匹配的函数重新赋值给 `add` 函数
 
-# 推断函数类型
+### 推断函数类型
 
 当在等式的一边有类型的时候，TypeScript 编译器可以推断出函数的类型，这种形式的 [类型推断](/2-basic-types/15-type-inference/) 被称为上下文类型，比如：
 

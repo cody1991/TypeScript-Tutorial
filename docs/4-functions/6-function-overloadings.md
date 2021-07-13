@@ -2,17 +2,17 @@
 title: 函数重载
 ---
 
-:::tip 前言
-在本教程中，你将学习 TypeScript 中的函数重载
-:::
+## 函数重载
 
-# TypeScript 中的函数重载介绍
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-function-overloadings/)
+
+在本教程中，你将学习 TypeScript 中的函数重载
+
+### TypeScript 中的函数重载介绍
 
 在 TypeScript 中，函数重载允许你建立函数的参数类型和返回类型之间的关系
 
-::: tip
-注意 TypeScript 的函数重载不同于其他静态类型语言，比如 `C#` 和 `Java` 支持的函数重载
-:::
+> 注意 TypeScript 的函数重载不同于其他静态类型语言，比如 `C#` 和 `Java` 支持的函数重载
 
 让我们看几个简单的例子：
 
@@ -67,7 +67,7 @@ function add(a: any, b: any): any {
 
 ![typescript-function-overloadings](https://cdn.jsdelivr.net/gh/cody1991/images@master/typescript-tutorial/typescript-function-overloadings.36nbxumle820.png)
 
-# 数函数重载中使用可选参
+### 数函数重载中使用可选参
 
 当你使用函数重载的时候，函数所需的参数数量必须相同，如果又一个函数重载比另外一个重载的参数多的话，你必须把其他参数设置成可选的，比如：
 
@@ -82,7 +82,7 @@ function sum(a: number, b: number, c?: number): number {
 
 `sum()` 函数接受两个或者三个数字，第三个参数是可选的，如果你没有把它设置为可选，你将会得到一个错误提示
 
-# 方法重载
+### 方法重载
 
 当一个函数是一个类的属性的时候，它被称为方法，TypeScript 也支持方法重载，比如：
 
@@ -125,6 +125,6 @@ console.log(counter.count(20)); // return an array
 ]
 ```
 
-# 小结
+### 小结
 
 - TypeScript 中的函数重载允许你描述函数的参数类型和返回类型之间的关系

@@ -2,9 +2,11 @@
 title: 可选参数
 ---
 
-:::tip 前言
+## 可选参数
+
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-optional-parameters/)
+
 在本教程中，你将学习如何使用 TypeScript 函数的可选参数
-:::
 
 在 JavaScript 中，即使函数指定了参数，你也可以在调用它的时候不传入任何参数，因此 JavaScript 默认支持可选参数
 
@@ -31,9 +33,7 @@ function multiply(a: number, b: number, c?: number): number {
 - 首先，在 `c` 参数后面添加 `?`
 - 然后，通过表达式 `typeof c !== 'undefined'` 检查 `c` 参数是否传递给了函数
 
-::: tip
-注意如果你是用表达式 `if(c)` 来检查参数是否被初始化，你会发现空字符串和 `0` 也被视为 `undefined`
-:::
+> 注意如果你是用表达式 `if(c)` 来检查参数是否被初始化，你会发现空字符串和 `0` 也被视为 `undefined`
 
 可选参数必须出现在参数列表中必选参数的后面
 
@@ -54,7 +54,7 @@ function multiply(a: number, b?: number, c: number): number {
 error TS1016: A required parameter cannot follow an optional parameter.
 ```
 
-# 小结
+### 小结
 
 - 使用 `parameter?: type` 语法使参数是可选的
 - 使用 `typeof(parameter) !== 'undefined'` 表达式来检查可选参数是否被初始化了

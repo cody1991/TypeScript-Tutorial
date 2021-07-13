@@ -2,9 +2,11 @@
 title: Rest 参数
 ---
 
-:::tip 前言
+## Rest 参数
+
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-rest-parameters/)
+
 在本教程中，你将学习 TypeScript 中的剩余参数，它允许你把无限数量的参数表示为一个数组
-:::
 
 Rest 参数允许函数接受零个或者多个指定类型的参数，在 TypeScript 中， Rest 参数遵守下面的规则：
 
