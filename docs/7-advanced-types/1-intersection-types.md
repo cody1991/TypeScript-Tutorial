@@ -2,11 +2,13 @@
 title: 交叉类型
 ---
 
-:::tip 前言
-在本教程中，你将学习 TypeScript 中的交叉类型
-:::
+## 交叉类型
 
-# TypeScript 中的交叉类型介绍
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-intersection-types/)
+
+在本教程中，你将学习 TypeScript 中的交叉类型
+
+### TypeScript 中的交叉类型介绍
 
 价差类型通过组合多有现有类型来创建新的类型，新的类型具有现有类型的所有属性
 
@@ -92,7 +94,7 @@ let e: Employee = {
 
 注意 `BusinessPartner` 和 `Identity` 有相同类型的 `name` 属性，如果它们类型不同，你将会得到一个错误提示
 
-# 类型顺序
+### 类型顺序
 
 当你进行类型交叉的时候，类型的顺序并不重要，比如：
 
@@ -103,7 +105,7 @@ type typeBA = typeB & typeA;
 
 在这个例子中，`typeAB` 和 `typeBA` 有相同的属性
 
-# 小结
+### 小结
 
 - 交叉类型可以结合了两个或者更多的类型，创建具有现有类型的所有属性的新类型
 - 在组合类型的时候，类型的顺序并不重要

@@ -2,13 +2,15 @@
 title: 类型保护
 ---
 
-:::tip 前言
+## 类型保护
+
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-type-guards/)
+
 在本教程中，你将学习 TypeScript 中的类型保护
-:::
 
 类型保护允许你使用 [条件代码块](/3-control-flow-statements/1-if-else/) 来限定变量的类型范围
 
-# typeof
+### typeof
 
 让我们看看下面的例子：
 
@@ -54,7 +56,7 @@ if (typeof a === 'string' && typeof b === 'string') {
 }
 ```
 
-# instanceof
+### instanceof
 
 与 `typeof` 操作符类型，TypeScript 也知道 `instanceof` 操作符的使用，例如：
 
@@ -139,7 +141,7 @@ function signContract(partner: BusinessPartner): string {
 }
 ```
 
-# in
+### in
 
 `in` 操作符判断对象上是否存在某个属性来进行安全检查，你也可以将它用作类型保护，例如：
 
@@ -160,7 +162,7 @@ function signContract(partner: BusinessPartner): string {
 }
 ```
 
-# 用户定义的类型保护
+### 用户定义的类型保护
 
 用户定义的类型保护允许你使用函数的时候定义类型保护或者帮助 TypeScript 推断类型
 
@@ -191,7 +193,7 @@ function signContract(partner: BusinessPartner): string {
 }
 ```
 
-# 小结
+### 小结
 
 - 类型保护限定了条件代码块中变量的类型
 - 使用 `typeof` 和 `instanceof` 操作符在条件代码块中的实现类型保护

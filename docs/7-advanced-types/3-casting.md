@@ -2,15 +2,17 @@
 title: 类型转换
 ---
 
-:::tip 前言
+## 类型转换
+
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/type-casting/)
+
 在本教程中，你将学习 TypeScript 中的类型转换，它允许你将变量从一种类型转换到另外一种类型
-:::
 
 JavaScript 没有类型转换的概念，因为变量具有动态类型的特性，而 TypeScript 中的变量都有类型，类型转换允许你将变量从一种类型转换到另外一种类型
 
 TypeScript 中你可以使用 `as` 关键字或者 `<>` 操作符进行类型转换
 
-# 使用 as 关键字进行类型转换
+### 使用 as 关键字进行类型转换
 
 下面使用 [querySelector()](https://zh.javascript.info/searching-elements-dom#querySelector) 方法选择第一个输入元素：
 
@@ -62,7 +64,7 @@ let a: typeA;
 let b = a as typeB;
 ```
 
-# 使用 <> 操作符进行类型转换
+### 使用 <> 操作符进行类型转换
 
 除了 `as` 关键词，你可以使用 `<>` 操作符进行类型转换，如下所示：
 
@@ -79,7 +81,7 @@ let a: typeA;
 let b = <typeB>a;
 ```
 
-# 小结
+### 小结
 
 - 类型转换允许你将变量从一种类型转换到另外一种类型
 - 使用 `as` 关键字或者 `<>` 操作符进行类型转换

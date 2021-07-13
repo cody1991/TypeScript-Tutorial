@@ -2,11 +2,13 @@
 title: 类型断言
 ---
 
-:::tip 前言
-在本教程中，你将学习 TypeScript 中的类型断言
-:::
+## 类型断言
 
-# TypeScript 中的类型断言介绍
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/type-assertions/)
+
+在本教程中，你将学习 TypeScript 中的类型断言
+
+### TypeScript 中的类型断言介绍
 
 类型断言让 TypeScript 编译器将某个值视为指定的类型，它使用 `as` 关键字来做到这点：
 
@@ -59,7 +61,7 @@ console.log(netPrice);
 
 注意类型断言不做任何 [类型转换](/7-advanced-types/3-casting/) 的事情，它只是告诉编译器为了类型检查的目的，应该使用哪种类型应用于该值
 
-# 可选的类型断言语法
+### 可选的类型断言语法
 
 你也可以使用尖括号语法 `<>` 来断言一个类型，比如：
 
@@ -75,7 +77,7 @@ let netPrice = <number>getNetPrice(100, 0.05, false);
 
 注意你不能在 React 等库中使用尖括号语法 `<>`，出于这个原因，你应该进行类型断言的时候都是用 `as` 关键字
 
-# 小结
+### 小结
 
 - 类型断言告诉编译器把一个值视为指定的类型
 - 类型断言不做任何转型转换的事情

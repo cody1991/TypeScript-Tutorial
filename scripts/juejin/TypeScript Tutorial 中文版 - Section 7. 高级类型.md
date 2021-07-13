@@ -11,11 +11,13 @@ theme: jzman
 - [TypeScript Tutorial 中文版 - Section 1. 入门](https://juejin.cn/post/6984290303880478757)
 - [TypeScript Tutorial 中文版 - Section 2. 基本类型](https://juejin.cn/post/6984309148553445406)
 
-:::tip 前言
-在本教程中，你将学习 TypeScript 中的交叉类型
-:::
+## 交叉类型
 
-# TypeScript 中的交叉类型介绍
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-intersection-types/)
+
+在本教程中，你将学习 TypeScript 中的交叉类型
+
+### TypeScript 中的交叉类型介绍
 
 价差类型通过组合多有现有类型来创建新的类型，新的类型具有现有类型的所有属性
 
@@ -101,7 +103,7 @@ let e: Employee = {
 
 注意 `BusinessPartner` 和 `Identity` 有相同类型的 `name` 属性，如果它们类型不同，你将会得到一个错误提示
 
-# 类型顺序
+### 类型顺序
 
 当你进行类型交叉的时候，类型的顺序并不重要，比如：
 
@@ -112,19 +114,21 @@ type typeBA = typeB & typeA;
 
 在这个例子中，`typeAB` 和 `typeBA` 有相同的属性
 
-# 小结
+### 小结
 
 - 交叉类型可以结合了两个或者更多的类型，创建具有现有类型的所有属性的新类型
 - 在组合类型的时候，类型的顺序并不重要
 
 
-:::tip 前言
+## 类型保护
+
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-type-guards/)
+
 在本教程中，你将学习 TypeScript 中的类型保护
-:::
 
 类型保护允许你使用 [条件代码块](https://juejin.cn/post/6984313301530312734) 来限定变量的类型范围
 
-# typeof
+### typeof
 
 让我们看看下面的例子：
 
@@ -170,7 +174,7 @@ if (typeof a === 'string' && typeof b === 'string') {
 }
 ```
 
-# instanceof
+### instanceof
 
 与 `typeof` 操作符类型，TypeScript 也知道 `instanceof` 操作符的使用，例如：
 
@@ -255,7 +259,7 @@ function signContract(partner: BusinessPartner): string {
 }
 ```
 
-# in
+### in
 
 `in` 操作符判断对象上是否存在某个属性来进行安全检查，你也可以将它用作类型保护，例如：
 
@@ -276,7 +280,7 @@ function signContract(partner: BusinessPartner): string {
 }
 ```
 
-# 用户定义的类型保护
+### 用户定义的类型保护
 
 用户定义的类型保护允许你使用函数的时候定义类型保护或者帮助 TypeScript 推断类型
 
@@ -307,21 +311,23 @@ function signContract(partner: BusinessPartner): string {
 }
 ```
 
-# 小结
+### 小结
 
 - 类型保护限定了条件代码块中变量的类型
 - 使用 `typeof` 和 `instanceof` 操作符在条件代码块中的实现类型保护
 
 
-:::tip 前言
+## 类型转换
+
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/type-casting/)
+
 在本教程中，你将学习 TypeScript 中的类型转换，它允许你将变量从一种类型转换到另外一种类型
-:::
 
 JavaScript 没有类型转换的概念，因为变量具有动态类型的特性，而 TypeScript 中的变量都有类型，类型转换允许你将变量从一种类型转换到另外一种类型
 
 TypeScript 中你可以使用 `as` 关键字或者 `<>` 操作符进行类型转换
 
-# 使用 as 关键字进行类型转换
+### 使用 as 关键字进行类型转换
 
 下面使用 [querySelector()](https://zh.javascript.info/searching-elements-dom#querySelector) 方法选择第一个输入元素：
 
@@ -373,7 +379,7 @@ let a: typeA;
 let b = a as typeB;
 ```
 
-# 使用 <> 操作符进行类型转换
+### 使用 <> 操作符进行类型转换
 
 除了 `as` 关键词，你可以使用 `<>` 操作符进行类型转换，如下所示：
 
@@ -390,17 +396,19 @@ let a: typeA;
 let b = <typeB>a;
 ```
 
-# 小结
+### 小结
 
 - 类型转换允许你将变量从一种类型转换到另外一种类型
 - 使用 `as` 关键字或者 `<>` 操作符进行类型转换
 
 
-:::tip 前言
-在本教程中，你将学习 TypeScript 中的类型断言
-:::
+## 类型断言
 
-# TypeScript 中的类型断言介绍
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/type-assertions/)
+
+在本教程中，你将学习 TypeScript 中的类型断言
+
+### TypeScript 中的类型断言介绍
 
 类型断言让 TypeScript 编译器将某个值视为指定的类型，它使用 `as` 关键字来做到这点：
 
@@ -453,7 +461,7 @@ console.log(netPrice);
 
 注意类型断言不做任何 [类型转换](https://juejin.cn/post/6984314053757763592) 的事情，它只是告诉编译器为了类型检查的目的，应该使用哪种类型应用于该值
 
-# 可选的类型断言语法
+### 可选的类型断言语法
 
 你也可以使用尖括号语法 `<>` 来断言一个类型，比如：
 
@@ -469,7 +477,7 @@ let netPrice = <number>getNetPrice(100, 0.05, false);
 
 注意你不能在 React 等库中使用尖括号语法 `<>`，出于这个原因，你应该进行类型断言的时候都是用 `as` 关键字
 
-# 小结
+### 小结
 
 - 类型断言告诉编译器把一个值视为指定的类型
 - 类型断言不做任何转型转换的事情
