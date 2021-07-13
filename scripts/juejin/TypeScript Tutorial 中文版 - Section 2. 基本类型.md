@@ -1,5 +1,5 @@
 ---
-theme: geek-black
+theme: jzman
 ---
 
 # Section 2. 基本类型

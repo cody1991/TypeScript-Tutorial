@@ -1,5 +1,5 @@
 ---
-theme: geek-black
+theme: jzman
 ---
 
 # Section 8. 泛型

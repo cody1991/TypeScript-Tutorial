@@ -1,5 +1,5 @@
 ---
-theme: geek-black
+theme: jzman
 ---
 
 # Section 0. 前言
