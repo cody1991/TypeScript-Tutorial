@@ -1156,63 +1156,61 @@ useless = null; // OK if --strictNullChecks is not specified
 ```
 
 
-:::tip 前言
-在本教程中，你将学习 TypeScript never 类型，它不包含任何值
-:::
+## never 类型
 
-`never` 类型是不包含值的类型，因为你不能给 `never` 类型的变量赋值
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-never-type/)
 
-通常，你可以使用 `never` 类型来表示总是抛出错误的函数的返回类型，比如：
+在本教程中，你将学习 TypeScript 中的 never 类型，它不包含值。
 
-```TypeScript
+`never` 类型是不包含值的类型，由于这个原因，你不能给 `never` 类型的变量赋任何的值。通常，你可以使用 `never` 类型来表示总是抛出错误的函数的返回类型，如下所示：
+
+```ts
 function raiseError(message: string): never {
   throw new Error(message);
 }
 ```
 
-下面函数的返回值会被推断为 `never` 类型
+下面的函数的返回值被推断为 `never` 类型：
 
-```TypeScript
+```ts
 function reject() {
   return raiseError('Rejected');
 }
 ```
 
-如果你有一个包含无限循环的函数表达式，那么它的返回类型也是 `never` 类型，比如：
+包含死循环的函数它的返回类型也是 `never` 类型，如下所示：
 
-```TypeScript
+```ts
 let loop = function forever() {
-    while (true) {
-        console.log('Hello');
-    }
-}
+  while (true) {
+    console.log('Hello');
+  }
+};
 ```
 
-在这个例子中，`forever()` 函数返回的类似是 `never`
+在这个例子中，`forever()` 函数的返回类型是 `never` 类型。
 
-如果你看到一个函数返回的类型是 `never`，那么你要确保这不是你想要做的
+如果看到一个函数的返回类型是 `never` 类型，那么要确定下这是不是你想要的结果。
 
-当你通过 [类型保护](/7-advanced-types/2-type-guards/) 收缩变量的类型时，变量也可以得到 `never` 类型，当它不能为真的时候
+当你使用 [类型保护](/7-advanced-types/2-type-guards/) 来收缩变量的类型，导致有些条件判断再也不能为真的时候，也可以得到 `never` 类型。如下所示，不使用 `never` 类型的话，下面的函数会抛出错误，因为不是所有代码中的路径都有返回值：
 
-比如，如果没有 `never` 类型，下面的函数将会导致错误，因为不是所有的代码路径都返回值
-
-```TypeScript
+```ts
 function fn(a: string | number): boolean {
-  if (typeof a === "string") {
+  if (typeof a === 'string') {
     return true;
-  } else if (typeof a === "number") {
+  } else if (typeof a === 'number') {
     return false;
   }
 }
 ```
 
-为了使代码有效，你可以返回一个返回类型为 `never` 类型的函数
+为了使代码变得有效，你可以返回一个返回类型为 `never` 类型的函数：
 
-```TypeScript
+```ts
 function fn(a: string | number): boolean {
-  if (typeof a === "string") {
+  if (typeof a === 'string') {
     return true;
-  } else if (typeof a === "number") {
+  } else if (typeof a === 'number') {
     return false;
   }
   // make the function valid
@@ -1221,22 +1219,24 @@ function fn(a: string | number): boolean {
 
 let neverOccur = () => {
   throw new Error('Never!');
-}
+};
 ```
 
-# 小结
+#### 小结
 
-- `never` 类型不包含值
-- `never` 类型表示总是抛出错误的函数或者包含无限循环的函数的返回类型
+- `never` 类型不包含值；
+- `never` 类型表示总是抛出错误的或包含死循环的函数的返回类型。
 
 
-:::tip 前言
-在本教程中，你将学习 TypeScript 联合类型，该类型允许你在变量中存储一个或多个类型的值
-:::
+## 联合类型
 
-# TypeScript union 类型介绍
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-union-type/)
 
-有时候你会遇到一个函数，它希望接受一个数字或者字符串作为参数，比如：
+在本教程中，你将学习 TypeScript 中的联合类型，它允许你在变量中存储一个或多个不同类型的值。
+
+### TypeScript 中的联合类型介绍
+
+有时候你会遇到这样一个函数，它希望接受数字或字符串的值作为参数，如下所示：
 
 ```ts
 function add(a: any, b: any) {
@@ -1250,23 +1250,15 @@ function add(a: any, b: any) {
 }
 ```
 
-在这个例子中，如果参数都是数字，`add` 函数会计算参数之和
+在这个例子中，如果两个参数都是数字，`add` 函数会计算它们的和，而如果两个参数都是字符串，`add` 函数会把它们拼接成一个字符串，如果参数既不都是数字也都不是字符串，`add()` 函数会抛出一个错误提示。
 
-如果参数都是字符串，`add` 函数会把它们连接成一个字符串
-
-如果参数既不都是数字也不是字符串，`add()` 函数会返回一个错误
-
-`add()` 函数的问题是它的参数类型是 [any 类型](/2-basic-types/9-any-type/)，这意味着你可以使用既不都是数字也不都是字符串的方式来调用这个函数，TypeScript 能接受这种情况
-
-代码可以编译成功但是在运行的时候会抛出错误：
+`add()` 函数的问题是它的参数类型是 [any 类型](/2-basic-types/9-any-type/)，这意味着可以使用既不都是数字也不都是字符串的参数来调用它，TypeScript 能接受这种情况。代码可以编译成功，但是在运行的时候会抛出错误：
 
 ```ts
 add(true, false);
 ```
 
-为了解决这个问题，你可以使用 TypeScript 联合类型，联合类型允许你把多个类型组合成一个类型
-
-比如，下面的变量类型是 `number` 或者 `string`：
+为了解决这个问题，你可以使用 TypeScript 中的联合类型，联合类型允许把多个类型组合成一个类型来使用。`result` 变量的类型是 `number` 类型或者 `string` 类型，如下所示：
 
 ```ts
 let result: number | string;
@@ -1275,9 +1267,7 @@ result = 'Hi'; // also OK
 result = false; // a boolean value, not OK
 ```
 
-联合类型描述的值可以是几种类型中的一种，但不仅仅是两种，比如 `number | string | boolean` 是一个值的类型，它可以是数字，字符串或者布尔值
-
-回到 `add()` 函数的例子，你可以把它的参数类型从 `any` 类型改为联合类型
+联合类型描述的值可以是几种类型中的一种，但不仅仅只能是两种。比如 `number | string | boolean` 也是一个值的类型，它可以是数字，字符串或者布尔值。回到 `add()` 函数的例子，你可以把它的参数的类型从 `any` 类型修改为联合类型：
 
 ```ts
 function add(a: number | string, b: number | string) {
@@ -1291,33 +1281,33 @@ function add(a: number | string, b: number | string) {
 }
 ```
 
-# 小结
+### 小结
 
-- TypeScript 联合类型允许你在变量中存储一个或者多个类型的值
+- TypeScript 中的联合类型允许你在变量中存储一个或多个不同类型的值。
 
 
-:::tip 前言
-在本教程中，你将学习如果使用类型别名定义类型新的名称
-:::
+## 类型别名
 
-# TypeScript 类型别名介绍
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-type-aliases/)
 
-类型别名允许你为现有的类型创建新的名称，类型别名的语法如下：
+在本教程中，你将学习如果使用类型别名为类型起新的名字。
+
+### TypeScript 中的类型别名介绍
+
+类型别名允许你为现有的类型指定新的名字，类型别名的语法如下所示：
 
 ```ts
 type alias = existingType;
 ```
 
-现有的类型可以是任何 TypeScript 有效地类型
-
-下面的例子使用类型别名，给 `string` 类型创建了新的名称 `chars`
+现有的类型可以是任何 TypeScript 中有效的类型。下面的例子使用类型别名，为 `string` 类型指定了新的名字 `chars`：
 
 ```ts
 type chars = string;
 let messsage: chars; // same as string type
 ```
 
-给 [联合类型](/2-basic-types/13-type-aliases/) 创建类型别名是非常有用的，比如：
+给 [联合类型](/2-basic-types/13-type-aliases/) 创建类型别名是非常有用的，如下所示：
 
 ```ts
 type alphanumeric = string | number;
@@ -1327,30 +1317,26 @@ input = 'Hi'; // valid
 input = false; // Compiler error
 ```
 
-# 小结
 
-- 使用类型别名给现有的类型创建新的名称
+## 字符串字面量类型
 
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-string-literal-types/)
 
-:::tip 前言
-在本教程中，你将学习 TypeScript 字符串字面量类型，它指定了可接受的字符串
-:::
+在本教程中，你将学习 TypeScript 中的字符串字面量类型，它指定了类型可接受的字符串字面量。
 
-字符串字面量类型允许你定义一个值接受一个指定字符串的类型
-
-下面的例子定义了一个字符串字面量类型，它只接受 `'click'` 字符串
+字符串字面量类型允许你定义一种类型，它只接受一个指定的字符串字面量。下面的例子定义了一个字符串字面量类型，它只接受 `'click'` 字符串字面量：
 
 ```ts
 let click: 'click';
 ```
 
-`click` 是一个只接受 `'click'` 字符串的字符串字面量类型，如果你把字符串 `click` 赋值给 `click` 变量，它是合法的：
+`click` 变量是一个只接受 `'click'` 字符串的字符串字面量类型，如果你把字符串 `click` 赋值给 `click` 变量，它是合法的：
 
 ```ts
 click = 'click'; // valid
 ```
 
-但是你如果把另外一个字符串赋值给 `click` 变量，TypeScript 编译器会抛出错误，例如：
+但如果把另外一个字符串赋值给 `click` 变量，TypeScript 编译器会抛出一个错误提示，如下所示：
 
 ```ts
 click = 'dblclick'; // compiler error
@@ -1362,9 +1348,9 @@ click = 'dblclick'; // compiler error
 Type '"dblclick"' is not assignable to type '"click"'.
 ```
 
-字符串字面量类型用于限定变量中可能的字符串值
+使用字符串字面量类型来限制变量中可能出现的字符串字面量是非常有用的。
 
-字符串字面量类型可以与 [联合类型](/2-basic-types/12-union-type/) 很好地结合起来，为变量定义一组有限的字符串值
+字符串字面量类型可以与 [联合类型](/2-basic-types/12-union-type/) 结合起来使用，为变量定义一组有限的、可选的字符串字面量集合：
 
 ```ts
 let mouseEvent: 'click' | 'dblclick' | 'mouseup' | 'mousedown';
@@ -1375,9 +1361,7 @@ mouseEvent = 'mousedown'; // valid
 mouseEvent = 'mouseover'; // compiler error
 ```
 
-如果你在多个位置使用字符串字面量类型，这样会非常的冗长
-
-为了避免这样，你可以使用类型别名，比如：
+在多个位置使用同一个字符串字面量类型显得非常冗余，你可以使用 [类型别名](/2-basic-types/13-type-aliases/) 来避免这种情况的发生，如下所示：
 
 ```ts
 type MouseEvent: 'click' | 'dblclick' | 'mouseup' | 'mousedown';
@@ -1391,7 +1375,7 @@ mouseEvent = 'mouseover'; // compiler error
 let anotherEvent: MouseEvent;
 ```
 
-# 小结
+### 小结
 
-- TypeScript 字符串字面量类型指定了可接受的字符串
-- 将字符串字面量类型与联合类型和类型别名一起使用，来定义指定接受有限的字符串集合的类型
+- TypeScript 中的字符串字面量类型指定了类型可接受的字符串字面量；
+- 字符串字面量类型与联合类型和类型别名结合起来使用，可以指定接受一组有限的、可选的字符串字面量集合。
