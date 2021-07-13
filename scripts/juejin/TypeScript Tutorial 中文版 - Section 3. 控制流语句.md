@@ -685,9 +685,7 @@ switch (product.name) {
 console.log(`There is a ${discount}% on ${product.name}.`);
 ```
 
-:::tip
-注意，除了循环和 `switch` 语句外，`break` 语句还可以用于中断带有标签的语句。但是，它很少在实践中使用，所以在本教程中不进行讨论
-:::
+> 注意，除了循环和 `switch` 语句外，`break` 语句还可以用于中断带有标签的语句。但是，它很少在实践中使用，所以在本教程中不进行讨论
 
 ### 小结
 
