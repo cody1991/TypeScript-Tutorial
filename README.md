@@ -6,6 +6,8 @@ TypeScript 语言越来越受欢迎，而 TypeScript 语言的学习渠道也越
 
 项目的在线阅读地址在：[TypeScript Tutorial 中文版](https://cody1991.github.io/TypeScript-Tutorial/)，已添加评论功能，欢迎大家进行吐槽，也欢迎提交 MR 单来帮忙提高项目的质量，感谢。
 
+注意：在掘金上的文章内的跳转现在还有问题，后续会通过脚本统一处理。
+
 # 目录
 
 ## 掘金版本
