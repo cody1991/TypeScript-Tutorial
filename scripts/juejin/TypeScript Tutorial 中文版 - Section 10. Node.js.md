@@ -10,6 +10,7 @@ theme: jzman
 - [TypeScript Tutorial 中文版 - Section 0. 前言](https://juejin.cn/post/6984281996449021966)
 - [TypeScript Tutorial 中文版 - Section 1. 入门](https://juejin.cn/post/6984290303880478757)
 - [TypeScript Tutorial 中文版 - Section 2. 基本类型](https://juejin.cn/post/6984309148553445406)
+- [TypeScript Tutorial 中文版 - Section 3. 控制流语句](https://juejin.cn/post/6984313301530312734)
 
 :::tip 前言
 在本教程中，你将学习如何搭建 Node.js 项目中的 TypeScript 自动化开发工作流

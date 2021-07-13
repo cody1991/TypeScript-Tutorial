@@ -5,7 +5,7 @@ title: 项目进度
 ::: tip 校对进度
 💪💪 校对中 💪💪
 
-第一轮总体校对进度：21 / 52
+第一轮总体校对进度：28 / 52
 :::
 
 ::: tip 翻译进度
@@ -40,13 +40,13 @@ title: 项目进度
 | - Section 2.15 类型别名              | 完成     | 1                         |
 | - Section 2.16 字符串字面量类型      | 完成     | 1                         |
 | **<big>Section 3. 控制流语句</big>** | 7 / 7    | -                         |
-| - Section 3.1 if else                | 完成     | 0                         |
-| - Section 3.2 switch case            | 完成     | 0                         |
-| - Section 3.3 for                    | 完成     | 0                         |
-| - Section 3.4 while                  | 完成     | 0                         |
-| - Section 3.5 do while               | 完成     | 0                         |
-| - Section 3.6 break                  | 完成     | 0                         |
-| - Section 3.7 continue               | 完成     | 0                         |
+| - Section 3.1 if else                | 完成     | 1                         |
+| - Section 3.2 switch case            | 完成     | 1                         |
+| - Section 3.3 for                    | 完成     | 1                         |
+| - Section 3.4 while                  | 完成     | 1                         |
+| - Section 3.5 do while               | 完成     | 1                         |
+| - Section 3.6 break                  | 完成     | 1                         |
+| - Section 3.7 continue               | 完成     | 1                         |
 | **<big>Section 4. 函数</big>**       | 6 / 6    | -                         |
 | - Section 4.1 函数                   | 完成     | 0                         |
 | - Section 4.2 函数类型               | 完成     | 0                         |

@@ -6,11 +6,11 @@ title: if else
 
 [原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-if-else/)
 
-在本教程中，你将学习 TypeScript 中的 if else 语句
+在本教程中，你将学习 TypeScript 中的 if else 语句。
 
 ### TypeScript 中的 if 语句
 
-`if` 语句基于条件执行语句，如果条件为真，那么 `if` 语句会执行语句体中的语句
+`if` 语句根据条件的真假来决定是否执行语句，如果条件为真，那么 `if` 语句会执行语句体中的语句：
 
 ```ts
 if (condition) {
@@ -18,7 +18,7 @@ if (condition) {
 }
 ```
 
-比如下面的语句演示了如果 `counter` 变量值小于 `max` 常量值，如何使用 `if` 语句来增加 `counter` 变量的值
+下面的例子演示了如果 `counter` 变量的值小于 `max` 变量的值，如何使用 `if` 语句来增加 `counter` 变量的值：
 
 ```ts
 const max = 100;
@@ -37,9 +37,7 @@ console.log(counter); // 1
 1
 ```
 
-在这个例子中，因为 `counter` 变量初始值为 `0`，它小于 `max` 常量值，所以表达式 `counter < max` 的值为 `true`，因此 `if` 语句会执行 `counter++` 语句
-
-让我们把 `counter` 变量初始化为 `100`
+在这个例子中，因为 `counter` 变量初始值为 `0`，它比 `max` 常量的值小，所以表达式 `counter < max` 的值为 `true`，因此 `if` 语句会执行 `counter++`。让我们把 `counter` 变量的值初始化为 `100`：
 
 ```ts
 const max = 100;
@@ -58,11 +56,11 @@ console.log(counter); // 100
 100
 ```
 
-在这个例子中，表达式 `counter < max` 计算结果为 `false`，所以 `if` 语句不会执行 `counter++` 语句，因此输出结果为 `100`
+在这个例子中，表达式 `counter < max` 计算结果为 `false`，所以 `if` 语句不会执行 `counter++` ，因此输出结果为 `100`。
 
 ### TypeScript 中的 if else 语句
 
-如果希望当条件语句计算结果为 `false` 的时候执行一些语句，你可以使用 `if else` 语句
+如果想在条件语句计算结果为 `false` 的时候执行另外一些语句，可以使用 `if else` 语句：
 
 ```ts
 if (condition) {
@@ -72,7 +70,7 @@ if (condition) {
 }
 ```
 
-下面演示了一个使用 `if else` 语句的例子
+下面演示了一个使用 `if else` 语句的例子：
 
 ```ts
 const max = 100;
@@ -93,11 +91,11 @@ console.log(counter);
 1
 ```
 
-在这个例子中，`counter < max` 表达式计算结果为 `false` ，所以 `else` 分支中的语句会被执行，即把 `counter` 变量的值设置为 `1`
+在这个例子中，`counter < max` 表达式计算结果为 `false` ，所以 `else` 分支中的语句会执行，即把 `counter` 变量的值设置为 `1`。
 
 #### 三元运算符 ?:
 
-在实践中，如果只是一个简单的条件判断，你可以使用三元运算符 `?:` 代替 `if else` 语句，这会让代码看起来更加短，比如：
+在实践中，如果只是一个简单的条件判断，你可以使用三元运算符 `?:` 代替 `if else` 语句，让代码看起来更加简短易懂，如下所示：
 
 ```ts
 const max = 100;
@@ -108,13 +106,9 @@ counter < max ? counter++ : (counter = 1);
 console.log(counter);
 ```
 
-### TypeScript 中的 `if` `else if` `else` 语句
+### if else if else 语句
 
-当你想要执行多条件的语句的时候，你可以使用 `if` `else if` `else` 语句
-
-`if` `else if` `else` 语句 可以有一个或者多个的 `else if` 分支，但是只会有一个 `else` 分支
-
-例如：
+想要执行多条件分支的语句，可以使用 `if` `else if` `else` 语句。`if` `else if` `else` 语句可以有一个或者多个的 `else if` 分支，但只会有一个 `else` 分支，如下所示：
 
 ```ts
 let discount: number;
@@ -137,17 +131,13 @@ console.log(`You got ${discount}% discount. `);
 0
 ```
 
-这个例子根据 `items` 的数量，使用 `if` `else if` `else` 语句来确定折扣：
+这个例子根据 `items` 变量的值，使用 `if` `else if` `else` 语句来确定折扣：
 
-如果 `items` 的数量小于或者等于 `5`，折扣是 `5%`，`if` 分支的语句会被执行
+- 如果 `items` 变量的值小于或者等于 `5` 的时候，那么折扣是 `5%`，`if` 分支的语句执行；
+- 如果 `items` 变量的值小于等于 `10` 的时候，那么折扣是 `10%`，`else if` 分支的语句执行；
+- 当 `items` 变量的值大于 `10` 的时候，那么折扣是 `15%`，`else` 分支的语句执行。
 
-如果 `items` 的数量小于等于 `10`，折扣是 `10%`， `else if` 分支的语句会被执行
-
-当 `items` 的数量大于 `10`，折扣是 `15%`， `else` 分支的语句会被执行
-
-在本例中，假设 `items` 的数量总是大于 `0`，但是如果 `items` 的数量小于 `0` 或者大于 `10`，折扣都是 `10%`
-
-为了使代码更加健壮，你可以另外使用一个 `else if` 分支代替 `else` 分支，就像这样：
+在本例中，假设了 `items` 变量的值总是大于 `0`，如果 `items` 变量的值小于 `0` 或者大于 `10` 的时候，折扣都是 `10%`。出于使代码更具有健壮性，可以在 `else` 分支前新增一个 `else if` 分支，如下所示：
 
 ```ts
 let discount: number;
@@ -166,12 +156,10 @@ if (itemCount > 0 && itemCount <= 5) {
 console.log(`You got ${discount}% discount. `);
 ```
 
-在本例中，只有但 `items` 的数量大于 `10` 的时候折扣是 `10%`，第二个 `else if` 分支的语句将会被执行
-
-如果 `items` 的数量小于 `0`，`else` 分支会被执行
+在本例中，只有当 `items` 变量的值大于 `10` 的时候，折扣是 `10%`，第二个 `else if` 分支的语句执行。如果 `items` 变量的值小于 `0`，`else` 分支执行。
 
 ### 小结
 
-- 使用 `if` 语句来根据条件执行代码
-- 如果你想在条件为 `false` 的时候执行代码，那么使用 `else` 分支。使用三元运算符 `?:` 是一个好的实践，而不是简单的使用 `if else` 语句
-- 使用 `if` `else if` `else` 语句去执行基于多个条件的代码
+- 使用 `if` 语句来根据条件的真假来决定是否执行语句；
+- 使用 `else` 分支当你想在条件为 `false` 的时候执行某些代码，而使用三元运算符 `?:` 代替`if else` 语句是一个很好的实践方式；
+- 使用 `if` `else if` `else` 语句执行多条件分支的语句。

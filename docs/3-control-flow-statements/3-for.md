@@ -6,11 +6,11 @@ title: for
 
 [原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-for/)
 
-在本教程中，你将学习 TypeScript 中的 for 语句，它可以重复执行一段代码
+在本教程中，你将学习 TypeScript 中的 for 语句，它可以重复执行一段代码。
 
 ### TypeScript 中的 for 语句介绍
 
-下面展示了 TypeScript 中 `for` 循环语句的语法：
+下面是 TypeScript 中 `for` 循环语句的语法：
 
 ```ts
 for (initialization; condition; expression) {
@@ -18,13 +18,13 @@ for (initialization; condition; expression) {
 }
 ```
 
-`for` 循环语句被圆括号包裹起来，由三个分号 (`;`) 分隔的可选表达式组成
+`for` 循环语句被圆括号包裹起来，由分号 (`;`) 分隔的三个可选表达式组成：
 
-- `initialization` - 是在循环之前执行一次的表达式，通常你可以使用 `initialization` 初始化一个循环计数器
-- `condition` – 是每次循环迭代结束时求值的表达式，如果 `condition` 值为 `true`，继续执行循环体中的语句
-- `expression` – 是每次循环迭代结束，在对 `condition` 求值之前求值的表达式，通常，你可以使用 `expression` 来更新循环计算器
+- `initialization` - 在循环前执行的表达式，通常会在 `initialization` 中初始循环计数器的值；
+- `condition` – 在每次循环迭代结束的时候执行的表达式，如果 `condition` 计算结果为 `true`，`for` 循环语句会继续执行循环体中的语句；
+- `expression` – 在执行 `condition` 语句前执行的表达式，通常会在 `expression` 中更新循环计算器的值。
 
-`for` 循环语句中的三个表达式都是可选的，这意味着你可以像下面这样使用它：
+`for` 循环语句中的三个表达式都是可选的，这意味着可以这样使用它，如下所示：
 
 ```ts
 for (;;) {
@@ -32,25 +32,23 @@ for (;;) {
 }
 ```
 
-在实践中，如果你知道循环执行多少次，你应该使用 `for` 循环，如果你想根据循环次数以外的条件停止循环，你应该使用 `while` 循环
+在实践中，如果你知道循环执行多少次，你应该使用 `for` 循环，如果你需要根据循环次数以外的条件判断是否停止循环的时候，使用 `while` 循环语句。
 
-TypeScript 允许你完全忽略循环体，如下所示：
+TypeScript 允许你完全省略 `for` 循环语句的循环体，如下所示：
 
 ```ts
 for (initialization; condition; expression);
 ```
 
-但是在实践中很少使用它，因为它使得代码更难阅读和维护
+但在实践中很少这样来使用它，它使得代码难以阅读和维护。
 
-### TypeScript for 例子
+### 循环语句例子
 
-让我们看几个使用 TypeScript `for` 循环语句的例子：
+让我们看几个使用 TypeScript 中的 `for` 循环语句的例子：
 
-#### 1) 简单的 TypeScript for 例子
+#### 1) 简单的 for 循环语句例子
 
-The following example uses the `for` loop statement to output 10 numbers from 0 to 9 to the console:
-
-下面的例子使用 `for` 循环语句输出从 `0` 到 `9` 的 `10` 个数字到控制台
+下面的例子使用 `for` 循环语句输出从 `0` 到 `9` 之间的 `10` 个数字：
 
 ```ts
 for (let i = 0; i < 10; i++) {
@@ -73,15 +71,15 @@ Output:
 9
 ```
 
-它是如何工作的：
+它是这样工作的：
 
-- 首先，声明了 `i` 变量，初始化为 `0`
-- 检查 `i` 是否比 `10` 小，如果是的话把它输出到控制台，并且给 `i` 变量加一
-- 最后，循环第二步直到 `i` 的值为 `10`
+- 首先，声明了 `i` 变量，把它的值初始化为 `0`；
+- 检查 `i` 的值是否比 `10` 小，如果是的话把它的值输出到控制台，并给 `i` 变量加一；
+- 最后，循环第二步直到 `i` 的值等于 `10`，结束循环。
 
-#### 2) TypeScript for 例子：可选块
+#### 2) for 循环语句例子：可选表达式
 
-下面的例子和上面的例子由相同的输出，但是，`for` 循环语句没有 `initialization` 块：
+下面的例子和上面的例子有着相同的输出结果，但是下面的 `for` 循环语句没有 `initialization` 表达式：
 
 ```ts
 let i = 0;
@@ -90,9 +88,7 @@ for (; i < 10; i++) {
 }
 ```
 
-和 `initialization` 块一样，你也可以忽略 `condition` 块
-
-但是，你必须使用 `if` 和 `break` 语句来满足一些条件来终止循环，否则的话你将创建一个无限循环语句导致程序重复执行直至崩溃
+和 `initialization` 表达式一样，你也可以省略 `condition` 表达式。但是必须使用 `if` 或者 `break` 语句，在满足一些条件的时候终止循环，否则你将创建一个死循环语句，导致程序重复执行直至崩溃：
 
 ```ts
 for (let i = 0; ; i++) {
@@ -101,7 +97,7 @@ for (let i = 0; ; i++) {
 }
 ```
 
-下面的例子演示了一个省略三个块的 `for` 循环
+下面的例子演示了一个省略了三个表达式的 `for` 循环语句：
 
 ```ts
 let i = 0;
@@ -127,11 +123,11 @@ for (;;) {
 9
 ```
 
-它是如何工作的：
+它是这样工作的：
 
-- 首先，在进入 `for` 语句前声明了一个 `i` 循环计数器，初始化为 `0`
-- 然后，在每次循环迭代中，把 `i` 输出到控制台，并将它进行加一，如果 `i` 的值比 `9` 大则跳出循环
+- 首先，在进入 `for` 循环语句前声明了一个 `i` 循环计数器，并把它的值初始化为 `0`；
+- 然后，在每次循环迭代中，把 `i` 输出到控制台中并将它的值加一，判断如果 `i` 的值大于 `9` 的话，跳出循环语句。
 
 ### 小结
 
-- 使用 TypeScript `for` 语句当你想要重复执行一段代码的时候
+- 使用 TypeScript 中的 `for` 循环语句来重复执行一段代码。
