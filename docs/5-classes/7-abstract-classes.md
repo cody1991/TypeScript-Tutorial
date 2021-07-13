@@ -2,11 +2,13 @@
 title: 抽象方法
 ---
 
-:::tip 前言
-在本教程中，你将了解 TypeScript 中的抽象类
-:::
+## 抽象方法
 
-# TypeScript 抽象类介绍
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-abstract-classes/)
+
+在本教程中，你将了解 TypeScript 中的抽象类
+
+### TypeScript 抽象类介绍
 
 抽象类通常用于定义要扩展的派生类的公共行为，不像常规的 [类](/5-classes/1-class/)，抽象类不能直接实例化
 
@@ -109,7 +111,7 @@ Jane Doe makes 16000 a month.
 
 当你想要在一些相关的类之间共享代码的时候，使用抽象类是一个很好的方法
 
-# 小结
+### 小结
 
 - 抽象类不能被实例化
 - 一个抽象类至少有一个抽象方法

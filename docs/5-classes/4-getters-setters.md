@@ -2,11 +2,13 @@
 title: Getter / Setter
 ---
 
-:::tip 前言
-在本教程中，你将学习如何使用 TypeScript 中的 getter 方法和 getter 方法
-:::
+## Getter / Setter
 
-# TypeScript 中的 getter 方法 and setter 方法介绍
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-getters-setters/)
+
+在本教程中，你将学习如何使用 TypeScript 中的 getter 方法和 getter 方法
+
+### TypeScript 中的 getter 方法 and setter 方法介绍
 
 下面展示了一个简单的 `Person` 类，只有三个属性：`age`, `firstName` 和 `lastName`
 
@@ -163,7 +165,7 @@ class Person {
 }
 ```
 
-# 更多 TypeScript 的 `getter` 方法 / `setter` 方法 例子
+### 更多 TypeScript 的 `getter` 方法 / `setter` 方法 例子
 
 正如你从代码中所看到的，当你想在赋值数据给属性之前，使用 `setter` 方法进行数据验证是非常有用的，此外你还可以进行其他复杂的逻辑处理
 
@@ -201,7 +203,7 @@ person.fullname = 'John Doe';
 console.log(person.fullName);
 ```
 
-# 小结
+### 小结
 
 - 使用 TypeScript 的 `getter` 方法 / `setter` 方法来控制类属性的访问
 - `getter` 方法 / `setter` 方法 也被叫做 `accessor` 方法 / `mutator` 方法.

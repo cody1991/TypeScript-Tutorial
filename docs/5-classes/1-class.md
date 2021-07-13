@@ -2,11 +2,13 @@
 title: 类
 ---
 
-:::tip 前言
-在本教程中，你将学习 TypeScript 中的类
-:::
+## 类
 
-# TypeScript 中的类介绍
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-class/)
+
+在本教程中，你将学习 TypeScript 中的类
+
+### TypeScript 中的类介绍
 
 JavaScript 不想其他编程语言，比如 `Java` 和 `C#` 有类的概念，在 ES5 中，你可以通过构造函数和 [原型继承](https://zh.javascript.info/prototype-inheritance) 来创建一个 “类”
 
@@ -112,7 +114,7 @@ class Person {
 let person = new Person(171280926, 'John', 'Doe');
 ```
 
-# 小结
+### 小结
 
 - 在 TypeScript 中使用 `class` 关键字定义类
 - TypeScript 利用 ES6 类语法，并添加类型注释，让类更具健壮性

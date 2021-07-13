@@ -2,9 +2,11 @@
 title: 访问修饰符
 ---
 
-:::tip 前言
+## 访问修饰符
+
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-access-modifiers/)
+
 在本教程中，你将学习 TypeScript 中的访问修饰符
-:::
 
 访问修饰符改变 [类](/5-classes/1-class/) 中属性和方法的可见性，TypeScript 提供三个访问修饰符：
 
@@ -14,7 +16,7 @@ title: 访问修饰符
 
 注意，TypeScript 在编译时而不是在运行时从逻辑上控制属性和方法的可见性
 
-# private 修饰符
+### private 修饰符
 
 `private` 修饰符限制了属性和方法只在当前类中可见，当你给方法或属性添加了 `private` 修饰符，你只有在当前类中可以访问。任何在当前类外部访问私有属性和方法的尝试都会在编译时导致错误
 
@@ -56,7 +58,7 @@ let person = new Person('153-07-3130', 'John', 'Doe');
 console.log(person.ssn); // compile error
 ```
 
-# public 修饰符
+### public 修饰符
 
 The public modifier allows class properties and methods to be accessible from all locations. If you don’t specify any access modifier for properties and methods, they will take the public modifier by default.
 
@@ -76,7 +78,7 @@ class Person {
 
 它的效果和省略关键字 `public` 是一样的
 
-# protected 修饰符
+### protected 修饰符
 
 `protected` 修饰符允许一个类的属性和方法在当前类或者当前类的子类中被访问
 
@@ -119,7 +121,7 @@ class Person {
 
 当你考虑属性和方法的可见性，最好给它们添加最低可见性的访问修饰符，即 `private` 修饰符
 
-# 小结
+### 小结
 
 - TypeScript 给属性和方法提供了三种访问修饰符：`private`, `protected` 和 `public`
 - `private` 修饰符只有在当前类中可以访问

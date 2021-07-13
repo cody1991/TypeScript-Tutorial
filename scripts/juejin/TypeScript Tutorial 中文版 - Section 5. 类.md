@@ -11,11 +11,13 @@ theme: jzman
 - [TypeScript Tutorial 中文版 - Section 1. 入门](https://juejin.cn/post/6984290303880478757)
 - [TypeScript Tutorial 中文版 - Section 2. 基本类型](https://juejin.cn/post/6984309148553445406)
 
-:::tip 前言
-在本教程中，你将学习 TypeScript 中的类
-:::
+## 类
 
-# TypeScript 中的类介绍
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-class/)
+
+在本教程中，你将学习 TypeScript 中的类
+
+### TypeScript 中的类介绍
 
 JavaScript 不想其他编程语言，比如 `Java` 和 `C#` 有类的概念，在 ES5 中，你可以通过构造函数和 [原型继承](https://zh.javascript.info/prototype-inheritance) 来创建一个 “类”
 
@@ -121,15 +123,17 @@ class Person {
 let person = new Person(171280926, 'John', 'Doe');
 ```
 
-# 小结
+### 小结
 
 - 在 TypeScript 中使用 `class` 关键字定义类
 - TypeScript 利用 ES6 类语法，并添加类型注释，让类更具健壮性
 
 
-:::tip 前言
+## 访问修饰符
+
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-access-modifiers/)
+
 在本教程中，你将学习 TypeScript 中的访问修饰符
-:::
 
 访问修饰符改变 [类](https://juejin.cn/post/6984313923902111781) 中属性和方法的可见性，TypeScript 提供三个访问修饰符：
 
@@ -139,7 +143,7 @@ let person = new Person(171280926, 'John', 'Doe');
 
 注意，TypeScript 在编译时而不是在运行时从逻辑上控制属性和方法的可见性
 
-# private 修饰符
+### private 修饰符
 
 `private` 修饰符限制了属性和方法只在当前类中可见，当你给方法或属性添加了 `private` 修饰符，你只有在当前类中可以访问。任何在当前类外部访问私有属性和方法的尝试都会在编译时导致错误
 
@@ -181,7 +185,7 @@ let person = new Person('153-07-3130', 'John', 'Doe');
 console.log(person.ssn); // compile error
 ```
 
-# public 修饰符
+### public 修饰符
 
 The public modifier allows class properties and methods to be accessible from all locations. If you don’t specify any access modifier for properties and methods, they will take the public modifier by default.
 
@@ -201,7 +205,7 @@ class Person {
 
 它的效果和省略关键字 `public` 是一样的
 
-# protected 修饰符
+### protected 修饰符
 
 `protected` 修饰符允许一个类的属性和方法在当前类或者当前类的子类中被访问
 
@@ -244,7 +248,7 @@ class Person {
 
 当你考虑属性和方法的可见性，最好给它们添加最低可见性的访问修饰符，即 `private` 修饰符
 
-# 小结
+### 小结
 
 - TypeScript 给属性和方法提供了三种访问修饰符：`private`, `protected` 和 `public`
 - `private` 修饰符只有在当前类中可以访问
@@ -252,9 +256,11 @@ class Person {
 - `public` 修饰符在任何地方都可以访问
 
 
-:::tip 前言
+## 只读属性
+
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-readonly/)
+
 在本教程中，你将学习如何使用 TypeScript 中的只读访问修饰符将类属性标记为不可变属性
-:::
 
 TypeScript 提供了只读访问修饰符允许你将类属性标记为不可变属性，为属性添加只读属性只能出现在下面两个位置中：
 
@@ -292,7 +298,7 @@ class Person {
 }
 ```
 
-# Readonly vs const
+### Readonly vs const
 
 下面展示了`readonly` 和 `const` 之间不同的地点：
 
@@ -301,17 +307,19 @@ class Person {
 | 用于       | 类属性                             | 变量       |
 | 初始化时机 | 在声明的时候或者在当前类构造函数中 | 声明的时候 |
 
-# 小结
+### 小结
 
 - 使用只读访问修饰符将类属性标记为不可变属性
 - 只读访问修饰必须在声明的时候或在当前类的构造函数中进行初始化
 
 
-:::tip 前言
-在本教程中，你将学习如何使用 TypeScript 中的 getter 方法和 getter 方法
-:::
+## Getter / Setter
 
-# TypeScript 中的 getter 方法 and setter 方法介绍
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-getters-setters/)
+
+在本教程中，你将学习如何使用 TypeScript 中的 getter 方法和 getter 方法
+
+### TypeScript 中的 getter 方法 and setter 方法介绍
 
 下面展示了一个简单的 `Person` 类，只有三个属性：`age`, `firstName` 和 `lastName`
 
@@ -468,7 +476,7 @@ class Person {
 }
 ```
 
-# 更多 TypeScript 的 `getter` 方法 / `setter` 方法 例子
+### 更多 TypeScript 的 `getter` 方法 / `setter` 方法 例子
 
 正如你从代码中所看到的，当你想在赋值数据给属性之前，使用 `setter` 方法进行数据验证是非常有用的，此外你还可以进行其他复杂的逻辑处理
 
@@ -506,17 +514,19 @@ person.fullname = 'John Doe';
 console.log(person.fullName);
 ```
 
-# 小结
+### 小结
 
 - 使用 TypeScript 的 `getter` 方法 / `setter` 方法来控制类属性的访问
 - `getter` 方法 / `setter` 方法 也被叫做 `accessor` 方法 / `mutator` 方法.
 
 
-:::tip 前言
-在本教程中，你将了解 TypeScript 继承的概念，以及如何使用它来复用其他类的功能
-:::
+## 类继承
 
-# TypeScript 中的继承介绍
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-inheritance/)
+
+在本教程中，你将了解 TypeScript 继承的概念，以及如何使用它来复用其他类的功能
+
+### TypeScript 中的继承介绍
 
 [类](https://juejin.cn/post/6984313923902111781) 可以让其他的类复用它的属性和方法，这在 TypeScript 中被称为继承
 
@@ -553,7 +563,7 @@ class Employee extends Person {
 
 在这个例子中，`Employee` 是子类，而 `Person`是父类
 
-# 构造函数
+### 构造函数
 
 因为 `Person` 类有一个初始化 `firstName` 和 `lastName` 属性的构造函数，你需要在 `Employee` 类的构造函数中调用父类的构造函数来初始化这些属性
 
@@ -591,7 +601,7 @@ John Doe
 This is John Doe.
 ```
 
-# 方法重载
+### 方法重载
 
 当你调用 `employee` 对象上的 `employee.describe()` 方法，`Person` 类的 `describe()` 方法会被执行，显示 `This is John Doe` 信息
 
@@ -625,17 +635,19 @@ console.log(employee.describe());
 This is John Doe.I'm a Web Developer.
 ```
 
-# 小结
+### 小结
 
 - 使用 `extends` 关键字允许一个类继承另外一个类
 - 在子类的构造函数中使用 `super` 方法调用父类的构造函数，同时，可以使用 `super.methodInParentClass()` 语法在子类中调用 `methodInParentClass()` ，即父类中的方法
 
 
-:::tip 前言
-在本教程中，你将了解 TypeScript 静态属性和方法
-:::
+## 静态属性和方法
 
-# 静态属性
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-static-methods-and-properties/)
+
+在本教程中，你将了解 TypeScript 静态属性和方法
+
+### 静态属性
 
 与实例属性不同，静态属性是类所有实例之间共享的
 
@@ -666,7 +678,7 @@ let jane = new Employee('Jane', 'Doe', 'Back-end Developer');
 console.log(Employee.headcount); // 2
 ```
 
-# 静态方法
+### 静态方法
 
 与静态属性一样，静态方法也是类所有实例之间共享的，要声明一个静态属性，在方法名之前添加 `static` 关键字，如下所示：
 
@@ -704,17 +716,19 @@ console.log(Employee.getHeadcount); // 2
 
 实际上，你会发现比如像 `Math` 对象，它有很多的静态属性和方法，比如 `PI`, `E` 等等的静态属性，和 `abs()`, `round()` 等等的静态方法
 
-# 小结
+### 小结
 
 - 静态属性和静态方法被类的所有实例共享
 - 在一个属性或者方法前面添加 `static` 关键字，可以使其静态化
 
 
-:::tip 前言
-在本教程中，你将了解 TypeScript 中的抽象类
-:::
+## 抽象方法
 
-# TypeScript 抽象类介绍
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-abstract-classes/)
+
+在本教程中，你将了解 TypeScript 中的抽象类
+
+### TypeScript 抽象类介绍
 
 抽象类通常用于定义要扩展的派生类的公共行为，不像常规的 [类](https://juejin.cn/post/6984313923902111781)，抽象类不能直接实例化
 
@@ -817,7 +831,7 @@ Jane Doe makes 16000 a month.
 
 当你想要在一些相关的类之间共享代码的时候，使用抽象类是一个很好的方法
 
-# 小结
+### 小结
 
 - 抽象类不能被实例化
 - 一个抽象类至少有一个抽象方法

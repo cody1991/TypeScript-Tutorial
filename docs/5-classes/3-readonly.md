@@ -2,9 +2,11 @@
 title: 只读属性
 ---
 
-:::tip 前言
+## 只读属性
+
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-readonly/)
+
 在本教程中，你将学习如何使用 TypeScript 中的只读访问修饰符将类属性标记为不可变属性
-:::
 
 TypeScript 提供了只读访问修饰符允许你将类属性标记为不可变属性，为属性添加只读属性只能出现在下面两个位置中：
 
@@ -42,7 +44,7 @@ class Person {
 }
 ```
 
-# Readonly vs const
+### Readonly vs const
 
 下面展示了`readonly` 和 `const` 之间不同的地点：
 
@@ -51,7 +53,7 @@ class Person {
 | 用于       | 类属性                             | 变量       |
 | 初始化时机 | 在声明的时候或者在当前类构造函数中 | 声明的时候 |
 
-# 小结
+### 小结
 
 - 使用只读访问修饰符将类属性标记为不可变属性
 - 只读访问修饰必须在声明的时候或在当前类的构造函数中进行初始化

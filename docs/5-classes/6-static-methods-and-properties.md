@@ -2,11 +2,13 @@
 title: 静态属性和方法
 ---
 
-:::tip 前言
-在本教程中，你将了解 TypeScript 静态属性和方法
-:::
+## 静态属性和方法
 
-# 静态属性
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-static-methods-and-properties/)
+
+在本教程中，你将了解 TypeScript 静态属性和方法
+
+### 静态属性
 
 与实例属性不同，静态属性是类所有实例之间共享的
 
@@ -37,7 +39,7 @@ let jane = new Employee('Jane', 'Doe', 'Back-end Developer');
 console.log(Employee.headcount); // 2
 ```
 
-# 静态方法
+### 静态方法
 
 与静态属性一样，静态方法也是类所有实例之间共享的，要声明一个静态属性，在方法名之前添加 `static` 关键字，如下所示：
 
@@ -75,7 +77,7 @@ console.log(Employee.getHeadcount); // 2
 
 实际上，你会发现比如像 `Math` 对象，它有很多的静态属性和方法，比如 `PI`, `E` 等等的静态属性，和 `abs()`, `round()` 等等的静态方法
 
-# 小结
+### 小结
 
 - 静态属性和静态方法被类的所有实例共享
 - 在一个属性或者方法前面添加 `static` 关键字，可以使其静态化

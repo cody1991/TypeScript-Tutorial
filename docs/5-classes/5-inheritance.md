@@ -2,11 +2,13 @@
 title: 类继承
 ---
 
-:::tip 前言
-在本教程中，你将了解 TypeScript 继承的概念，以及如何使用它来复用其他类的功能
-:::
+## 类继承
 
-# TypeScript 中的继承介绍
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-inheritance/)
+
+在本教程中，你将了解 TypeScript 继承的概念，以及如何使用它来复用其他类的功能
+
+### TypeScript 中的继承介绍
 
 [类](/5-classes/1-class/) 可以让其他的类复用它的属性和方法，这在 TypeScript 中被称为继承
 
@@ -43,7 +45,7 @@ class Employee extends Person {
 
 在这个例子中，`Employee` 是子类，而 `Person`是父类
 
-# 构造函数
+### 构造函数
 
 因为 `Person` 类有一个初始化 `firstName` 和 `lastName` 属性的构造函数，你需要在 `Employee` 类的构造函数中调用父类的构造函数来初始化这些属性
 
@@ -81,7 +83,7 @@ John Doe
 This is John Doe.
 ```
 
-# 方法重载
+### 方法重载
 
 当你调用 `employee` 对象上的 `employee.describe()` 方法，`Person` 类的 `describe()` 方法会被执行，显示 `This is John Doe` 信息
 
@@ -115,7 +117,7 @@ console.log(employee.describe());
 This is John Doe.I'm a Web Developer.
 ```
 
-# 小结
+### 小结
 
 - 使用 `extends` 关键字允许一个类继承另外一个类
 - 在子类的构造函数中使用 `super` 方法调用父类的构造函数，同时，可以使用 `super.methodInParentClass()` 语法在子类中调用 `methodInParentClass()` ，即父类中的方法
