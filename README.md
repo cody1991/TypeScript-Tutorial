@@ -10,6 +10,7 @@ TypeScript 语言越来越受欢迎，而 TypeScript 语言的学习渠道也越
 
 ## 掘金版本
 
+- [TypeScript Tutorial 中文版 - 项目介绍](https://juejin.cn/post/6984281217168310302)
 - [TypeScript Tutorial 中文版 - Section 0. 前言](https://juejin.cn/post/6984281996449021966)
 
 # 工程

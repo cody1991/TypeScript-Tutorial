@@ -4,7 +4,10 @@ theme: geek-black
 
 # Section 10. Node.js
 
-[项目地址](https://github.com/cody1991/TypeScript-Tutorial)
+## 目录
+
+- [TypeScript Tutorial 中文版 - 项目介绍](https://juejin.cn/post/6984281217168310302)
+- [TypeScript Tutorial 中文版 - Section 0. 前言](https://juejin.cn/post/6984281996449021966)
 
 :::tip 前言
 在本教程中，你将学习如何搭建 Node.js 项目中的 TypeScript 自动化开发工作流
