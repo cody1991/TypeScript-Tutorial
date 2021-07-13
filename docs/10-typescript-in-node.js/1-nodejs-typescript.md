@@ -2,15 +2,15 @@
 title: Node.js
 ---
 
-:::tip 前言
+## Node.js
+
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/nodejs-typescript/)
+
 在本教程中，你将学习如何搭建 Node.js 项目中的 TypeScript 自动化开发工作流
-:::
 
-:::tip
-本教程假设你在你的系统上已经安装 Node.js 和 tsc 模块
-:::
+> 本教程假设你在你的系统上已经安装 Node.js 和 tsc 模块
 
-# 创建项目结构
+### 创建项目结构
 
 首先我们创建一个新的目录 `nodets`.
 
@@ -22,7 +22,7 @@ title: Node.js
 
 当 TypeScript 编译器编译了 TypeScript 源文件的时候，它会把输出文件存储在 `build` 目录中
 
-# 配置 TypeScript 编译器
+### 配置 TypeScript 编译器
 
 在 macOS 和 Linux 的终端或者 Windows 上的命令提示符中，在 `nodets` 目录下运行下面的命令来创建 `tsconfig.json` 文件
 
@@ -96,7 +96,7 @@ Node.js TypeScript
 
 幸运的是，你可以使用一些 Node.js 模块使整个流程自动化
 
-# 安装 Node.js 模块
+### 安装 Node.js 模块
 
 `nodemon` 模块允许你在更改了 JavaScript 源代码的时候，自动重新启动应用程序
 

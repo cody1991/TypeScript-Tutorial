@@ -2,12 +2,13 @@
 title: 模块
 ---
 
-:::tip 前言
+## 模块
+
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-modules/)
+
 在本教程中，你将学习 TypeScript 中的模块，以及如何使用它来重构你的代码
 
-:::
-
-# TypeScript 中的模块介绍
+### TypeScript 中的模块介绍
 
 [自从 ES6 以来，JavaScript 开始支持模块](https://zh.javascript.info/modules-intro) ，作为语言的原生功能，TypeScript 与 JavaScript 的模块概念一致
 
@@ -17,7 +18,7 @@ TypeScript 模块可以同时包含声明和代码，模块在它自己的作用
 
 和 ES6 一样，当 TypeScript 文件包含顶级 `import` 或者 `export` 的时候，它被视为一个模块
 
-# 创建一个新的模块
+### 创建一个新的模块
 
 下面创建了一个名为 `Validator.ts` 的新模块，声明了一个名为 `Validator` 的接口：
 
@@ -31,7 +32,7 @@ export interface Validator {
 
 换句话说，如果你不是用 `export` 关键字，`Validator` 接口在 `Validator.ts` 模块中是私有的，因此，它不能被其他模块使用
 
-# 导出语句
+### 导出语句
 
 从模块中到处声明的另外一种方法是使用 `export` 语句，比如：
 
@@ -55,7 +56,7 @@ export { Validator as StringValidator };
 
 在这个例子中，其他模块将使用 `Validator` 接口作为 `StringValidator` 接口
 
-# 倒入新模块
+### 导入新模块
 
 要使用一个模块，使用 `import` 语句，下面创建了一个使用 `Validator.ts` 模块的新模块 `EmailValidator.ts`
 
@@ -111,7 +112,7 @@ console.log(result);
 true
 ```
 
-## 导入类型
+#### 导入类型
 
 下面在 `Types.ts` 模块中声明了一个类型：
 
@@ -131,7 +132,7 @@ import type { alphanumeric } from './Types';
 import { alphanumeric } from './Types';
 ```
 
-## 从模块中导入所有内容
+#### 从模块中导入所有内容
 
 要从模块中导入所有内容，可以使用下面的语法：
 
@@ -139,7 +140,7 @@ import { alphanumeric } from './Types';
 import * from 'module_name';
 ```
 
-# 重新导出
+### 重新导出
 
 下面创建了一个使用 `Validator.ts` 模块，名为 `ZipCodeValidator.ts` 的新模块：
 
@@ -169,7 +170,7 @@ export * from './EmailValidator';
 export * from './ZipCodeValidator';
 ```
 
-# 默认导出
+### 默认导出
 
 TypeScript 允许每个模块都有一个默认导出，要将导出标记为 `default` 导出，你可以使用 `default` 关键字
 
@@ -209,7 +210,7 @@ console.log(result);
 true
 ```
 
-# 小结
+### 小结
 
 - TypeScript 与 ES6 module 的模块概念一致，一个模块可以同时包含声明和代码
 - 在一个模块中，变量，函数，类和接口等等都在它自己的作用域上执行，而不是全局作用域下
