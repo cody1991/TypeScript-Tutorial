@@ -2,11 +2,13 @@
 title: switch case
 ---
 
-:::tip 前言
-在本教程中，你将学习 TypeScript 中的 switch case 语句
-:::
+## switch case
 
-# TypeScript 中的 switch case 语句
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-switch-case/)
+
+在本教程中，你将学习 TypeScript 中的 switch case 语句
+
+### TypeScript 中的 switch case 语句
 
 下面展示了 `switch case` 语句的语法：
 
@@ -42,11 +44,11 @@ switch (expression) {
 
 按照惯例， `default` 从句是 `switch case` 语句 的最后一个从句，但是并不需要都是如此
 
-# TypeScript switch case 语句例子
+### TypeScript switch case 语句例子
 
 让我们看几个 `switch case` 语句的例子
 
-## 1) 一个简单的 TypeScript switch case 例子
+#### 1) 一个简单的 TypeScript switch case 例子
 
 下面的例子展示了一个简单的 `switch case` 例子，它会基于 `targetId` 来展示信息
 
@@ -76,7 +78,7 @@ Delete
 
 `switch case` 语句将 `targetId` 与一组值进行比较，因为 `targetId` 匹配了 `'btnDelete'` ，在对应的 `case` 从句中的语句被执行了
 
-## 2) `case` 分组案例
+#### 2) `case` 分组案例
 
 如果你希望一段代码被多个 `case` 共享，你可以对它们进行分组，比如：
 

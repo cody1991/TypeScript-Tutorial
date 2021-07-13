@@ -11,11 +11,13 @@ theme: jzman
 - [TypeScript Tutorial 中文版 - Section 1. 入门](https://juejin.cn/post/6984290303880478757)
 - [TypeScript Tutorial 中文版 - Section 2. 基本类型](https://juejin.cn/post/6984309148553445406)
 
-:::tip 前言
-在本教程中，你将学习 TypeScript 中的 if else 语句
-:::
+## if else
 
-# TypeScript 中的 if 语句
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-if-else/)
+
+在本教程中，你将学习 TypeScript 中的 if else 语句
+
+### TypeScript 中的 if 语句
 
 `if` 语句基于条件执行语句，如果条件为真，那么 `if` 语句会执行语句体中的语句
 
@@ -67,7 +69,7 @@ console.log(counter); // 100
 
 在这个例子中，表达式 `counter < max` 计算结果为 `false`，所以 `if` 语句不会执行 `counter++` 语句，因此输出结果为 `100`
 
-# TypeScript 中的 if else 语句
+### TypeScript 中的 if else 语句
 
 如果希望当条件语句计算结果为 `false` 的时候执行一些语句，你可以使用 `if else` 语句
 
@@ -102,7 +104,7 @@ console.log(counter);
 
 在这个例子中，`counter < max` 表达式计算结果为 `false` ，所以 `else` 分支中的语句会被执行，即把 `counter` 变量的值设置为 `1`
 
-## 三元运算符 ?:
+#### 三元运算符 ?:
 
 在实践中，如果只是一个简单的条件判断，你可以使用三元运算符 `?:` 代替 `if else` 语句，这会让代码看起来更加短，比如：
 
@@ -115,7 +117,7 @@ counter < max ? counter++ : (counter = 1);
 console.log(counter);
 ```
 
-# TypeScript 中的 `if` `else if` `else` 语句
+### TypeScript 中的 `if` `else if` `else` 语句
 
 当你想要执行多条件的语句的时候，你可以使用 `if` `else if` `else` 语句
 
@@ -177,18 +179,20 @@ console.log(`You got ${discount}% discount. `);
 
 如果 `items` 的数量小于 `0`，`else` 分支会被执行
 
-# 小结
+### 小结
 
 - 使用 `if` 语句来根据条件执行代码
 - 如果你想在条件为 `false` 的时候执行代码，那么使用 `else` 分支。使用三元运算符 `?:` 是一个好的实践，而不是简单的使用 `if else` 语句
 - 使用 `if` `else if` `else` 语句去执行基于多个条件的代码
 
 
-:::tip 前言
-在本教程中，你将学习 TypeScript 中的 switch case 语句
-:::
+## switch case
 
-# TypeScript 中的 switch case 语句
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-switch-case/)
+
+在本教程中，你将学习 TypeScript 中的 switch case 语句
+
+### TypeScript 中的 switch case 语句
 
 下面展示了 `switch case` 语句的语法：
 
@@ -224,11 +228,11 @@ switch (expression) {
 
 按照惯例， `default` 从句是 `switch case` 语句 的最后一个从句，但是并不需要都是如此
 
-# TypeScript switch case 语句例子
+### TypeScript switch case 语句例子
 
 让我们看几个 `switch case` 语句的例子
 
-## 1) 一个简单的 TypeScript switch case 例子
+#### 1) 一个简单的 TypeScript switch case 例子
 
 下面的例子展示了一个简单的 `switch case` 例子，它会基于 `targetId` 来展示信息
 
@@ -258,7 +262,7 @@ Delete
 
 `switch case` 语句将 `targetId` 与一组值进行比较，因为 `targetId` 匹配了 `'btnDelete'` ，在对应的 `case` 从句中的语句被执行了
 
-## 2) `case` 分组案例
+#### 2) `case` 分组案例
 
 如果你希望一段代码被多个 `case` 共享，你可以对它们进行分组，比如：
 
@@ -311,11 +315,13 @@ The month 2 in 2020 has 29 days
 如果月份是 `2` 并且是闰年的话，那么返回 `29` 天，否则返回 `28` 天
 
 
-:::tip 前言
-在本教程中，你将学习 TypeScript 中的 for 语句，它可以重复执行一段代码
-:::
+## for
 
-# TypeScript 中的 for 语句介绍
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-for/)
+
+在本教程中，你将学习 TypeScript 中的 for 语句，它可以重复执行一段代码
+
+### TypeScript 中的 for 语句介绍
 
 下面展示了 TypeScript 中 `for` 循环语句的语法：
 
@@ -349,11 +355,11 @@ for (initialization; condition; expression);
 
 但是在实践中很少使用它，因为它使得代码更难阅读和维护
 
-# TypeScript for 例子
+### TypeScript for 例子
 
 让我们看几个使用 TypeScript `for` 循环语句的例子：
 
-## 1) 简单的 TypeScript for 例子
+#### 1) 简单的 TypeScript for 例子
 
 The following example uses the `for` loop statement to output 10 numbers from 0 to 9 to the console:
 
@@ -386,7 +392,7 @@ Output:
 - 检查 `i` 是否比 `10` 小，如果是的话把它输出到控制台，并且给 `i` 变量加一
 - 最后，循环第二步直到 `i` 的值为 `10`
 
-## 2) TypeScript for 例子：可选块
+#### 2) TypeScript for 例子：可选块
 
 下面的例子和上面的例子由相同的输出，但是，`for` 循环语句没有 `initialization` 块：
 
@@ -439,16 +445,18 @@ for (;;) {
 - 首先，在进入 `for` 语句前声明了一个 `i` 循环计数器，初始化为 `0`
 - 然后，在每次循环迭代中，把 `i` 输出到控制台，并将它进行加一，如果 `i` 的值比 `9` 大则跳出循环
 
-# 小结
+### 小结
 
 - 使用 TypeScript `for` 语句当你想要重复执行一段代码的时候
 
 
-:::tip 前言
-在本教程中，你将学习使用 TypeScript while 语句创建循环
-:::
+## while
 
-# TypeScript 中的 while 语句介绍
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-while/)
+
+在本教程中，你将学习使用 TypeScript while 语句创建循环
+
+### TypeScript 中的 while 语句介绍
 
 `while` 语句允许你创建一个循环，只要条件为 `true` 那么就执行一段代码
 
@@ -481,11 +489,11 @@ while (condition) {
 
 如果你想要循环运行某个循环 `number` 次的话，你可以使用 TypeScript `for` 语句
 
-# TypeScript while 语句例子
+### TypeScript while 语句例子
 
 让我们看几个使用 TypeScript `while` 语句的案例
 
-## TypeScript while： 简单案例
+#### TypeScript while： 简单案例
 
 下面的例子使用 `while` 语句，当 `counter` 小于 `5` 的时候输出它的值到控制台上
 
@@ -514,7 +522,7 @@ while (counter < 5) {
 - 然后，在进入循环之前检查一下 `counter` 是否小于 `5`，如果是的话输出 `counter` 到控制台中，并且把它的值加一
 - 最后，只要 `counter` 小于 `5`，重复执行上面的步骤
 
-## TypeScript while 实践项目
+#### TypeScript while 实践项目
 
 假设你在 `HTML` 文档中有一下子列表元素：
 
@@ -542,16 +550,18 @@ while (list.firstChild) {
 - 首先，通过元素的 `id` 和 `querySelector()` 方法查找出 `<ul>` 元素
 - 接下来，检查 `list` 变量的 `firstChild` 是否可用，如果是的话删除它。当第一个子节点被删除的时候，下一个子节点自动提升为第一个子节点。因此，`while` 语句可以删除 `list` 元素伤的所有子节点
 
-# 小结
+### 小结
 
 - 使用 TypeScript `while` 语句创建一个只要条件为 `true` 就会一直执行的循环
 
 
-:::tip 前言
-在本教程中，你将学习如何使用 TypeScript do while 语句去创建一个只有当条件为 `false` 的时候才停止的循环
-:::
+## do while
 
-# TypeScript 中的 do while 语句介绍
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-do-while/)
+
+在本教程中，你将学习如何使用 TypeScript do while 语句去创建一个只有当条件为 `false` 的时候才停止的循环
+
+### TypeScript 中的 do while 语句介绍
 
 下面展示了 `do while` 语句的语法：
 
@@ -567,7 +577,7 @@ do {
 
 和 `while` 语句不同，`do while` 语句会在每次循环迭代以后才计算 `condition` 是否符合，所以，它被称为后测试循环
 
-# TypeScript do while 语句案例
+### TypeScript do while 语句案例
 
 下面的例子使用 `do while` 语句来把 `0` 到 `9` 的数字输出到控制台：
 
@@ -600,16 +610,18 @@ do {
 - 首先，声明了一个变量 `i`，在进入循环前把它初始化为 `0`
 - 接下来，把 `i` 输出到控制台并且加一，检查它是否小于 `10`。如果是的话，继续循环直到 `i` 大于或者等于 `10`
 
-# 小结
+### 小结
 
 - 使用 `do while` 语句 创建一个循环，这个循环会一直运行，直到 `condition` 计算结果为 `false`
 
 
-:::tip 前言
-在本教程中，你将学习 TypeScript 中的 break 语句，它可以用来终止循环和 `switch` 语句
-:::
+## break
 
-# 使用 TypeScript break 语句终止循环
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-break/)
+
+在本教程中，你将学习 TypeScript 中的 break 语句，它可以用来终止循环和 `switch` 语句
+
+### 使用 TypeScript break 语句终止循环
 
 break 语句允许你终止一个循环，把程序控制流传递给循环后的下一条语句
 
@@ -644,7 +656,7 @@ console.log(products[i]);
 - 然后，查找价格为 `900` 的产品，当产品被找到的时候，使用 `break` 语句中断循环
 - 最后，我们把符合要求的产品输出到控制台
 
-# 使用 break 语句中断 switch 语句
+### 使用 break 语句中断 switch 语句
 
 下面的例子返回指定产品的折扣，它使用 `break` 语句中断 [switch](https://juejin.cn/post/6984313301530312734) 语句
 
@@ -677,20 +689,22 @@ console.log(`There is a ${discount}% on ${product.name}.`);
 注意，除了循环和 `switch` 语句外，`break` 语句还可以用于中断带有标签的语句。但是，它很少在实践中使用，所以在本教程中不进行讨论
 :::
 
-# 小结
+### 小结
 
 - 使用 `break` 语句来中断循环或者 `switch` 语句
 
 
-:::tip 前言
+## continue
+
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-continue/)
+
 在本教程中，你将学习 TypeScript continue 语句
-:::
 
 `continue` 语句用于控制循环，比如 [for](https://juejin.cn/post/6984313301530312734) 循环，[while](https://juejin.cn/post/6984313301530312734) 循环，或者 [do while](https://juejin.cn/post/6984313301530312734) 循环中
 
 `continue` 语句会跳到当前循环的末尾，并继续到下一个迭代
 
-# 在 for 循环中使用 TypeScript continue 语句
+### 在 for 循环中使用 TypeScript continue 语句
 
 下面的例子演示了如何在 `for` 循环中使用 `continue` 语句
 
@@ -719,7 +733,7 @@ Output:
 - 首先，循环从 `0` 到 `9` 这几个数字
 - 然后，如果当前的数字是奇数，使用 `continue` 语句跳过输出数字到控制台到操作。如果当前的数字是偶数，则将其输出到控制台
 
-# 在 while 循环中使用 TypeScript continue 语句
+### 在 while 循环中使用 TypeScript continue 语句
 
 The following example shows how to use the continue statement in a while loop. It returns the same result as the above example.
 
@@ -747,7 +761,7 @@ Output:
 8
 ```
 
-# 在 do while 循环中使用 TypeScript continue 语句
+### 在 do while 循环中使用 TypeScript continue 语句
 
 The following example demonstrates how to use the continue statement in a do...while loop. It returns the number of even numbers from 9 to 99:
 
@@ -766,6 +780,6 @@ do {
 console.log(count); // 45
 ```
 
-# 小结
+### 小结
 
 - 使用 TypeScript `continue` 语句跳到循环的末尾，并继续下一个循环迭代

@@ -2,11 +2,13 @@
 title: break
 ---
 
-:::tip 前言
-在本教程中，你将学习 TypeScript 中的 break 语句，它可以用来终止循环和 `switch` 语句
-:::
+## break
 
-# 使用 TypeScript break 语句终止循环
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-break/)
+
+在本教程中，你将学习 TypeScript 中的 break 语句，它可以用来终止循环和 `switch` 语句
+
+### 使用 TypeScript break 语句终止循环
 
 break 语句允许你终止一个循环，把程序控制流传递给循环后的下一条语句
 
@@ -41,7 +43,7 @@ console.log(products[i]);
 - 然后，查找价格为 `900` 的产品，当产品被找到的时候，使用 `break` 语句中断循环
 - 最后，我们把符合要求的产品输出到控制台
 
-# 使用 break 语句中断 switch 语句
+### 使用 break 语句中断 switch 语句
 
 下面的例子返回指定产品的折扣，它使用 `break` 语句中断 [switch](/3-control-flow-statements/2-switch-case/) 语句
 
@@ -74,6 +76,6 @@ console.log(`There is a ${discount}% on ${product.name}.`);
 注意，除了循环和 `switch` 语句外，`break` 语句还可以用于中断带有标签的语句。但是，它很少在实践中使用，所以在本教程中不进行讨论
 :::
 
-# 小结
+### 小结
 
 - 使用 `break` 语句来中断循环或者 `switch` 语句

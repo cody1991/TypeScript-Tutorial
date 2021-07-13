@@ -2,11 +2,13 @@
 title: for
 ---
 
-:::tip 前言
-在本教程中，你将学习 TypeScript 中的 for 语句，它可以重复执行一段代码
-:::
+## for
 
-# TypeScript 中的 for 语句介绍
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-for/)
+
+在本教程中，你将学习 TypeScript 中的 for 语句，它可以重复执行一段代码
+
+### TypeScript 中的 for 语句介绍
 
 下面展示了 TypeScript 中 `for` 循环语句的语法：
 
@@ -40,11 +42,11 @@ for (initialization; condition; expression);
 
 但是在实践中很少使用它，因为它使得代码更难阅读和维护
 
-# TypeScript for 例子
+### TypeScript for 例子
 
 让我们看几个使用 TypeScript `for` 循环语句的例子：
 
-## 1) 简单的 TypeScript for 例子
+#### 1) 简单的 TypeScript for 例子
 
 The following example uses the `for` loop statement to output 10 numbers from 0 to 9 to the console:
 
@@ -77,7 +79,7 @@ Output:
 - 检查 `i` 是否比 `10` 小，如果是的话把它输出到控制台，并且给 `i` 变量加一
 - 最后，循环第二步直到 `i` 的值为 `10`
 
-## 2) TypeScript for 例子：可选块
+#### 2) TypeScript for 例子：可选块
 
 下面的例子和上面的例子由相同的输出，但是，`for` 循环语句没有 `initialization` 块：
 
@@ -130,6 +132,6 @@ for (;;) {
 - 首先，在进入 `for` 语句前声明了一个 `i` 循环计数器，初始化为 `0`
 - 然后，在每次循环迭代中，把 `i` 输出到控制台，并将它进行加一，如果 `i` 的值比 `9` 大则跳出循环
 
-# 小结
+### 小结
 
 - 使用 TypeScript `for` 语句当你想要重复执行一段代码的时候

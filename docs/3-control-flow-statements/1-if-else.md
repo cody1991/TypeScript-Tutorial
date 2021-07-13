@@ -2,11 +2,13 @@
 title: if else
 ---
 
-:::tip 前言
-在本教程中，你将学习 TypeScript 中的 if else 语句
-:::
+## if else
 
-# TypeScript 中的 if 语句
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-if-else/)
+
+在本教程中，你将学习 TypeScript 中的 if else 语句
+
+### TypeScript 中的 if 语句
 
 `if` 语句基于条件执行语句，如果条件为真，那么 `if` 语句会执行语句体中的语句
 
@@ -58,7 +60,7 @@ console.log(counter); // 100
 
 在这个例子中，表达式 `counter < max` 计算结果为 `false`，所以 `if` 语句不会执行 `counter++` 语句，因此输出结果为 `100`
 
-# TypeScript 中的 if else 语句
+### TypeScript 中的 if else 语句
 
 如果希望当条件语句计算结果为 `false` 的时候执行一些语句，你可以使用 `if else` 语句
 
@@ -93,7 +95,7 @@ console.log(counter);
 
 在这个例子中，`counter < max` 表达式计算结果为 `false` ，所以 `else` 分支中的语句会被执行，即把 `counter` 变量的值设置为 `1`
 
-## 三元运算符 ?:
+#### 三元运算符 ?:
 
 在实践中，如果只是一个简单的条件判断，你可以使用三元运算符 `?:` 代替 `if else` 语句，这会让代码看起来更加短，比如：
 
@@ -106,7 +108,7 @@ counter < max ? counter++ : (counter = 1);
 console.log(counter);
 ```
 
-# TypeScript 中的 `if` `else if` `else` 语句
+### TypeScript 中的 `if` `else if` `else` 语句
 
 当你想要执行多条件的语句的时候，你可以使用 `if` `else if` `else` 语句
 
@@ -168,7 +170,7 @@ console.log(`You got ${discount}% discount. `);
 
 如果 `items` 的数量小于 `0`，`else` 分支会被执行
 
-# 小结
+### 小结
 
 - 使用 `if` 语句来根据条件执行代码
 - 如果你想在条件为 `false` 的时候执行代码，那么使用 `else` 分支。使用三元运算符 `?:` 是一个好的实践，而不是简单的使用 `if else` 语句

@@ -2,11 +2,13 @@
 title: while
 ---
 
-:::tip 前言
-在本教程中，你将学习使用 TypeScript while 语句创建循环
-:::
+## while
 
-# TypeScript 中的 while 语句介绍
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-while/)
+
+在本教程中，你将学习使用 TypeScript while 语句创建循环
+
+### TypeScript 中的 while 语句介绍
 
 `while` 语句允许你创建一个循环，只要条件为 `true` 那么就执行一段代码
 
@@ -39,11 +41,11 @@ while (condition) {
 
 如果你想要循环运行某个循环 `number` 次的话，你可以使用 TypeScript `for` 语句
 
-# TypeScript while 语句例子
+### TypeScript while 语句例子
 
 让我们看几个使用 TypeScript `while` 语句的案例
 
-## TypeScript while： 简单案例
+#### TypeScript while： 简单案例
 
 下面的例子使用 `while` 语句，当 `counter` 小于 `5` 的时候输出它的值到控制台上
 
@@ -72,7 +74,7 @@ while (counter < 5) {
 - 然后，在进入循环之前检查一下 `counter` 是否小于 `5`，如果是的话输出 `counter` 到控制台中，并且把它的值加一
 - 最后，只要 `counter` 小于 `5`，重复执行上面的步骤
 
-## TypeScript while 实践项目
+#### TypeScript while 实践项目
 
 假设你在 `HTML` 文档中有一下子列表元素：
 
@@ -100,6 +102,6 @@ while (list.firstChild) {
 - 首先，通过元素的 `id` 和 `querySelector()` 方法查找出 `<ul>` 元素
 - 接下来，检查 `list` 变量的 `firstChild` 是否可用，如果是的话删除它。当第一个子节点被删除的时候，下一个子节点自动提升为第一个子节点。因此，`while` 语句可以删除 `list` 元素伤的所有子节点
 
-# 小结
+### 小结
 
 - 使用 TypeScript `while` 语句创建一个只要条件为 `true` 就会一直执行的循环

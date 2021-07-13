@@ -2,15 +2,17 @@
 title: continue
 ---
 
-:::tip 前言
+## continue
+
+[原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-continue/)
+
 在本教程中，你将学习 TypeScript continue 语句
-:::
 
 `continue` 语句用于控制循环，比如 [for](/3-control-flow-statements/3-for/) 循环，[while](/3-control-flow-statements/4-while/) 循环，或者 [do while](/3-control-flow-statements/5-do-while/) 循环中
 
 `continue` 语句会跳到当前循环的末尾，并继续到下一个迭代
 
-# 在 for 循环中使用 TypeScript continue 语句
+### 在 for 循环中使用 TypeScript continue 语句
 
 下面的例子演示了如何在 `for` 循环中使用 `continue` 语句
 
@@ -39,7 +41,7 @@ Output:
 - 首先，循环从 `0` 到 `9` 这几个数字
 - 然后，如果当前的数字是奇数，使用 `continue` 语句跳过输出数字到控制台到操作。如果当前的数字是偶数，则将其输出到控制台
 
-# 在 while 循环中使用 TypeScript continue 语句
+### 在 while 循环中使用 TypeScript continue 语句
 
 The following example shows how to use the continue statement in a while loop. It returns the same result as the above example.
 
@@ -67,7 +69,7 @@ Output:
 8
 ```
 
-# 在 do while 循环中使用 TypeScript continue 语句
+### 在 do while 循环中使用 TypeScript continue 语句
 
 The following example demonstrates how to use the continue statement in a do...while loop. It returns the number of even numbers from 9 to 99:
 
@@ -86,6 +88,6 @@ do {
 console.log(count); // 45
 ```
 
-# 小结
+### 小结
 
 - 使用 TypeScript `continue` 语句跳到循环的末尾，并继续下一个循环迭代
