@@ -3,7 +3,7 @@ home: true
 heroText: TypeScript Tutorial
 tagline: 中文版
 actionText: 前往学习 →
-actionLink: /0-guide/
+actionLink: /0-guide/1-guide
 footer: MIT Licensed | Copyright © 2021-present Cody1991
 ---
 

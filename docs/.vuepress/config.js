@@ -94,8 +94,7 @@ module.exports = {
     sidebar: [
       {
         title: 'Section 0. 前言',
-        path: '/0-guide/',
-        children: ['/0-guide/'],
+        path: '/0-guide/1-guide',
         collapsable: false,
         sidebarDepth: 0,
       },
