@@ -1,4 +1,4 @@
-
+# Section 5. 类
 
 :::tip 前言
 在本教程中，你将学习 TypeScript 中的类

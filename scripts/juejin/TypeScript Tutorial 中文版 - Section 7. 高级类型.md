@@ -1,4 +1,4 @@
-
+# Section 7. 高级类型
 
 :::tip 前言
 在本教程中，你将学习 TypeScript 中的交叉类型

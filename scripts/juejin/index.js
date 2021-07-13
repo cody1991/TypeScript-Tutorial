@@ -12,12 +12,7 @@ for (let index = 0; index < sidebar.length; index++) {
   if (print === false) continue;
 
   const fileName = `TypeScript Tutorial 中文版 - ${title}.md`;
-  if (fs.existsSync(fileName)) {
-    console.log('清除文件', fileName);
-    fs.unlinkSync(fileName);
-  } else {
-    console.log('新建文件', fileName);
-  }
+  fs.writeFileSync(fileName, `# ${title}`);
 
   function writeFile(srcFileName, fileName) {
     const filePath = path.join('../../docs', `${srcFileName}.md`);
