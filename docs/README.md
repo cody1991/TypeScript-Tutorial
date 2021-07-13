@@ -19,7 +19,7 @@ TypeScript 是建立在 JavaScript 语言之上的开源编程语言。TypeScrip
 - 知道 TypeScript 的真正含义，以及它背后的运行原理；
 - 使用 TypeScript 丰富的语言特性，例如类型，类，接口，模块等等。
 
-## 条件
+## 要求
 
 为了更好的学习本教程，你需要具备以下条件：
 
