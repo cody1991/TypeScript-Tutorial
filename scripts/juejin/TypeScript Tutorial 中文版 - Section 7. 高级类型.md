@@ -8,6 +8,8 @@ theme: geek-black
 
 - [TypeScript Tutorial 中文版 - 项目介绍](https://juejin.cn/post/6984281217168310302)
 - [TypeScript Tutorial 中文版 - Section 0. 前言](https://juejin.cn/post/6984281996449021966)
+- [TypeScript Tutorial 中文版 - Section 1. 入门](https://juejin.cn/post/6984290303880478757)
+- [TypeScript Tutorial 中文版 - Section 2. 基本类型](https://juejin.cn/post/6984309148553445406)
 
 :::tip 前言
 在本教程中，你将学习 TypeScript 中的交叉类型
