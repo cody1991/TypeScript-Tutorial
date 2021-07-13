@@ -5,7 +5,7 @@ title: 项目进度
 ::: tip 校对进度
 💪💪 校对中 💪💪
 
-第一轮总体校对进度：15 / 52
+第一轮总体校对进度：21 / 52
 :::
 
 ::: tip 翻译进度
@@ -33,12 +33,12 @@ title: 项目进度
 | - Section 2.8 数组类型               | 完成     | 1                         |
 | - Section 2.9 元组类型               | 完成     | 1                         |
 | - Section 2.10 枚举类型              | 完成     | 1                         |
-| - Section 2.11 any 类型              | 完成     | 0                         |
-| - Section 2.12 void 类型             | 完成     | 0                         |
-| - Section 2.13 never 类型            | 完成     | 0                         |
-| - Section 2.14 联合类型              | 完成     | 0                         |
-| - Section 2.15 类型别名              | 完成     | 0                         |
-| - Section 2.16 字符串字面量类型      | 完成     | 0                         |
+| - Section 2.11 any 类型              | 完成     | 1                         |
+| - Section 2.12 void 类型             | 完成     | 1                         |
+| - Section 2.13 never 类型            | 完成     | 1                         |
+| - Section 2.14 联合类型              | 完成     | 1                         |
+| - Section 2.15 类型别名              | 完成     | 1                         |
+| - Section 2.16 字符串字面量类型      | 完成     | 1                         |
 | **<big>Section 3. 控制流语句</big>** | 7 / 7    | -                         |
 | - Section 3.1 if else                | 完成     | 0                         |
 | - Section 3.2 switch case            | 完成     | 0                         |
