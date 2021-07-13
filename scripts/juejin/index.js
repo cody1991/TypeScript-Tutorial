@@ -22,15 +22,13 @@ for (let index = 0; index < sidebar.length; index++) {
 theme: jzman
 ---
 
-# ${title}
-
-## 目录
-
 - [TypeScript Tutorial 中文版 - 项目介绍](https://juejin.cn/post/6984281217168310302)
 - [TypeScript Tutorial 中文版 - Section 0. 前言](https://juejin.cn/post/6984281996449021966)
 - [TypeScript Tutorial 中文版 - Section 1. 入门](https://juejin.cn/post/6984290303880478757)
 - [TypeScript Tutorial 中文版 - Section 2. 基本类型](https://juejin.cn/post/6984309148553445406)
-- [TypeScript Tutorial 中文版 - Section 3. 控制流语句](https://juejin.cn/post/6984313301530312734)`,
+- [TypeScript Tutorial 中文版 - Section 3. 控制流语句](https://juejin.cn/post/6984313301530312734)
+
+# ${title}`,
   );
 
   function writeFile(srcFileName, fileName) {
