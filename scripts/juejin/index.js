@@ -6,26 +6,36 @@ const {
   themeConfig: { sidebar },
 } = config;
 
-if (fs.existsSync('./docs.md')) fs.unlinkSync('./docs.md');
+for (let index = 0; index < sidebar.length; index++) {
+  const curSidebar = sidebar[index];
+  const { print, title, path: pathUrl, children } = curSidebar;
+  if (print === false) continue;
 
-const files = sidebar
-  .reduce((allFiles, cur) => {
-    const now = [...allFiles];
-    const { path, children } = cur;
-    if (children) now.push(...children);
-    else now.push(path);
-    return now;
-  }, [])
-  .filter((item) => !item.includes('addon'));
+  const fileName = `TypeScript Tutorial 中文版 - ${title}.md`;
+  if (fs.existsSync(fileName)) {
+    console.log('清除文件', fileName);
+    fs.unlinkSync(fileName);
+  } else {
+    console.log('新建文件', fileName);
+  }
 
-for (let index = 0; index < files.length; index++) {
-  const filePath = path.join('../../docs', `${files[index]}.md`);
-  let file = fs.readFileSync(filePath).toString();
+  function writeFile(srcFileName, fileName) {
+    const filePath = path.join('../../docs', `${srcFileName}.md`);
+    let fileStr = fs.readFileSync(filePath).toString();
+    fileStr = fileStr.replace(
+      /---\stitle: [\sA-Za-z\u4e00-\u9fa5\.\/]+\s---/g,
+      '',
+    );
+    console.log('写入文件', fileName);
+    fs.writeFileSync(fileName, fileStr, { flag: 'a' });
+  }
 
-  file = file.replace(/---\stitle: [\sA-Za-z\u4e00-\u9fa5\.\/]+\s---/g, '');
-
-  console.log('写入', filePath);
-  fs.writeFileSync('./docs.md', file, { flag: 'a' });
+  if (children && children.length > 0) {
+    for (let innerIndex = 0; innerIndex < children.length; innerIndex++) {
+      const child = children[innerIndex];
+      writeFile(child, fileName);
+    }
+  } else {
+    writeFile(pathUrl, fileName);
+  }
 }
-
-// console.log(files);

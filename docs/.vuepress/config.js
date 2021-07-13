@@ -229,6 +229,7 @@ module.exports = {
         children: ['/addon/progress'],
         collapsable: false,
         sidebarDepth: 0,
+        print: false,
       },
     ],
     nav: [
