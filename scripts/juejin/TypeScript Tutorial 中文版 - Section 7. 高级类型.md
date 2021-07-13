@@ -122,7 +122,7 @@ type typeBA = typeB & typeA;
 在本教程中，你将学习 TypeScript 中的类型保护
 :::
 
-类型保护允许你使用 [条件代码块](/3-control-flow-statements/1-if-else/) 来限定变量的类型范围
+类型保护允许你使用 [条件代码块](https://juejin.cn/post/6984313301530312734) 来限定变量的类型范围
 
 # typeof
 
@@ -148,13 +148,13 @@ function add(a: alphanumeric, b: alphanumeric) {
 
 它是如何工作的：
 
-- 属性，定义了 `alphanumeric` 类型，它可以保存 [字符串类型](/2-basic-types/3-string/) 或者 [数字类型](/2-basic-types/2-number/) 值
+- 属性，定义了 `alphanumeric` 类型，它可以保存 [字符串类型](https://juejin.cn/post/6984309148553445406) 或者 [数字类型](https://juejin.cn/post/6984309148553445406) 值
 - 接下来，定义了 `add()` 函数，它把类型为 `alphanumeric` 的 `a` 变量与 `b` 变量进行相加
 - 然后使用 `typeof` 操作符检查两个参数的类型是否都为 `number` 类型，如果是的话，使用 `+` 操作符计算参数之和
 - 再然后使用 `typeof` 操作符检查两个参数的类型是否都为 `string` 类型，如果是的话，把两个字符串参数拼接起来
 - 最后，如果两个参数不都全是数字或者字符串的话，抛出错误提示
 
-在这个例子中，TypeScript 直到如何在条件代码块中使用 `typeof` 操作符，在下面的 [if](/3-control-flow-statements/1-if-else/) 块中，TypeScript 认为 `a` 和 `b` 都是数字类型
+在这个例子中，TypeScript 直到如何在条件代码块中使用 `typeof` 操作符，在下面的 [if](https://juejin.cn/post/6984313301530312734) 块中，TypeScript 认为 `a` 和 `b` 都是数字类型
 
 ```ts
 if (typeof a === 'number' && typeof b === 'number') {
@@ -408,7 +408,7 @@ let b = <typeB>a;
 expression as targetType;
 ```
 
-类型断言也被称为类型收缩，它允许你从 [联合类型](/2-basic-types/12-union-type/) 收缩类型范围。让我们看下下面简单的函数：
+类型断言也被称为类型收缩，它允许你从 [联合类型](https://juejin.cn/post/6984309148553445406) 收缩类型范围。让我们看下下面简单的函数：
 
 ```ts
 function getNetPrice(
@@ -451,7 +451,7 @@ console.log(netPrice);
 95
 ```
 
-注意类型断言不做任何 [类型转换](/7-advanced-types/3-casting/) 的事情，它只是告诉编译器为了类型检查的目的，应该使用哪种类型应用于该值
+注意类型断言不做任何 [类型转换](https://juejin.cn/post/6984314053757763592) 的事情，它只是告诉编译器为了类型检查的目的，应该使用哪种类型应用于该值
 
 # 可选的类型断言语法
 

@@ -44,7 +44,7 @@ John Doe
 
 如果参数有两个类型为字符串的 `firstName` 和 `lastName` 属性，TypeScript 会通过检查，否则的话它会抛出错误
 
-从代码中可以清楚的发现，函数参数的 [类型注释](/2-basic-types/1-type-annotations/) 使得代码难以阅读
+从代码中可以清楚的发现，函数参数的 [类型注释](https://juejin.cn/post/6984309148553445406) 使得代码难以阅读
 
 为了解决这个问题，TypeScript 引入了接口的概念
 
@@ -154,7 +154,7 @@ error TS2540: Cannot assign to 'ssn' because it is a read-only property.
 
 # 函数类型
 
-除了描述对象的属性外，接口也可以描述 [函数类型](/4-functions/2-function-types/)
+除了描述对象的属性外，接口也可以描述 [函数类型](https://juejin.cn/post/6984313766053675022)
 
 要描述函数类型的话，你需要将接口赋值成以下形式的函数签名：
 
@@ -201,7 +201,7 @@ format = function (src: string, upper: boolean) {
 console.log(format('hi', true));
 ```
 
-`StringFormat` 接口确保所有实现了它的函数调用方传入所需的参数：一个 [字符串类型](/2-basic-types/3-string/) 和一个 [布尔值类型](/2-basic-types/4-boolean/)
+`StringFormat` 接口确保所有实现了它的函数调用方传入所需的参数：一个 [字符串类型](https://juejin.cn/post/6984309148553445406) 和一个 [布尔值类型](https://juejin.cn/post/6984309148553445406)
 
 下面的代码也可以正常的工作，即使 `lowerCase` 函数被分配成一个没有第二个参数的函数：
 
@@ -270,7 +270,7 @@ console.log(person.toJson());
 
 # 扩展一个接口的接口
 
-假设你有一个名为 `Mailable` 的 [接口](/6-interfaces/1-interface/)，它包含两个方法：`send()` 和 `queue()`
+假设你有一个名为 `Mailable` 的 [接口](https://juejin.cn/post/6984313984061505567)，它包含两个方法：`send()` 和 `queue()`
 
 ```ts
 interface Mailable {
@@ -279,7 +279,7 @@ interface Mailable {
 }
 ```
 
-然后你有很多 [类](/5-classes/1-class/) 已经实现了 `Mailable` 接口
+然后你有很多 [类](https://juejin.cn/post/6984313923902111781) 已经实现了 `Mailable` 接口
 
 现在，你想要在 `Mailable` 接口上添加一个新的方法， 表示它会延时发送邮件，如下所示：
 

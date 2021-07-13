@@ -17,11 +17,11 @@ theme: geek-black
 
 # TypeScript 中的泛型介绍
 
-TypeScript 中的泛型允许你编写可重用的泛型函数，泛型 [类](/8-generics/3-generic-classes/) 和 泛型 [接口](/8-generics/4-generic-interfaces/)，在这个教程中，你将专注于通用函数的开发
+TypeScript 中的泛型允许你编写可重用的泛型函数，泛型 [类](https://juejin.cn/post/6984314162402820133) 和 泛型 [接口](https://juejin.cn/post/6984314162402820133)，在这个教程中，你将专注于通用函数的开发
 
 通过一个简单的例子可以更加容易地解释 TypeScript 中的泛型概念
 
-假设你需要开发一个函数，它返回一个 [数字](/2-basic-types/2-number/) [数组](/2-basic-types/6-array-type/) 中的一个随即元素
+假设你需要开发一个函数，它返回一个 [数字](https://juejin.cn/post/6984309148553445406) [数组](https://juejin.cn/post/6984309148553445406) 中的一个随即元素
 
 下面的 `getRandomNumberElement()` 函数接受一个数字数组作为参数，并从数组中返回一个随机元素：
 
@@ -46,7 +46,7 @@ let numbers = [1, 5, 7, 4, 2, 9];
 console.log(getRandomNumberElement(numbers));
 ```
 
-假设你需要从一个 [字符串](/2-basic-types/3-string/) 数组中获得随机元素，你可能想到开发一个新的函数：
+假设你需要从一个 [字符串](https://juejin.cn/post/6984309148553445406) 数组中获得随机元素，你可能想到开发一个新的函数：
 
 ```ts
 function getRandomStringElement(items: string[]): string {
@@ -120,7 +120,7 @@ console.log(randomEle);
 
 这个例子中显式地将 `number` 作为 `T` 类型传递给 `getRandomElement()` 函数
 
-实践中，你可以使用 [类型推断](/2-basic-types/15-type-inference/) 来推断类型。这意味着你可以让 TypeScript 编译器根据你传递的参数自动设置 `T` 的值，就像这样：
+实践中，你可以使用 [类型推断](https://juejin.cn/post/6984309148553445406) 来推断类型。这意味着你可以让 TypeScript 编译器根据你传递的参数自动设置 `T` 的值，就像这样：
 
 ```ts
 let numbers = [1, 5, 7, 4, 2, 9];
@@ -128,7 +128,7 @@ let randomEle = getRandomElement(numbers);
 console.log(randomEle);
 ```
 
-在这个例子中，我们没有显式地给 `getRandomElement()` 函数传递 [数字类型](/2-basic-types/2-number/)，编译器查看参数并把 `T` 设置为对应的类型
+在这个例子中，我们没有显式地给 `getRandomElement()` 函数传递 [数字类型](https://juejin.cn/post/6984309148553445406)，编译器查看参数并把 `T` 设置为对应的类型
 
 现在 `getRandomElement()` 函数也是类型安全的了，比如，如果你把返回值赋值给一个字符串变量，将会得到一个错误提示：
 
@@ -174,7 +174,7 @@ console.log(result);
 下面是 TypeScript 中泛型的好处：
 
 - 编译时使用类型检查
-- 消除 [类型转换](/7-advanced-types/3-casting/).
+- 消除 [类型转换](https://juejin.cn/post/6984314053757763592).
 - 允许你实现泛型算法
 
 # 小结
@@ -323,7 +323,7 @@ Argument of type '"age"' is not assignable to parameter of type '"name"'.
 
 # TypeScript 中的泛型类介绍
 
-[泛型](/8-generics/1-generics/) 类的语法如下，泛型类型参数列表在尖括号 `<>` 中，跟着名称后面：
+[泛型](https://juejin.cn/post/6984314162402820133) 类的语法如下，泛型类型参数列表在尖括号 `<>` 中，跟着名称后面：
 
 ```ts
 class className<T> {
@@ -339,7 +339,7 @@ class className<K, T> {
 }
 ```
 
-[泛型约束](/8-generics/2-generic-constraints/) 也可以应用于类中的泛型类型：
+[泛型约束](https://juejin.cn/post/6984314162402820133) 也可以应用于类中的泛型类型：
 
 ```ts
 class className<T extends TypeA> {

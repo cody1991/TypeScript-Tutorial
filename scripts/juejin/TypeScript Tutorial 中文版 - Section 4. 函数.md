@@ -27,7 +27,7 @@ function name(parameter: type, parameter: type, ...): returnType {
 }
 ```
 
-和 JavaScript 不一样的是，TypeScript 允许你在函数的参数和返回值中使用 [类型注释](/2-basic-types/1-type-annotations/)
+和 JavaScript 不一样的是，TypeScript 允许你在函数的参数和返回值中使用 [类型注释](https://juejin.cn/post/6984309148553445406)
 
 让我们看下 `add()` 函数：
 
@@ -37,7 +37,7 @@ function add(a: number, b: number): number {
 }
 ```
 
-在这个例子中，`add()` 函数接受两个 [数字类型](/2-basic-types/2-number/) 的参数
+在这个例子中，`add()` 函数接受两个 [数字类型](https://juejin.cn/post/6984309148553445406) 的参数
 
 当你调用 `add` 函数的时候，TypeScript 编译器会检查每个传给函数的参数，保证他们都是数字类型
 
@@ -81,7 +81,7 @@ function add(a: number, b: number) {
 
 在这个例子中，TypeScript 编译器尝试把 `add()` 函数的返回类型推断为 `number` 类型，这是符合预期的
 
-但是，如果函数有返回不同类型的不同分支，那么 TypeScript 编译器可能推断出 [联合类型](/2-basic-types/12-union-type/) 或者 [any 类型](/2-basic-types/9-any-type/)
+但是，如果函数有返回不同类型的不同分支，那么 TypeScript 编译器可能推断出 [联合类型](https://juejin.cn/post/6984309148553445406) 或者 [any 类型](https://juejin.cn/post/6984309148553445406)
 
 因此，将类型注释尽可能地添加到函数中是非常重要的
 
@@ -111,7 +111,7 @@ let add: (x: number, y: number) => number;
 在这个例子中：
 
 - 函数类型接受两个参数：`x` 和 `y`，他们都是 `number` 类型
-- 返回值的类型是 [数字类型](/2-basic-types/2-number/) ，它跟在参数和返回类型之间的胖箭头 (`=>`) 后面
+- 返回值的类型是 [数字类型](https://juejin.cn/post/6984309148553445406) ，它跟在参数和返回类型之间的胖箭头 (`=>`) 后面
 
 ::: tip
 注意，参数的命名 (`x` 和 `y`) 指示为了方便阅读，只要参数的类型匹配，它就是函数中有效的类型
@@ -149,7 +149,7 @@ add = function (x: string, y: string): number {
 
 # 推断函数类型
 
-当在等式的一边有类型的时候，TypeScript 编译器可以推断出函数的类型，这种形式的 [类型推断](/2-basic-types/15-type-inference/) 被称为上下文类型，比如：
+当在等式的一边有类型的时候，TypeScript 编译器可以推断出函数的类型，这种形式的 [类型推断](https://juejin.cn/post/6984309148553445406) 被称为上下文类型，比如：
 
 ![TypeScript-Function-Type-Example](https://cdn.jsdelivr.net/gh/cody1991/images@master/typescript-tutorial/TypeScript-Function-Type-Example.6rkmnr74nik0.png)
 
@@ -277,7 +277,7 @@ error TS2371: A parameter initializer is only allowed in a function or construct
 
 # 默认参数和可选参数
 
-和 [可选参数](/4-functions/3-optional-parameters/) 相同,默认参数也是可选的。这意味着在调用函数的时候可以省略默认参数
+和 [可选参数](https://juejin.cn/post/6984313766053675022) 相同,默认参数也是可选的。这意味着在调用函数的时候可以省略默认参数
 
 另外，默认参数和尾随的默认参数共享相同的类型，比如下面的函数：
 
@@ -372,7 +372,7 @@ Rest 参数允许函数接受零个或者多个指定类型的参数，在 TypeS
 
 - 一个函数只有一个 Rest 参数
 - Rest 参数出现在参数列表的最后面
-- Rest 参数的类型是 [数组类型](/2-basic-types/9-any-type/).
+- Rest 参数的类型是 [数组类型](https://juejin.cn/post/6984309148553445406).
 
 要声明一个 Rest 参数，你可以在参数名前加上三个点，并使用数组类型作为类型注释：
 
@@ -432,7 +432,7 @@ function addStrings(a: string, b: string): string {
 - `addNumbers()` 函数返回两数之和
 - `addStrings()` 函数返回两个字符串连接
 
-可以使用 [联合类型](/2-basic-types/12-union-type/) 来定义一个函数参数和返回值的类型范围：
+可以使用 [联合类型](https://juejin.cn/post/6984309148553445406) 来定义一个函数参数和返回值的类型范围：
 
 ```ts
 function add(a: number | string, b: number | string): number | string {

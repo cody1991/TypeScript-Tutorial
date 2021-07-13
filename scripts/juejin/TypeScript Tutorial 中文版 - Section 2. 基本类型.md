@@ -61,9 +61,9 @@ TypeScript 继承了 JavaScript 的内置类型，TypeScript 中的类型可分�
 
 | 名字                                | 描述                                          |
 | ----------------------------------- | --------------------------------------------- |
-| [字符串](/2-basic-types/3-string/)  | 表示文本类型数据                              |
-| [数字](/2-basic-types/2-number/)    | 表示数值                                      |
-| [布尔值](/2-basic-types/4-boolean/) | 有 `true` 值和 `false` 值                     |
+| [字符串](https://juejin.cn/post/6984309148553445406)  | 表示文本类型数据                              |
+| [数字](https://juejin.cn/post/6984309148553445406)    | 表示数值                                      |
+| [布尔值](https://juejin.cn/post/6984309148553445406) | 有 `true` 值和 `false` 值                     |
 | null                                | 有一个值：null                                |
 | undefined                           | 有一个值：undefined，它是未初始化变量的默认值 |
 | symbol                              | 表示唯一常量值                                |
@@ -128,7 +128,7 @@ const constantName: type = value;
 
 在这个语法中，类型注释跟在变量或者常量名之后，前面是一个冒号 (`:`)。
 
-下面例子中的变量使用了 [数字](/2-basic-types/2-number/) 类型注释：
+下面例子中的变量使用了 [数字](https://juejin.cn/post/6984309148553445406) 类型注释：
 
 ```ts
 let counter: number;
@@ -169,13 +169,13 @@ let age: number = 25;
 let active: boolean = true;
 ```
 
-在这个例子中， 为 `name` 变量添加了 [字符串](/2-basic-types/3-string/) 类型注释，为 `age` 变量添加了 [数字](/2-basic-types/2-number/) 类型注释，为 `active` 变量添加了 [布尔值](/2-basic-types/4-boolean/) 类型注释
+在这个例子中， 为 `name` 变量添加了 [字符串](https://juejin.cn/post/6984309148553445406) 类型注释，为 `age` 变量添加了 [数字](https://juejin.cn/post/6984309148553445406) 类型注释，为 `active` 变量添加了 [布尔值](https://juejin.cn/post/6984309148553445406) 类型注释
 
 ### 类型注释例子
 
 #### 数组
 
-为 [数组类型](/2-basic-types/6-array-type/) 的变量添加类型注释，需要使用一个特定的类型：它的后面跟着一个方括号 `: type[] ` 标识：
+为 [数组类型](https://juejin.cn/post/6984309148553445406) 的变量添加类型注释，需要使用一个特定的类型：它的后面跟着一个方括号 `: type[] ` 标识：
 
 ```ts
 let arrayName: type[];
@@ -221,7 +221,7 @@ greeting = function (name: string) {
 };
 ```
 
-下面的例子由于分配给 `greeting` 变量的函数和它的 [函数](/4-functions/2-function-types/) 类型注释不匹配，会抛出一个错误提示：
+下面的例子由于分配给 `greeting` 变量的函数和它的 [函数](https://juejin.cn/post/6984313766053675022) 类型注释不匹配，会抛出一个错误提示：
 
 ```ts
 greeting = function () {
@@ -246,17 +246,17 @@ Type '() => void' is not assignable to type '(name: string) => string'. Type 'vo
 
 在本教程中，你将学习 TypeScript 中的类型推断
 
-类型推断描述的是当你没有为变量添加 [类型注释](/2-basic-types/1-type-annotations/) 的时候，TypeScript 是如何推断变量的类型的。
+类型推断描述的是当你没有为变量添加 [类型注释](https://juejin.cn/post/6984309148553445406) 的时候，TypeScript 是如何推断变量的类型的。
 
 ### 类型推断基础
 
-当你声明一个变量的时候，你可以使用 [类型注释](/2-basic-types/1-type-annotations/) 为变量指定某种类型，如下所示：
+当你声明一个变量的时候，你可以使用 [类型注释](https://juejin.cn/post/6984309148553445406) 为变量指定某种类型，如下所示：
 
 ```ts
 let counter: number;
 ```
 
-当你把 `counter` 变量初始化一个数字的时候，TypeScript 会推断 `counter` 的类型为 [数字类型](/2-basic-types/2-number/)，如下所示：
+当你把 `counter` 变量初始化一个数字的时候，TypeScript 会推断 `counter` 的类型为 [数字类型](https://juejin.cn/post/6984309148553445406)，如下所示：
 
 ```ts
 let counter = 0;
@@ -302,7 +302,7 @@ let items = [1, 2, 3, null];
 
 为了推断出 `items` 变量的类型，TypeScript 需要考虑数组中的每个元素的类型。TypeScript 使用最佳通用类型算法来分析每个候选类型，最终选择与所有候选类型都兼容的类型作为变量的类型。
 
-在这个例子中，TypeScript 选择数字 [数组类型](/2-basic-types/6-array-type/) (`number[]`) 作为最佳通用类型。如果你往 `items` 数组中添加一个字符串，TypeScript 会把 `items` 变量的类型推断为数字与字符串组合的数组类型，即 `(number | string)[]`。
+在这个例子中，TypeScript 选择数字 [数组类型](https://juejin.cn/post/6984309148553445406) (`number[]`) 作为最佳通用类型。如果你往 `items` 数组中添加一个字符串，TypeScript 会把 `items` 变量的类型推断为数字与字符串组合的数组类型，即 `(number | string)[]`。
 
 ```ts
 let items = [0, 1, null, 'Hi'];
@@ -358,7 +358,7 @@ TypeScript 知道在这种情况下 `event` 不再是 `MouseEvent` 的实例，�
 
 - 当声明一个变量但在后面才为它赋值的时候；
 - 当你希望一个变量的类型不能被推断的时候；
-- 当一个函数的返回类型是 [any](/2-basic-types/9-any-type/) 类型，而你需要明确知道它的类型的时候。
+- 当一个函数的返回类型是 [any](https://juejin.cn/post/6984309148553445406) 类型，而你需要明确知道它的类型的时候。
 
 ### 小结
 
@@ -673,7 +673,7 @@ TypeScript 中的 `array` 是一个有序的数据列表，可以使用下面的
 let arrayName: type[];
 ```
 
-如下所示，声明了一个 [字符串](/2-basic-types/3-string/) 数组：
+如下所示，声明了一个 [字符串](https://juejin.cn/post/6984309148553445406) 数组：
 
 ```ts
 let skills: string[];
@@ -698,7 +698,7 @@ skills.push('Software Design');
 let skills = ['Problem Sovling', 'Software Design', 'Programming'];
 ```
 
-在这个例子中，TypeScript [推断](/2-basic-types/15-type-inference/) `skills` 数组是一个字符串数组，它相当于：
+在这个例子中，TypeScript [推断](https://juejin.cn/post/6984309148553445406) `skills` 数组是一个字符串数组，它相当于：
 
 ```ts
 let skills: string[];
@@ -719,7 +719,7 @@ skills.push(100);
 Argument of type 'number' is not assignable to parameter of type 'string'.
 ```
 
-当从一个数组中提取元素的时候，TypeScript 会执行 [类型推断](/2-basic-types/15-type-inference/) 的操作，如下所示：
+当从一个数组中提取元素的时候，TypeScript 会执行 [类型推断](https://juejin.cn/post/6984309148553445406) 的操作，如下所示：
 
 ```ts
 let skill = skills[0];
@@ -786,7 +786,7 @@ scores = ['Programming', 5, 'Software Design', 4];
 
 ### TypeScript 中的元组类型介绍
 
-元组的工作机制和 [数组类型](/2-basic-types/6-array-type/) 类似，但有一些额外的条件限制：
+元组的工作机制和 [数组类型](https://juejin.cn/post/6984309148553445406) 类似，但有一些额外的条件限制：
 
 - 元组中元素的数量是固定的；
 - 元素中元素的类型是已知的，并且它们不需要都相同。
@@ -1084,7 +1084,7 @@ TypeScript 的 `any` 类型提供了一个可以与当前基于 JavaScript 的�
 
 ### TypeScript 隐式具有 any 类型
 
-如果你在声明一个变量的时候没有指定类型，TypeScript 会假定变量使用的是 `any` 类型。这个特性被叫做 [类型推断](/2-basic-types/15-type-inference/)。TypeScript 基本上都会进行变量类型的推断，比如：
+如果你在声明一个变量的时候没有指定类型，TypeScript 会假定变量使用的是 `any` 类型。这个特性被叫做 [类型推断](https://juejin.cn/post/6984309148553445406)。TypeScript 基本上都会进行变量类型的推断，比如：
 
 ```ts
 let result;
@@ -1131,7 +1131,7 @@ error TS2339: Property 'toFixed' does not exist on type 'object'.
 
 ### TypeScript 中的 void 类型介绍
 
-`void` 类型表示值没有任何类型，它有点像是 [any 类型](/2-basic-types/9-any-type/) 的反面。实际上你可以使用 `void` 类型表示不返回任何值的函数的返回类型，如下所示：
+`void` 类型表示值没有任何类型，它有点像是 [any 类型](https://juejin.cn/post/6984309148553445406) 的反面。实际上你可以使用 `void` 类型表示不返回任何值的函数的返回类型，如下所示：
 
 ```ts
 function log(message): void {
@@ -1194,7 +1194,7 @@ let loop = function forever() {
 
 如果看到一个函数的返回类型是 `never` 类型，那么要确定下这是不是你想要的结果。
 
-当你使用 [类型保护](/7-advanced-types/2-type-guards/) 来收缩变量的类型，导致有些条件判断再也不能为真的时候，也可以得到 `never` 类型。如下所示，不使用 `never` 类型的话，下面的函数会抛出错误，因为不是所有代码中的路径都有返回值：
+当你使用 [类型保护](https://juejin.cn/post/6984314053757763592) 来收缩变量的类型，导致有些条件判断再也不能为真的时候，也可以得到 `never` 类型。如下所示，不使用 `never` 类型的话，下面的函数会抛出错误，因为不是所有代码中的路径都有返回值：
 
 ```ts
 function fn(a: string | number): boolean {
@@ -1254,7 +1254,7 @@ function add(a: any, b: any) {
 
 在这个例子中，如果两个参数都是数字，`add` 函数会计算它们的和，而如果两个参数都是字符串，`add` 函数会把它们拼接成一个字符串，如果参数既不都是数字也都不是字符串，`add()` 函数会抛出一个错误提示。
 
-`add()` 函数的问题是它的参数类型是 [any 类型](/2-basic-types/9-any-type/)，这意味着可以使用既不都是数字也不都是字符串的参数来调用它，TypeScript 能接受这种情况。代码可以编译成功，但是在运行的时候会抛出错误：
+`add()` 函数的问题是它的参数类型是 [any 类型](https://juejin.cn/post/6984309148553445406)，这意味着可以使用既不都是数字也不都是字符串的参数来调用它，TypeScript 能接受这种情况。代码可以编译成功，但是在运行的时候会抛出错误：
 
 ```ts
 add(true, false);
@@ -1309,7 +1309,7 @@ type chars = string;
 let messsage: chars; // same as string type
 ```
 
-给 [联合类型](/2-basic-types/13-type-aliases/) 创建类型别名是非常有用的，如下所示：
+给 [联合类型](https://juejin.cn/post/6984309148553445406) 创建类型别名是非常有用的，如下所示：
 
 ```ts
 type alphanumeric = string | number;
@@ -1352,7 +1352,7 @@ Type '"dblclick"' is not assignable to type '"click"'.
 
 使用字符串字面量类型来限制变量中可能出现的字符串字面量是非常有用的。
 
-字符串字面量类型可以与 [联合类型](/2-basic-types/12-union-type/) 结合起来使用，为变量定义一组有限的、可选的字符串字面量集合：
+字符串字面量类型可以与 [联合类型](https://juejin.cn/post/6984309148553445406) 结合起来使用，为变量定义一组有限的、可选的字符串字面量集合：
 
 ```ts
 let mouseEvent: 'click' | 'dblclick' | 'mouseup' | 'mousedown';
@@ -1363,7 +1363,7 @@ mouseEvent = 'mousedown'; // valid
 mouseEvent = 'mouseover'; // compiler error
 ```
 
-在多个位置使用同一个字符串字面量类型显得非常冗余，你可以使用 [类型别名](/2-basic-types/13-type-aliases/) 来避免这种情况的发生，如下所示：
+在多个位置使用同一个字符串字面量类型显得非常冗余，你可以使用 [类型别名](https://juejin.cn/post/6984309148553445406) 来避免这种情况的发生，如下所示：
 
 ```ts
 type MouseEvent: 'click' | 'dblclick' | 'mouseup' | 'mousedown';

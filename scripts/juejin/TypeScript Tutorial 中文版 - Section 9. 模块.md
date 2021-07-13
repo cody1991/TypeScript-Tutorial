@@ -20,7 +20,7 @@ theme: geek-black
 
 [自从 ES6 以来，JavaScript 开始支持模块](https://zh.javascript.info/modules-intro) ，作为语言的原生功能，TypeScript 与 JavaScript 的模块概念一致
 
-TypeScript 模块可以同时包含声明和代码，模块在它自己的作用域中执行，而不是在全局作用域中。这意味着当你在一个模块中声明变量，[函数](/4-functions/1-functions/)， [类](/5-classes/1-class/) 和 [接口](/6-interfaces/1-interface/) 等等的时候，它们在模块外部是不可见的，除非你使用 `export` 语句显式地导出它们
+TypeScript 模块可以同时包含声明和代码，模块在它自己的作用域中执行，而不是在全局作用域中。这意味着当你在一个模块中声明变量，[函数](https://juejin.cn/post/6984313766053675022)， [类](https://juejin.cn/post/6984313923902111781) 和 [接口](https://juejin.cn/post/6984313984061505567) 等等的时候，它们在模块外部是不可见的，除非你使用 `export` 语句显式地导出它们
 
 另一方面，如果你想从一个模块中访问变量，函数和类等，你需要使用 `import` 语句导入它们
 

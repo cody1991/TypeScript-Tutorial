@@ -221,7 +221,7 @@ tsc app.ts
 node app.js
 ```
 
-如果你已经安装了在 [环境搭建](/1-getting-started/2-setup-typescript/) 中提到的 `ts-node` 模块，你只需要一个命令便可以实现编译 TypeScript 文件后运行输出的文件的目的：
+如果你已经安装了在 [环境搭建](https://juejin.cn/post/6984290303880478757) 中提到的 `ts-node` 模块，你只需要一个命令便可以实现编译 TypeScript 文件后运行输出的文件的目的：
 
 ```sh
 ts-node app.ts
@@ -414,7 +414,7 @@ The product 99.5 costs $Awesome Gadget 1
 
 解决引用对象上不存在的属性的问题，你可以按照下面的步骤来进行：
 
-第一，我们使用 [接口](/6-interfaces/1-interface/) 定义 `product` 对象的 “形状”，注意你会在后面的教程中 [学习接口的相关知识](/6-interfaces/1-interface/)
+第一，我们使用 [接口](https://juejin.cn/post/6984313984061505567) 定义 `product` 对象的 “形状”，注意你会在后面的教程中 [学习接口的相关知识](https://juejin.cn/post/6984313984061505567)
 
 ```ts
 interface Product {

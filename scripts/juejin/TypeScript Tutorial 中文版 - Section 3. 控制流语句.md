@@ -613,7 +613,7 @@ do {
 
 break 语句允许你终止一个循环，把程序控制流传递给循环后的下一条语句
 
-你可以在 [for](/3-control-flow-statements/3-for/)，[while](/3-control-flow-statements/4-while/) 和 [do while](/3-control-flow-statements/5-do-while/) 语句内使用 `break` 语句
+你可以在 [for](https://juejin.cn/post/6984313301530312734)，[while](https://juejin.cn/post/6984313301530312734) 和 [do while](https://juejin.cn/post/6984313301530312734) 语句内使用 `break` 语句
 
 下面的例子展示了在 `for` 循环里面如何使用 `break` 语句
 
@@ -646,7 +646,7 @@ console.log(products[i]);
 
 # 使用 break 语句中断 switch 语句
 
-下面的例子返回指定产品的折扣，它使用 `break` 语句中断 [switch](/3-control-flow-statements/2-switch-case/) 语句
+下面的例子返回指定产品的折扣，它使用 `break` 语句中断 [switch](https://juejin.cn/post/6984313301530312734) 语句
 
 ```ts
 let products = [
@@ -686,7 +686,7 @@ console.log(`There is a ${discount}% on ${product.name}.`);
 在本教程中，你将学习 TypeScript continue 语句
 :::
 
-`continue` 语句用于控制循环，比如 [for](/3-control-flow-statements/3-for/) 循环，[while](/3-control-flow-statements/4-while/) 循环，或者 [do while](/3-control-flow-statements/5-do-while/) 循环中
+`continue` 语句用于控制循环，比如 [for](https://juejin.cn/post/6984313301530312734) 循环，[while](https://juejin.cn/post/6984313301530312734) 循环，或者 [do while](https://juejin.cn/post/6984313301530312734) 循环中
 
 `continue` 语句会跳到当前循环的末尾，并继续到下一个迭代
 

@@ -1,15 +1,19 @@
 const fs = require('fs');
 const path = require('path');
 const config = require('../../docs/.vuepress/config');
+const { replace } = require('./menus');
 
-const {
+let {
   themeConfig: { sidebar },
 } = config;
 
+sidebar = sidebar.filter((item) => item.print !== false);
+
+let menusReplace = replace(sidebar);
+
 for (let index = 0; index < sidebar.length; index++) {
   const curSidebar = sidebar[index];
-  const { print, title, path: pathUrl, children } = curSidebar;
-  if (print === false) continue;
+  const { title, path: pathUrl, children } = curSidebar;
 
   const fileName = `TypeScript Tutorial 中文版 - ${title}.md`;
   fs.writeFileSync(
@@ -35,7 +39,9 @@ theme: geek-black
       /---\stitle: [\sA-Za-z\u4e00-\u9fa5\.\/]+\s---/g,
       '',
     );
-    console.log('写入文件', fileName);
+    // console.log('写入文件', fileName);
+
+    fileStr = menusReplace(fileStr);
     fs.writeFileSync(fileName, fileStr, { flag: 'a' });
   }
 
