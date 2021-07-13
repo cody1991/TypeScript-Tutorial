@@ -32,7 +32,6 @@ module.exports = {
           distractionFreeMode: true,
           id: '<%- frontmatter.title %>',
           title: '「Comment」<%- frontmatter.title %>',
-          body: '<%- frontmatter.title %>：<%-window.location.origin %><%- frontmatter.to.path || window.location.pathname %>',
         },
       },
     ],
