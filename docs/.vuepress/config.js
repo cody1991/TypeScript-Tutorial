@@ -6,7 +6,7 @@ module.exports = {
         rel: 'icon',
         type: 'image/png',
         sizes: '32x32',
-        href: 'https://www.typescripttutorial.net/wp-content/uploads/2020/04/cropped-favicon-32x32.png',
+        href: 'https://cdn.jsdelivr.net/gh/cody1991/images@master/typescript-tutorial/cropped-favicon-32x32.5xhhtlaz6oo.png',
       },
     ],
     [
@@ -15,7 +15,7 @@ module.exports = {
         rel: 'icon',
         type: 'image/png',
         sizes: '192x192',
-        href: 'https://www.typescripttutorial.net/wp-content/uploads/2020/04/cropped-favicon-192x192.png',
+        href: 'https://cdn.jsdelivr.net/gh/cody1991/images@master/typescript-tutorial/cropped-favicon-192x192.xgmhj7esmg0.png',
       },
     ],
     [
