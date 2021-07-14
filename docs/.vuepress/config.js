@@ -1,6 +1,24 @@
 module.exports = {
   head: [
     [
+      'link',
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '32x32',
+        href: 'https://www.typescripttutorial.net/wp-content/uploads/2020/04/cropped-favicon-32x32.png',
+      },
+    ],
+    [
+      'link',
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '192x192',
+        href: 'https://www.typescripttutorial.net/wp-content/uploads/2020/04/cropped-favicon-192x192.png',
+      },
+    ],
+    [
       'script',
       {},
       `
