@@ -233,7 +233,7 @@ module.exports = {
       },
     ],
     nav: [
-      { text: '教程', link: '/0-guide/' },
+      { text: '教程', link: '/0-guide/1-guide' },
       { text: 'TS Playground', link: 'https://www.typescriptlang.org/play' },
       { text: '英文原版', link: 'https://www.typescripttutorial.net/' },
     ],
