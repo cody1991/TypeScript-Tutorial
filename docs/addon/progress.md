@@ -53,7 +53,7 @@ title: 项目进度
 | - Section 4.3 可选参数               | 完成     | 1                         |
 | - Section 4.4 默认参数               | 完成     | 1                         |
 | - Section 4.5 Rest 参数              | 完成     | 1                         |
-| - Section 4.6 函数重载               | 完成     | 0                         |
+| - Section 4.6 函数重载               | 完成     | 1                         |
 | **<big>Section 5. 类</big>**         | 7 / 7    | -                         |
 | - Section 5.1 类                     | 完成     | 0                         |
 | - Section 5.2 访问修饰符             | 完成     | 0                         |
