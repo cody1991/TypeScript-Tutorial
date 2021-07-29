@@ -7,6 +7,8 @@ theme: jzman
 - [TypeScript Tutorial 中文版 - Section 1. 入门](https://juejin.cn/post/6984290303880478757)
 - [TypeScript Tutorial 中文版 - Section 2. 基本类型](https://juejin.cn/post/6984309148553445406)
 - [TypeScript Tutorial 中文版 - Section 3. 控制流语句](https://juejin.cn/post/6984313301530312734)
+- [TypeScript Tutorial 中文版 - Section 4. 函数](https://juejin.cn/post/6984313766053675022)
+- [TypeScript Tutorial 中文版 - Section 5. 类](https://juejin.cn/post/6984313923902111781)
 
 # Section 7. 高级类型
 
@@ -18,7 +20,7 @@ theme: jzman
 
 ### TypeScript 中的交叉类型介绍
 
-价差类型通过组合多有现有类型来创建新的类型，新的类型具有现有类型的所有属性
+交叉类型通过组合多有现有类型来创建新的类型，新的类型具有现有类型的所有属性
 
 使用 `&` 操作符来组合类型，如下所示：
 
