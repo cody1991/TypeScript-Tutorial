@@ -94,7 +94,7 @@ let person = new Person('171-28-0926', 'John', 'Doe');
 console.log(person.getFullName());
 ```
 
-TypeScript 中的类给它的属性和方法增加了 [类型注释](https://juejin.cn/post/6984309148553445406)。下面演示了 TypeScript 中的 `Person` 类的使用方法：
+TypeScript 中的类给它的属性和方法增加了 [类型注释](https://cody1991.github.io/TypeScript-Tutorial/2-basic-types/1-type-annotations.html)。下面演示了 TypeScript 中的 `Person` 类的使用方法：
 
 ```ts
 class Person {
@@ -132,7 +132,7 @@ let person = new Person(171280926, 'John', 'Doe');
 
 在本教程中，你将学习 TypeScript 中的访问修饰符。
 
-访问修饰符改变 [类](https://juejin.cn/post/6984313923902111781) 中属性和方法的可见性，TypeScript 提供了三个访问修饰符：
+访问修饰符改变 [类](https://cody1991.github.io/TypeScript-Tutorial/5-classes/1-class.html) 中属性和方法的可见性，TypeScript 提供了三个访问修饰符：
 
 - `private`
 - `protected`
@@ -277,7 +277,7 @@ let person = new Person(new Date(1990, 12, 25));
 person.birthDate = new Date(1991, 12, 25); // Compile error
 ```
 
-和其他 [访问修饰符](https://juejin.cn/post/6984313923902111781) 一样，你可以在构造函数中同时声明和初始化只读属性，如下所示：
+和其他 [访问修饰符](https://cody1991.github.io/TypeScript-Tutorial/5-classes/2-access-modifiers.html) 一样，你可以在构造函数中同时声明和初始化只读属性，如下所示：
 
 ```ts
 class Person {
@@ -515,9 +515,9 @@ console.log(person.fullName);
 
 ### TypeScript 中的继承介绍
 
-[类](https://juejin.cn/post/6984313923902111781) 可以让其他的类复用它的属性和方法，这在 TypeScript 中被称为继承。继承其他类的属性和方法的类被称为子类，被继承的类被称为父类，这些名字来自自然中孩子继承父母基因的说法。继承让你可以复用现有类的功能，而不需要重写一遍。
+[类](https://cody1991.github.io/TypeScript-Tutorial/5-classes/1-class.html) 可以让其他的类复用它的属性和方法，这在 TypeScript 中被称为继承。继承其他类的属性和方法的类被称为子类，被继承的类被称为父类，这些名字来自自然中孩子继承父母基因的说法。继承让你可以复用现有类的功能，而不需要重写一遍。
 
-JavaScript 使用 [原型继承](https://juejin.cn/post/6984313923902111781) 的方式实现类，而非 `Java` 和 `C#` 语言的类继承方式。 `ES6` 引入的 [类](https://juejin.cn/post/6984313923902111781) 语法是 JavaScript 原型继承的语法糖，TypeScript 也支持这种语法。
+JavaScript 使用 [原型继承](https://cody1991.github.io/TypeScript-Tutorial/5-classes/1-class.html) 的方式实现类，而非 `Java` 和 `C#` 语言的类继承方式。 `ES6` 引入的 [类](https://cody1991.github.io/TypeScript-Tutorial/5-classes/1-class.html) 语法是 JavaScript 原型继承的语法糖，TypeScript 也支持这种语法。
 
 假设有下面一个 `Person` 类：
 
@@ -703,7 +703,7 @@ console.log(Employee.getHeadcount); // 2
 
 ### TypeScript 中的抽象类介绍
 
-抽象类通常用于定义要扩展的派生类的共同行为，和常规的 [类](https://juejin.cn/post/6984313923902111781) 不同的是，抽象类不能直接实例化。要声明一个抽象类，可以使用 `abstract` 关键字：
+抽象类通常用于定义要扩展的派生类的共同行为，和常规的 [类](https://cody1991.github.io/TypeScript-Tutorial/5-classes/1-class.html) 不同的是，抽象类不能直接实例化。要声明一个抽象类，可以使用 `abstract` 关键字：
 
 ```ts
 abstract class Employee {

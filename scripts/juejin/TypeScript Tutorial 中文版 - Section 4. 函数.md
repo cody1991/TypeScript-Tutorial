@@ -28,7 +28,7 @@ function name(parameter: type, parameter: type, ...): returnType {
 }
 ```
 
-和 JavaScript 不一样的是，TypeScript 允许为函数的参数和返回值添加 [类型注释](https://juejin.cn/post/6984309148553445406)，看看下面的 `add()` 函数：
+和 JavaScript 不一样的是，TypeScript 允许为函数的参数和返回值添加 [类型注释](https://cody1991.github.io/TypeScript-Tutorial/2-basic-types/1-type-annotations.html)，看看下面的 `add()` 函数：
 
 ```ts
 function add(a: number, b: number): number {
@@ -36,7 +36,7 @@ function add(a: number, b: number): number {
 }
 ```
 
-在这个例子中，`add()` 函数接受两个 [数字类型](https://juejin.cn/post/6984309148553445406) 的参数。当你调用 `add()` 函数的时候，TypeScript 编译器会检查每个传递给函数的参数，保证它们都是数字类型的值。在 `add()` 函数的例子中，你只能传递数字类型的参数给它，不能是其他任何类型的值。下面的例子会抛出错误提示，因为它向 `add()` 函数传递了两个字符串类型的参数：
+在这个例子中，`add()` 函数接受两个 [数字类型](https://cody1991.github.io/TypeScript-Tutorial/2-basic-types/2-number.html) 的参数。当你调用 `add()` 函数的时候，TypeScript 编译器会检查每个传递给函数的参数，保证它们都是数字类型的值。在 `add()` 函数的例子中，你只能传递数字类型的参数给它，不能是其他任何类型的值。下面的例子会抛出错误提示，因为它向 `add()` 函数传递了两个字符串类型的参数：
 
 ```ts
 let sum = add('10', '20');
@@ -66,7 +66,7 @@ function add(a: number, b: number) {
 }
 ```
 
-在这个例子中，TypeScript 编译器尝试把 `add()` 函数的返回值的类型推断为 `number` 类型，这是符合预期的。但是，如果函数有多个分支返回不同类型的值的时候，TypeScript 编译器可能推断出返回值的类型为 [联合类型](https://juejin.cn/post/6984309148553445406) 或者 [any 类型](https://juejin.cn/post/6984309148553445406)。因此，尽可能给函数添加类型注释。
+在这个例子中，TypeScript 编译器尝试把 `add()` 函数的返回值的类型推断为 `number` 类型，这是符合预期的。但是，如果函数有多个分支返回不同类型的值的时候，TypeScript 编译器可能推断出返回值的类型为 [联合类型](https://cody1991.github.io/TypeScript-Tutorial/2-basic-types/12-union-type.html) 或者 [any 类型](https://cody1991.github.io/TypeScript-Tutorial/2-basic-types/9-any-type.html)。因此，尽可能给函数添加类型注释。
 
 ### 小结
 
@@ -96,7 +96,7 @@ let add: (x: number, y: number) => number;
 在这个例子中：
 
 - 函数类型接受两个参数：`x` 和 `y`，它们都是 `number` 类型的值；
-- 返回值的类型是 [数字类型](https://juejin.cn/post/6984309148553445406) ，它跟在参数列表和返回类型之间的胖箭头 (`=>`) 后面。
+- 返回值的类型是 [数字类型](https://cody1991.github.io/TypeScript-Tutorial/2-basic-types/2-number.html) ，它跟在参数列表和返回类型之间的胖箭头 (`=>`) 后面。
 
 > 注意，参数的名字 (`x` 和 `y`) 只是方便阅读，可以使用其他参数名字。
 
@@ -126,7 +126,7 @@ add = function (x: string, y: string): number {
 
 ### 函数类型推断
 
-当在等式的一边有类型的时候，TypeScript 编译器可以推断出函数的类型，这种形式的 [类型推断](https://juejin.cn/post/6984309148553445406) 被称为上下文类型，如下所示：
+当在等式的一边有类型的时候，TypeScript 编译器可以推断出函数的类型，这种形式的 [类型推断](https://cody1991.github.io/TypeScript-Tutorial/2-basic-types/15-type-inference.html) 被称为上下文类型，如下所示：
 
 ![TypeScript-Function-Type-Example](https://cdn.jsdelivr.net/gh/cody1991/images@master/typescript-tutorial/TypeScript-Function-Type-Example.6rkmnr74nik0.png)
 
@@ -248,7 +248,7 @@ error TS2371: A parameter initializer is only allowed in a function or construct
 
 ### 默认参数和可选参数
 
-和 [可选参数](https://juejin.cn/post/6984313766053675022) 类似，默认参数也是可选的。这意味着在调用函数的时候可以省略默认参数。另外，默认参数和可选参数可能有相同的类型，比如下面两个函数：
+和 [可选参数](https://cody1991.github.io/TypeScript-Tutorial/4-functions/3-optional-parameters.html) 类似，默认参数也是可选的。这意味着在调用函数的时候可以省略默认参数。另外，默认参数和可选参数可能有相同的类型，比如下面两个函数：
 
 ```ts
 function applyDiscount(price: number, discount: number = 0.05): number {
@@ -339,7 +339,7 @@ Rest 参数允许函数接受零个或者多个指定类型的参数，在 TypeS
 
 - 一个函数只有一个 Rest 参数；
 - Rest 参数出现在参数列表的最后面；
-- Rest 参数的类型是 [数组类型](https://juejin.cn/post/6984309148553445406)。
+- Rest 参数的类型是 [数组类型](https://cody1991.github.io/TypeScript-Tutorial/2-basic-types/9-any-type.html)。
 
 要声明一个 Rest 参数，可以在参数名前加上三个点，并使用数组类型作为它的类型注释：
 
@@ -397,7 +397,7 @@ function addStrings(a: string, b: string): string {
 - `addNumbers()` 函数返回两数之和；
 - `addStrings()` 函数返回两个字符串连接后的结果。
 
-可以使用 [联合类型](https://juejin.cn/post/6984309148553445406) 来定义一个函数参数和返回值的类型范围：
+可以使用 [联合类型](https://cody1991.github.io/TypeScript-Tutorial/2-basic-types/12-union-type.html) 来定义一个函数参数和返回值的类型范围：
 
 ```ts
 function add(a: number | string, b: number | string): number | string {

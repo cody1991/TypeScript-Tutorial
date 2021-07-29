@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const config = require('../../docs/.vuepress/config');
-const { replace } = require('./menus');
+const { replacer } = require('./replacer');
 
 let {
   themeConfig: { sidebar },
@@ -9,7 +9,7 @@ let {
 
 sidebar = sidebar.filter((item) => item.print !== false);
 
-let menusReplace = replace(sidebar);
+let menusReplace = replacer(sidebar);
 
 for (let index = 0; index < sidebar.length; index++) {
   const curSidebar = sidebar[index];
