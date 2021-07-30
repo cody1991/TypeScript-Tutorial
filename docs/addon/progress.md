@@ -66,7 +66,7 @@ title: 项目进度
 | - Section 6.1 接口                   | 完成     | 1                         |
 | - Section 6.2 扩展接口               | 完成     | 1                         |
 | **<big>Section 7. 高级类型</big>**   | 4 / 4    | -                         |
-| - Section 7.1 交叉类型               | 完成     | 0                         |
+| - Section 7.1 交叉类型               | 完成     | 1                         |
 | - Section 7.2 类型保护               | 完成     | 0                         |
 | - Section 7.3 类型转换               | 完成     | 0                         |
 | - Section 7.4 类型断言               | 完成     | 0                         |
