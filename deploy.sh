@@ -23,3 +23,15 @@ git commit -m '🎉🎉 又发布新内容啦 🎉🎉'
 git push -f git@github.com:cody1991/TypeScript-Tutorial.git master:gh-pages
 
 cd -
+
+cd ./scripts/juejin
+
+node ./index.js
+
+node ./whole.js
+
+git add -A
+
+git commit -m '🎉🎉 更新文稿 🎉🎉'
+
+git push git@github.com:cody1991/TypeScript-Tutorial.git master:master
