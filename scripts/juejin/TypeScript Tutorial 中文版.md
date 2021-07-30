@@ -3869,13 +3869,11 @@ Jane Doe makes 16000 a month.
 
 [原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-interface/)
 
-在本教程中，你将学习 TypeScript 中的接口，以及如何使用它们来执行类型检查
+在本教程中，你将学习 TypeScript 中的接口，以及如何使用它们执行类型检查。
 
-### TypeScript 接口介绍
+### TypeScript 中的接口介绍
 
-TypeScript 接口定义代码中的约定，它也为类型检查提供显式名称
-
-让我们从一个简单的例子开始：
+TypeScript 中的接口制定代码中的约束，也为类型检查提供显式的名称。让我们从一个简单的例子开始：
 
 ```ts
 function getFullName(person: { firstName: string; lastName: string }) {
@@ -3896,15 +3894,11 @@ console.log(getFullName(person));
 John Doe
 ```
 
-在这个例子中，TypeScript 编译器检查传递给 `getFullName()` 函数的参数
+在这个例子中，TypeScript 编译器检查传递给 `getFullName()` 函数的参数，如果参数有 `firstName` 和 `lastName` 这两个字符串类型的属性，那么可以通过 TypeScript 的类型检查，否则会抛出错误提示。
 
-如果参数有两个类型为字符串的 `firstName` 和 `lastName` 属性，TypeScript 会通过检查，否则的话它会抛出错误
+通过代码可以清楚的发现，函数参数的 [类型注释](https://cody1991.github.io/TypeScript-Tutorial/2-basic-types/1-type-annotations.html) 让我们的代码变得难以阅读。为了解决这个问题，TypeScript 引入了接口的概念。
 
-从代码中可以清楚的发现，函数参数的 [类型注释](https://cody1991.github.io/TypeScript-Tutorial/2-basic-types/1-type-annotations.html) 使得代码难以阅读
-
-为了解决这个问题，TypeScript 引入了接口的概念
-
-下面使用了一个 `Person` 的接口，它有两个字符串属性：
+下面定义了一个 `Person` 接口，它有两个类型为字符串的属性：
 
 ```ts
 interface Person {
@@ -3913,9 +3907,9 @@ interface Person {
 }
 ```
 
-按照惯例，接口名字都使用驼峰式，即用一个大写字母来分隔名字中的单词，比如 `Person`, `UserProfile` 和 `FullName`
+按照惯例，接口名字都使用驼峰式，即使用大写字母分隔命名中的单词，比如 `Person`, `UserProfile` 和 `FullName`。
 
-定义好 `Person` 接口之后你可以把它作为类型使用，你也可以用接口名称来注释函数参数
+定义好 `Person` 接口之后你可以把它作为类型使用，也可以使用它为函数参数添加注释：
 
 ```ts
 function getFullName(person: Person) {
@@ -3930,11 +3924,9 @@ let john = {
 console.log(getFullName(john));
 ```
 
-现在的代码比之前容易阅读很多
+现在的代码比之前容易阅读很多。
 
-`getFullName()` 函数会接受任何具有两个字符串属性 `firstName` 和 `lastName` 的参数，而它也不需要恰好有这两个字符串属性，参考以下例子：
-
-下面的代码定义了一个有四个属性的对象：
+`getFullName()` 函数接受任何具有 `firstName` 和 `lastName` 两个字符串类型的属性的对象作为参数，而它也不需要恰好只有这两个属性，如下所示，定义了一个具有四个属性的对象：
 
 ```ts
 let jane = {
@@ -3945,7 +3937,7 @@ let jane = {
 };
 ```
 
-因为 `jane` 对象有两个字符串属性 `firstName` 和 `lastName`，你可以把它传入到 `getFullName()` 函数中，如下所示：
+因为 `jane` 对象具有 `firstName` 和 `lastName` 两个字符串类型的属性，你可以把它传入到 `getFullName()` 函数中，如下所示：
 
 ```ts
 let fullName = getFullName(jane);
@@ -3954,7 +3946,7 @@ console.log(fullName); // Jane Doe
 
 ### 可选属性
 
-接口可以有可选属性，要声明一个可选属性，你需要在属性名的末尾添加 (`?`)，就像这样：
+接口可以拥有可选属性，要声明一个可选属性，你需要在属性名后添加 (`?`) 符号，如下所示：
 
 ```ts
 interface Person {
@@ -3964,9 +3956,7 @@ interface Person {
 }
 ```
 
-在这个例子中，`Person` 接口有两个必选属性和一个可选属性
-
-下面的例子展示 `Person` 接口如何在 `getFullName()` 函数中使用：
+在这个例子中，`Person` 接口有两个必选属性和一个可选属性。下面的例子演示了 `Person` 接口如何在 `getFullName()` 函数中使用：
 
 ```ts
 function getFullName(person: Person) {
@@ -3979,7 +3969,7 @@ function getFullName(person: Person) {
 
 ### 只读属性
 
-如果属性只有在对象第一次创建的时候可以修改，我们可以在属性名前面加上 `readonly` 关键字：
+如果属性只有在对象创建的时候可以被修改，可以在属性名前面加上 `readonly` 关键字：
 
 ```ts
 interface Person {
@@ -4010,9 +4000,7 @@ error TS2540: Cannot assign to 'ssn' because it is a read-only property.
 
 ### 函数类型
 
-除了描述对象的属性外，接口也可以描述 [函数类型](https://cody1991.github.io/TypeScript-Tutorial/4-functions/2-function-types.html)
-
-要描述函数类型的话，你需要将接口赋值成以下形式的函数签名：
+除了描述对象的属性外，接口也可以描述 [函数类型](https://cody1991.github.io/TypeScript-Tutorial/4-functions/2-function-types.html)。要描述函数类型的话，你需要将接口赋值成以下形式：
 
 - 包含类型的参数列表
 - 包含返回类型
@@ -4025,9 +4013,7 @@ interface StringFormat {
 }
 ```
 
-现在，你可以使用这个函数类型接口了
-
-下面演示如何声明函数类型的变量，并为其赋值：
+现在，你可以使用这个函数类型接口了。下面演示如何声明具有函数类型的变量，并为其赋值：
 
 ```ts
 let format: StringFormat;
@@ -4057,9 +4043,9 @@ format = function (src: string, upper: boolean) {
 console.log(format('hi', true));
 ```
 
-`StringFormat` 接口确保所有实现了它的函数调用方传入所需的参数：一个 [字符串类型](https://cody1991.github.io/TypeScript-Tutorial/2-basic-types/3-string.html) 和一个 [布尔值类型](https://cody1991.github.io/TypeScript-Tutorial/2-basic-types/4-boolean.html)
+`StringFormat` 接口确保所有实现了它的函数调用方传入所需的参数：一个 [字符串类型](https://cody1991.github.io/TypeScript-Tutorial/2-basic-types/3-string.html) 的参数和一个 [布尔值类型](https://cody1991.github.io/TypeScript-Tutorial/2-basic-types/4-boolean.html) 的参数。
 
-下面的代码也可以正常的工作，即使 `lowerCase` 函数被分配成一个没有第二个参数的函数：
+下面的代码也可以正常的工作，即使 `lowerCase` 函数没有第二个参数：
 
 ```ts
 let lowerCase: StringFormat;
@@ -4070,13 +4056,11 @@ lowerCase = function (str: string) {
 console.log(lowerCase('Hi', false));
 ```
 
-注意，第二个参数是在调用 `lowerCase()` 函数时传递的
+注意，第二个参数是在调用 `lowerCase()` 函数的时候传递的。
 
 ### 类类型
 
-如果你使用过 `Java` 或者 `C#`，你会发现接口的主要用途是定义不相关类之间的联系
-
-比如，下面的 `Json` 接口可以由任何不相关的类实现：
+如果你使用过 `Java` 或者 `C#` 语言，你会发现接口的主要用途是定义不相关类之间的约定。例如下面的 `Json` 接口可以由任何不相关的类实现：
 
 ```ts
 interface Json {
@@ -4084,9 +4068,7 @@ interface Json {
 }
 ```
 
-下面声明了一个实现了 `Json` 接口的类：
-
-The following declares a class that implements the `Json` interface:
+下面声明了一个实现 `Json` 接口的类：
 
 ```ts
 class Person implements Json {
@@ -4097,9 +4079,9 @@ class Person implements Json {
 }
 ```
 
-在 `Person` 类中，我们实现了 `Json` 接口的 `toJson()` 方法
+在 `Person` 类中我们实现了 `Json` 接口的 `toJson()` 方法。
 
-下面的例子展示了如何使用 `Person` 类
+下面的例子演示了如何使用 `Person` 类：
 
 ```ts
 let person = new Person('John', 'Doe');
@@ -4114,21 +4096,21 @@ console.log(person.toJson());
 
 ### 小结
 
-- TypeScript 接口在代码中定义约定，并为类型检查提供显式名称
-- 接口可以有很多的可选属性或者只读属性
-- 接口可以作为函数类型来使用
-- 接口经常被用作类类型来建立不相关类之间的约定
+- 接口制定代码中的约束，也为类型检查提供显式的名称；
+- 接口可以有很多的可选属性和只读属性；
+- 接口可以作为函数类型来使用；
+- 接口经常被用作类类型来建立不相关类之间的约定。
 
 
 ## 扩展接口
 
 [原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-extend-interface/)
 
-在本教程中，你讲学习如何扩展接口，让你能够把一个接口的属性和方法复制到另外一个接口
+在本教程中，你讲学习如何扩展接口，这样可以把一个接口的属性和方法复制到另外一个接口中。
 
 ### 扩展一个接口的接口
 
-假设你有一个名为 `Mailable` 的 [接口](https://cody1991.github.io/TypeScript-Tutorial/6-interfaces/1-interface.html)，它包含两个方法：`send()` 和 `queue()`
+假设有一个名为 `Mailable` 的 [接口](https://cody1991.github.io/TypeScript-Tutorial/6-interfaces/1-interface.html)，它包含 `send()` 和 `queue()` 两个方法：
 
 ```ts
 interface Mailable {
@@ -4137,17 +4119,13 @@ interface Mailable {
 }
 ```
 
-然后你有很多 [类](https://cody1991.github.io/TypeScript-Tutorial/5-classes/1-class.html) 已经实现了 `Mailable` 接口
-
-现在，你想要在 `Mailable` 接口上添加一个新的方法， 表示它会延时发送邮件，如下所示：
+然后你有很多 [类](https://cody1991.github.io/TypeScript-Tutorial/5-classes/1-class.html) 已经实现了 `Mailable` 接口。现在，你想要在 `Mailable` 接口上添加一个新的方法， 表示它会延时发送邮件，如下所示：
 
 ```ts
 later(email: string, after: number): void
 ```
 
-然后，给 `Mailable` 接口直接添加 `later()` 方法会破坏当前的代码，造成前后不兼容的问题
-
-为了避免这个问题，你可以创建一个新的接口来扩展 `Mailable` 接口：
+给 `Mailable` 接口直接添加 `later()` 方法会破坏当前的代码，造成前后不兼容的问题。为了避免这个问题，你可以创建一个新的接口来扩展 `Mailable` 接口：
 
 ```ts
 interface FutureMailable extends Mailable {
@@ -4155,7 +4133,7 @@ interface FutureMailable extends Mailable {
 }
 ```
 
-你可以使用 `extends` 关键字按照下面的语法来扩展一个接口：
+使用 `extends` 关键字按照下面的语法来扩展一个接口：
 
 ```ts
 interface A {
@@ -4167,11 +4145,9 @@ interface B extends A {
 }
 ```
 
-接口 `B` 扩展了接口 `A`，它有两个方法 `a()` 和 `b()`
+接口 `B` 扩展了接口 `A`，它有两个方法 `a()` 和 `b()`。与类相似，`FutureMailable` 接口从 `Mailable` 接口继承了 `send()` 和 `queue()` 方法。
 
-和类相似，`FutureMailable` 接口从 `Mailable` 接口继承了 `send()` 和 `queue()` 方法
-
-下面的例子展示了如何实现 `FutureMailable` 接口：
+下面的例子演示如何实现 `FutureMailable` 接口：
 
 ```ts
 class Mail implements FutureMailable {
@@ -4192,7 +4168,7 @@ class Mail implements FutureMailable {
 
 ### 扩展多个接口的接口
 
-一个接口可以扩展多个接口，创建所有接口的组合，比如：
+一个接口可以扩展多个接口，创建所有接口的组合，如下所示：
 
 ```ts
 interface C {
@@ -4204,15 +4180,13 @@ interface D extends B, C {
 }
 ```
 
-在这个例子中，接口 `D` 扩展了 `B` 和 `C` 接口，所以 `D` 接口有所有 `B` 和 `C` 接口的方法，它们是 `a()`, `b()` 和 `c()` 接口
+在这个例子中，接口 `D` 扩展了 `B` 和 `C` 接口，所以 `D` 接口有 `B` 和 `C` 接口的所有方法： `a()`, `b()` 和 `c()` 方法。
 
 ### 扩展类的接口
 
-TypeScript 允许接口扩展类，在这种情况下，接口会继承类的属性和方法，此外，接口可以继承累的私有成员和受保护成员，而不仅仅是公共成员
+TypeScript 中允许接口扩展类，在这种情况下，接口会继承类的属性和方法，此外，接口可以继承类的私有成员和受保护成员，而不仅仅是公共成员。这意味着，当接口扩展具有私有成员和保护成员的类的时候，该接口只能有该接口所扩展的类或该类的子类中实现。
 
-这意味着，当接口扩展具有私有成员和保护成员的类的时候，该接口只能有该接口所扩展的类或该类的子类实现
-
-通过这么做，可以把接口的使用范围限制为接口所继承的类或该类的子类，如果试图从一个不是接口继承的类或该类的子类来实现接口，则会得到一个错误：
+通过这种做法，可以把接口的使用范围限制为接口所继承的类或该类的子类，如果试图从一个不是接口继承的类或该类的子类来实现接口，则会抛出错误提示：
 
 ```ts
 class Control {
@@ -4239,8 +4213,8 @@ class Chart implements StatefulControl {
 
 ### 小结
 
-- 接口可以扩展一个或多个现有接口
-- 接口也可以扩展类，如果类包含私有成员或受保护成员，则接口只能有该类或该类的子类实现
+- 接口可以扩展一个或多个现有的接口；
+- 接口也可以扩展类，如果类包含私有成员或者受保护成员，则接口只能由该类或该类的子类实现。
 # Section 7. 高级类型
 
 ## 交叉类型
