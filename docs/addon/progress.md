@@ -74,6 +74,6 @@ title: 项目进度
 | - Section 8.1 泛型                   | 完成     | 1                         |
 | - Section 8.2 泛型约束               | 完成     | 1                         |
 | - Section 8.3 泛型类                 | 完成     | 1                         |
-| - Section 8.4 泛型接口               | 完成     | 0                         |
+| - Section 8.4 泛型接口               | 完成     | 1                         |
 | **<big>Section 9. 模块</big>**       | 完成     | 0                         |
 | **<big>Section 10. Node.js </big>**  | 完成     | 0                         |

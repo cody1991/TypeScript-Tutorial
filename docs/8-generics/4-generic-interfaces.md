@@ -6,11 +6,11 @@ title: 泛型接口
 
 [原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-generic-interfaces/)
 
-在本教程中，你将学习 TypeScript 中的泛型接口
+在本教程中，你将学习 TypeScript 中的泛型接口。
 
 ### TypeScript 中的泛型接口介绍
 
-和类一样，接口也支持泛型的，泛型接口的语法如下，泛型类型参数列表在尖括号 `<>` 中，跟着接口名称后面：
+和类一样，接口也支持泛型，泛型接口的语法如下：泛型类型参数列表在尖括号 `<>` 中，接口名称之后：
 
 ```ts
 interface interfaceName<T> {
@@ -18,7 +18,7 @@ interface interfaceName<T> {
 }
 ```
 
-这使得类型参数 `T` 对接口的所有成员都可见
+这使得类型参数 `T` 对接口的所有成员都是可见。
 
 类型参数列表可以是一个或者多个类型，如下所示：
 
@@ -28,13 +28,13 @@ interface interfaceName<U, V> {
 }
 ```
 
-### TypeScript 泛型接口例子：
+### 泛型接口例子：
 
-看我们看几个声明泛型接口的列子：
+看几个泛型接口声明的例子：
 
 #### 1) 描述对象属性的泛型接口
 
-下面展示了一个泛型接口，他包含两个键值对成员，类型分别是 `K` 和 `V`
+下面演示了一个泛型接口，他包含 `key` 和 `value` 两个属性，类型分别是 `K` 和 `V` 类型：
 
 ```ts
 interface Pair<K, V> {
@@ -43,7 +43,7 @@ interface Pair<K, V> {
 }
 ```
 
-现在，你可以使用 `Pair` 接口定义任意类型的键值对，比如：
+现在，你可以使用 `Pair` 接口定义任意指定类型的键值对对象，比如：
 
 ```ts
 let month: Pair<string, number> = {
@@ -54,11 +54,11 @@ let month: Pair<string, number> = {
 console.log(month);
 ```
 
-在这个例子中，我们定义了一个 `key` 为字符串类型而 `value` 为数字类型的键值对
+在这个例子中，我们定义了一个 `key` 为字符串类型而 `value` 为数字类型的键值对对象。
 
 #### 2) 描述方法的泛型接口
 
-下面声明了一个泛型接口，它有两个方法：`add()` 方法和 `remove()` 方法：
+下面声明了一个泛型接口，它有两个方法：`add()` 和 `remove()` 方法：
 
 ```ts
 interface Collection<T> {
@@ -85,9 +85,7 @@ class List<T> implements Collection<T> {
 }
 ```
 
-对于 `List<T>` 类，你可以创建任意类型的值列表，如数字或者字符串
-
-比如，下面展示了如何使用 `List<T>` 泛型类来创建一个数字列表：
+对于 `List<T>` 类，你可以创建任意类型的值列表，如数字或者字符串类型。比如，下面演示如何使用 `List<T>` 泛型类来创建一个数字列表对象：
 
 ```ts
 let list = new List<number>();
