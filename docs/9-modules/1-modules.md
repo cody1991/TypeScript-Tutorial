@@ -10,15 +10,15 @@ title: 模块
 
 ### TypeScript 中的模块介绍
 
-[自从 ES6 以来，JavaScript 开始支持模块](https://zh.javascript.info/modules-intro) ，作为语言的原生功能，TypeScript 与 JavaScript 的模块概念一致
+[自从 ES6 以来，JavaScript 开始支持模块](https://zh.javascript.info/modules-intro) ，把它作为语言的原生功能。TypeScript 与 JavaScript 的模块概念保持一致。
 
-TypeScript 模块可以同时包含声明和代码，模块在它自己的作用域中执行，而不是在全局作用域中。这意味着当你在一个模块中声明变量，[函数](/4-functions/1-functions/)， [类](/5-classes/1-class/) 和 [接口](/6-interfaces/1-interface/) 等等的时候，它们在模块外部是不可见的，除非你使用 `export` 语句显式地导出它们
+模块在它自己的作用域中执行，而不是在全局作用域中，这意味着当你在一个模块中声明变量，[函数](/4-functions/1-functions/)， [类](/5-classes/1-class/) 和 [接口](/6-interfaces/1-interface/) 等等的时候，它们在模块外部是不可见的，除非你使用 `export` 语句显式地把它们导出。
 
-另一方面，如果你想从一个模块中访问变量，函数和类等，你需要使用 `import` 语句导入它们
+另一方面，如果你想访问另外一个模块中的变量，函数和类等等，需要使用 `import` 语句来导入它们。
 
-和 ES6 一样，当 TypeScript 文件包含顶级 `import` 或者 `export` 的时候，它被视为一个模块
+和 ES6 一样，当 TypeScript 文件包含顶级 `import` 或者 `export` 关键字的时候，它被视为一个模块。
 
-### 创建一个新的模块
+### 创建模块
 
 下面创建了一个名为 `Validator.ts` 的新模块，声明了一个名为 `Validator` 的接口：
 
@@ -28,13 +28,11 @@ export interface Validator {
 }
 ```
 
-在这个模块中，我们将 `export` 关键字放在 `interface` 关键字前，以便将它公开给其他模块使用
-
-换句话说，如果你不是用 `export` 关键字，`Validator` 接口在 `Validator.ts` 模块中是私有的，因此，它不能被其他模块使用
+在这个模块中，我们将 `export` 关键字放在 `interface` 关键字前，以便将它导出，从而可以被其他模块使用。换句话说，如果不使用 `export` 关键字，`Validator` 接口在 `Validator.ts` 模块中是私有的，不能被其他模块使用。
 
 ### 导出语句
 
-从模块中到处声明的另外一种方法是使用 `export` 语句，比如：
+从模块中导出声明的另外一种方法是使用 `export` 语句，如下所示：
 
 ```ts
 interface Validator {
@@ -54,11 +52,11 @@ interface Validator {
 export { Validator as StringValidator };
 ```
 
-在这个例子中，其他模块将使用 `Validator` 接口作为 `StringValidator` 接口
+在这个例子中，其他模块将使用 `StringValidator` 接口。
 
 ### 导入新模块
 
-要使用一个模块，使用 `import` 语句，下面创建了一个使用 `Validator.ts` 模块的新模块 `EmailValidator.ts`
+要使用一个模块，需要使用 `import` 语句，下面创建一个使用 `Validator.ts` 模块的新模块 `EmailValidator.ts`：
 
 ```ts
 import { Validator } from './Validator';
@@ -73,13 +71,13 @@ class EmailValidator implements Validator {
 export { EmailValidator };
 ```
 
-当你倒入一个模块的时候，你可以像这样重命名它：
+当你导入一个模块的时候，你可以进行重命名的操作，如下所示：
 
 ```ts
 import { Validator as StringValidator } from './Validator';
 ```
 
-在 `EmailValidator` 模块中，你是用 `Validator` 接口作为 `StringValidator` 接口
+在 `EmailValidator` 模块中，使用 `StringValidator` 接口代替 `Validator` 接口。
 
 ```ts
 import { Validator as StringValidator } from './Validator';
@@ -126,7 +124,7 @@ export type alphanumeric = string | number;
 import type { alphanumeric } from './Types';
 ```
 
-注意，TypeScript 从 3.8 版本开始支持 `import type` 语句，在 TypeScript 3.8 版本之前你需要使用 `import` 语句来代替：
+注意，TypeScript 从 3.8 版本开始支持 `import type` 语句，在 TypeScript 3.8 版本之前使用 `import` 语句：
 
 ```ts
 import { alphanumeric } from './Types';
@@ -134,7 +132,7 @@ import { alphanumeric } from './Types';
 
 #### 从模块中导入所有内容
 
-要从模块中导入所有内容，可以使用下面的语法：
+要导入模块中的所有内容，使用如下所示的语法：
 
 ```ts
 import * from 'module_name';
@@ -157,7 +155,7 @@ class ZipCodeValidator implements Validator {
 export { ZipCodeValidator };
 ```
 
-你可以将 `EmailValidator` 和 `ZipCodeValidator` 模块打包到一个新的模块中，方法是使用以下语法组合导出它们所有的内容：
+你可以将 `EmailValidator` 和 `ZipCodeValidator` 模块打包到一个新的模块中，方法是使用如下所示的语法，组合导出它们中的所有内容：
 
 ```ts
 export * from 'module_name';
@@ -172,9 +170,7 @@ export * from './ZipCodeValidator';
 
 ### 默认导出
 
-TypeScript 允许每个模块都有一个默认导出，要将导出标记为 `default` 导出，你可以使用 `default` 关键字
-
-下面展示了如何将 `ZipCodeValidator` 作为默认导出：
+TypeScript 允许每个模块都有一个默认的导出，要将导出标记为默认的导出，你可以使用 `default` 关键字实现。下面演示了如何将 `ZipCodeValidator` 类标记为默认的导出：
 
 ```ts
 import { Validator } from './Validator';
@@ -187,13 +183,13 @@ export default class ZipCodeValidator implements Validator {
 }
 ```
 
-要导入一个默认导出，你可以使用一个不同的 `import` 语法，如下所示：
+要导入默认导出，可以使用如下所示的语法：
 
 ```ts
 import default_export from 'module_name';
 ```
 
-下面展示了如何在 `App.ts` 文件中使用 `ZipCodeValidator` 的默认导出：
+下面演示了如何在 `App.ts` 文件中使用 `ZipCodeValidator` 模块的默认导出：
 
 ```ts
 import ZipCodeValidator from './ZipCodeValidator';
@@ -212,7 +208,7 @@ true
 
 ### 小结
 
-- TypeScript 与 ES6 module 的模块概念一致，一个模块可以同时包含声明和代码
-- 在一个模块中，变量，函数，类和接口等等都在它自己的作用域上执行，而不是全局作用域下
-- 使用 `export` 语句从模块中导出变量，函数，类，接口和类型等等
-- 使用 `import` 语句访问来自另外一个模块的导出
+- TypeScript 与 ES6 module 的模块概念一致，一个模块可以同时包含声明和实现代码；
+- 在一个模块中，变量，函数，类和接口等等都在它自己的作用域上允许，而不是全局作用域下允许；
+- 使用 `export` 语句把模块中的变量，函数，类，接口和类型等等导出；
+- 使用 `import` 语句导入另外一个模块导出的内容。
