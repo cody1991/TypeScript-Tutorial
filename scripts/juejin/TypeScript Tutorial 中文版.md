@@ -4330,13 +4330,13 @@ type typeBA = typeB & typeA;
 
 [原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-type-guards/)
 
-在本教程中，你将学习 TypeScript 中的类型保护
+在本教程中，你将学习 TypeScript 中的类型保护。
 
-类型保护允许你使用 [条件代码块](https://cody1991.github.io/TypeScript-Tutorial/3-control-flow-statements/1-if-else.html) 来限定变量的类型范围
+使用 [条件代码块](https://cody1991.github.io/TypeScript-Tutorial/3-control-flow-statements/1-if-else.html) 限定变量类型的范围，达到类型保护的目的。
 
 ### typeof
 
-让我们看看下面的例子：
+看看下面的例子：
 
 ```ts
 type alphanumeric = string | number;
@@ -4356,15 +4356,17 @@ function add(a: alphanumeric, b: alphanumeric) {
 }
 ```
 
-它是如何工作的：
+它是这样工作的：
 
-- 属性，定义了 `alphanumeric` 类型，它可以保存 [字符串类型](https://cody1991.github.io/TypeScript-Tutorial/2-basic-types/3-string.html) 或者 [数字类型](https://cody1991.github.io/TypeScript-Tutorial/2-basic-types/2-number.html) 值
-- 接下来，定义了 `add()` 函数，它把类型为 `alphanumeric` 的 `a` 变量与 `b` 变量进行相加
-- 然后使用 `typeof` 操作符检查两个参数的类型是否都为 `number` 类型，如果是的话，使用 `+` 操作符计算参数之和
-- 再然后使用 `typeof` 操作符检查两个参数的类型是否都为 `string` 类型，如果是的话，把两个字符串参数拼接起来
-- 最后，如果两个参数不都全是数字或者字符串的话，抛出错误提示
+- 首先定义了 `alphanumeric` 类型，它可以保存 [字符串类型](https://cody1991.github.io/TypeScript-Tutorial/2-basic-types/3-string.html) 或者 [数字类型](https://cody1991.github.io/TypeScript-Tutorial/2-basic-types/2-number.html) 的值；
+- 接下来，定义了 `add()` 函数，它把类型为 `alphanumeric` 的 `a` 和 `b` 变量的值进行相加；
+- 然后使用 `typeof` 操作符检查两个参数的类型是否都为 `number` 类型，如果是的话，使用 `+` 操作符计算参数值之和；
+- 再然后使用 `typeof` 操作符检查两个参数的类型是否都为 `string` 类型，如果是的话，把两个字符串参数值拼接起来；
+- 最后，如果两个参数不都是数字类型或者不都是字符串类型的话，抛出错误提示。
 
-在这个例子中，TypeScript 直到如何在条件代码块中使用 `typeof` 操作符，在下面的 [if](https://cody1991.github.io/TypeScript-Tutorial/3-control-flow-statements/1-if-else.html) 块中，TypeScript 认为 `a` 和 `b` 都是数字类型
+在这个例子中，TypeScript 知道如何在条件代码块中使用 `typeof` 操作符。
+
+在下面的 [if](https://cody1991.github.io/TypeScript-Tutorial/3-control-flow-statements/1-if-else.html) 语句中，TypeScript 认为 `a` 和 `b` 变量都是数字类型：
 
 ```ts
 if (typeof a === 'number' && typeof b === 'number') {
@@ -4372,7 +4374,7 @@ if (typeof a === 'number' && typeof b === 'number') {
 }
 ```
 
-类似地，在下面的 `if` 代码块中，TypeScript 将 `a` 和 `b` 作为字符串处理，因此，你可以把它们拼接成一个字符串：
+类似地，在下面的 `if` 语句中，TypeScript 将 `a` 和 `b` 变量作为字符串来处理，因此，可以把它们拼接成一个字符串：
 
 ```ts
 if (typeof a === 'string' && typeof b === 'string') {
@@ -4382,7 +4384,7 @@ if (typeof a === 'string' && typeof b === 'string') {
 
 ### instanceof
 
-与 `typeof` 操作符类型，TypeScript 也知道 `instanceof` 操作符的使用，例如：
+与 `typeof` 操作符类似，TypeScript 也知道如何使用 `instanceof` 操作符，如下所示：
 
 ```ts
 class Customer {
@@ -4419,12 +4421,12 @@ function signContract(partner: BusinessPartner): string {
 }
 ```
 
-它是如何工作的：
+它这样何工作的：
 
-- 首先，声明了 `Customer` 和 `Supplier` 两个类
-- 第二， 创建一个类型别名 `BusinessPartner`，它是`Customer` 和 `Supplier` 的联合类型
-- 第三，定义一个函数 `signContract()`，它接受一个类型为 `BusinessPartner` 的参数
-- 最后，检查 `partner` 是否是 `Customer` 或者 `Supplier` 类的实例，然后进行对应的逻辑处理
+- 首先，声明了 `Customer` 和 `Supplier` 两个类；
+- 第二， 创建类型别名为 `BusinessPartner` 的类型，它是`Customer` 和 `Supplier` 的联合类型；
+- 第三，定义 `signContract()` 函数，它接受一个类型为 `BusinessPartner` 的参数；
+- 最后，检查 `partner` 是否为 `Customer` 或者 `Supplier` 类的实例，然后进行对应的逻辑处理。
 
 在下面的 `if` 代码块中，TypeScript 通过 `instanceof` 操作符知道 `partner` 是 `Customer` 类型的一个实例：
 
@@ -4446,7 +4448,7 @@ if (partner instanceof Supplier) {
 }
 ```
 
-当 `if` 代码块限定了一种类型，TypeScript 知道在 `else` 里面会是另外一种类型，例如：
+当 `if` 语句限定了一种类型，TypeScript 知道在 `else` 语句中会是另外一种类型，如下所示：
 
 ```ts
 function signContract(partner: BusinessPartner): string {
@@ -4467,7 +4469,7 @@ function signContract(partner: BusinessPartner): string {
 
 ### in
 
-`in` 操作符判断对象上是否存在某个属性来进行安全检查，你也可以将它用作类型保护，例如：
+`in` 操作符通过判断对象上是否存在某个属性来进行安全检查，也可以将它用作类型保护，如下所示：
 
 ```ts
 function signContract(partner: BusinessPartner): string {
@@ -4486,11 +4488,9 @@ function signContract(partner: BusinessPartner): string {
 }
 ```
 
-### 用户定义的类型保护
+### 用户自定义的类型保护
 
-用户定义的类型保护允许你使用函数的时候定义类型保护或者帮助 TypeScript 推断类型
-
-用户定义的类型保护函数是一个简单返回 `arg is aType` 判断的函数，比如：
+用户自定义的类型保护允许你使用函数的时候定义类型保护或者帮助 TypeScript 推断类型。用户自定义的类型保护函数是一个返回 `arg is aType` 判断的函数，如下所示：
 
 ```ts
 function isCustomer(partner: any): partner is Customer {
@@ -4498,7 +4498,7 @@ function isCustomer(partner: any): partner is Customer {
 }
 ```
 
-在这个例子中，`isCustomer()` 是一个用户定义的类型保护函数，现在你可以按照下面的例子来使用它：
+在这个例子中，`isCustomer()` 是一个用户自定义的类型保护函数，可以按照下面的例子来使用它：
 
 ```ts
 function signContract(partner: BusinessPartner): string {
@@ -4519,19 +4519,19 @@ function signContract(partner: BusinessPartner): string {
 
 ### 小结
 
-- 类型保护限定了条件代码块中变量的类型
-- 使用 `typeof` 和 `instanceof` 操作符在条件代码块中的实现类型保护
+- 类型保护限定了条件语句中变量的类型；
+- 使用 `typeof` 和 `instanceof` 操作符在条件语句中实现类型保护。
 
 
 ## 类型转换
 
 [原文地址](https://www.typescripttutorial.net/typescript-tutorial/type-casting/)
 
-在本教程中，你将学习 TypeScript 中的类型转换，它允许你将变量从一种类型转换到另外一种类型
+在本教程中，你将学习 TypeScript 中的类型转换，它允许变量从一种类型转换成另外一种类型。
 
-JavaScript 没有类型转换的概念，因为变量具有动态类型的特性，而 TypeScript 中的变量都有类型，类型转换允许你将变量从一种类型转换到另外一种类型
+JavaScript 没有类型转换的概念，因为变量具有动态类型的特性。而 TypeScript 中的变量都有类型，类型转换允许变量从一种类型转换成另外一种类型。
 
-TypeScript 中你可以使用 `as` 关键字或者 `<>` 操作符进行类型转换
+TypeScript 中可以使用 `as` 关键字或者 `<>` 操作符进行类型转换的操作。
 
 ### 使用 as 关键字进行类型转换
 
@@ -4547,38 +4547,34 @@ let input = document.querySelector('input["type="text"]');
 console.log(input.value);
 ```
 
-因为 `Element` 类型不存在 `value` 属性，这个属性只存在 `HTMLInputElement` 类型上
-
-为了解决这个问题，你可以使用类型转换，即使用关键字 `as` 把 `Element` 类型转换为 `HTMLInputElement` 类型，如下所示：
+因为 `Element` 类型不存在 `value` 属性，这个属性只存在 `HTMLInputElement` 类型上。为了解决这个问题，你可以使用类型转换，使用关键字 `as` 把 `input` 变量的类型从 `Element` 类型转换为 `HTMLInputElement` 类型，如下所示：
 
 ```ts
 let input = document.querySelector('input[type="text"]') as HTMLInputElement;
 ```
 
-现在，`input` 变量的类型是 `HTMLInputElement`，所以访问它的 `value` 属性不会导致任何错误，下面的代码可以正常工作：
+现在，`input` 变量的类型是 `HTMLInputElement` 类型，所以访问它的 `value` 属性不会导致任何错误，下面的代码可以正常工作：
 
 ```ts
 console.log(input.value);
 ```
 
-另外一种把 `Element` 类型转换为 `HTMLInputElement` 类型来访问属性的方法如下所示：
+另外一种把 `input` 变量的类型从 `Element` 类型转换为 `HTMLInputElement` 类型的方法如下所示：
 
 ```ts
 let enteredText = (input as HTMLInputElement).value;
 ```
 
-注意 `HTMLInputElement` 方法扩展了 `HTMLElement` 类型，而 `HTMLElement` 类型扩展了 `Element` 类型。把 `HTMLElement` 类型转换为 `HTMLInputElement` 类型被称为向下转换
+注意 `HTMLInputElement` 类型扩展自 `HTMLElement` 类型，而 `HTMLElement` 类型扩展自 `Element` 类型。把 `HTMLElement` 类型转换成 `HTMLInputElement` 类型被称为向下转换。
 
-也可以如下进行向下转换：
+也可以进行如下所示的向下转换：
 
 ```ts
 let el: HTMLElement;
 el = new HTMLInputElement();
 ```
 
-在这个例子中，`el` 变量的类型是 `HTMLElement` 类型，你可以给它指定一个 `HTMLInputElement` 类型的实例，因为 `HTMLInputElement` 类型是 `HTMLElement` 类型的子类
-
-将类型从 `typeA` 转换为 `typeB` 的语法如下：
+在这个例子中，`el` 变量的类型是 `HTMLElement` 类型，你可以给它指定一个 `HTMLInputElement` 类型的实例，因为 `HTMLInputElement` 类型是 `HTMLElement` 类型的子类。将类型从 `typeA` 转换成 `typeB` 的语法如下：
 
 ```ts
 let a: typeA;
@@ -4595,7 +4591,7 @@ let input = <HTMLInputElement>document.querySelector('input[type="text"]');
 console.log(input.value);
 ```
 
-使用 `<>` 操作符进行类型转换的语法是：
+使用 `<>` 操作符进行类型转换的语法如下所示：
 
 ```ts
 let a: typeA;
@@ -4604,8 +4600,8 @@ let b = <typeB>a;
 
 ### 小结
 
-- 类型转换允许你将变量从一种类型转换到另外一种类型
-- 使用 `as` 关键字或者 `<>` 操作符进行类型转换
+- 类型转换允许变量从一种类型转换成另外一种类型；
+- 使用 `as` 关键字或者 `<>` 操作符进行类型转换的操作。
 
 
 ## 类型断言
