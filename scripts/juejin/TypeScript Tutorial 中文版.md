@@ -5251,15 +5251,15 @@ let inputOptions: Options<boolean> = {
 
 ### TypeScript 中的模块介绍
 
-[自从 ES6 以来，JavaScript 开始支持模块](https://zh.javascript.info/modules-intro) ，作为语言的原生功能，TypeScript 与 JavaScript 的模块概念一致
+[自从 ES6 以来，JavaScript 开始支持模块](https://zh.javascript.info/modules-intro) ，把它作为语言的原生功能。TypeScript 与 JavaScript 的模块概念保持一致。
 
-TypeScript 模块可以同时包含声明和代码，模块在它自己的作用域中执行，而不是在全局作用域中。这意味着当你在一个模块中声明变量，[函数](https://cody1991.github.io/TypeScript-Tutorial/4-functions/1-functions.html)， [类](https://cody1991.github.io/TypeScript-Tutorial/5-classes/1-class.html) 和 [接口](https://cody1991.github.io/TypeScript-Tutorial/6-interfaces/1-interface.html) 等等的时候，它们在模块外部是不可见的，除非你使用 `export` 语句显式地导出它们
+模块在它自己的作用域中执行，而不是在全局作用域中，这意味着当你在一个模块中声明变量，[函数](https://cody1991.github.io/TypeScript-Tutorial/4-functions/1-functions.html)， [类](https://cody1991.github.io/TypeScript-Tutorial/5-classes/1-class.html) 和 [接口](https://cody1991.github.io/TypeScript-Tutorial/6-interfaces/1-interface.html) 等等的时候，它们在模块外部是不可见的，除非你使用 `export` 语句显式地把它们导出。
 
-另一方面，如果你想从一个模块中访问变量，函数和类等，你需要使用 `import` 语句导入它们
+另一方面，如果你想访问另外一个模块中的变量，函数和类等等，需要使用 `import` 语句来导入它们。
 
-和 ES6 一样，当 TypeScript 文件包含顶级 `import` 或者 `export` 的时候，它被视为一个模块
+和 ES6 一样，当 TypeScript 文件包含顶级 `import` 或者 `export` 关键字的时候，它被视为一个模块。
 
-### 创建一个新的模块
+### 创建模块
 
 下面创建了一个名为 `Validator.ts` 的新模块，声明了一个名为 `Validator` 的接口：
 
@@ -5269,13 +5269,11 @@ export interface Validator {
 }
 ```
 
-在这个模块中，我们将 `export` 关键字放在 `interface` 关键字前，以便将它公开给其他模块使用
-
-换句话说，如果你不是用 `export` 关键字，`Validator` 接口在 `Validator.ts` 模块中是私有的，因此，它不能被其他模块使用
+在这个模块中，我们将 `export` 关键字放在 `interface` 关键字前，以便将它导出，从而可以被其他模块使用。换句话说，如果不使用 `export` 关键字，`Validator` 接口在 `Validator.ts` 模块中是私有的，不能被其他模块使用。
 
 ### 导出语句
 
-从模块中到处声明的另外一种方法是使用 `export` 语句，比如：
+从模块中导出声明的另外一种方法是使用 `export` 语句，如下所示：
 
 ```ts
 interface Validator {
@@ -5295,11 +5293,11 @@ interface Validator {
 export { Validator as StringValidator };
 ```
 
-在这个例子中，其他模块将使用 `Validator` 接口作为 `StringValidator` 接口
+在这个例子中，其他模块将使用 `StringValidator` 接口。
 
 ### 导入新模块
 
-要使用一个模块，使用 `import` 语句，下面创建了一个使用 `Validator.ts` 模块的新模块 `EmailValidator.ts`
+要使用一个模块，需要使用 `import` 语句，下面创建一个使用 `Validator.ts` 模块的新模块 `EmailValidator.ts`：
 
 ```ts
 import { Validator } from './Validator';
@@ -5314,13 +5312,13 @@ class EmailValidator implements Validator {
 export { EmailValidator };
 ```
 
-当你倒入一个模块的时候，你可以像这样重命名它：
+当你导入一个模块的时候，你可以进行重命名的操作，如下所示：
 
 ```ts
 import { Validator as StringValidator } from './Validator';
 ```
 
-在 `EmailValidator` 模块中，你是用 `Validator` 接口作为 `StringValidator` 接口
+在 `EmailValidator` 模块中，使用 `StringValidator` 接口代替 `Validator` 接口。
 
 ```ts
 import { Validator as StringValidator } from './Validator';
@@ -5367,7 +5365,7 @@ export type alphanumeric = string | number;
 import type { alphanumeric } from './Types';
 ```
 
-注意，TypeScript 从 3.8 版本开始支持 `import type` 语句，在 TypeScript 3.8 版本之前你需要使用 `import` 语句来代替：
+注意，TypeScript 从 3.8 版本开始支持 `import type` 语句，在 TypeScript 3.8 版本之前使用 `import` 语句：
 
 ```ts
 import { alphanumeric } from './Types';
@@ -5375,7 +5373,7 @@ import { alphanumeric } from './Types';
 
 #### 从模块中导入所有内容
 
-要从模块中导入所有内容，可以使用下面的语法：
+要导入模块中的所有内容，使用如下所示的语法：
 
 ```ts
 import * from 'module_name';
@@ -5398,7 +5396,7 @@ class ZipCodeValidator implements Validator {
 export { ZipCodeValidator };
 ```
 
-你可以将 `EmailValidator` 和 `ZipCodeValidator` 模块打包到一个新的模块中，方法是使用以下语法组合导出它们所有的内容：
+你可以将 `EmailValidator` 和 `ZipCodeValidator` 模块打包到一个新的模块中，方法是使用如下所示的语法，组合导出它们中的所有内容：
 
 ```ts
 export * from 'module_name';
@@ -5413,9 +5411,7 @@ export * from './ZipCodeValidator';
 
 ### 默认导出
 
-TypeScript 允许每个模块都有一个默认导出，要将导出标记为 `default` 导出，你可以使用 `default` 关键字
-
-下面展示了如何将 `ZipCodeValidator` 作为默认导出：
+TypeScript 允许每个模块都有一个默认的导出，要将导出标记为默认的导出，你可以使用 `default` 关键字实现。下面演示了如何将 `ZipCodeValidator` 类标记为默认的导出：
 
 ```ts
 import { Validator } from './Validator';
@@ -5428,13 +5424,13 @@ export default class ZipCodeValidator implements Validator {
 }
 ```
 
-要导入一个默认导出，你可以使用一个不同的 `import` 语法，如下所示：
+要导入默认导出，可以使用如下所示的语法：
 
 ```ts
 import default_export from 'module_name';
 ```
 
-下面展示了如何在 `App.ts` 文件中使用 `ZipCodeValidator` 的默认导出：
+下面演示了如何在 `App.ts` 文件中使用 `ZipCodeValidator` 模块的默认导出：
 
 ```ts
 import ZipCodeValidator from './ZipCodeValidator';
@@ -5453,54 +5449,50 @@ true
 
 ### 小结
 
-- TypeScript 与 ES6 module 的模块概念一致，一个模块可以同时包含声明和代码
-- 在一个模块中，变量，函数，类和接口等等都在它自己的作用域上执行，而不是全局作用域下
-- 使用 `export` 语句从模块中导出变量，函数，类，接口和类型等等
-- 使用 `import` 语句访问来自另外一个模块的导出
+- TypeScript 与 ES6 module 的模块概念一致，一个模块可以同时包含声明和实现代码；
+- 在一个模块中，变量，函数，类和接口等等都在它自己的作用域上允许，而不是全局作用域下允许；
+- 使用 `export` 语句把模块中的变量，函数，类，接口和类型等等导出；
+- 使用 `import` 语句导入另外一个模块导出的内容。
 # Section 10. Node.js
 
 ## Node.js
 
 [原文地址](https://www.typescripttutorial.net/typescript-tutorial/nodejs-typescript/)
 
-在本教程中，你将学习如何搭建 Node.js 项目中的 TypeScript 自动化开发工作流
+在本教程中，你将学习搭建使用 TypeScript 语言的 Node.js 项目的自动化开发环境。
 
-> 本教程假设你在你的系统上已经安装 Node.js 和 tsc 模块
+> 本教程假设你在系统上已经安装 Node.js 和 tsc 模块。
 
-### 创建项目结构
+### 创建目录结构
 
-首先我们创建一个新的目录 `nodets`.
+首先创建一个新的目录 `nodets`。
 
 接下来，在 `nodets` 目录下面创建两个子目录，分别是 `build` 和 `src`，如下所示：
 
 ![nodejs-typescript-directory-structure](https://cdn.jsdelivr.net/gh/cody1991/images@master/typescript-tutorial/nodejs-typescript-directory-structure.4buzjj0j3lc0.png)
 
-你的 TypeScript 代码存储在 `src` 目录下
-
-当 TypeScript 编译器编译了 TypeScript 源文件的时候，它会把输出文件存储在 `build` 目录中
+TypeScript 代码存储在 `src` 目录下，而编译器的输出文件存储在 `build` 目录中。
 
 ### 配置 TypeScript 编译器
 
-在 macOS 和 Linux 的终端或者 Windows 上的命令提示符中，在 `nodets` 目录下运行下面的命令来创建 `tsconfig.json` 文件
+打开 macOS 和 Linux 的终端或者 Windows 上的命令提示符，在 `nodets` 目录下运行下面的命令，创建 `tsconfig.json` 文件：
 
 ```sh
 tsc --init
 ```
 
-你会看到 `nodets` 目录下 `tsconfig.json` 被创建了
+你会看到 `nodets` 目录下新增了 `tsconfig.json` 文件：
 
 ![nodejs-typescript-tsconfig.json](https://cdn.jsdelivr.net/gh/cody1991/images@master/typescript-tutorial/nodejs-typescript-tsconfig.json_.jn33hl2u37k.png)
 
-`tsconfig.json` 文件指定目录 (`nodets`) 是 TypeScript 项目的根目录
-
-当你编译 TypeScript 文件的时候，TypeScript 编译器会使用 `tsconfig.json` 中的选项来编译项目
+`tsconfig.json` 配置指定目录 (`nodets`) 是 TypeScript 项目的根目录。当你编译 TypeScript 文件的时候，TypeScript 编译器会使用 `tsconfig.json` 中的配置来编译项目。
 
 现在，你可以打开 `tsconfig.json` 文件，里面有非常多的选项，在本教程中，主要关注两个选项：
 
 - `rootdir` – 指定 TypeScript 输入文件的根目录
-- `outdir` - 存储 JavaScript 输出文件的目录
+- `outdir` - 指定 JavaScript 输出文件的目录
 
-这些选项在默认情况下是被注释掉的，你需要取消它们的注释（删除行首的 `//`），并改成下面这样：
+这些选项在默认情况下是被注释掉的，你需要取消它们的注释（删除行首的 `//`），并改成如下所示的配置：
 
 对于 `outDir` 选项：
 
@@ -5508,13 +5500,13 @@ tsc --init
 "outDir": "./build"
 ```
 
-而对于 `rootDir` 选项：
+对于 `rootDir` 选项：
 
 ```ts
 "rootDir": "./src"
 ```
 
-为了验证新的配置是否正确，你可以在 `./src` 目录下创建一个名为 `app.ts` 的新文件，并敲入以下代码：
+为了验证新的配置是否生效，可以在 `./src` 目录下创建一个名为 `app.ts` 的新文件，敲入如下代码：
 
 ```ts
 console.log('Node.js TypeScript');
@@ -5522,13 +5514,13 @@ console.log('Node.js TypeScript');
 
 ![nodejs-typescript-app](https://cdn.jsdelivr.net/gh/cody1991/images@master/typescript-tutorial/nodejs-typescript-app.ts_.6j9le5sytxs0.png)
 
-接下来运行下面的命令来执行 TypeScript 编译器，它会编译所有存储在 `src` 目录下的文件：
+接下来运行下面的命令来执行 TypeScript 编译器的编译工作，它会编译所有存储在 `src` 目录下的文件：
 
 ```sh
 tsc
 ```
 
-如果配置是正确的，你将会看到 `./build` 目录下生成了 `app.js` 文件
+如果配置是正确有效的，将会看到 `./build` 目录下生成了 `app.js` 文件：
 
 ![nodejs-typescript-app](https://cdn.jsdelivr.net/gh/cody1991/images@master/typescript-tutorial/nodejs-typescript-app.js.4okqve6avca0.png)
 
@@ -5538,7 +5530,7 @@ tsc
 node app.js
 ```
 
-你会看到下面的输出：
+看到下面的输出结果：
 
 ```sh
 Node.js TypeScript
@@ -5546,18 +5538,16 @@ Node.js TypeScript
 
 每当你修改了 TypeScript 代码的时候，你需要：
 
-- 构建项目
-- 运行 JavaScript 输出文件
+- 构建项目；
+- 运行 JavaScript 输出文件。
 
-这样很浪费时间
-
-幸运的是，你可以使用一些 Node.js 模块使整个流程自动化
+这样很浪费时间。幸运的是，你可以使用一些 Node.js 模块，自动化执行上面的流程。
 
 ### 安装 Node.js 模块
 
-`nodemon` 模块允许你在更改了 JavaScript 源代码的时候，自动重新启动应用程序
+`nodemon` 模块允许你在修改了 JavaScript 源代码后，重新启动应用程序。
 
-`concurrently` 模块允许并发运行多个命令
+`concurrently` 模块允许并发运行多个命令。
 
 首先在根目录下执行 `npm init` 命令：
 
@@ -5571,11 +5561,11 @@ npm init --yes
 npm install --g nodemon concurrently
 ```
 
-它需要话费一定的时间去安装，当安装完成我们可以继续下面的步骤
+需要花费一点时间来安装它们，安装完成以后我们继续后面的步骤。
 
-注意 `--g` 标识指示 npm 全局安装这两个模块，它允许你在其他项目中使用它们
+注意 `--g` 标识表示 npm 将会全局安装这两个模块，你可以在其他项目中使用它们。
 
-接下来，打开 `package.json` 文件，你在 `scripts` 选项中会看到下面的代码：
+接下来打开 `package.json` 文件，在 `scripts` 选项中会看到下面的代码：
 
 ```json
 ...
@@ -5585,7 +5575,7 @@ npm install --g nodemon concurrently
 ...
 ```
 
-接下来，把 `scripts` 修改成下面这样：
+把 `scripts` 修改成如下所示的配置：
 
 ```json
 ...
@@ -5597,15 +5587,13 @@ npm install --g nodemon concurrently
 ...
 ```
 
-`"start:build": "tsc -w"` 会监听 `./src` 下的文件变化，发生变化的时候自动重新编译它们
+`"start:build": "tsc -w"` 会监听 `./src` 下的文件的变化，当有文件发生变化的时候，重新编译这些文件。
 
-`"start:run": "nodemon build/app.js"` 每当新文件产生的时候，自动运行 `./build` 目录下的 `app.js` 文件
+`"start:run": "nodemon build/app.js"` 每当有新文件产生的时候，重新运行 `./build` 目录下的 `app.js` 文件。
 
-`"start": "concurrently npm:start:*"` 运行所有 `npm:start:*` 开头的命令，它会执行上面的 `start:build` 和 `start:run` 命令
+`"start": "concurrently npm:start:*"` 运行所有 `npm:start:*` 开头的命令，它会执行上面的 `start:build` 和 `start:run` 命令。
 
-因为 `app.js` 会是 Node.js 程序的入口点，你还需要把 `package.json` 文件中下面的选项修改成 `app.js`
-
-从：
+因为 `app.js` 是 Node.js 程序的入口，还需要把 `package.json` 文件中的 `main` 配置修改成 `app.js`，如下所示：
 
 ```ts
 "main": "index.js"
@@ -5623,4 +5611,4 @@ npm install --g nodemon concurrently
 npm start
 ```
 
-为了验证配置的正确性，你可以修改一些 `app.ts` 中的代码，然后你将会在控制台看到一些输出
+为了验证配置已经生效，修改一些 `app.ts` 中的代码，将会在控制台看到一些新的执行结果输出。
