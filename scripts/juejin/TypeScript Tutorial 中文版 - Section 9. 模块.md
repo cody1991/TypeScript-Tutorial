@@ -16,7 +16,7 @@ theme: jzman
 
 [原文地址](https://www.typescripttutorial.net/typescript-tutorial/typescript-modules/)
 
-在本教程中，你将学习 TypeScript 中的模块，以及如何使用它来重构你的代码
+在本教程中，你将学习 TypeScript 中的模块，以及使用它来重构你的代码。
 
 ### TypeScript 中的模块介绍
 
