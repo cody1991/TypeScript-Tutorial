@@ -2,14 +2,9 @@
 
 TypeScript 语言越来越受欢迎，而 TypeScript 语言的学习渠道也越来越多，笔者在学习 TypeScript 语言的时候发现一个不错的入门级教程 [Typescrip Ttutorial](https://www.typescripttutorial.net/)，学习完以后打算翻译成中文提供给更多的人学习，于是 [TypeScript Tutorial 中文版](https://github.com/cody1991/TypeScript-Tutorial) 这个项目就诞生了。
 
-目前这个项目的进度是：已经把所有英文教程翻译完毕，正在进行第一期的校对工作。在校对的过程中发现很多低级的错误，或者语句不通顺的地方，正在不断地优化，敬请谅解～
+目前这个项目的进度是：完成第一期的校对工作。
 
 项目的在线阅读地址在：[TypeScript Tutorial 中文版](https://cody1991.github.io/TypeScript-Tutorial/)，已添加评论功能，欢迎大家进行吐槽，也欢迎提交 MR 单来帮忙提高项目的质量，感谢。
-
-注意：
-
-- 在掘金上的文章内的跳转现在还有问题，后续会通过脚本统一处理；
-- 后续文章已更新，但是只有下面目录贴出来的文章进行了校对，敬请期待。
 
 # 目录
 
@@ -119,14 +114,3 @@ module.exports = {
   endOfLine: 'lf',
 };
 ```
-
-## 脚本
-
-### 掘金文章
-
-由于考虑
-
-- 到发布到掘金的文章和 `VuePress` 内的文章内容会有点出入
-- 项目还在不断修改，希望在掘金上也能快速的同步修改
-
-所以在 `scripts/juejin` 目录下写了一段脚本来生成掘金这边的文章，后续有修改的话也会同步过来。
