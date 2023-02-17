@@ -61,7 +61,7 @@ function add(a: any, b: any): any {
 
 ![typescript-function-overloadings](https://cdn.jsdelivr.net/gh/cody1991/images@master/typescript-tutorial/typescript-function-overloadings.36nbxumle820.png)
 
-### 数函数重载中使用可选参数
+### 函数重载中使用可选参数
 
 当你使用函数重载的时候，函数的参数数量必须相同，如果有一个函数重载的参数比另外一个函数重载的参数多的话，你必须把多出来的参数设置为可选参数，如下所示：
 
